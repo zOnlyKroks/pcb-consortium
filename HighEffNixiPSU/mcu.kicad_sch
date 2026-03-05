@@ -2917,7 +2917,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_BJT:2N2219"
+		(symbol "Transistor_BJT:MMBTA06"
 			(pin_names
 				(offset 0)
 				(hide yes)
@@ -2934,7 +2934,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "2N2219"
+			(property "Value" "MMBTA06"
 				(at 5.08 0 0)
 				(effects
 					(font
@@ -2943,7 +2943,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 				(at 5.08 -1.905 0)
 				(effects
 					(font
@@ -2954,7 +2954,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
+			(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2964,7 +2964,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
+			(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2973,7 +2973,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "NPN Transistor"
+			(property "Sim.Device" "NPN"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2982,7 +2982,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "TO?39*"
+			(property "Sim.Pins" "1=B 2=E 3=C"
 				(at 0 0 0)
 				(effects
 					(font
@@ -2991,7 +2991,25 @@
 					(hide yes)
 				)
 			)
-			(symbol "2N2219_0_1"
+			(property "ki_keywords" "SMD"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MMBTA06_0_1"
 				(polyline
 					(pts
 						(xy -2.54 0) (xy 0.635 0)
@@ -3028,7 +3046,7 @@
 					)
 				)
 			)
-			(symbol "2N2219_1_1"
+			(symbol "MMBTA06_1_1"
 				(polyline
 					(pts
 						(xy 0.635 0.635) (xy 2.54 2.54)
@@ -3075,7 +3093,7 @@
 							)
 						)
 					)
-					(number "2"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3111,7 +3129,7 @@
 							)
 						)
 					)
-					(number "1"
+					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3484,16 +3502,16 @@
 		(uuid "1586187d-e8e2-41ee-9d77-8d147aa2ac3f")
 	)
 	(junction
-		(at 69.85 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2419524c-2123-404e-8e6c-a62e36f2edbc")
-	)
-	(junction
 		(at 254 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "29d39141-f872-4f80-8191-f99914911f51")
+	)
+	(junction
+		(at 48.26 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "31c92405-2552-46bd-9b26-3a54cda3be7a")
 	)
 	(junction
 		(at 242.57 36.83)
@@ -3508,22 +3526,16 @@
 		(uuid "35e5e46c-41dd-48b7-aeec-937328ab7a41")
 	)
 	(junction
-		(at 48.26 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "40cd9ed7-35fa-4ed3-b380-799057079565")
-	)
-	(junction
-		(at 48.26 111.76)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4bd28b1e-878a-4577-9f4e-3903d7007e46")
-	)
-	(junction
 		(at 265.43 29.21)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4d16b993-a4c1-4a71-a293-68b54229cc0b")
+	)
+	(junction
+		(at 69.85 143.51)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e46df56-4e25-4602-ab2a-f9fe512ac45f")
 	)
 	(junction
 		(at 231.14 29.21)
@@ -3538,6 +3550,12 @@
 		(uuid "58058ff1-27c6-4902-8519-825c1b6f9a2c")
 	)
 	(junction
+		(at 48.26 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5ab88a2f-5766-482c-b1d1-48c7bc8668bb")
+	)
+	(junction
 		(at 57.785 31.75)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3550,22 +3568,34 @@
 		(uuid "6ff813af-9dcf-4259-865d-f577f700058d")
 	)
 	(junction
+		(at 48.26 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80326d36-cce2-4909-bc78-1d4be3763eb2")
+	)
+	(junction
+		(at 48.26 175.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82bb5c82-f56f-47b9-8a2e-ebb3c6b7930e")
+	)
+	(junction
+		(at 69.85 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "858d132c-68fd-4d25-bb32-c7286e0dfc23")
+	)
+	(junction
 		(at 69.85 80.01)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "7337271e-65aa-4d8a-a80b-37eeb6d44e56")
+		(uuid "9ab4e405-ea18-4b5e-99a8-d2004d378475")
 	)
 	(junction
-		(at 69.85 143.51)
+		(at 125.73 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "846f384f-72f3-4091-925d-04e665efd027")
-	)
-	(junction
-		(at 48.26 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8d8ccb69-1669-418c-9ea2-0aa28ec7d298")
+		(uuid "add77851-b121-4be1-8026-6bad41376308")
 	)
 	(junction
 		(at 219.71 36.83)
@@ -3586,22 +3616,16 @@
 		(uuid "b77443e5-6483-4ffd-98d5-738f6386a54b")
 	)
 	(junction
-		(at 69.85 175.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bc6c5701-cfe6-42b4-b9d0-bc691ebb8bf7")
-	)
-	(junction
 		(at 48.26 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "bf8679d1-892c-4297-8a0c-91a736c51a16")
 	)
 	(junction
-		(at 147.32 175.26)
+		(at 69.85 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bff29283-7888-4f83-b74a-fc1e3c233b2a")
+		(uuid "c0092470-d8dc-41b4-9c61-acd4aa163bd1")
 	)
 	(junction
 		(at 254 36.83)
@@ -3610,16 +3634,10 @@
 		(uuid "c0393438-7371-4ec6-9514-6cc79041c7b1")
 	)
 	(junction
-		(at 125.73 175.26)
+		(at 147.32 175.26)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d6360581-f95d-4b1f-ac79-9be13f4ddbb1")
-	)
-	(junction
-		(at 48.26 175.26)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ddf9b668-b8bc-4a26-a224-7830e6ee7397")
+		(uuid "fb071e64-1ea3-4f13-8d8a-65d0145dee93")
 	)
 	(no_connect
 		(at 165.1 38.1)
@@ -4664,91 +4682,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 144.78 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "05fb76ca-bea3-4866-ab70-40170cdf5486")
-		(property "Reference" "Q11"
-			(at 149.86 179.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 149.86 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 149.86 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 144.78 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 144.78 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 144.78 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "0a043246-b5ad-4a33-aa0b-5736b4f1f1cf")
-		)
-		(pin "2"
-			(uuid "9960c811-7706-4b7f-bd4b-88e092bede15")
-		)
-		(pin "3"
-			(uuid "a6dee2b0-8025-452a-9fce-26bfd84dcf1c")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 69.85 107.95 0)
 		(unit 1)
@@ -5118,6 +5051,100 @@
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
 					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 45.72 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10f2a44b-4521-4803-bc0f-53492ee3156d")
+		(property "Reference" "Q3"
+			(at 50.8 115.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 50.8 118.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 118.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 45.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 45.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 45.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 45.72 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a025857-b935-4f0c-9228-35fc3a71a136")
+		)
+		(pin "3"
+			(uuid "b0603c20-2fe2-43a8-926e-55a6ad4bacbb")
+		)
+		(pin "2"
+			(uuid "d50c0ea1-5268-4be2-9669-fb1f02ec7d07")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -5629,91 +5656,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 45.72 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "22e84c71-89cc-49d1-8491-6c6826bb94c4")
-		(property "Reference" "Q6"
-			(at 50.8 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 50.8 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 50.8 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 45.72 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 45.72 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 45.72 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "222f9222-e672-4be9-a08e-99a4970e7867")
-		)
-		(pin "2"
-			(uuid "c506241d-d520-491d-a8f4-8120aa77fa41")
-		)
-		(pin "3"
-			(uuid "62196bc9-9886-469b-a12a-f3efd409ee0a")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 207.01 71.12 0)
 		(unit 1)
@@ -5988,6 +5930,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 45.72 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2ca17a5a-2245-4dad-ba64-0d635fdd799f")
+		(property "Reference" "Q5"
+			(at 50.8 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 50.8 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 45.72 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 45.72 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 45.72 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 45.72 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "22bba6e8-176d-40ee-a015-6bff878660f9")
+		)
+		(pin "3"
+			(uuid "3345ceb2-7c47-41fc-ad87-d57027ef7ed6")
+		)
+		(pin "2"
+			(uuid "706c6829-0074-4405-a5bb-023290ce5d0c")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 48.26 107.95 0)
 		(unit 1)
@@ -6210,91 +6246,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 45.72 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "37767bf4-5786-482d-bb70-4ba8de51a749")
-		(property "Reference" "Q7"
-			(at 50.8 179.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 50.8 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 50.8 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 45.72 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 45.72 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 45.72 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "99b1012f-aa7a-446f-86b1-0c44079e9e06")
-		)
-		(pin "2"
-			(uuid "c72ac0b7-3a2b-4c6a-b055-b930e3a4c91f")
-		)
-		(pin "3"
-			(uuid "50d890be-4625-47af-b0ae-caf6b0556dda")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 219.71 33.02 0)
 		(unit 1)
@@ -6467,91 +6418,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 45.72 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "417958b9-6fe8-4446-b016-be5b9993456f")
-		(property "Reference" "Q2"
-			(at 50.8 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 50.8 86.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 50.8 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 45.72 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 45.72 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 45.72 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "eca659ef-63d5-4241-8d02-d365f633f0d0")
-		)
-		(pin "2"
-			(uuid "92d35e29-f71b-497e-8389-ac716de3d825")
-		)
-		(pin "3"
-			(uuid "08c541b4-bf48-49e2-a313-747031498ca4")
-		)
-		(instances
-			(project ""
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 125.73 171.45 0)
 		(unit 1)
@@ -6625,6 +6491,100 @@
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
 					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 67.31 148.59 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "50e7bbba-d43a-4d82-9237-2a932fc3e767")
+		(property "Reference" "Q6"
+			(at 72.39 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 72.39 149.8599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 72.39 150.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 67.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 67.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 67.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 67.31 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "aa889a53-c6cb-4694-9787-98c19017ed06")
+		)
+		(pin "3"
+			(uuid "7353cf05-07fc-42fe-b77d-16658612d126")
+		)
+		(pin "2"
+			(uuid "6691b3fc-3e99-4480-996e-6bb161bbe597")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q6")
 					(unit 1)
 				)
 			)
@@ -6789,6 +6749,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 45.72 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5d13bc9a-8e33-4a20-8d05-28a2d60c67d1")
+		(property "Reference" "Q12"
+			(at 50.8 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 50.8 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 45.72 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 45.72 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 45.72 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 45.72 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67a4ccd8-e6ae-4ec8-9702-75d0ed14b4b6")
+		)
+		(pin "3"
+			(uuid "4103f8d7-a612-44fe-b397-b02241c54050")
+		)
+		(pin "2"
+			(uuid "5fcb0a79-2b7c-40c3-bf26-1d18252d8e17")
+		)
+		(instances
+			(project ""
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 69.85 171.45 0)
 		(unit 1)
@@ -6862,91 +6916,6 @@
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
 					(reference "R23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 123.19 180.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "63fbb05e-546c-4348-a61a-0057bf1750ad")
-		(property "Reference" "Q10"
-			(at 128.27 179.0699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 128.27 181.6099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 128.27 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 123.19 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 123.19 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 123.19 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b0420952-eff4-4e82-af31-ed78f015ff81")
-		)
-		(pin "2"
-			(uuid "963d70c8-53f7-437d-b6c5-a4edc9cc4218")
-		)
-		(pin "3"
-			(uuid "de581d10-d5ff-4e5b-acba-9d07209a57c7")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -8292,6 +8261,100 @@
 		)
 	)
 	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 67.31 116.84 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9eddfb27-c114-43bd-915b-ad87f40b410c")
+		(property "Reference" "Q4"
+			(at 72.39 115.5699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 72.39 118.1099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 72.39 118.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 67.31 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 67.31 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 67.31 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 67.31 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ed5bf6e-c8d5-4eee-86d7-4b3e37e0e9a3")
+		)
+		(pin "3"
+			(uuid "cefcfc40-e564-4200-8ebb-fff357d37bca")
+		)
+		(pin "2"
+			(uuid "c546870c-a7db-43b6-a05e-b7d2250969cf")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 69.85 121.92 0)
 		(unit 1)
@@ -8421,17 +8484,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 67.31 116.84 0)
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 123.19 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "ae552cec-86eb-48f5-9e8c-518f00e94730")
-		(property "Reference" "Q5"
-			(at 72.39 115.5699 0)
+		(uuid "a5c89b45-3a4b-4d08-970e-2dba8b92809e")
+		(property "Reference" "Q9"
+			(at 128.27 179.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8439,8 +8502,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2N2219"
-			(at 72.39 118.1099 0)
+		(property "Value" "MMBTA06"
+			(at 128.27 181.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8448,8 +8511,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 72.39 118.745 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 128.27 182.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8459,8 +8522,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 67.31 116.84 0)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 123.19 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8469,8 +8532,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 67.31 116.84 0)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 123.19 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8478,8 +8541,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C37270941"
-			(at 67.31 116.84 0)
+		(property "Sim.Device" "NPN"
+			(at 123.19 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 123.19 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8488,18 +8560,112 @@
 			)
 		)
 		(pin "1"
-			(uuid "cd9780db-3279-4349-8599-488f3519db7d")
-		)
-		(pin "2"
-			(uuid "d525f10e-0dc1-4cc1-ad23-a435039e6a3c")
+			(uuid "e19ae7d6-c581-4313-a7a0-264a4bf17ba0")
 		)
 		(pin "3"
-			(uuid "521796d6-7c7b-4763-a31f-40689c4d74ba")
+			(uuid "9eac7a2b-df6e-4f61-988e-2a845a178c78")
+		)
+		(pin "2"
+			(uuid "7a9a76d5-2309-4438-9797-2d7fb93e4e58")
 		)
 		(instances
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q5")
+					(reference "Q9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 144.78 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a7b8c7b6-b228-461d-a17e-31882d9cdafe")
+		(property "Reference" "Q10"
+			(at 149.86 179.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 149.86 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 149.86 182.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 144.78 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d75d3fe4-4254-452d-ba7e-35ae9fd61896")
+		)
+		(pin "3"
+			(uuid "00aa9ae3-3113-4eec-94b1-fdbda005659f")
+		)
+		(pin "2"
+			(uuid "a1053be7-754f-4e80-959e-bfd2ee16eb04")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q10")
 					(unit 1)
 				)
 			)
@@ -8585,176 +8751,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 67.31 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b18b82d0-ae67-42b1-bda6-f12166a0537e")
-		(property "Reference" "Q3"
-			(at 72.39 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 72.39 86.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 72.39 86.995 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 67.31 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 67.31 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 67.31 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d17232e8-5224-4aa4-a1f5-3b10d4494177")
-		)
-		(pin "2"
-			(uuid "0847f259-b58e-478a-9cbb-7e07c65e8d4a")
-		)
-		(pin "3"
-			(uuid "26c7742b-0405-45a4-aba6-a951cd5e13ff")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 45.72 116.84 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b4cb4c99-7f8b-45cf-8f37-29fb71f78c16")
-		(property "Reference" "Q4"
-			(at 50.8 115.5699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 50.8 118.1099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 50.8 118.745 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 45.72 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 45.72 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 45.72 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4fba1318-b9af-4c95-85cd-cbedb67a9422")
-		)
-		(pin "2"
-			(uuid "0af7ba30-1640-46b1-a202-6faa1b477ef6")
-		)
-		(pin "3"
-			(uuid "6a56fbd8-9efd-4973-9702-383d62401ffb")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 147.32 171.45 0)
 		(unit 1)
@@ -8828,6 +8824,100 @@
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
 					(reference "R27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 67.31 180.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf85949f-5672-40ac-b9ee-baa8b8960399")
+		(property "Reference" "Q8"
+			(at 72.39 179.0699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 72.39 181.6099 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 72.39 182.245 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 67.31 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 67.31 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 67.31 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 67.31 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d31cd71c-792a-488d-9d15-2b7796c88e21")
+		)
+		(pin "3"
+			(uuid "87f51403-baba-4792-94a8-6294059c890a")
+		)
+		(pin "2"
+			(uuid "5eda5480-b598-4831-9773-52ffdfc315e0")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -8914,91 +9004,6 @@
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
 					(reference "C6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 67.31 148.59 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c44b104c-cae1-4e67-877d-f27147ee11f3")
-		(property "Reference" "Q8"
-			(at 72.39 147.3199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2N2219"
-			(at 72.39 149.8599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 72.39 150.495 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 67.31 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 67.31 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C37270941"
-			(at 67.31 148.59 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9d47b3f1-3569-4631-b89c-ea7699d724e2")
-		)
-		(pin "2"
-			(uuid "d5b495cf-961b-4363-92ad-3f0298909179")
-		)
-		(pin "3"
-			(uuid "cbad11c6-c4ce-484c-a099-1ae6ce8393d6")
-		)
-		(instances
-			(project "HighEffNixiPSU"
-				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q8")
 					(unit 1)
 				)
 			)
@@ -9280,17 +9285,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Transistor_BJT:2N2219")
-		(at 67.31 180.34 0)
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 45.72 180.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "dc1e7728-500b-439a-89f7-5e79e2c39433")
-		(property "Reference" "Q9"
-			(at 72.39 179.0699 0)
+		(uuid "e06d9497-4902-4dd0-bf7c-38c949bf7f34")
+		(property "Reference" "Q7"
+			(at 50.8 179.0699 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9298,8 +9303,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "2N2219"
-			(at 72.39 181.6099 0)
+		(property "Value" "MMBTA06"
+			(at 50.8 181.6099 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9307,8 +9312,8 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_THT:TO-39-3"
-			(at 72.39 182.245 0)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 50.8 182.245 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9318,8 +9323,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/2N2219-D.PDF"
-			(at 67.31 180.34 0)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 45.72 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9328,8 +9333,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "800mA Ic, 50V Vce, NPN Transistor, TO-39"
-			(at 67.31 180.34 0)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 45.72 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9337,8 +9342,17 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C37270941"
-			(at 67.31 180.34 0)
+		(property "Sim.Device" "NPN"
+			(at 45.72 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 45.72 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9347,18 +9361,112 @@
 			)
 		)
 		(pin "1"
-			(uuid "c1af1ca5-5181-4cd4-be27-49636cf20baf")
-		)
-		(pin "2"
-			(uuid "53d18293-a275-48e5-a353-1aacececd457")
+			(uuid "42b79e2d-8015-49e9-a1cb-074760123dae")
 		)
 		(pin "3"
-			(uuid "d546c6cf-76be-4892-a196-5e4d2807fe44")
+			(uuid "94e02f75-5240-4157-bc2d-8686993f7803")
+		)
+		(pin "2"
+			(uuid "21baaf43-8271-4137-a6d3-f1cb3248d4e7")
 		)
 		(instances
 			(project "HighEffNixiPSU"
 				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
-					(reference "Q9")
+					(reference "Q7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_BJT:MMBTA06")
+		(at 67.31 85.09 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3618d60-0e3c-4f90-a364-5c50cd9af196")
+		(property "Reference" "Q2"
+			(at 72.39 83.8199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MMBTA06"
+			(at 72.39 86.3599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+			(at 72.39 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://diotec.com/request/datasheet/mmbta06.pdf"
+			(at 67.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Description" "0.5A Ic, 80V Vce, general purpose NPN"
+			(at 67.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "NPN"
+			(at 67.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=B 2=E 3=C"
+			(at 67.31 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bf4b7467-67a7-4103-8c39-81db67279b3a")
+		)
+		(pin "3"
+			(uuid "5a8fa429-4158-4c9a-8ebb-d6fed3624804")
+		)
+		(pin "2"
+			(uuid "a926ce95-1d4a-480c-8151-3c7a81c5681d")
+		)
+		(instances
+			(project "HighEffNixiPSU"
+				(path "/6358b760-01e9-45d0-9d78-5a1aba5b2ae5/96a8d84f-c519-45e0-b00d-1f55a0ac41db"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
