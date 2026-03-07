@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- *
+ * This software is distributed in the hope that it will be useful,
+ * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * This software may only be used to program products purchased from
+ * Analog Devices for incorporation by you into audio products that
+ * are intended for resale to audio product end users. This software
+ * may not be distributed whole or in any part to third parties.
+ *
+ * Copyright © 2026 Analog Devices, Inc. All rights reserved.
+ */
+-->
+<!--NetList XML file-->
+<NetList>
+    <IC name=" IC 1 " type="DSPSigma100">
+        <Schematic>
+            <Algorithm name="ICSigma100In1" friendlyname="170x\140x input " cell="Input1 " location="{X=278, Y=426} " Growth="10 " GrowthB="0 " FS="48000">
+                <Link pin="O_C24_A0_P1_out" dir="out" link="Link0" />
+                <Link pin="O_C24_A0_P2_out" dir="out" link="Link1" />
+                <Link pin="O_C24_A0_P3_out" dir="out" link="Link2" />
+                <Link pin="O_C24_A0_P4_out" dir="out" link="Link3" />
+            </Algorithm>
+            <Algorithm name="GPIAlg1" friendlyname="General Purpose Input " cell="GPI1 " location="{X=353, Y=349} " Growth="0 " GrowthB="0 " FS="48000">
+                <Link pin="O_C75_A0_P1_out" dir="out" link="Link6" />
+            </Algorithm>
+            <Algorithm name="SingleCtrlMixer19401" friendlyname="Signal MixerC " cell="Mg1 " location="{X=378, Y=421} " Growth="2 " GrowthB="0">
+                <Link pin="I_C4_A0_P2_in" dir="in" link="Link0" />
+                <Link pin="I_C4_A0_P3_in" dir="in" link="Link1" />
+                <Link pin="O_C4_A0_P1_out" dir="out" link="Link4" />
+            </Algorithm>
+            <Algorithm name="SingleCtrlMixer19402" friendlyname="Signal MixerC " cell="Mg1_2 " location="{X=377, Y=456} " Growth="2 " GrowthB="0">
+                <Link pin="I_C14_A0_P2_in" dir="in" link="Link2" />
+                <Link pin="I_C14_A0_P3_in" dir="in" link="Link3" />
+                <Link pin="O_C14_A0_P1_out" dir="out" link="Link5" />
+            </Algorithm>
+            <Algorithm name="DCinputmuxAlg1" friendlyname="Mono " cell="MX1 " location="{X=493, Y=434} " Growth="3 " GrowthB="0">
+                <Link pin="I_C57_A0_P2_in" dir="in" link="Link6" />
+                <Link pin="I_C57_A0_P3_in" dir="in" link="Link4" />
+                <Link pin="I_C57_A0_P4_in" dir="in" link="Link5" />
+                <Link pin="O_C57_A0_P1_out" dir="out" link="Link7" />
+            </Algorithm>
+            <Algorithm name="CrossoverFilter2WayAlgSP1" friendlyname="2-Way Crossover Filter - Single Precision " cell="Crossover1 " location="{X=621, Y=437} " Growth="0 " GrowthB="0">
+                <Link pin="I_C71_A0_P1_in" dir="in" link="Link7" />
+                <Link pin="O_C71_A0_P2_out" dir="out" link="Link8" />
+                <Link pin="O_C71_A0_P3_out" dir="out" link="Link10" />
+            </Algorithm>
+            <Algorithm name="EQ1940SingleS1" friendlyname="1 Channel - Single Precision " cell="Gen Filter1 " location="{X=773, Y=385} " Growth="1 " GrowthB="0">
+                <Link pin="I_C79_A0_P1_in" dir="in" link="Link8" />
+                <Link pin="O_C79_A0_P2_out" dir="out" link="Link9" />
+            </Algorithm>
+            <Algorithm name="EQ1940SingleS2" friendlyname="1 Channel - Single Precision " cell="Gen Filter1_2 " location="{X=776, Y=464} " Growth="1 " GrowthB="0">
+                <Link pin="I_C100_A0_P1_in" dir="in" link="Link10" />
+                <Link pin="O_C100_A0_P2_out" dir="out" link="Link11" />
+            </Algorithm>
+            <Algorithm name="ICSigma100Out2" friendlyname="170x\140x output " cell="Output2 " location="{X=899, Y=405} " Growth="0 " GrowthB="0">
+                <Link pin="I_C35_A0_P1_in" dir="in" link="Link9" />
+            </Algorithm>
+            <Algorithm name="ICSigma100Out1" friendlyname="170x\140x output " cell="Output1 " location="{X=899, Y=484} " Growth="0 " GrowthB="0">
+                <Link pin="I_C11_A0_P1_in" dir="in" link="Link11" />
+            </Algorithm>
+        </Schematic>
+    </IC>
+</NetList>

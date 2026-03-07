@@ -1,0 +1,10 @@
+0 ICSigma100In1 O_C24_A0_P1_out Link0 O_C24_A0_P2_out Link1 O_C24_A0_P3_out Link2 O_C24_A0_P4_out Link3
+1 GPIAlg1 O_C75_A0_P1_out Link6
+2 SingleCtrlMixer19401 I_C4_A0_P2_in Link0 I_C4_A0_P3_in Link1 O_C4_A0_P1_out Link4
+3 SingleCtrlMixer19402 I_C14_A0_P2_in Link2 I_C14_A0_P3_in Link3 O_C14_A0_P1_out Link5
+4 DCinputmuxAlg1 I_C57_A0_P2_in Link6 I_C57_A0_P3_in Link4 I_C57_A0_P4_in Link5 O_C57_A0_P1_out Link7
+5 CrossoverFilter2WayAlgSP1 I_C71_A0_P1_in Link7 O_C71_A0_P2_out Link8 O_C71_A0_P3_out Link10
+6 EQ1940SingleS1 I_C79_A0_P1_in Link8 O_C79_A0_P2_out Link9
+7 EQ1940SingleS2 I_C100_A0_P1_in Link10 O_C100_A0_P2_out Link11
+8 ICSigma100Out2 I_C35_A0_P1_in Link9
+9 ICSigma100Out1 I_C11_A0_P1_in Link11
