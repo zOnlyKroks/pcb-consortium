@@ -633,20 +633,27 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Audio:AudioJack3_Ground"
+		(symbol "Connector:TestPoint"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 8.89 0)
+			(property "Reference" "TP"
+				(at 0 6.858 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "AudioJack3_Ground"
-				(at 0 6.35 0)
+			(property "Value" "TestPoint"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -654,7 +661,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 5.08 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -663,6 +670,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 5.08 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "test point"
 				(at 0 0 0)
 				(effects
 					(font
@@ -671,7 +687,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Audio Jack, 3 Poles (Stereo / TRS), Grounded Sleeve"
+			(property "ki_keywords" "test point tp"
 				(at 0 0 0)
 				(effects
 					(font
@@ -680,7 +696,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "audio jack receptacle stereo headphones phones TRS connector"
+			(property "ki_fp_filters" "Pin* Test*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -689,68 +705,12 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "Jack*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "AudioJack3_Ground_0_1"
-				(rectangle
-					(start -5.08 -2.54)
-					(end -6.35 -5.08)
+			(symbol "TestPoint_0_1"
+				(circle
+					(center 0 3.302)
+					(radius 0.762)
 					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy -1.905 -2.54) (xy -1.27 -3.175) (xy -0.635 -2.54) (xy -0.635 0) (xy 2.54 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -2.54) (xy 0.635 -3.175) (xy 1.27 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 2.54 3.81)
-					(end -5.08 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy -2.54 2.54) (xy -2.54 -2.54) (xy -3.175 -3.175) (xy -3.81 -2.54)
-					)
-					(stroke
-						(width 0.254)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -758,72 +718,18 @@
 					)
 				)
 			)
-			(symbol "AudioJack3_Ground_1_1"
+			(symbol "TestPoint_1_1"
 				(pin passive line
-					(at 0 -7.62 90)
+					(at 0 0 90)
 					(length 2.54)
-					(name "~"
+					(name "1"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 2.54 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "R"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "T"
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1154,6 +1060,16 @@
 		(uuid "eb00475b-2b44-46f5-8344-cb74d1ab6ff9")
 	)
 	(label "Tip"
+		(at 35.56 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6dc06bec-f2c0-4323-b0c3-29c4fa2be33b")
+	)
+	(label "Tip"
 		(at 77.47 58.42 180)
 		(effects
 			(font
@@ -1164,24 +1080,14 @@
 		(uuid "6dfd7df3-d57a-45cf-9854-2ca01f4b1962")
 	)
 	(label "Ring"
-		(at 54.61 62.23 0)
+		(at 35.56 69.85 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "cd41d9a1-4a9e-49be-b515-1fa72379c85c")
-	)
-	(label "Tip"
-		(at 54.61 64.77 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "e745a60b-669b-4d4a-afa2-ced62c569d60")
+		(uuid "d6c946a1-639f-4e43-ab0c-1b296d1a7056")
 	)
 	(label "Ring"
 		(at 77.47 71.12 180)
@@ -1258,7 +1164,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0bff9b3b-dbff-44c4-87de-b88239ee100c")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR029"
 			(at 90.17 21.59 0)
 			(effects
 				(font
@@ -1308,7 +1214,74 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR025")
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 35.56 67.31 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "426663db-e81f-46bd-96cb-884ace9c7305")
+		(property "Reference" "TP3"
+			(at 27.432 66.802 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 21.844 66.548 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 35.56 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 35.56 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "320587ea-fbea-48cb-bae8-86755413e873")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
+					(reference "TP3")
 					(unit 1)
 				)
 			)
@@ -1324,7 +1297,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46322043-5b5d-429d-a204-58e209704aac")
-		(property "Reference" "U5"
+		(property "Reference" "U2"
 			(at 97.3933 104.14 0)
 			(effects
 				(font
@@ -1464,7 +1437,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "U5")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -1480,7 +1453,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6640fefc-a8c5-42c0-a468-8f8a1634e1ed")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR028"
 			(at 87.63 21.59 0)
 			(effects
 				(font
@@ -1530,7 +1503,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR024")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -1546,7 +1519,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "688f11a4-94bc-4a8f-884b-ca6814889adb")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR032"
 			(at 95.25 110.49 0)
 			(effects
 				(font
@@ -1596,24 +1569,42 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR028")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 49.53 69.85 0)
+		(lib_id "Connector:TestPoint")
+		(at 35.56 72.39 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7a2b0928-f92d-4914-821a-11ab2d815bb0")
-		(property "Reference" "#PWR021"
-			(at 49.53 76.2 0)
+		(uuid "70f6821f-ca84-469e-8c16-0ab9542284ed")
+		(property "Reference" "TP5"
+			(at 30.48 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 23.876 72.39 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 35.56 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1621,16 +1612,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 49.53 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 69.85 0)
+		(property "Datasheet" "~"
+			(at 35.56 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1638,17 +1621,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 49.53 69.85 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 49.53 69.85 0)
+		(property "Description" "test point"
+			(at 35.56 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1657,12 +1631,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "5a8d9a18-2c0a-4e73-9dba-85ff6ec72bf7")
+			(uuid "7d2aef26-97f5-44f4-b2ad-ea10f6c87a10")
 		)
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR021")
+					(reference "TP5")
 					(unit 1)
 				)
 			)
@@ -1678,7 +1652,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7ff53397-d9d8-4004-a068-1ffb990e2708")
-		(property "Reference" "C7"
+		(property "Reference" "C2"
 			(at 93.98 30.4799 0)
 			(effects
 				(font
@@ -1741,7 +1715,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "C7")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -1749,16 +1723,16 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 54.61 59.69 90)
+		(at 35.56 67.31 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "86404811-9b1f-4a30-8d0e-33339b898ed9")
-		(property "Reference" "#PWR022"
-			(at 60.96 59.69 0)
+		(uuid "a9c49c17-c365-446d-a072-98c64cb387ea")
+		(property "Reference" "#PWR078"
+			(at 41.91 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1767,7 +1741,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 59.69 59.69 0)
+			(at 40.64 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1775,7 +1749,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 54.61 59.69 0)
+			(at 35.56 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1784,7 +1758,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 54.61 59.69 0)
+			(at 35.56 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1793,7 +1767,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 54.61 59.69 0)
+			(at 35.56 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1802,12 +1776,79 @@
 			)
 		)
 		(pin "1"
-			(uuid "12b85605-c962-4f23-a276-36e418ba06d6")
+			(uuid "ebb5d89a-0911-40e3-8f55-f45a46838552")
 		)
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR022")
+					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 35.56 69.85 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b42aa391-28aa-4913-a6dc-b0bd7896ebb6")
+		(property "Reference" "TP4"
+			(at 28.194 69.596 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 22.098 69.342 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_2.0x2.0mm"
+			(at 35.56 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 35.56 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 35.56 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f765f5f3-c997-4d24-873a-45cda1127097")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
+					(reference "TP4")
 					(unit 1)
 				)
 			)
@@ -1824,7 +1865,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b6551952-f8d1-4cc0-8fb3-4c684b0a8426")
-		(property "Reference" "C6"
+		(property "Reference" "C1"
 			(at 83.82 38.0999 0)
 			(effects
 				(font
@@ -1887,7 +1928,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "C6")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -1903,7 +1944,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "d297e888-7e03-4b78-a0d1-54d2559152bf")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR030"
 			(at 90.17 110.49 0)
 			(effects
 				(font
@@ -1953,7 +1994,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR026")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -1969,7 +2010,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dd29501f-50d8-45c7-8503-ec07940cd720")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR031"
 			(at 92.71 21.59 0)
 			(effects
 				(font
@@ -2019,81 +2060,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "#PWR027")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Audio:AudioJack3_Ground")
-		(at 49.53 62.23 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea5a93c4-7314-42a0-8d58-641685afe7af")
-		(property "Reference" "J3"
-			(at 47.625 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AudioJack3_Ground"
-			(at 47.625 55.88 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Audio Jack, 3 Poles (Stereo / TRS), Grounded Sleeve"
-			(at 49.53 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "R"
-			(uuid "98ae0a80-db94-451c-81b8-418177a62c88")
-		)
-		(pin "G"
-			(uuid "c0f23f2b-a833-4b7e-886c-f98d309925eb")
-		)
-		(pin "T"
-			(uuid "ffca8426-650e-46d7-8f87-b66db91a61c4")
-		)
-		(pin "S"
-			(uuid "25324936-51df-4782-b322-763a31b6de7f")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "J3")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -2109,7 +2076,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd29f3d5-811f-4634-b54a-b864cdb8ba65")
-		(property "Reference" "C8"
+		(property "Reference" "C3"
 			(at 96.52 38.0999 0)
 			(effects
 				(font
@@ -2172,7 +2139,7 @@
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/58fe50d2-341f-4640-b68c-f42454b623a9"
-					(reference "C8")
+					(reference "C3")
 					(unit 1)
 				)
 			)
