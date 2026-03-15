@@ -4771,6 +4771,16 @@
 		)
 		(uuid "f814ed5d-f04c-415d-8658-84a794ac22ff")
 	)
+	(label "Mute"
+		(at 140.97 83.82 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0660adc8-0ca7-427f-a4ec-1ac87e933a7e")
+	)
 	(label "I2S_BCLK"
 		(at 186.69 92.71 180)
 		(effects
@@ -4841,8 +4851,18 @@
 		)
 		(uuid "77a8411d-2604-4a75-b570-25a56938ae1f")
 	)
+	(label "Mute"
+		(at 246.38 149.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "79568c6c-8de6-4442-b530-cd33d9f6ff01")
+	)
 	(label "I2S_LRCLK"
-		(at 33.02 143.51 0)
+		(at 33.02 140.97 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4860,6 +4880,16 @@
 			(justify right bottom)
 		)
 		(uuid "82dc4439-95fa-4315-9ede-adffc2781f08")
+	)
+	(label "SCL"
+		(at 33.02 147.32 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "880e5cee-ce4d-4c1b-9013-494ba1637023")
 	)
 	(label "RST"
 		(at 110.49 63.5 180)
@@ -4890,6 +4920,16 @@
 			(justify right bottom)
 		)
 		(uuid "9013c8f7-38c6-4de1-b7a9-c66c951735c9")
+	)
+	(label "SDA"
+		(at 33.02 149.86 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4ce9f4e-ca4d-4960-bb71-20698a73f1c9")
 	)
 	(label "DSP_IN_SELECT"
 		(at 110.49 55.88 180)
@@ -4962,7 +5002,7 @@
 		(uuid "e22df84c-a84f-4dd9-9e69-dd48536f2876")
 	)
 	(label "AUX_I2S_DATA"
-		(at 33.02 146.05 0)
+		(at 33.02 143.51 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4972,7 +5012,7 @@
 		(uuid "eb853c41-0573-4654-b5b8-2d8b6b86f32f")
 	)
 	(label "I2S_BCLK"
-		(at 33.02 140.97 0)
+		(at 33.02 138.43 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -8960,7 +9000,7 @@
 			)
 		)
 		(pin "BCK" input
-			(at 33.02 140.97 0)
+			(at 33.02 138.43 0)
 			(uuid "5623deb7-dfc5-4d30-8e6c-fc74944d0a09")
 			(effects
 				(font
@@ -8970,7 +9010,7 @@
 			)
 		)
 		(pin "DOUT" output
-			(at 33.02 146.05 0)
+			(at 33.02 143.51 0)
 			(uuid "75664ea7-f070-4d25-8365-e7106498fe1f")
 			(effects
 				(font
@@ -8980,7 +9020,7 @@
 			)
 		)
 		(pin "LRCK" input
-			(at 33.02 143.51 0)
+			(at 33.02 140.97 0)
 			(uuid "92924ab8-23f3-494e-b2de-08fc142b63c5")
 			(effects
 				(font
@@ -8992,6 +9032,26 @@
 		(pin "3.3V" input
 			(at 24.13 135.89 90)
 			(uuid "d736ee01-641c-45bc-bcc7-a8b8af21a89d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" input
+			(at 33.02 147.32 0)
+			(uuid "aba243b1-1d49-4c37-b17b-5baedf8527ae")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" input
+			(at 33.02 149.86 0)
+			(uuid "4a3a2489-1a77-40f2-b8b6-6f9ada394aba")
 			(effects
 				(font
 					(size 1.27 1.27)
