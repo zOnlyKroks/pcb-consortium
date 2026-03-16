@@ -2370,128 +2370,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3V3"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:GND"
 			(power)
 			(pin_numbers
@@ -2764,6 +2642,26 @@
 	)
 	(wire
 		(pts
+			(xy 39.37 92.71) (xy 55.88 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62a00cf3-bd94-43b7-852d-0a07b82798d1")
+	)
+	(wire
+		(pts
+			(xy 39.37 121.92) (xy 39.37 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "713cfa53-bc86-4a3a-90cf-986bf75d209d")
+	)
+	(wire
+		(pts
 			(xy 48.26 77.47) (xy 55.88 77.47)
 		)
 		(stroke
@@ -2781,6 +2679,16 @@
 			(type default)
 		)
 		(uuid "77dcdd1e-5c45-44ca-80ff-7c19bfece2b5")
+	)
+	(wire
+		(pts
+			(xy 39.37 121.92) (xy 74.93 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a91f2628-ea03-4c56-bf19-f610d0aa6cf5")
 	)
 	(wire
 		(pts
@@ -2861,16 +2769,6 @@
 			(type default)
 		)
 		(uuid "efe19ba2-6e9e-4449-a1bc-5ed65ac7e8df")
-	)
-	(wire
-		(pts
-			(xy 66.04 121.92) (xy 74.93 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fcb5b59f-af99-468b-a042-2c05a5283a9c")
 	)
 	(label "EN"
 		(at 92.71 97.79 180)
@@ -3207,7 +3105,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "STD10P6F6"
+		(property "Footprint" "footprints:STD10P6F6"
 			(at 52.07 -16.18 0)
 			(effects
 				(font
@@ -5304,70 +5202,6 @@
 			(project "BuckV1"
 				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
 					(reference "#PWR068")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 66.04 121.92 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e9fc5b9d-58b0-4f61-8ecf-848e4d79f12a")
-		(property "Reference" "#PWR067"
-			(at 66.04 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 66.04 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 66.04 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 66.04 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2b8de201-45f7-4018-a61b-b1b64bebc4cb")
-		)
-		(instances
-			(project "BuckV1"
-				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
-					(reference "#PWR067")
 					(unit 1)
 				)
 			)
