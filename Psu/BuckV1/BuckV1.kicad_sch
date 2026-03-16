@@ -2607,6 +2607,12 @@
 		(uuid "0b6fb081-d12b-4b13-b23a-cfb4b772b15d")
 	)
 	(junction
+		(at 55.88 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "18cbd15b-742d-477e-b672-4139ab0e0868")
+	)
+	(junction
 		(at 78.74 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2635,12 +2641,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ec4f7699-aaa2-45fc-a9c8-6d07b03f1e4c")
-	)
-	(junction
-		(at 55.88 92.71)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f29ef86e-6911-433f-a3ec-ffe88b663388")
 	)
 	(no_connect
 		(at 95.25 121.92)
@@ -2671,16 +2671,6 @@
 			(type default)
 		)
 		(uuid "09b90a33-2af9-4376-94c4-785f7425e9c5")
-	)
-	(wire
-		(pts
-			(xy 55.88 77.47) (xy 55.88 92.71)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a7477e7-7417-425f-a594-12a08855a66e")
 	)
 	(wire
 		(pts
@@ -2764,13 +2754,23 @@
 	)
 	(wire
 		(pts
-			(xy 34.29 77.47) (xy 48.26 77.47)
+			(xy 34.29 77.47) (xy 40.64 77.47)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "495d56ce-bcea-48cd-9514-8fe523b74d38")
+	)
+	(wire
+		(pts
+			(xy 48.26 77.47) (xy 55.88 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73381fd7-03bd-4b8d-8567-93b94e4d7397")
 	)
 	(wire
 		(pts
@@ -2831,6 +2831,16 @@
 			(type default)
 		)
 		(uuid "d68f08df-11d0-42aa-9358-0c67a45c4bd2")
+	)
+	(wire
+		(pts
+			(xy 34.29 77.47) (xy 34.29 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc4a502a-60e1-4e05-b8de-98cde4f23667")
 	)
 	(wire
 		(pts
@@ -3164,6 +3174,140 @@
 			(project ""
 				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Personal:STD10P6F6")
+		(at 63.5 82.55 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "38699087-301f-42b7-9e6e-e0088838b99c")
+		(property "Reference" "Q2"
+			(at 52.07 86.3601 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "STD10P6F6"
+			(at 52.07 83.8201 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "STD10P6F6"
+			(at 52.07 -16.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/std10p6f6.pdf"
+			(at 52.07 -116.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Description" "P-channel -60 V, 0.13  typ., -10 A STripFET F6 Power MOSFETs in DPAK, TO-220FP, TO-220 and IPAK packages"
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Height" ""
+			(at 52.07 -316.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Part Number" "511-STD10P6F6"
+			(at 52.07 -416.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STD10P6F6?qs=gNDSiZmRJS%2FCMx5C%252BLoTdg%3D%3D"
+			(at 52.07 -516.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Name" "STMicroelectronics"
+			(at 52.07 -616.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer_Part_Number" "STD10P6F6"
+			(at 52.07 -716.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C457501"
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "6a712b5a-9f07-4ab0-b05c-dd1d6488c704")
+		)
+		(pin "1"
+			(uuid "4b684981-ab46-4569-8ab8-d28432029976")
+		)
+		(pin "2"
+			(uuid "7c66bf34-e794-4f0d-9224-2ac6b0ead034")
+		)
+		(instances
+			(project "BuckV1"
+				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -4324,72 +4468,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 26.67 87.63 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "8657dd66-3617-4ba1-9895-d71d6bd5b7b5")
-		(property "Reference" "#PWR012"
-			(at 20.32 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 21.59 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 26.67 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 26.67 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 26.67 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7bf99573-21e7-43d5-8c82-4979a4d7be86")
-		)
-		(instances
-			(project "BuckV1"
-				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
-					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 212.09 100.33 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -4798,140 +4876,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Personal:STD10P6F6")
-		(at 26.67 87.63 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9a188a27-4e8d-4e04-97a0-4416be28d665")
-		(property "Reference" "Q1"
-			(at 38.1 83.8199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "STD10P6F6"
-			(at 38.1 86.3599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "STD10P6F6"
-			(at 38.1 186.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/std10p6f6.pdf"
-			(at 38.1 286.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "P-channel -60 V, 0.13  typ., -10 A STripFET F6 Power MOSFETs in DPAK, TO-220FP, TO-220 and IPAK packages"
-			(at 26.67 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" ""
-			(at 38.1 486.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "511-STD10P6F6"
-			(at 38.1 586.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/STMicroelectronics/STD10P6F6?qs=gNDSiZmRJS%2FCMx5C%252BLoTdg%3D%3D"
-			(at 38.1 686.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "STMicroelectronics"
-			(at 38.1 786.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "STD10P6F6"
-			(at 38.1 886.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C457501"
-			(at 26.67 87.63 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "3"
-			(uuid "9b6c1a3a-e022-4f32-9884-86bbfcdb9d4f")
-		)
-		(pin "1"
-			(uuid "f8e516c9-3b7d-42c3-9616-09c1dbe448e0")
-		)
-		(pin "2"
-			(uuid "969a2d57-debc-44cc-8840-fad61b610cd9")
-		)
-		(instances
-			(project ""
-				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
-					(reference "Q1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 105.41 107.95 0)
 		(unit 1)
@@ -5157,7 +5101,7 @@
 	)
 	(symbol
 		(lib_id "Device:Polyfuse")
-		(at 52.07 77.47 90)
+		(at 44.45 77.47 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5166,7 +5110,7 @@
 		(fields_autoplaced yes)
 		(uuid "e126ab7e-07d4-4b94-94e6-2eff3f390aa2")
 		(property "Reference" "F1"
-			(at 50.7999 74.93 0)
+			(at 43.1799 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5175,7 +5119,7 @@
 			)
 		)
 		(property "Value" "60V 3A"
-			(at 53.3399 74.93 0)
+			(at 45.7199 74.93 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5184,7 +5128,7 @@
 			)
 		)
 		(property "Footprint" "footprints:Polyfuse_60R300XF"
-			(at 57.15 76.2 0)
+			(at 49.53 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5194,7 +5138,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 52.07 77.47 0)
+			(at 44.45 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5203,7 +5147,7 @@
 			)
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
-			(at 52.07 77.47 0)
+			(at 44.45 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5212,7 +5156,7 @@
 			)
 		)
 		(property "LCSC Part #" "C207120"
-			(at 52.07 77.47 0)
+			(at 44.45 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5490,6 +5434,72 @@
 			(project "BuckV1"
 				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
 					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 63.5 82.55 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ec90eb05-721f-4bad-8042-a66740d083f7")
+		(property "Reference" "#PWR013"
+			(at 69.85 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 63.5 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2557a74c-a0a9-4020-b436-9dc30ec15166")
+		)
+		(instances
+			(project "BuckV1"
+				(path "/1ea0fc8a-a46b-4318-aa68-554101b34543"
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
