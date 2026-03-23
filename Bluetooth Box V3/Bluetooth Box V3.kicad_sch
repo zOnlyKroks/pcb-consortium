@@ -311,6 +311,260 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Amplifier_Operational:AD8606ARM"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "AD8606ARM"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Dual Precision Low Noise, Low Input Bias Current, Wide Bandwidth Operational Amplifiers, MSOP-8"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "dual opamp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MSOP*3x3mm*P0.65mm*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AD8606ARM_1_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "AD8606ARM_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "AD8606ARM_3_1"
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:Conn_01x01_Pin"
 			(pin_names
 				(offset 1.016)
@@ -4306,16 +4560,16 @@
 		(uuid "390dc622-87ec-46da-a7eb-d9341abfe3e0")
 	)
 	(junction
-		(at 26.67 86.36)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "431706a7-a360-4ad8-9def-3bd140b4ac7f")
-	)
-	(junction
 		(at 99.06 33.02)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b41f9356-ed02-40a1-b858-81f4b6010ed1")
+	)
+	(junction
+		(at 144.78 182.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cc39a88c-2288-4b24-b016-4bffd8b46f0b")
 	)
 	(junction
 		(at 52.705 54.61)
@@ -4328,6 +4582,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cfefd6df-952c-48d6-9509-85619a3a968f")
+	)
+	(junction
+		(at 153.67 184.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4276d58-2d52-4c34-a00c-28497d58c905")
 	)
 	(junction
 		(at 43.18 62.23)
@@ -4383,6 +4643,16 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 182.88) (xy 144.78 181.61)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13a47556-e062-49da-9fe0-3d2a945453cf")
+	)
+	(wire
+		(pts
 			(xy 53.34 182.88) (xy 59.69 182.88)
 		)
 		(stroke
@@ -4413,7 +4683,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 140.97) (xy 246.38 140.97)
+			(xy 229.87 134.62) (xy 246.38 134.62)
 		)
 		(stroke
 			(width 0)
@@ -4423,7 +4693,17 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 134.62) (xy 246.38 134.62)
+			(xy 147.32 182.88) (xy 144.78 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d03fa09-a34d-4a52-8925-027983dc66d0")
+	)
+	(wire
+		(pts
+			(xy 218.44 140.97) (xy 246.38 140.97)
 		)
 		(stroke
 			(width 0)
@@ -4443,6 +4723,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 184.15) (xy 147.32 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3843d40c-19ae-4a02-8248-cb59b277404a")
+	)
+	(wire
+		(pts
 			(xy 19.05 86.36) (xy 22.86 86.36)
 		)
 		(stroke
@@ -4453,7 +4743,7 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 130.81) (xy 229.87 140.97)
+			(xy 229.87 130.81) (xy 229.87 134.62)
 		)
 		(stroke
 			(width 0)
@@ -4493,7 +4783,7 @@
 	)
 	(wire
 		(pts
-			(xy 144.78 184.15) (xy 144.78 181.61)
+			(xy 144.78 184.15) (xy 144.78 182.88)
 		)
 		(stroke
 			(width 0)
@@ -4550,6 +4840,16 @@
 			(type default)
 		)
 		(uuid "7db73851-6a71-484e-91a2-7b8ac1465477")
+	)
+	(wire
+		(pts
+			(xy 153.67 184.15) (xy 147.32 184.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e94ca3c-a62e-491d-9bd9-471f0d9f6441")
 	)
 	(wire
 		(pts
@@ -4613,7 +4913,7 @@
 	)
 	(wire
 		(pts
-			(xy 218.44 130.81) (xy 218.44 134.62)
+			(xy 218.44 140.97) (xy 218.44 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5110,6 +5410,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 153.67 179.07 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03c0f550-a5cd-4720-96cb-2b4a0c2ad55d")
+		(property "Reference" "J10"
+			(at 154.94 180.9751 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "GND"
+			(at 154.94 178.4351 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 153.67 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 153.67 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C492400"
+			(at 153.67 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c42f0296-0074-4d29-96cd-3662981903f1")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 246.38 137.16 270)
 		(unit 1)
@@ -5330,6 +5707,72 @@
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
 					(reference "R26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 153.67 186.69 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "19cb7780-199c-40e5-ba2a-0727b5d4a860")
+		(property "Reference" "#PWR092"
+			(at 147.32 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.908 188.976 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 153.67 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c50ca40-aeec-4d04-9e00-7f3cd33fffdb")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "#PWR092")
 					(unit 1)
 				)
 			)
@@ -5746,6 +6189,71 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
+		(at 242.57 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2413bc87-3d00-4983-844c-eb0e49c90a18")
+		(property "Reference" "#PWR094"
+			(at 242.57 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 242.57 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80f96c55-c650-420d-8840-e81b6d14178e")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "#PWR094")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
 		(at 96.52 58.42 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5893,7 +6401,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "MainPWR"
+		(property "Value" "12V Screw"
 			(at 76.708 183.896 0)
 			(effects
 				(font
@@ -5921,6 +6429,15 @@
 			)
 		)
 		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 74.93 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C8465"
 			(at 74.93 182.88 0)
 			(effects
 				(font
@@ -6357,6 +6874,70 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 242.57 114.3 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3c7a7782-7c96-45b2-9dbb-2ce62351f639")
+		(property "Reference" "#PWR093"
+			(at 242.57 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 242.697 118.6942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 242.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 242.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 242.57 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5f4d8aa3-65f8-4421-be78-ef9ffc4a79ee")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "#PWR093")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3V3")
 		(at 26.67 25.4 0)
 		(unit 1)
@@ -6670,6 +7251,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C8465"
+			(at 284.48 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "594827e1-97cf-41b3-b39d-eba564ed8b5b")
 		)
@@ -6687,7 +7277,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 124.46 184.15 270)
+		(at 120.65 181.61 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6696,7 +7286,7 @@
 		(fields_autoplaced yes)
 		(uuid "569f0a7d-02d8-49f3-8357-642b8d7705cd")
 		(property "Reference" "#PWR013"
-			(at 120.65 184.15 0)
+			(at 116.84 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6705,7 +7295,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 128.27 184.1499 90)
+			(at 124.46 181.6099 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6714,7 +7304,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 184.15 0)
+			(at 120.65 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6723,7 +7313,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 184.15 0)
+			(at 120.65 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6732,7 +7322,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 124.46 184.15 0)
+			(at 120.65 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7230,73 +7820,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+12V")
-		(at 101.6 181.61 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6aa2a50e-8a22-441c-aa3a-84a5001ce40c")
-		(property "Reference" "#PWR011"
-			(at 105.41 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 97.79 181.6099 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 101.6 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 101.6 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 101.6 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2882e71a-d7f8-412a-87b8-64feed46cef2")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
-					(reference "#PWR011")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 41.91 46.99 0)
 		(unit 1)
@@ -7363,16 +7886,15 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 124.46 181.61 270)
+		(at 97.79 181.61 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "6d5025be-2b58-4b51-8a21-beb13b3b266e")
 		(property "Reference" "#PWR012"
-			(at 120.65 181.61 0)
+			(at 101.6 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7381,16 +7903,15 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 128.27 181.6099 90)
+			(at 92.456 181.61 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 181.61 0)
+			(at 97.79 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7399,7 +7920,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 181.61 0)
+			(at 97.79 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7408,7 +7929,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 124.46 181.61 0)
+			(at 97.79 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7487,6 +8008,149 @@
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
 					(reference "#PWR016")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 265.43 129.54 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7222278b-bc6b-492f-9ecc-3869c21d002d")
+		(property "Reference" "#PWR011"
+			(at 265.43 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 265.43 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 265.43 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 265.43 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 265.43 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d7a3e0e6-d84c-4f35-b5a6-778de82333bf")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 158.75 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "73bb0be4-f183-4321-90ed-3dbdcf6d4304")
+		(property "Reference" "J2"
+			(at 157.48 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5V Screw"
+			(at 160.528 185.166 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "footprints:WJ500V-5.08-2P"
+			(at 158.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 158.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 158.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C8465"
+			(at 158.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f0adb125-8daf-4562-93d8-20e2f7b17fb4")
+		)
+		(pin "2"
+			(uuid "080f76d6-236d-4b31-9406-a611615e1af7")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -7790,80 +8454,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x01_Pin")
-		(at 31.75 86.36 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7fe27c32-9016-4aaf-80bb-233bf3ca334e")
-		(property "Reference" "J2"
-			(at 31.115 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 31.115 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 31.75 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 31.75 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 31.75 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part #" "C492400"
-			(at 31.75 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "055d1be6-a2c8-45c2-90bf-692b3bf97f40")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
-					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 55.88 54.61 0)
 		(unit 1)
@@ -8070,7 +8660,7 @@
 	)
 	(symbol
 		(lib_id "power:+1V8")
-		(at 124.46 186.69 270)
+		(at 120.65 184.15 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8079,7 +8669,7 @@
 		(fields_autoplaced yes)
 		(uuid "9d96a887-23ab-4d42-8cfa-aabba1c3d84a")
 		(property "Reference" "#PWR014"
-			(at 120.65 186.69 0)
+			(at 116.84 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8088,7 +8678,7 @@
 			)
 		)
 		(property "Value" "+1V8"
-			(at 128.27 186.6899 90)
+			(at 124.46 184.1499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8097,7 +8687,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 124.46 186.69 0)
+			(at 120.65 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8106,7 +8696,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 124.46 186.69 0)
+			(at 120.65 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8115,7 +8705,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+1V8\""
-			(at 124.46 186.69 0)
+			(at 120.65 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8131,6 +8721,100 @@
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
 					(reference "#PWR014")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Operational:AD8606ARM")
+		(at 245.11 106.68 0)
+		(unit 3)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b6249026-0f7e-4e98-b545-ee342b735706")
+		(property "Reference" "U3"
+			(at 249.682 104.648 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AD8606ARM"
+			(at 249.682 107.188 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:MSOP-8_3x3mm_P0.65mm"
+			(at 245.11 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/AD8605_8606_8608.pdf"
+			(at 245.11 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Dual Precision Low Noise, Low Input Bias Current, Wide Bandwidth Operational Amplifiers, MSOP-8"
+			(at 245.11 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C459905"
+			(at 245.11 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "67746936-edba-4a3d-b25b-a3b191bedc0c")
+		)
+		(pin "6"
+			(uuid "a41d1475-d430-477c-a547-4e24507e3312")
+		)
+		(pin "1"
+			(uuid "e11fdbff-ff46-484f-9dcd-f3e8b7fab03d")
+		)
+		(pin "3"
+			(uuid "2d6237cf-6a32-423c-a489-5e59e6179699")
+		)
+		(pin "8"
+			(uuid "9b3fa90f-4657-4a4c-9172-e5cd1e7617a7")
+		)
+		(pin "4"
+			(uuid "8d16ac5f-c958-4f18-8b88-06c8acff94cc")
+		)
+		(pin "2"
+			(uuid "da450188-6f5d-479f-8d48-f0688de4197f")
+		)
+		(pin "7"
+			(uuid "05019287-a7fc-4d6f-892a-cb7bddd5fcfa")
+		)
+		(instances
+			(project ""
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574"
+					(reference "U3")
+					(unit 3)
 				)
 			)
 		)
@@ -8806,6 +9490,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part #" "C8465"
+			(at 284.48 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7c7d41cd-19c0-4515-9874-38bef3b34004")
 		)
@@ -8822,8 +9515,8 @@
 		)
 	)
 	(sheet
-		(at 101.6 180.34)
-		(size 22.86 7.62)
+		(at 97.79 180.34)
+		(size 22.86 5.08)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
@@ -8838,7 +9531,7 @@
 		)
 		(uuid "08bbdc8c-2f8e-4da1-ab4d-f5452d4c4cd9")
 		(property "Sheetname" "Power"
-			(at 101.6 179.6284 0)
+			(at 97.79 179.6284 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8847,7 +9540,7 @@
 			)
 		)
 		(property "Sheetfile" "power.kicad_sch"
-			(at 101.6 188.5446 0)
+			(at 97.79 186.0046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8856,7 +9549,7 @@
 			)
 		)
 		(pin "1.8 V" output
-			(at 124.46 186.69 0)
+			(at 120.65 184.15 0)
 			(uuid "adfd0389-deac-47ad-be0e-38e2986cd8ac")
 			(effects
 				(font
@@ -8866,7 +9559,7 @@
 			)
 		)
 		(pin "3.3 V" output
-			(at 124.46 184.15 0)
+			(at 120.65 181.61 0)
 			(uuid "b111242c-25fc-4c86-998f-42ebd6172e72")
 			(effects
 				(font
@@ -8875,19 +9568,9 @@
 				(justify right)
 			)
 		)
-		(pin "5 V" output
-			(at 124.46 181.61 0)
-			(uuid "491bb05d-32dc-4aa9-9d65-10f8832b03be")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(pin "12 V" output
-			(at 101.6 181.61 180)
-			(uuid "71d5fd51-e6fe-424e-b185-8008dad7959d")
+		(pin "5 V" input
+			(at 97.79 181.61 180)
+			(uuid "def08e35-f3d6-4780-9b9e-591e2dd539ac")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9254,7 +9937,7 @@
 			)
 		)
 		(pin "LINN" input
-			(at 246.38 137.16 180)
+			(at 246.38 143.51 180)
 			(uuid "36e94984-3893-4775-bd57-be47e7fc810d")
 			(effects
 				(font
@@ -9264,7 +9947,7 @@
 			)
 		)
 		(pin "LINP" input
-			(at 246.38 134.62 180)
+			(at 246.38 140.97 180)
 			(uuid "d70eaedb-527a-4c0d-aeb7-c591e1adbf86")
 			(effects
 				(font
@@ -9304,7 +9987,7 @@
 			)
 		)
 		(pin "RINN" input
-			(at 246.38 143.51 180)
+			(at 246.38 137.16 180)
 			(uuid "43b88347-52ef-4115-a1fa-12ac5652a934")
 			(effects
 				(font
@@ -9314,7 +9997,7 @@
 			)
 		)
 		(pin "RINP" input
-			(at 246.38 140.97 180)
+			(at 246.38 134.62 180)
 			(uuid "84542960-0a64-4b30-a6d5-fb0cca6e78f9")
 			(effects
 				(font
@@ -9336,6 +10019,16 @@
 		(pin "ROUTP" output
 			(at 279.4 134.62 0)
 			(uuid "997e7f56-6d0c-4c04-a7f5-459dcbe5a508")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "3.3V" input
+			(at 265.43 129.54 90)
+			(uuid "df7de419-f239-49cc-be62-7f2a3bf35a8a")
 			(effects
 				(font
 					(size 1.27 1.27)
