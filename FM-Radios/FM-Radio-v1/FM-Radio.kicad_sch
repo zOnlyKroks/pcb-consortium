@@ -6027,128 +6027,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:+3V3"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+3V3"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+3V3\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "global power"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+3V3_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+3V3_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0)
-					(hide yes)
-					(name "+3V3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power)
 			(pin_numbers
@@ -6502,18 +6380,6 @@
 		)
 	)
 	(junction
-		(at 252.73 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "08f049d4-339c-4787-9eb1-743780c01828")
-	)
-	(junction
-		(at 88.9 153.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0be43a28-56c6-4622-b912-7f4a3ded79b5")
-	)
-	(junction
 		(at 50.165 154.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6610,6 +6476,12 @@
 		(uuid "2f3b73a5-8832-4134-bd59-ccdb15ff69ec")
 	)
 	(junction
+		(at 34.29 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2ff24732-0913-4a96-81c1-c4ca4cdc1526")
+	)
+	(junction
 		(at 142.24 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6650,6 +6522,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5114b173-3f6d-48fb-92f7-49a3fc267a2a")
+	)
+	(junction
+		(at 88.9 153.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "58cf56c7-16f9-42fd-8a02-1cfe15d2f14b")
+	)
+	(junction
+		(at 49.53 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5acb520a-886c-4313-b9ad-b0eb4c7d980f")
 	)
 	(junction
 		(at 17.78 93.98)
@@ -6724,6 +6608,18 @@
 		(uuid "a1da6796-7026-452e-91ee-3b36309e385f")
 	)
 	(junction
+		(at 257.81 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a64dad7b-0365-4207-a11f-d5c86b87d583")
+	)
+	(junction
+		(at 257.81 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ac7ee43d-b168-4406-a360-c18a84a6fa81")
+	)
+	(junction
 		(at 24.13 186.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6734,6 +6630,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b7cf9ab6-86ca-4fd4-8abd-fbcab1cb619f")
+	)
+	(junction
+		(at 265.43 82.55)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba06d655-198f-42d5-9012-fa5b08fb3bd2")
 	)
 	(junction
 		(at 185.42 128.27)
@@ -6766,12 +6668,6 @@
 		(uuid "c5bf9032-e75b-4b28-a082-25eb7cc96136")
 	)
 	(junction
-		(at 252.73 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c9854ee0-b297-48ae-8aaf-a70364704908")
-	)
-	(junction
 		(at 261.62 34.29)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6782,12 +6678,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e528e0f8-a50e-4bf5-b60e-6cdd2b34ecf2")
-	)
-	(junction
-		(at 49.53 44.45)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f2add29f-c1fd-4cb1-b006-582f8d960f6a")
 	)
 	(junction
 		(at 265.43 69.85)
@@ -6806,12 +6696,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f8bf37f1-36d5-42ec-b228-385b6283e99f")
-	)
-	(junction
-		(at 265.43 80.01)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f9e1420d-4797-4032-9b93-a9a5853fe34b")
 	)
 	(junction
 		(at 143.51 34.29)
@@ -6912,16 +6796,6 @@
 			(type default)
 		)
 		(uuid "0524f168-0934-46e9-9494-aa0689ce138a")
-	)
-	(wire
-		(pts
-			(xy 274.32 80.01) (xy 265.43 80.01)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0ac70ac7-4331-4bb0-890c-3f0e33db36cd")
 	)
 	(wire
 		(pts
@@ -7195,6 +7069,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 35.56) (xy 34.29 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e5f7a2d-9f8b-4dee-a46d-9fab2077c86e")
+	)
+	(wire
+		(pts
 			(xy 172.72 67.31) (xy 201.93 67.31)
 		)
 		(stroke
@@ -7235,6 +7119,16 @@
 	)
 	(wire
 		(pts
+			(xy 265.43 82.55) (xy 274.32 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "463afb74-e1d5-41bc-ba14-729ff265072c")
+	)
+	(wire
+		(pts
 			(xy 39.37 162.56) (xy 40.64 162.56)
 		)
 		(stroke
@@ -7245,6 +7139,26 @@
 	)
 	(wire
 		(pts
+			(xy 49.53 35.56) (xy 49.53 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50526d4f-cd7b-4369-bf94-a6673c5bd707")
+	)
+	(wire
+		(pts
+			(xy 255.27 128.27) (xy 257.81 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "514b500f-1b94-498a-b487-bc9d6d7df05f")
+	)
+	(wire
+		(pts
 			(xy 214.63 157.48) (xy 214.63 138.43)
 		)
 		(stroke
@@ -7252,16 +7166,6 @@
 			(type default)
 		)
 		(uuid "51a213cc-f24d-4080-a068-2cc348ae4fd2")
-	)
-	(wire
-		(pts
-			(xy 49.53 20.32) (xy 49.53 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "537688d5-6cb6-4e84-a8bf-f7dfb9f66774")
 	)
 	(wire
 		(pts
@@ -7332,16 +7236,6 @@
 			(type default)
 		)
 		(uuid "61f92b47-1139-4b0d-a597-f8627e9a3d07")
-	)
-	(wire
-		(pts
-			(xy 46.99 44.45) (xy 49.53 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64e56559-9568-44b3-94d4-220cfe8d50b7")
 	)
 	(wire
 		(pts
@@ -7462,6 +7356,16 @@
 			(type default)
 		)
 		(uuid "736049d5-6467-49f9-ba78-41aad4e36126")
+	)
+	(wire
+		(pts
+			(xy 34.29 26.67) (xy 34.29 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75ce886b-f4c7-4d71-ac0c-e0e513f2cb1d")
 	)
 	(wire
 		(pts
@@ -7595,6 +7499,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 35.56) (xy 35.56 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "889ee0bf-8a7d-4ec5-95d8-88697cf897b3")
+	)
+	(wire
+		(pts
 			(xy 142.24 176.53) (xy 138.43 176.53)
 		)
 		(stroke
@@ -7655,6 +7569,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 44.45) (xy 46.99 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "992de91b-f765-41e1-a1ef-8081f1a27e37")
+	)
+	(wire
+		(pts
 			(xy 172.72 69.85) (xy 193.04 69.85)
 		)
 		(stroke
@@ -7692,16 +7616,6 @@
 			(type default)
 		)
 		(uuid "9afaa3ec-2d88-4131-b76b-6633119465ea")
-	)
-	(wire
-		(pts
-			(xy 265.43 80.01) (xy 265.43 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0f50f77-24fb-4ac4-8561-0382317e4590")
 	)
 	(wire
 		(pts
@@ -7802,16 +7716,6 @@
 			(type default)
 		)
 		(uuid "c9c8fc1d-0cd9-4388-800e-49932cea2c92")
-	)
-	(wire
-		(pts
-			(xy 252.73 128.27) (xy 270.51 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cbbb3017-9fb3-4bab-a4a2-a375abb8e109")
 	)
 	(wire
 		(pts
@@ -7965,7 +7869,7 @@
 	)
 	(wire
 		(pts
-			(xy 248.92 128.27) (xy 252.73 128.27)
+			(xy 248.92 128.27) (xy 250.19 128.27)
 		)
 		(stroke
 			(width 0)
@@ -7995,7 +7899,7 @@
 	)
 	(wire
 		(pts
-			(xy 193.04 82.55) (xy 274.32 82.55)
+			(xy 193.04 82.55) (xy 265.43 82.55)
 		)
 		(stroke
 			(width 0)
@@ -8022,6 +7926,16 @@
 			(type default)
 		)
 		(uuid "e473e873-e650-4d9d-a7f0-c752e3f83e7e")
+	)
+	(wire
+		(pts
+			(xy 270.51 111.76) (xy 270.51 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4cb699f-a0d8-4e01-8b84-b981de5886f3")
 	)
 	(wire
 		(pts
@@ -8115,7 +8029,7 @@
 	)
 	(wire
 		(pts
-			(xy 240.03 133.35) (xy 252.73 133.35)
+			(xy 240.03 133.35) (xy 257.81 133.35)
 		)
 		(stroke
 			(width 0)
@@ -8165,7 +8079,7 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 80.01) (xy 265.43 80.01)
+			(xy 251.46 80.01) (xy 274.32 80.01)
 		)
 		(stroke
 			(width 0)
@@ -8182,6 +8096,26 @@
 			(type default)
 		)
 		(uuid "f39e40e8-53fa-41bd-9145-45b92f061ee6")
+	)
+	(wire
+		(pts
+			(xy 257.81 128.27) (xy 270.51 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5b00f5f-63a7-4687-9e3e-0ebcf5f9d9d4")
+	)
+	(wire
+		(pts
+			(xy 43.18 35.56) (xy 49.53 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5b9ab95-08b9-43e6-b54a-a190cbcd5339")
 	)
 	(wire
 		(pts
@@ -8815,71 +8749,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 142.24 176.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "1ad9a1d1-deb1-4b20-a6bc-4830b70881e9")
-		(property "Reference" "#PWR0103"
-			(at 142.24 180.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 142.24 172.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 142.24 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 142.24 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "21eb183b-5ba1-435a-a086-bde43f9ccc17")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
-					(reference "#PWR0103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Personal:SSSS811101")
 		(at 25.4 125.73 0)
 		(unit 1)
@@ -9102,6 +8971,85 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
+		(at 252.73 128.27 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2116fdf7-fa8d-477b-9bf2-51f350e911b9")
+		(property "Reference" "R14"
+			(at 251.4599 125.73 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0 Ohm"
+			(at 253.9999 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 252.73 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 252.73 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 252.73 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C95177"
+			(at 252.73 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "cb6aafaa-0fe0-49e6-98bf-a0b60893d85f")
+		)
+		(pin "2"
+			(uuid "b84ce63d-ee42-49b6-b40c-d9cebe2c073d")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
 		(at 81.28 156.21 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -9244,35 +9192,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 252.73 130.81 0)
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 270.51 106.68 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "274f7f23-61be-4b20-8468-f38728561f7f")
-		(property "Reference" "R12"
-			(at 255.27 129.5399 0)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "562kΩ"
-			(at 255.27 132.0799 0)
+		(uuid "244773b2-1793-42ab-8cbf-5f265e4d9652")
+		(property "Reference" "J7"
+			(at 275.59 107.315 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 252.73 130.81 0)
+		(property "Value" "3V3"
+			(at 273.05 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 270.51 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9281,7 +9227,83 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 252.73 130.81 0)
+			(at 270.51 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 270.51 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C492400"
+			(at 270.51 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f69c4303-6cc5-4504-8594-826ae866e1ea")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 257.81 130.81 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "274f7f23-61be-4b20-8468-f38728561f7f")
+		(property "Reference" "R12"
+			(at 260.35 129.5399 0)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "562kΩ"
+			(at 260.35 132.0799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 257.81 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 257.81 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9290,7 +9312,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 252.73 130.81 0)
+			(at 257.81 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9299,7 +9321,7 @@
 			)
 		)
 		(property "LCSC Part #" "C2849274"
-			(at 252.73 130.81 0)
+			(at 257.81 130.81 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9532,6 +9554,72 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "C12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 49.53 27.94 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2a943051-2a29-4420-8ef5-4a206cfbf623")
+		(property "Reference" "#PWR031"
+			(at 49.53 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 49.53 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 49.53 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "65ed8a08-c733-4d47-bab1-a960cebf0a43")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -9982,7 +10070,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 49.53 20.32 0)
+		(at 34.29 26.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9991,7 +10079,7 @@
 		(fields_autoplaced yes)
 		(uuid "3680d7ca-fb73-41ac-994d-688f7929eb1d")
 		(property "Reference" "#PWR01"
-			(at 49.53 24.13 0)
+			(at 34.29 30.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10000,7 +10088,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 49.53 15.24 0)
+			(at 34.29 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10008,7 +10096,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 49.53 20.32 0)
+			(at 34.29 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10017,7 +10105,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 49.53 20.32 0)
+			(at 34.29 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10026,7 +10114,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 49.53 20.32 0)
+			(at 34.29 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11165,7 +11253,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 252.73 135.89 0)
+		(at 257.81 135.89 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11174,7 +11262,7 @@
 		(fields_autoplaced yes)
 		(uuid "5aaa08fe-bbde-41b3-b994-75cd2e813063")
 		(property "Reference" "R13"
-			(at 255.27 134.6199 0)
+			(at 260.35 134.6199 0)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -11183,7 +11271,7 @@
 			)
 		)
 		(property "Value" "180kΩ"
-			(at 255.27 137.1599 0)
+			(at 260.35 137.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11192,7 +11280,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 252.73 135.89 0)
+			(at 257.81 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11201,7 +11289,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 252.73 135.89 0)
+			(at 257.81 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11210,7 +11298,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 252.73 135.89 0)
+			(at 257.81 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11219,7 +11307,7 @@
 			)
 		)
 		(property "LCSC Part #" "C17501"
-			(at 252.73 135.89 0)
+			(at 257.81 135.89 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11237,6 +11325,72 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "R13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 115.57 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "5c106f68-4c85-4eb5-be1f-431b8f41a108")
+		(property "Reference" "#PWR021"
+			(at 115.57 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 115.57 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 115.57 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115.57 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 115.57 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "48f639c1-5a99-42e8-9050-b4423cd3b52d")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -11409,7 +11563,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 252.73 138.43 0)
+		(at 257.81 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11417,7 +11571,7 @@
 		(dnp no)
 		(uuid "65bde1d6-2e5b-47f6-959d-3c040c0ed33c")
 		(property "Reference" "#PWR041"
-			(at 252.73 144.78 0)
+			(at 257.81 144.78 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11426,7 +11580,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 252.857 142.8242 0)
+			(at 257.937 142.8242 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11434,7 +11588,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 252.73 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11443,7 +11597,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 252.73 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11452,7 +11606,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 252.73 138.43 0)
+			(at 257.81 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11596,71 +11750,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "67469f85-f969-4236-a993-095c564cc83d")
-		(property "Reference" "#PWR0101"
-			(at 88.9 130.81 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c488349e-4387-4f8c-b7f7-9a01abf30658")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
-					(reference "#PWR0101")
 					(unit 1)
 				)
 			)
@@ -12303,6 +12392,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 16.51 125.73 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "726d5524-53c2-4dc0-b326-a746132ce32c")
+		(property "Reference" "#PWR039"
+			(at 16.51 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 16.51 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 16.51 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5d97092e-94da-49a4-af2e-f0b729d4db57")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 279.4 67.31 0)
 		(unit 1)
@@ -12383,7 +12538,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 265.43 88.9 0)
+		(at 265.43 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12391,7 +12546,7 @@
 		(dnp no)
 		(uuid "78d28804-ca93-495e-a6ea-6039f7f86902")
 		(property "Reference" "#PWR020"
-			(at 265.43 95.25 0)
+			(at 265.43 96.52 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12400,7 +12555,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 265.557 93.2942 0)
+			(at 265.557 94.5642 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12408,7 +12563,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 265.43 88.9 0)
+			(at 265.43 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12417,7 +12572,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 265.43 88.9 0)
+			(at 265.43 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12426,7 +12581,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 265.43 88.9 0)
+			(at 265.43 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12440,6 +12595,72 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 88.9 127 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7a3ec392-e435-4076-a115-595c6db0b685")
+		(property "Reference" "#PWR033"
+			(at 88.9 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 88.9 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 88.9 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f7110c81-8a07-4f90-99f0-1c10098e84a6")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -12720,6 +12941,151 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:FerriteBead")
+		(at 39.37 35.56 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8a91400e-80d0-4d3a-bdba-ce75dd10eb6f")
+		(property "Reference" "FB5"
+			(at 38.0491 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "120Ohm 2A"
+			(at 40.5891 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 39.37 37.338 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 39.37 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Ferrite bead"
+			(at 39.37 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C356986"
+			(at 39.37 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "fe8f1b18-ebf8-4cc9-89b2-07098ccecbc4")
+		)
+		(pin "1"
+			(uuid "5149c49a-ab90-4acb-b2c3-c286e3ea56fb")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "FB5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 88.9 153.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8cc13f1c-6d7d-4655-9f95-7f7b8dac4efa")
+		(property "Reference" "#PWR09"
+			(at 88.9 157.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 88.9 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 88.9 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 88.9 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 88.9 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "59b0d4bb-8a5b-4581-9bca-67ad623b32da")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 152.4 90.17 0)
 		(unit 1)
@@ -12923,6 +13289,72 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 142.24 176.53 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9570a1c8-a5a2-4c45-9261-3e322ac736b4")
+		(property "Reference" "#PWR032"
+			(at 142.24 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 142.24 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 142.24 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "79fb4087-5852-4ebb-8d7b-00875ba29ac1")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -13237,7 +13669,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 265.43 85.09 0)
+		(at 265.43 86.36 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13245,7 +13677,7 @@
 		(dnp no)
 		(uuid "9b41d4d0-c21c-4949-9f0b-7fdf7d9f0e10")
 		(property "Reference" "C26"
-			(at 268.351 83.9216 0)
+			(at 268.351 85.1916 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13254,7 +13686,7 @@
 			)
 		)
 		(property "Value" "220pF"
-			(at 268.351 86.233 0)
+			(at 268.351 87.503 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13263,7 +13695,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 266.3952 88.9 0)
+			(at 266.3952 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13272,7 +13704,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 265.43 85.09 0)
+			(at 265.43 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13281,7 +13713,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 265.43 85.09 0)
+			(at 265.43 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13289,7 +13721,7 @@
 			)
 		)
 		(property "LCSC" "C1603"
-			(at 265.43 85.09 0)
+			(at 265.43 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13298,7 +13730,7 @@
 			)
 		)
 		(property "JlcRotOffset" ""
-			(at 265.43 85.09 0)
+			(at 265.43 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13651,6 +14083,92 @@
 			(project ""
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "J6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 49.53 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a3a6c28d-5ff7-43bb-ac83-54709f4a88f5")
+		(property "Reference" "C27"
+			(at 52.451 30.5816 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 52.451 32.893 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 50.4952 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 49.53 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 49.53 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "28c32e40-97df-45b8-ad60-43e7a50657a9")
+		)
+		(pin "2"
+			(uuid "e4fd21a5-f7fb-4055-978e-c100715cf797")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -15648,71 +16166,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 115.57 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e3bc597a-ebd6-4d35-93fe-36c03a444bec")
-		(property "Reference" "#PWR021"
-			(at 115.57 132.08 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 115.57 124.46 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 115.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 115.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 115.57 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d44d82bb-8204-436c-b797-7b6eb53f3642")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
-					(reference "#PWR021")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 251.46 63.5 0)
 		(unit 1)
@@ -16064,135 +16517,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR036")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 16.51 125.73 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "e9fc5b9d-58b0-4f61-8ecf-848e4d79f12a")
-		(property "Reference" "#PWR067"
-			(at 16.51 129.54 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 16.51 121.92 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 16.51 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 16.51 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 16.51 125.73 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2b8de201-45f7-4018-a61b-b1b64bebc4cb")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
-					(reference "#PWR067")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 88.9 153.67 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ea9b190e-e388-4a67-957c-f6a8d4ae42f6")
-		(property "Reference" "#PWR09"
-			(at 88.9 157.48 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 88.9 149.86 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 88.9 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 88.9 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 88.9 153.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "00281e51-8c26-4e0c-886e-30aeb4618ee5")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
-					(reference "#PWR09")
 					(unit 1)
 				)
 			)
