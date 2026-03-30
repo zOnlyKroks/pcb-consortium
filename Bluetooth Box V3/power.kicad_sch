@@ -145,6 +145,143 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:AMS1117-1.8"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AMS1117-1.8"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+				(at 2.54 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "1A Low Dropout regulator, positive, 1.8V fixed output, SOT-223"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?223*TabPin2*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "AMS1117-1.8_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "AMS1117-1.8_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:AZ1117-3.3"
 			(pin_names
 				(offset 0.254)
@@ -229,143 +366,6 @@
 				)
 			)
 			(symbol "AZ1117-3.3_1_1"
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "VI"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -7.62 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "VO"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Regulator_Linear:NCP1117-1.8_SOT223"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "U"
-				(at -3.81 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "NCP1117-1.8_SOT223"
-				(at 0 3.175 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF"
-				(at 2.54 -6.35 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "1A Low drop-out regulator, Fixed Output 1.8V, SOT-223"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "REGULATOR LDO 1.8V"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "SOT?223*TabPin2*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "NCP1117-1.8_SOT223_0_1"
-				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "NCP1117-1.8_SOT223_1_1"
 				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
@@ -526,6 +526,12 @@
 		)
 	)
 	(junction
+		(at 102.87 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "179f3fa9-ebd0-40e6-86c6-b7485089ee77")
+	)
+	(junction
 		(at 82.55 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -538,16 +544,10 @@
 		(uuid "81d9ae91-71a2-473a-904a-89c45d946ff8")
 	)
 	(junction
-		(at 102.87 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "bcb3e4e0-67f8-48b4-8ad0-90a427684d75")
-	)
-	(junction
 		(at 118.11 77.47)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c38830c7-4c0b-407d-87c9-90b054ca6b10")
+		(uuid "b5c65d72-1fe2-45bd-8414-58c697c477e6")
 	)
 	(junction
 		(at 67.31 77.47)
@@ -749,6 +749,15 @@
 			)
 		)
 		(property "Description" "1A 20V Fixed LDO Linear Regulator, 3.3V, SOT-89/SOT-223/TO-220/TO-252/TO-263"
+			(at 74.93 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C362112"
 			(at 74.93 77.47 0)
 			(effects
 				(font
@@ -1415,7 +1424,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:NCP1117-1.8_SOT223")
+		(lib_id "Regulator_Linear:AMS1117-1.8")
 		(at 110.49 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -1423,8 +1432,8 @@
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bc13dfdf-3c95-43de-9ac4-f20467151142")
-		(property "Reference" "U9"
+		(uuid "de99039f-6a25-402e-b576-f8aced7b35a4")
+		(property "Reference" "U4"
 			(at 110.49 71.12 0)
 			(effects
 				(font
@@ -1432,7 +1441,7 @@
 				)
 			)
 		)
-		(property "Value" "NCP1117-1.8_SOT223"
+		(property "Value" "AMS1117-1.8"
 			(at 110.49 73.66 0)
 			(effects
 				(font
@@ -1449,7 +1458,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.onsemi.com/pub_link/Collateral/NCP1117-D.PDF"
+		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
 			(at 113.03 83.82 0)
 			(effects
 				(font
@@ -1458,7 +1467,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "1A Low drop-out regulator, Fixed Output 1.8V, SOT-223"
+		(property "Description" "1A Low Dropout regulator, positive, 1.8V fixed output, SOT-223"
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C46473009"
 			(at 110.49 77.47 0)
 			(effects
 				(font
@@ -1468,18 +1486,18 @@
 			)
 		)
 		(pin "3"
-			(uuid "83ca3807-dedd-4b47-91c8-f83afde25f72")
+			(uuid "b20f1be7-cc2d-4c3a-929a-f92481b5799c")
 		)
 		(pin "1"
-			(uuid "5cc66963-edde-43b6-a084-92333c21fa12")
+			(uuid "2cec7b73-41f0-499b-a1fb-6467b2dcb2ea")
 		)
 		(pin "2"
-			(uuid "5398bd31-ad7c-49f7-a670-c424496ae8be")
+			(uuid "7577081f-fc74-44eb-8612-00b8abdae6fb")
 		)
 		(instances
 			(project ""
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/08bbdc8c-2f8e-4da1-ab4d-f5452d4c4cd9"
-					(reference "U9")
+					(reference "U4")
 					(unit 1)
 				)
 			)

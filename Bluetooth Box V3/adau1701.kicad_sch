@@ -1402,6 +1402,179 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Crystal"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "Y"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Crystal"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Two pin crystal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "quartz ceramic resonator oscillator"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Crystal*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Crystal_0_1"
+				(polyline
+					(pts
+						(xy -2.54 0) (xy -1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.905 -1.27) (xy -1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.143 2.54)
+					(end 1.143 -2.54)
+					(stroke
+						(width 0.3048)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.905 -1.27) (xy 1.905 1.27)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0) (xy 1.905 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Crystal_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:R"
 			(pin_numbers
 				(hide yes)
@@ -1634,194 +1807,6 @@
 					(at 0 -2.54 90)
 					(length 0.762)
 					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Personal:ABM3B-12.288MHZ-B2-T"
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "Y"
-				(at 29.21 7.62 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Value" "ABM3B-12.288MHZ-B2-T"
-				(at 29.21 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-				)
-			)
-			(property "Footprint" "ABM3B"
-				(at 29.21 -94.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "https://abracon.com/Resonators/abm3b.pdf"
-				(at 29.21 -194.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Description" "12.288 MHz +/-20ppm Crystal 18pF 70 Ohms 4-SMD, No Lead"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Height" "1.1"
-				(at 29.21 -394.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Mouser Part Number" "815-ABM3B-12.288-B2T"
-				(at 29.21 -494.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/ABRACON/ABM3B-12.288MHZ-B2-T?qs=H8AWquzS%2FlOF4k01klAYaw%3D%3D"
-				(at 29.21 -594.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Name" "ABRACON"
-				(at 29.21 -694.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(property "Manufacturer_Part_Number" "ABM3B-12.288MHZ-B2-T"
-				(at 29.21 -794.92 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left top)
-					(hide yes)
-				)
-			)
-			(symbol "ABM3B-12.288MHZ-B2-T_1_1"
-				(rectangle
-					(start 5.08 2.54)
-					(end 27.94 -5.08)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "GND_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 0)
-					(length 5.08)
-					(name "XTAL_1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 0 180)
-					(length 5.08)
-					(name "XTAL_2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 33.02 -2.54 180)
-					(length 5.08)
-					(name "GND_1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2189,22 +2174,28 @@
 		)
 	)
 	(junction
+		(at 95.25 83.82)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f1f64a2-573c-4055-a810-4ea1c16ab460")
+	)
+	(junction
 		(at 83.82 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2a98c30e-835d-4592-aaff-72e68a1fd1ee")
 	)
 	(junction
+		(at 161.29 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2bc94dd1-26a5-4683-868f-239fc9e91f55")
+	)
+	(junction
 		(at 153.67 83.82)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3221f281-e874-405f-b7b7-be565b7d9448")
-	)
-	(junction
-		(at 59.69 49.53)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "33d35a92-a034-436c-962a-62f701336f55")
 	)
 	(junction
 		(at 142.24 121.92)
@@ -2261,6 +2252,12 @@
 		(uuid "a586fbcf-ccdf-45a7-a423-0291d32709ee")
 	)
 	(junction
+		(at 95.25 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b24c6814-704e-4e77-8cd2-a65b3589d0e4")
+	)
+	(junction
 		(at 85.09 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2271,12 +2268,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cd749321-6a88-4b4d-9e4e-349e30d02a8e")
-	)
-	(junction
-		(at 26.67 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d140c4ab-a539-4d9e-87a6-cce33d44bb37")
 	)
 	(junction
 		(at 99.06 132.08)
@@ -2303,6 +2294,10 @@
 	(no_connect
 		(at 139.7 76.2)
 		(uuid "4b6e8dba-7154-4401-ad8f-5ae204806ff8")
+	)
+	(no_connect
+		(at 91.44 119.38)
+		(uuid "627ba8e5-3a4c-4a1b-961b-d3b6afcb8032")
 	)
 	(no_connect
 		(at 104.14 73.66)
@@ -2384,26 +2379,6 @@
 	)
 	(wire
 		(pts
-			(xy 64.77 49.53) (xy 59.69 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2343c96f-e414-4dfc-a56c-c089f0f6b7ba")
-	)
-	(wire
-		(pts
-			(xy 91.44 114.3) (xy 95.25 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24ad50cb-718f-49ac-b195-3baa04577655")
-	)
-	(wire
-		(pts
 			(xy 55.88 86.36) (xy 55.88 91.44)
 		)
 		(stroke
@@ -2424,16 +2399,6 @@
 	)
 	(wire
 		(pts
-			(xy 24.13 52.07) (xy 26.67 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "340f51be-d076-4212-89ef-90721334f423")
-	)
-	(wire
-		(pts
 			(xy 124.46 60.96) (xy 127 60.96)
 		)
 		(stroke
@@ -2451,6 +2416,16 @@
 			(type default)
 		)
 		(uuid "37a3264e-0e4b-4b36-9bc1-f5f8be746cbe")
+	)
+	(wire
+		(pts
+			(xy 161.29 111.76) (xy 163.83 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c34d30f-f9e7-42d0-81a6-4007d3e09e7c")
 	)
 	(wire
 		(pts
@@ -2494,6 +2469,26 @@
 	)
 	(wire
 		(pts
+			(xy 102.87 81.28) (xy 104.14 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a4331f7-7952-4c63-bfb4-ea64c03a7e6f")
+	)
+	(wire
+		(pts
+			(xy 91.44 114.3) (xy 104.14 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51e693a5-7527-4b22-92fd-8099fe1552cb")
+	)
+	(wire
+		(pts
 			(xy 153.67 81.28) (xy 153.67 83.82)
 		)
 		(stroke
@@ -2504,7 +2499,7 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 81.28) (xy 104.14 83.82)
+			(xy 102.87 81.28) (xy 102.87 83.82)
 		)
 		(stroke
 			(width 0)
@@ -2574,13 +2569,13 @@
 	)
 	(wire
 		(pts
-			(xy 72.39 76.2) (xy 102.87 76.2)
+			(xy 95.25 83.82) (xy 102.87 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8673529e-55df-4300-a577-ee478b44a6f3")
+		(uuid "8706367b-8a12-4bb9-b885-efccfbaa92c7")
 	)
 	(wire
 		(pts
@@ -2634,16 +2629,6 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 114.3) (xy 104.14 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "97b36f63-02ea-45c0-99a8-f10540ba3840")
-	)
-	(wire
-		(pts
 			(xy 83.82 109.22) (xy 104.14 109.22)
 		)
 		(stroke
@@ -2654,26 +2639,6 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 83.82) (xy 104.14 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a892f994-346d-41a3-947a-93f3421c82da")
-	)
-	(wire
-		(pts
-			(xy 68.58 62.23) (xy 26.67 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad0aed42-eb8a-4f62-aea6-2514d3dff364")
-	)
-	(wire
-		(pts
 			(xy 139.7 83.82) (xy 153.67 83.82)
 		)
 		(stroke
@@ -2681,26 +2646,6 @@
 			(type default)
 		)
 		(uuid "b09818cd-29d4-45af-946b-36baf2d4f925")
-	)
-	(wire
-		(pts
-			(xy 72.39 49.53) (xy 72.39 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b13d1f82-b62a-4643-9666-361bf8517309")
-	)
-	(wire
-		(pts
-			(xy 68.58 83.82) (xy 68.58 62.23)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bc99e6a1-f664-4914-ae86-4c3a7cc7a161")
 	)
 	(wire
 		(pts
@@ -2744,6 +2689,16 @@
 	)
 	(wire
 		(pts
+			(xy 139.7 111.76) (xy 161.29 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2d44430-e5ce-43fd-98d8-377aa1d909e8")
+	)
+	(wire
+		(pts
 			(xy 102.87 76.2) (xy 102.87 78.74)
 		)
 		(stroke
@@ -2781,16 +2736,6 @@
 			(type default)
 		)
 		(uuid "e55630ba-0469-48ff-ae84-55a6b34d049f")
-	)
-	(wire
-		(pts
-			(xy 26.67 62.23) (xy 26.67 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ee910418-2ba3-49ba-b6b9-95c048e8e4b9")
 	)
 	(wire
 		(pts
@@ -2890,7 +2835,7 @@
 	)
 	(hierarchical_label "AUX_ADC0"
 		(shape input)
-		(at 139.7 111.76 0)
+		(at 163.83 111.76 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3078,6 +3023,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 161.29 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0d5f9a8c-89f1-450c-9a16-d459e4c9d33b")
+		(property "Reference" "#PWR040"
+			(at 161.29 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 161.29 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 161.29 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 161.29 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a5d870e-c81b-4459-ba89-01761f2467be")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "#PWR040")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 124.46 127 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3189,6 +3200,15 @@
 			)
 		)
 		(property "Description" "SigmaDSP 28-/56-Bit Audio Processor with Two ADCs and Four DACs, 50 MIPS, 1kword Program RAM, 2kword Data RAM, LQFP-48"
+			(at 121.92 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C389590"
 			(at 121.92 93.98 0)
 			(effects
 				(font
@@ -3483,6 +3503,71 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 87.63 76.2 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2be82050-b91a-4e6a-b987-d4963bffb221")
+		(property "Reference" "#PWR037"
+			(at 81.28 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 84.074 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 87.63 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e5ba1e9b-5882-4206-8337-1a1d09530b59")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 104.14 101.6 270)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3694,6 +3779,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 87.63 83.82 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3acb123e-a917-47b7-9e9f-10ce965c43a4")
+		(property "Reference" "#PWR038"
+			(at 81.28 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 83.82 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 87.63 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 87.63 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "704624ee-4c6e-40f1-8a66-648d873d9f6d")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "#PWR038")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 127 53.34 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3758,16 +3909,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 59.69 41.91 180)
+		(lib_id "Device:C")
+		(at 161.29 115.57 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3f2b14f0-8693-45cf-8980-2528d5af0fbb")
-		(property "Reference" "#PWR056"
-			(at 59.69 35.56 0)
+		(uuid "40926aa1-d7df-47f9-9d4e-cfbdea66dc00")
+		(property "Reference" "C14"
+			(at 157.48 114.2999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 157.48 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 162.2552 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3775,16 +3945,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 59.69 38.1 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 41.91 0)
+		(property "Datasheet" "~"
+			(at 161.29 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3792,8 +3954,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 59.69 41.91 0)
+		(property "Description" "Unpolarized capacitor"
+			(at 161.29 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3801,8 +3963,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 41.91 0)
+		(property "LCSC Part #" "C49678"
+			(at 161.29 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3811,12 +3973,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "77266b6d-2b3d-44f1-ae65-de30b929c484")
+			(uuid "e03138e1-0f05-43ea-b84f-c7ca75c78a11")
+		)
+		(pin "2"
+			(uuid "8c1c5a77-e418-427b-9251-03cae862219b")
 		)
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "#PWR056")
+					(reference "C14")
 					(unit 1)
 				)
 			)
@@ -3963,6 +4128,85 @@
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
 					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Crystal")
+		(at 95.25 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "49d7446e-25bf-4f19-b110-403ee33c282b")
+		(property "Reference" "Y2"
+			(at 99.06 78.7399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "Crystal"
+			(at 99.06 81.2799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm"
+			(at 95.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 95.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Two pin crystal"
+			(at 95.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C41383238"
+			(at 95.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c5464ba6-3870-4934-81d3-836afb0e8797")
+		)
+		(pin "2"
+			(uuid "334908e9-238a-4c02-bb26-89317ab68614")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "Y2")
 					(unit 1)
 				)
 			)
@@ -4405,71 +4649,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 16.51 52.07 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "59039fc6-c0e5-44d7-9548-1dfe2fcc34ec")
-		(property "Reference" "#PWR054"
-			(at 10.16 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 12.954 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 16.51 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 16.51 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 16.51 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "54f48185-d495-42e8-aa27-5185c568be48")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "#PWR054")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C")
 		(at 121.92 57.15 0)
 		(mirror x)
@@ -4905,6 +5084,72 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 66.04 119.38 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "727802ac-9546-4ae7-9e1c-da458a273f08")
+		(property "Reference" "#PWR039"
+			(at 59.69 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 62.23 118.872 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 66.04 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 66.04 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8e1a5955-3daf-49a8-83bb-b02f23e9946d")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 116.84 127 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -5210,15 +5455,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 59.69 45.72 0)
+		(at 91.44 76.2 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "89dc14b0-cd0b-4926-a787-f189bcc0404b")
-		(property "Reference" "C40"
-			(at 62.23 44.45 0)
+		(uuid "8f9d5dab-84d7-4c0c-94df-aeacc4a21478")
+		(property "Reference" "C12"
+			(at 90.17 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5226,8 +5471,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22 pF"
-			(at 61.976 46.228 0)
+		(property "Value" "12 pF"
+			(at 91.948 73.914 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5236,7 +5481,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 60.6552 49.53 0)
+			(at 95.25 75.2348 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5245,7 +5490,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 45.72 0)
+			(at 91.44 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5254,7 +5499,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 59.69 45.72 0)
+			(at 91.44 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5262,8 +5507,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C1804"
-			(at 59.69 45.72 0)
+		(property "LCSC Part #" "C107108"
+			(at 91.44 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5272,15 +5517,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "869e69fc-fc94-4f9f-96b8-56a1adab2287")
+			(uuid "cba736a1-4f94-4ffa-819b-0892acb98061")
 		)
 		(pin "2"
-			(uuid "7023a355-8584-4963-96c2-181e3131ed07")
+			(uuid "bd740729-0259-4930-bc66-e7a6b52ab5cd")
 		)
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "C40")
+					(reference "C12")
 					(unit 1)
 				)
 			)
@@ -5346,6 +5591,85 @@
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
 					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 91.44 83.82 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "96de7d0b-b45c-4f71-9a09-4f6afa554cb8")
+		(property "Reference" "C13"
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "12 pF"
+			(at 91.948 86.106 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 95.25 84.7852 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 91.44 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 91.44 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part #" "C107108"
+			(at 91.44 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81cd16d6-b971-4ed5-b748-5e11f689ba90")
+		)
+		(pin "2"
+			(uuid "63794bd8-02cb-48b7-bc26-3ee3741a1399")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
+					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -5512,34 +5836,32 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 20.32 52.07 90)
+		(lib_id "Device:R_Small")
+		(at 68.58 119.38 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b1151539-4c25-4196-a846-d119596f78ec")
-		(property "Reference" "C37"
-			(at 19.05 49.53 0)
+		(uuid "a9a50fbe-2a78-4198-8917-82b05cc01145")
+		(property "Reference" "R15"
+			(at 68.58 119.38 90)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10 kΩ"
+			(at 68.58 116.84 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "22 pF"
-			(at 20.828 49.784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 24.13 51.1048 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 68.58 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5548,7 +5870,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 20.32 52.07 0)
+			(at 68.58 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5556,8 +5878,8 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Unpolarized capacitor"
-			(at 20.32 52.07 0)
+		(property "Description" "Resistor, small symbol"
+			(at 68.58 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5565,8 +5887,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part #" "C1804"
-			(at 20.32 52.07 0)
+		(property "LCSC Part #" "C84376"
+			(at 68.58 119.38 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5575,80 +5897,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "8a69e584-7ac8-4c17-acb2-8c8c23b5ac3d")
+			(uuid "f57d56e5-bbdb-488c-b708-e2dde703816a")
 		)
 		(pin "2"
-			(uuid "a9091b0b-eba4-4969-b046-69a7f693c4a1")
+			(uuid "1fa18431-0fc1-47a2-a4ec-5a78beab55bc")
 		)
 		(instances
 			(project "Bluetooth Box V3"
 				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "C37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 59.69 52.07 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b594a324-2109-4e6a-9d8a-6e4f7f9d42eb")
-		(property "Reference" "#PWR057"
-			(at 59.69 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 63.754 56.388 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 59.69 52.07 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "c0f26946-ef9b-4ee0-9b12-75f44a6829f9")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "#PWR057")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -5734,73 +5991,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 26.67 49.53 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba4b259b-b598-48d1-8f34-2b122629797c")
-		(property "Reference" "#PWR055"
-			(at 26.67 43.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 26.67 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 26.67 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 26.67 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 26.67 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "6955c702-c318-469e-ac83-4604fb7815ed")
-		)
-		(instances
-			(project "Bluetooth Box V3"
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "#PWR055")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
-		(at 71.12 119.38 90)
+		(at 66.04 114.3 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5809,7 +6001,7 @@
 		(fields_autoplaced yes)
 		(uuid "c1b97069-f0f8-4cea-b20e-22dab08e4b58")
 		(property "Reference" "#PWR065"
-			(at 74.93 119.38 0)
+			(at 69.85 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5818,7 +6010,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 67.31 119.3799 90)
+			(at 62.23 114.2999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5827,7 +6019,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 71.12 119.38 0)
+			(at 66.04 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5836,7 +6028,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 119.38 0)
+			(at 66.04 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5845,7 +6037,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 71.12 119.38 0)
+			(at 66.04 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6144,7 +6336,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 68.58 49.53 90)
+		(at 99.06 76.2 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6152,7 +6344,7 @@
 		(dnp no)
 		(uuid "ef5d005c-2365-454d-89f6-f216521ac37f")
 		(property "Reference" "R21"
-			(at 68.58 48.514 0)
+			(at 99.06 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6161,7 +6353,7 @@
 			)
 		)
 		(property "Value" "100 Ω"
-			(at 71.12 48.514 0)
+			(at 101.6 75.184 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6170,7 +6362,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 68.58 51.308 90)
+			(at 99.06 77.978 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6179,7 +6371,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 68.58 49.53 0)
+			(at 99.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6188,7 +6380,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 68.58 49.53 0)
+			(at 99.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6197,7 +6389,7 @@
 			)
 		)
 		(property "LCSC Part #" "C17408"
-			(at 68.58 49.53 0)
+			(at 99.06 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6377,132 +6569,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Personal:ABM3B-12.288MHZ-B2-T")
-		(at 26.67 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f44994c6-c5af-48af-a40d-b4806b7d1bb8")
-		(property "Reference" "Y1"
-			(at 43.18 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "ABM3B-12.288MHZ-B2-T"
-			(at 43.18 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "ABM3B-12.288MHZ-B2-T:ABM3B"
-			(at 55.88 144.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://abracon.com/Resonators/abm3b.pdf"
-			(at 55.88 244.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Description" "12.288 MHz +/-20ppm Crystal 18pF 70 Ohms 4-SMD, No Lead"
-			(at 26.67 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Height" "1.1"
-			(at 55.88 444.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "815-ABM3B-12.288-B2T"
-			(at 55.88 544.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/ABRACON/ABM3B-12.288MHZ-B2-T?qs=H8AWquzS%2FlOF4k01klAYaw%3D%3D"
-			(at 55.88 644.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Name" "ABRACON"
-			(at 55.88 744.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer_Part_Number" "ABM3B-12.288MHZ-B2-T"
-			(at 55.88 844.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "35cbc34c-577b-4801-ba4e-e8c36c2cbd4c")
-		)
-		(pin "4"
-			(uuid "4b0bc6a7-0e9a-43e9-bcde-cdcb95207696")
-		)
-		(pin "3"
-			(uuid "9697926d-9b8d-4ede-abb8-0d5443dfc3fa")
-		)
-		(pin "2"
-			(uuid "6482a5c9-405b-43c1-af20-3320bbbd4267")
-		)
-		(instances
-			(project ""
-				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/5d959d84-c63b-4338-90e5-a932a984f044"
-					(reference "Y1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+3V3")
 		(at 93.98 93.98 90)
 		(unit 1)
@@ -6635,7 +6701,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 97.79 114.3 90)
+		(at 68.58 114.3 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6643,7 +6709,7 @@
 		(dnp no)
 		(uuid "fe75481a-e390-44b7-b0ad-c4bf5d2cbd53")
 		(property "Reference" "R25"
-			(at 97.79 114.3 90)
+			(at 68.58 114.3 90)
 			(effects
 				(font
 					(size 1.016 1.016)
@@ -6651,7 +6717,7 @@
 			)
 		)
 		(property "Value" "10 kΩ"
-			(at 97.79 111.76 90)
+			(at 68.58 111.76 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6659,7 +6725,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 97.79 114.3 0)
+			(at 68.58 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6668,7 +6734,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 97.79 114.3 0)
+			(at 68.58 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6677,7 +6743,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 97.79 114.3 0)
+			(at 68.58 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6686,7 +6752,7 @@
 			)
 		)
 		(property "LCSC Part #" "C84376"
-			(at 97.79 114.3 90)
+			(at 68.58 114.3 90)
 			(effects
 				(font
 					(size 1.27 1.27)
