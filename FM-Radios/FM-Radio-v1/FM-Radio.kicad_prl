@@ -15,6 +15,7 @@
       "vias": 1.0,
       "zones": 0.6
     },
+    "prototype_zone_fills": false,
     "selection_filter": {
       "dimensions": false,
       "footprints": false,
@@ -26,7 +27,7 @@
       "text": false,
       "tracks": true,
       "vias": true,
-      "zones": true
+      "zones": false
     },
     "visible_items": [
       "vias",
@@ -74,6 +75,8 @@
       false,
       false,
       false,
+      false,
+      false,
       false
     ],
     "col_order": [
@@ -86,19 +89,23 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11
     ],
     "col_widths": [
       162,
       147,
       91,
-      67,
+      72,
+      91,
+      100,
+      91,
+      76,
       91,
       91,
-      91,
-      71,
-      91,
-      91
+      95,
+      95
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
@@ -107,6 +114,7 @@
     "filter_text": "",
     "group_by_constraint": false,
     "group_by_netclass": false,
+    "show_time_domain_details": false,
     "show_unconnected_nets": false,
     "show_zero_pad_nets": false,
     "sort_ascending": true,
@@ -117,6 +125,7 @@
     "files": []
   },
   "schematic": {
+    "hierarchy_collapsed": [],
     "selection_filter": {
       "graphics": true,
       "images": true,
@@ -124,6 +133,7 @@
       "lockedItems": false,
       "otherItems": true,
       "pins": true,
+      "ruleAreas": true,
       "symbols": true,
       "text": true,
       "wires": true
