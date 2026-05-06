@@ -39,9 +39,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.0,
-          "height": 3.7592,
-          "width": 3.7592
+          "drill": 0.3,
+          "height": 0.6,
+          "width": 0.6
         },
         "silk_line_width": 0.1,
         "silk_text_italic": false,
@@ -54,7 +54,12 @@
         }
       },
       "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|71635000|71650000|bfb39e82-ee7c-4eda-85ce-060e3b386fdd|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -98,9 +103,9 @@
         "padstack": "warning",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_edge_clearance": "warning",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_edge_clearance": "ignore",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "solder_mask_bridge": "error",
         "starved_thermal": "error",
@@ -719,7 +724,7 @@
         "uuid": "c5f2915a-1379-46bf-9932-ae9df9d21574"
       }
     ],
-    "used_designators": "#PWR27,#PWR43,#PWR45-48,#PWR84,#PWR86,J6,R26,TP6-7,U6,C15,C59,Y3",
+    "used_designators": "#PWR20,#PWR23-24,#PWR49,#PWR54-56",
     "variants": []
   },
   "sheets": [
