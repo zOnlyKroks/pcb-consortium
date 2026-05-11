@@ -960,6 +960,38 @@
 		(color 0 0 0 0)
 		(uuid "1ab289bf-a984-4cdf-8e08-fa3eb7330916")
 	)
+	(junction
+		(at 115.57 66.04)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3cfdc8d6-36a6-4963-a70c-e6531d33ac86")
+	)
+	(junction
+		(at 115.57 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e39d3086-4c8f-48c4-aa27-e056f1359fe4")
+	)
+	(wire
+		(pts
+			(xy 115.57 66.04) (xy 116.84 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1821d7c5-a662-4ab0-8908-9cd5c10e9ae2")
+	)
+	(wire
+		(pts
+			(xy 115.57 57.15) (xy 115.57 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3437f1e1-1c08-4917-a576-91d8399d12da")
+	)
 	(wire
 		(pts
 			(xy 95.25 92.71) (xy 106.68 92.71)
@@ -1012,13 +1044,23 @@
 	)
 	(wire
 		(pts
-			(xy 114.3 66.04) (xy 116.84 66.04)
+			(xy 114.3 66.04) (xy 115.57 66.04)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dac29a9e-79a2-4e2d-934e-5eba85778cd2")
+		(uuid "d8490f84-b062-419f-be17-77d7b9b00f34")
+	)
+	(wire
+		(pts
+			(xy 115.57 66.04) (xy 115.57 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f58d1e00-0503-4729-9d5c-b855c8c5a202")
 	)
 	(wire
 		(pts
@@ -1029,17 +1071,6 @@
 			(type default)
 		)
 		(uuid "fa78714b-9ad2-4783-ae37-97ff40d3da27")
-	)
-	(hierarchical_label "3.3V"
-		(shape input)
-		(at 115.57 66.04 90)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "3fc7b77a-c812-4915-8c07-b108d80f3714")
 	)
 	(hierarchical_label "RX"
 		(shape output)
@@ -1084,6 +1115,184 @@
 			(justify left)
 		)
 		(uuid "c368f9e9-58d8-4aff-98ab-a5932b357b58")
+	)
+	(hierarchical_label "3.3V"
+		(shape input)
+		(at 115.57 57.15 90)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "da7f8f30-2cdf-4abe-a318-60949735b249")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 119.38 62.23 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5e0dd3b8-37aa-4789-aa9d-4790684e663e")
+		(property "Reference" "C79"
+			(at 122.428 55.626 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 122.428 58.166 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 115.57 61.2648 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 119.38 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 119.38 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b24ed766-9cca-4598-ba03-e154bc5c7fc0")
+		)
+		(pin "2"
+			(uuid "8f597a45-9039-4123-afd4-27bc941cc3bc")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/1a2481a2-5ae9-408f-bbde-c21184b72b5d"
+					(reference "C79")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 123.19 62.23 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "61003204-b1eb-47b6-bfd0-706f6a5ee74a")
+		(property "Reference" "#PWR057"
+			(at 129.54 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 127.5842 62.103 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 123.19 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 123.19 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 123.19 62.23 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "172948de-fb0a-4f4a-8cc4-2e679c103288")
+		)
+		(instances
+			(project "Bluetooth Box V3"
+				(path "/c5f2915a-1379-46bf-9932-ae9df9d21574/1a2481a2-5ae9-408f-bbde-c21184b72b5d"
+					(reference "#PWR057")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
