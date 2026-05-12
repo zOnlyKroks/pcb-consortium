@@ -1,0 +1,27 @@
+LTspice Filter Response Fix - Quick Steps:
+
+1. Run your AC simulation as normal
+
+2. In the waveform viewer:
+   - RIGHT-click on any existing traces and DELETE them
+   - You want to start fresh
+
+3. Click "Add Trace" or press Ctrl+A
+
+4. In the expression box, type exactly:
+   20*log10(V(out)/V(in))
+
+5. Click OK
+
+NOW you'll see the real filter response in dB!
+
+What you should see:
+- Peak around -3 to -8dB (your filter loss)
+- Deep nulls (-40dB+) outside passband
+- Proper bandpass shape in negative dB
+
+Alternative method:
+- Plot: V(out)/V(in)
+- Then right-click Y-axis → set to "Log" scale
+
+Your current plot shows individual voltages, not the transfer function!
