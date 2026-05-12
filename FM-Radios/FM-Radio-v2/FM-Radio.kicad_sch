@@ -3969,6 +3969,159 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Regulator_Linear:LD1117S18TR_SOT223"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LD1117S18TR_SOT223"
+				(at 0 3.175 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
+				(at 2.54 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 1.8V, SOT-223"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "REGULATOR LDO 1.8V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOT?223*TabPin2*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "LD1117S18TR_SOT223_0_1"
+				(rectangle
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "LD1117S18TR_SOT223_1_1"
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "VO"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VI"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Regulator_Linear:MIC5504-3.3YM5"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -4150,6 +4303,145 @@
 						)
 					)
 					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:+1V8"
+			(power global)
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "+1V8"
+				(at 0 3.556 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+1V8\""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "+1V8_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+1V8_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4760,10 +5052,22 @@
 		(uuid "8335ca1f-132c-4c30-8c3d-5f35f43d6e06")
 	)
 	(junction
-		(at 52.07 86.36)
+		(at 52.07 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8bc433f9-57a0-4b23-b2fa-b78f75f587bf")
+	)
+	(junction
+		(at 52.07 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8c8a36c3-c71d-4185-8676-9a7b534890fa")
+	)
+	(junction
+		(at 22.86 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a865ca7c-377e-4c8e-9285-586debb08bd5")
 	)
 	(junction
 		(at 125.73 110.49)
@@ -4790,13 +5094,13 @@
 		(uuid "bdbb4410-d89d-4657-b049-b1f5c951f765")
 	)
 	(junction
-		(at 31.75 86.36)
+		(at 31.75 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "c2f1f102-478a-4d1a-83fa-6c7e5077187e")
 	)
 	(junction
-		(at 22.86 86.36)
+		(at 22.86 68.58)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d971fcd0-3081-4345-bdf8-e3ed23c4dc37")
@@ -4861,7 +5165,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 86.36) (xy 22.86 85.09)
+			(xy 22.86 68.58) (xy 22.86 67.31)
 		)
 		(stroke
 			(width 0)
@@ -4878,6 +5182,16 @@
 			(type default)
 		)
 		(uuid "1724c502-4774-4d32-897e-9512a9c14b2d")
+	)
+	(wire
+		(pts
+			(xy 130.81 46.99) (xy 151.13 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e6637bc-5e74-40c1-a645-696193d52ed4")
 	)
 	(wire
 		(pts
@@ -4911,16 +5225,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 48.26) (xy 114.3 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "24e348e5-86e7-4446-942b-039cecab2261")
-	)
-	(wire
-		(pts
 			(xy 46.99 152.4) (xy 50.165 152.4)
 		)
 		(stroke
@@ -4941,7 +5245,7 @@
 	)
 	(wire
 		(pts
-			(xy 52.07 86.36) (xy 64.77 86.36)
+			(xy 52.07 68.58) (xy 64.77 68.58)
 		)
 		(stroke
 			(width 0)
@@ -4971,7 +5275,7 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 93.98) (xy 22.86 92.71)
+			(xy 22.86 76.2) (xy 22.86 74.93)
 		)
 		(stroke
 			(width 0)
@@ -5081,6 +5385,16 @@
 	)
 	(wire
 		(pts
+			(xy 22.86 95.25) (xy 34.29 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6478a30c-cfe0-4097-8446-459da073107f")
+	)
+	(wire
+		(pts
 			(xy 128.27 110.49) (xy 140.97 110.49)
 		)
 		(stroke
@@ -5128,6 +5442,16 @@
 			(type default)
 		)
 		(uuid "789e2a91-fa74-4792-b8d8-b38c901921ad")
+	)
+	(wire
+		(pts
+			(xy 52.07 95.25) (xy 64.77 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7919635c-1e8f-48ec-a250-d0afcb3cbd4a")
 	)
 	(wire
 		(pts
@@ -5241,6 +5565,16 @@
 	)
 	(wire
 		(pts
+			(xy 130.81 49.53) (xy 151.13 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a92eef52-81d8-467d-85c2-bb32ac1f030f")
+	)
+	(wire
+		(pts
 			(xy 149.86 147.32) (xy 140.97 147.32)
 		)
 		(stroke
@@ -5271,7 +5605,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 86.36) (xy 31.75 91.44)
+			(xy 31.75 68.58) (xy 31.75 73.66)
 		)
 		(stroke
 			(width 0)
@@ -5281,13 +5615,23 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 86.36) (xy 31.75 86.36)
+			(xy 22.86 68.58) (xy 31.75 68.58)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "bcf87875-822a-4f9d-ab52-b5b10cf6b34a")
+	)
+	(wire
+		(pts
+			(xy 104.14 46.99) (xy 111.76 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0a4de16-2265-452e-819d-3ca12c6b864b")
 	)
 	(wire
 		(pts
@@ -5321,6 +5665,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 49.53) (xy 111.76 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d1d4dac4-c9c6-49d2-b646-df34a564dba8")
+	)
+	(wire
+		(pts
 			(xy 128.27 118.11) (xy 140.97 118.11)
 		)
 		(stroke
@@ -5348,6 +5702,16 @@
 			(type default)
 		)
 		(uuid "ddb6ee32-20b7-4b6f-a1ae-1d885a3444c3")
+	)
+	(wire
+		(pts
+			(xy 49.53 95.25) (xy 52.07 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1ca73ad-dd42-4d62-84fd-0095b4120554")
 	)
 	(wire
 		(pts
@@ -5461,16 +5825,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 50.8) (xy 114.3 50.8)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9ce348d-0823-41fb-bb21-eb85637c75f1")
-	)
-	(wire
-		(pts
 			(xy 39.37 160.02) (xy 40.64 160.02)
 		)
 		(stroke
@@ -5510,7 +5864,7 @@
 		(uuid "21ff1959-610e-4dcd-882e-02dccd860400")
 	)
 	(label "SHND"
-		(at 114.3 58.42 180)
+		(at 151.13 57.15 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5518,6 +5872,16 @@
 			(justify right bottom)
 		)
 		(uuid "3380e7ac-226a-4071-8133-785a9426cba4")
+	)
+	(label "MP1"
+		(at 110.49 177.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "372009dd-4ead-456f-8275-da1ed339f18f")
 	)
 	(label "BOOTMODE"
 		(at 45.72 125.73 0)
@@ -5529,8 +5893,28 @@
 		)
 		(uuid "3acb2170-f2b9-482d-8121-d06c1c04fa92")
 	)
+	(label "MP0"
+		(at 110.49 175.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "4db0c7e5-9ba2-438f-9a16-7f80285f3e72")
+	)
+	(label "MP1"
+		(at 111.76 54.61 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6bc9049b-b2de-42b1-83c3-9e42d81b8fb3")
+	)
 	(label "MODE"
-		(at 114.3 53.34 180)
+		(at 151.13 52.07 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5569,6 +5953,16 @@
 		)
 		(uuid "a74fc33b-92c2-4252-b358-ec71b31a5d9d")
 	)
+	(label "SDA"
+		(at 111.76 62.23 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "a90660a2-d1f9-4ba6-8ba9-58b23e0263f5")
+	)
 	(label "MODE"
 		(at 110.49 167.64 180)
 		(effects
@@ -5578,6 +5972,26 @@
 			(justify right bottom)
 		)
 		(uuid "c2674aee-64a2-483f-8cba-413a9d26a56d")
+	)
+	(label "MP2"
+		(at 110.49 180.34 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "c5bcf87d-eb42-444b-8de4-12ad66c7d648")
+	)
+	(label "MP2"
+		(at 111.76 57.15 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d2ffe887-e817-4aa9-a94b-532709d1385c")
 	)
 	(label "SHND"
 		(at 110.49 172.9649 180)
@@ -5590,7 +6004,7 @@
 		(uuid "e3db8f57-d2c1-4cd8-8707-dbfaf844eecb")
 	)
 	(label "MUTE"
-		(at 114.3 55.88 180)
+		(at 151.13 54.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5598,6 +6012,16 @@
 			(justify right bottom)
 		)
 		(uuid "f0aba75a-a30e-4ee1-a376-24770dbdc185")
+	)
+	(label "SCL"
+		(at 111.76 59.69 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f7dc244a-c04f-4222-97fe-43076074de54")
 	)
 	(label "BOOTMODE"
 		(at 110.49 139.7 180)
@@ -5608,6 +6032,16 @@
 			(justify right bottom)
 		)
 		(uuid "f7f055d7-b5d1-4db8-842b-d07b3ab02c81")
+	)
+	(label "MP0"
+		(at 111.76 52.07 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f8d2d262-cb2c-4d60-bbc2-1e03f4d11594")
 	)
 	(label "RST"
 		(at 81.28 53.34 180)
@@ -6032,7 +6466,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x01_Pin")
-		(at 52.07 81.28 270)
+		(at 52.07 63.5 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6043,7 +6477,7 @@
 		(fields_autoplaced yes)
 		(uuid "1d15e736-5a03-4e6c-943c-424ca3782a9b")
 		(property "Reference" "J9"
-			(at 57.15 81.915 0)
+			(at 57.15 64.135 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6053,7 +6487,7 @@
 			)
 		)
 		(property "Value" "3.3V"
-			(at 54.61 81.915 0)
+			(at 54.61 64.135 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6063,7 +6497,7 @@
 			)
 		)
 		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
-			(at 52.07 81.28 0)
+			(at 52.07 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6074,7 +6508,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 81.28 0)
+			(at 52.07 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6085,7 +6519,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x01, script generated"
-			(at 52.07 81.28 0)
+			(at 52.07 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6096,7 +6530,7 @@
 			)
 		)
 		(property "LCSC Part #" "C492400"
-			(at 52.07 81.28 0)
+			(at 52.07 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6185,7 +6619,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C99782"
+		(property "LCSC Part #" "C23162"
 			(at 91.44 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -6359,6 +6793,100 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:LD1117S18TR_SOT223")
+		(at 41.91 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2e680580-55d8-444c-859c-ad98d3b5a095")
+		(property "Reference" "U2"
+			(at 41.91 88.9 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LD1117S18TR_SOT223"
+			(at 41.91 91.44 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 41.91 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf"
+			(at 44.45 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "800mA Fixed Low Drop Positive Voltage Regulator, Fixed Output 1.8V, SOT-223"
+			(at 41.91 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C80598"
+			(at 41.91 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "a95b8365-fdd6-4fd2-8bb2-6e44c9fe7b96")
+		)
+		(pin "1"
+			(uuid "72c88b54-6889-419a-9b0a-958090583359")
+		)
+		(pin "2"
+			(uuid "bac175c2-c1a6-4fe1-a01a-592052875f8e")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -6636,7 +7164,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 41.91 96.52 0)
+		(at 41.91 78.74 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6647,7 +7175,7 @@
 		(fields_autoplaced yes)
 		(uuid "3cff8e9c-94ff-4bd7-b1eb-d52863a5b049")
 		(property "Reference" "#PWR055"
-			(at 41.91 102.87 0)
+			(at 41.91 85.09 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6658,7 +7186,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 41.91 101.6 0)
+			(at 41.91 83.82 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6668,7 +7196,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 96.52 0)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6679,7 +7207,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 96.52 0)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6690,7 +7218,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 41.91 96.52 0)
+			(at 41.91 78.74 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6790,7 +7318,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 22.86 85.09 0)
+		(at 22.86 67.31 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6801,7 +7329,7 @@
 		(fields_autoplaced yes)
 		(uuid "4d7bb1af-9431-4d7d-872d-578c49d9a164")
 		(property "Reference" "#PWR051"
-			(at 22.86 88.9 0)
+			(at 22.86 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6812,7 +7340,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 22.86 80.01 0)
+			(at 22.86 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6822,7 +7350,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 85.09 0)
+			(at 22.86 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6833,7 +7361,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 85.09 0)
+			(at 22.86 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6844,7 +7372,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 22.86 85.09 0)
+			(at 22.86 67.31 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6933,7 +7461,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C99782"
+		(property "LCSC Part #" "C23162"
 			(at 99.06 160.02 0)
 			(hide yes)
 			(show_name no)
@@ -7115,6 +7643,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V8")
+		(at 64.77 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65a5bfb7-5757-463a-ba43-88b58847f2a9")
+		(property "Reference" "#PWR043"
+			(at 64.77 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+1V8"
+			(at 64.77 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 64.77 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 64.77 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+1V8\""
+			(at 64.77 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "a8b2b2a6-5196-45c6-9f7e-412b9f0abe08")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR043")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 91.44 139.7 0)
 		(unit 1)
@@ -7281,7 +7887,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 22.86 90.17 0)
+		(at 22.86 72.39 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7291,7 +7897,7 @@
 		(dnp no)
 		(uuid "709278b8-7e13-4347-9071-e153631da62b")
 		(property "Reference" "C33"
-			(at 25.781 89.0016 0)
+			(at 25.781 71.2216 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7302,7 +7908,7 @@
 			)
 		)
 		(property "Value" "10uF"
-			(at 25.781 91.313 0)
+			(at 25.781 73.533 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7313,7 +7919,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 23.8252 93.98 0)
+			(at 23.8252 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7324,7 +7930,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 90.17 0)
+			(at 22.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7335,7 +7941,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 22.86 90.17 0)
+			(at 22.86 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7344,8 +7950,8 @@
 				)
 			)
 		)
-		(property "LCSC" "C1691"
-			(at 22.86 90.17 0)
+		(property "LCSC" "C19702"
+			(at 22.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7356,7 +7962,7 @@
 			)
 		)
 		(property "JlcRotOffset" ""
-			(at 22.86 90.17 0)
+			(at 22.86 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7524,6 +8130,17 @@
 				)
 			)
 		)
+		(property "LCSC Part #" "C165948"
+			(at 24.13 162.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "A5"
 			(uuid "7716e863-2bf1-4989-8394-3e5d3420fabb")
 		)
@@ -7657,6 +8274,84 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR033")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 41.91 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7c4c2937-dabe-4673-8c32-8d1de27fe9a6")
+		(property "Reference" "#PWR059"
+			(at 41.91 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 41.91 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 41.91 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 41.91 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "78782ee2-42ce-4a9c-ace0-4ba51675ad87")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR059")
 					(unit 1)
 				)
 			)
@@ -7882,7 +8577,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C1691"
+		(property "LCSC" "C19702"
 			(at 140.97 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -8176,7 +8871,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 22.86 92.71 0)
+		(at 22.86 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8187,7 +8882,7 @@
 		(fields_autoplaced yes)
 		(uuid "99def1a7-98d7-4da6-8c52-d4ab58fe2662")
 		(property "Reference" "#PWR054"
-			(at 22.86 99.06 0)
+			(at 22.86 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8198,7 +8893,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 22.86 97.79 0)
+			(at 22.86 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8208,7 +8903,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 22.86 92.71 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8219,7 +8914,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 22.86 92.71 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8230,7 +8925,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 22.86 92.71 0)
+			(at 22.86 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8417,6 +9112,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 22.86 95.25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9c17a4f0-d01e-4167-a358-86cad4417785")
+		(property "Reference" "#PWR062"
+			(at 22.86 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 22.86 90.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 22.86 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2c2a0a2d-de1b-4db8-9994-d2c77dc0b2e9")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR062")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 45.72 130.81 0)
 		(unit 1)
@@ -8493,6 +9266,162 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 52.07 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b8b5807b-c9de-474c-adbb-aab08098cebc")
+		(property "Reference" "#PWR072"
+			(at 52.07 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 52.07 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 52.07 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "15d70807-de3a-4ee1-9457-972aa92c9617")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 22.86 102.87 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bf1f977b-c456-48e9-b0e1-2a93864d812b")
+		(property "Reference" "#PWR065"
+			(at 22.86 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 22.86 107.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 22.86 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 22.86 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "69f92d9f-9bc1-4ddc-a737-f99f99d3a716")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "#PWR065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 146.05 177.8 90)
 		(unit 1)
@@ -8559,7 +9488,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C98220"
+		(property "LCSC Part #" "C25804"
 			(at 146.05 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -8767,7 +9696,7 @@
 	)
 	(symbol
 		(lib_id "Regulator_Linear:MIC5504-3.3YM5")
-		(at 41.91 88.9 0)
+		(at 41.91 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8778,7 +9707,7 @@
 		(fields_autoplaced yes)
 		(uuid "d6c40d26-a519-4247-88fc-94547a076c40")
 		(property "Reference" "U3"
-			(at 41.91 78.74 0)
+			(at 41.91 60.96 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8788,7 +9717,7 @@
 			)
 		)
 		(property "Value" "MIC5504-3.3YM5"
-			(at 41.91 81.28 0)
+			(at 41.91 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8798,7 +9727,7 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 41.91 99.06 0)
+			(at 41.91 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8809,7 +9738,7 @@
 			)
 		)
 		(property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/MIC550X.pdf"
-			(at 35.56 82.55 0)
+			(at 35.56 64.77 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8820,7 +9749,18 @@
 			)
 		)
 		(property "Description" "300mA Low-dropout Voltage Regulator, Vout 3.3V, Vin up to 5.5V, SOT-23"
-			(at 41.91 88.9 0)
+			(at 41.91 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C88419"
+			(at 41.91 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8856,7 +9796,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 93.98 0)
+		(at 52.07 76.2 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8867,7 +9807,7 @@
 		(fields_autoplaced yes)
 		(uuid "d882e9ad-0636-46a4-91b4-a4722340868f")
 		(property "Reference" "#PWR056"
-			(at 52.07 100.33 0)
+			(at 52.07 82.55 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8878,7 +9818,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 52.07 99.06 0)
+			(at 52.07 81.28 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8888,7 +9828,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 93.98 0)
+			(at 52.07 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8899,7 +9839,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 93.98 0)
+			(at 52.07 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8910,7 +9850,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 93.98 0)
+			(at 52.07 76.2 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9036,6 +9976,108 @@
 	)
 	(symbol
 		(lib_id "Device:C")
+		(at 22.86 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "dd228a3a-5042-48b7-9f18-f7db79225ffd")
+		(property "Reference" "C36"
+			(at 25.781 97.8916 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 25.781 100.203 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 23.8252 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 22.86 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 22.86 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 22.86 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 22.86 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1fa1f59e-1289-48af-b5e4-a6d0728658d4")
+		)
+		(pin "2"
+			(uuid "2fc68375-d861-426c-a1d0-553d013c693f")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
 		(at 215.9 132.08 0)
 		(unit 1)
 		(body_style 1)
@@ -9137,8 +10179,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 52.07 90.17 0)
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 52.07 90.17 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9146,31 +10188,30 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e17ab144-0358-4841-a8ed-b95da4ec55fa")
-		(property "Reference" "C34"
-			(at 54.991 89.0016 0)
+		(fields_autoplaced yes)
+		(uuid "e0e4c5e7-9595-42da-90d0-d69d7761a86a")
+		(property "Reference" "J10"
+			(at 57.15 90.805 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Value" "10uF"
-			(at 54.991 91.313 0)
+		(property "Value" "1.8V"
+			(at 54.61 90.805 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 53.0352 93.98 0)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 52.07 90.17 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9191,17 +10232,7 @@
 				)
 			)
 		)
-		(property "Description" ""
-			(at 52.07 90.17 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C1691"
+		(property "Description" "Generic connector, single row, 01x01, script generated"
 			(at 52.07 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -9212,8 +10243,107 @@
 				)
 			)
 		)
-		(property "JlcRotOffset" ""
+		(property "LCSC Part #" "C492400"
 			(at 52.07 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9b43614a-288c-4dd2-add8-fc1760665e64")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "J10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 52.07 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e17ab144-0358-4841-a8ed-b95da4ec55fa")
+		(property "Reference" "C34"
+			(at 54.991 71.2216 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 54.991 73.533 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 53.0352 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 52.07 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 52.07 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9296,6 +10426,17 @@
 		)
 		(property "Description" "RF Module, ESP32-S3 SoC, Wi-Fi 802.11b/g/n, Bluetooth, BLE, 32-bit, 3.3V, SMD, external antenna"
 			(at 125.73 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C2980299"
+			(at 125.73 160.02 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9580,6 +10721,108 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(reference "#PWR068")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 52.07 99.06 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e78b26c7-8e3a-4b22-8db3-beac1e084790")
+		(property "Reference" "C37"
+			(at 54.991 97.8916 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 54.991 100.203 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 53.0352 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 99.06 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C19702"
+			(at 52.07 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 52.07 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2233469d-369e-4958-9827-285969dbada0")
+		)
+		(pin "2"
+			(uuid "6be3c886-600e-4236-aeaf-9e07460e8e17")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -9871,7 +11114,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 64.77 86.36 0)
+		(at 64.77 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9882,7 +11125,7 @@
 		(fields_autoplaced yes)
 		(uuid "f4f07f70-e687-49fa-9c8f-9fc6dff73268")
 		(property "Reference" "#PWR057"
-			(at 64.77 90.17 0)
+			(at 64.77 72.39 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9893,7 +11136,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 64.77 81.28 0)
+			(at 64.77 63.5 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9903,7 +11146,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 64.77 86.36 0)
+			(at 64.77 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9914,7 +11157,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 64.77 86.36 0)
+			(at 64.77 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9925,7 +11168,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 64.77 86.36 0)
+			(at 64.77 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10189,7 +11432,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C98220"
+		(property "LCSC Part #" "C25804"
 			(at 22.86 125.73 0)
 			(hide yes)
 			(show_name no)
@@ -10282,7 +11525,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C98220"
+		(property "LCSC Part #" "C25804"
 			(at 99.06 123.19 0)
 			(hide yes)
 			(show_name no)
@@ -10309,7 +11552,7 @@
 		)
 	)
 	(sheet
-		(at 114.3 45.72)
+		(at 151.13 44.45)
 		(size 22.86 13.97)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10325,7 +11568,7 @@
 		)
 		(uuid "18d8f057-b407-4e30-81ec-39f7fcc0cfbd")
 		(property "Sheetname" "amp"
-			(at 114.3 45.0084 0)
+			(at 151.13 43.7384 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10336,7 +11579,7 @@
 			)
 		)
 		(property "Sheetfile" "amp.kicad_sch"
-			(at 114.3 60.2746 0)
+			(at 151.13 59.0046 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10347,7 +11590,7 @@
 			)
 		)
 		(pin "INL" input
-			(at 114.3 48.26 180)
+			(at 151.13 46.99 180)
 			(uuid "9a39754a-4de5-4db0-a590-804c6ddafb06")
 			(effects
 				(font
@@ -10357,7 +11600,7 @@
 			)
 		)
 		(pin "INR" input
-			(at 114.3 50.8 180)
+			(at 151.13 49.53 180)
 			(uuid "82cd40ec-8c8f-4ad3-a065-62e811386374")
 			(effects
 				(font
@@ -10367,7 +11610,7 @@
 			)
 		)
 		(pin "MODE" input
-			(at 114.3 53.34 180)
+			(at 151.13 52.07 180)
 			(uuid "5372291a-6f06-4a15-82f6-52bf7a3871fb")
 			(effects
 				(font
@@ -10377,7 +11620,7 @@
 			)
 		)
 		(pin "MUTE" input
-			(at 114.3 55.88 180)
+			(at 151.13 54.61 180)
 			(uuid "dd3ffd0b-6c3f-4325-9740-f4242be880cc")
 			(effects
 				(font
@@ -10387,7 +11630,7 @@
 			)
 		)
 		(pin "SHND" input
-			(at 114.3 58.42 180)
+			(at 151.13 57.15 180)
 			(uuid "858506d3-0707-4bd1-80fd-22734dd33404")
 			(effects
 				(font
@@ -10443,7 +11686,7 @@
 			)
 		)
 		(pin "LOUT" output
-			(at 104.14 48.26 0)
+			(at 104.14 46.99 0)
 			(uuid "93c08eda-996e-485b-9a6a-6a9698fc9f70")
 			(effects
 				(font
@@ -10453,7 +11696,7 @@
 			)
 		)
 		(pin "ROUT" output
-			(at 104.14 50.8 0)
+			(at 104.14 49.53 0)
 			(uuid "c1f91a31-1d52-4dec-8eca-8194edec67db")
 			(effects
 				(font
@@ -10496,6 +11739,142 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
 					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 45.72)
+		(size 19.05 17.78)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "6502fa42-8fbe-485e-bdf8-8f75af672d94")
+		(property "Sheetname" "dsp"
+			(at 111.76 45.0084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "dsp.kicad_sch"
+			(at 111.76 64.0846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "INL" input
+			(at 111.76 46.99 180)
+			(uuid "930fc435-10ac-4652-8d99-93fea85fb94e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "INR" input
+			(at 111.76 49.53 180)
+			(uuid "312c5ba2-cc23-4ef3-aea0-7623dc43ac9d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "L" output
+			(at 130.81 46.99 0)
+			(uuid "0c9cc1b8-1509-4ed6-b21b-c3be5a31a333")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "MP0" input
+			(at 111.76 52.07 180)
+			(uuid "89b116c4-7e31-4afd-8ee7-54e17b57cb4d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MP1" input
+			(at 111.76 54.61 180)
+			(uuid "e0b1de7d-542f-430e-b4e5-fa97bf78110b")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "MP2" input
+			(at 111.76 57.15 180)
+			(uuid "c4266a7c-97d4-497e-9882-eebce4bb0589")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "R" output
+			(at 130.81 49.53 0)
+			(uuid "4c0e022b-e325-49d0-a202-1bf91b450810")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" input
+			(at 111.76 59.69 180)
+			(uuid "136ee57c-192a-4414-8a01-1299357aee07")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SDA" input
+			(at 111.76 62.23 180)
+			(uuid "ca3a3b47-72c7-4ce4-81f5-51bfe1cb556f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21"
+					(page "2")
 				)
 			)
 		)

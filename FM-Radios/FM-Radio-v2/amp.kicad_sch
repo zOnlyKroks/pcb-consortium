@@ -1094,147 +1094,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:R_Small"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0.254)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "R"
-				(at 0 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.016 1.016)
-					)
-				)
-			)
-			(property "Value" "R_Small"
-				(at 1.778 0 90)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Resistor, small symbol"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "R resistor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "R_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "R_Small_0_1"
-				(rectangle
-					(start -0.762 1.778)
-					(end 0.762 -1.778)
-					(stroke
-						(width 0.2032)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "R_Small_1_1"
-				(pin passive line
-					(at 0 2.54 270)
-					(length 0.762)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -2.54 90)
-					(length 0.762)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "power:+5V"
 			(power global)
 			(pin_numbers
@@ -1509,12 +1368,6 @@
 		(uuid "36d78969-f096-4300-8362-da7c4e1aeb0e")
 	)
 	(junction
-		(at 60.96 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4ab1c729-2fa5-4c93-b350-29e641c8e627")
-	)
-	(junction
 		(at 87.63 59.69)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1557,12 +1410,6 @@
 		(uuid "a36433fa-c573-4b19-951e-0104caa759de")
 	)
 	(junction
-		(at 60.96 77.47)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a9ab2a73-a161-4d75-afb7-37354e2f3847")
-	)
-	(junction
 		(at 87.63 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1595,16 +1442,6 @@
 			(type default)
 		)
 		(uuid "105499cb-5375-439a-b8fb-73c1477de41d")
-	)
-	(wire
-		(pts
-			(xy 50.8 77.47) (xy 60.96 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "27c3d65f-ffa6-4bce-94d1-8e7eee78a8aa")
 	)
 	(wire
 		(pts
@@ -1668,16 +1505,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 77.47) (xy 74.93 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "560ac923-473d-49fe-8a94-27d1f905b243")
-	)
-	(wire
-		(pts
 			(xy 87.63 35.56) (xy 87.63 59.69)
 		)
 		(stroke
@@ -1728,16 +1555,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 77.47) (xy 45.72 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b0bcdcb-fd11-4433-8333-4528c3dc8625")
-	)
-	(wire
-		(pts
 			(xy 198.12 90.17) (xy 207.01 90.17)
 		)
 		(stroke
@@ -1765,16 +1582,6 @@
 			(type default)
 		)
 		(uuid "825c59f4-67f9-49a9-9310-4b161d652bde")
-	)
-	(wire
-		(pts
-			(xy 60.96 72.39) (xy 74.93 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "83d97b77-7d72-46ae-9ace-9a53fb3f26a6")
 	)
 	(wire
 		(pts
@@ -1848,16 +1655,6 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 72.39) (xy 45.72 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7d6d7bc-3503-42e2-86e7-6f079aef6ece")
-	)
-	(wire
-		(pts
 			(xy 105.41 90.17) (xy 118.11 90.17)
 		)
 		(stroke
@@ -1865,16 +1662,6 @@
 			(type default)
 		)
 		(uuid "dee1c694-16ae-4aa5-9ac7-0da4773fcde2")
-	)
-	(wire
-		(pts
-			(xy 50.8 72.39) (xy 60.96 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e10ee15d-a351-4351-b0fe-b57222cff404")
 	)
 	(wire
 		(pts
@@ -1926,6 +1713,17 @@
 		)
 		(uuid "f7a99ba3-817a-4d75-b949-ae07447288e2")
 	)
+	(hierarchical_label "INL"
+		(shape input)
+		(at 74.93 72.39 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "4b8c583a-729b-459d-8707-9e49ac5ca37f")
+	)
 	(hierarchical_label "MODE"
 		(shape input)
 		(at 74.93 90.17 180)
@@ -1959,129 +1757,16 @@
 		)
 		(uuid "9855483b-bac9-416c-82c6-40e3a102f22f")
 	)
-	(hierarchical_label "INL"
-		(shape input)
-		(at 34.29 72.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d6847c46-a2d8-4ee8-b9ca-b9862d9dde1d")
-	)
 	(hierarchical_label "INR"
 		(shape input)
-		(at 34.29 77.47 180)
+		(at 74.93 77.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right)
 		)
-		(uuid "dae38d02-1e0e-4036-aa46-0d7854175b6e")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 38.1 72.39 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "18e7166f-2ff2-4863-ae91-dc0847a5bfe7")
-		(property "Reference" "C18"
-			(at 36.9316 69.469 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1 uF"
-			(at 39.243 69.469 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 41.91 71.4248 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 72.39 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C1592"
-			(at 38.1 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JlcRotOffset" ""
-			(at 38.1 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b22920e4-e15d-45bf-91b2-3b0b8d49a101")
-		)
-		(pin "2"
-			(uuid "79c1fd41-8fc2-4b51-92c1-df51801d3859")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "ae049b16-5152-400a-adf8-fc1def09bfc9")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2154,82 +1839,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "#PWR035")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 60.96 85.09 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2475d447-4dd0-4715-8700-bee997770d63")
-		(property "Reference" "#PWR016"
-			(at 60.96 91.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 61.087 89.4842 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 85.09 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f08930d5-6beb-4c6c-9f6f-9d11d6ac08d4")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -2499,7 +2108,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 85.852 26.67 90)
 			(hide yes)
 			(show_name no)
@@ -2635,99 +2244,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R_Small")
-		(at 48.26 72.39 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4bb3db9b-beb1-4a5d-9c6f-6b23bc8cb328")
-		(property "Reference" "R11"
-			(at 46.9899 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100 Ohm"
-			(at 49.5299 69.85 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 48.26 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 48.26 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C105588"
-			(at 48.26 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "af3cc04b-4d63-487b-9000-f582c6d7c45e")
-		)
-		(pin "2"
-			(uuid "d1d2731a-090e-4b9f-9f0b-1168dd617ec0")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:FerriteBead")
 		(at 138.43 74.93 90)
 		(unit 1)
@@ -2815,202 +2331,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "FB4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 48.26 77.47 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50ca8d69-a776-4803-981a-1071ad5461e7")
-		(property "Reference" "R4"
-			(at 46.9899 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100 Ohm"
-			(at 49.5299 80.01 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 48.26 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 48.26 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C105588"
-			(at 48.26 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "497c6004-2e2f-4bfc-b3c6-5378c01eebd0")
-		)
-		(pin "2"
-			(uuid "eb5e1d9f-cf0e-4947-a9d0-645da49788db")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 60.96 68.58 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "50d22883-a527-4236-b202-073df16a9a4f")
-		(property "Reference" "C36"
-			(at 63.881 67.4116 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 63.881 69.723 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 61.9252 72.39 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C100040"
-			(at 60.96 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JlcRotOffset" ""
-			(at 60.96 68.58 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f24d08fd-6a9f-45cf-9b27-1ca41b895076")
-		)
-		(pin "2"
-			(uuid "ee23ed85-7e6a-4b9e-98a7-331402c7c800")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "C36")
 					(unit 1)
 				)
 			)
@@ -3174,7 +2494,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C27675"
+		(property "LCSC" "C1603"
 			(at 184.15 71.12 0)
 			(hide yes)
 			(show_name no)
@@ -3206,82 +2526,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "C19")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 60.96 64.77 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5707eda6-98cd-4701-8b6d-49770b90c3e2")
-		(property "Reference" "#PWR030"
-			(at 60.96 58.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 60.833 60.3758 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 64.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "18856050-b1d3-4e60-96b6-6e325e7f01a7")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -3445,7 +2689,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C1592"
+		(property "LCSC Part #" "C15849"
 			(at 74.93 105.41 0)
 			(hide yes)
 			(show_name no)
@@ -3477,108 +2721,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "C16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 60.96 81.28 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "76a4a551-79e6-4a19-b2d2-e7c2893ce116")
-		(property "Reference" "C37"
-			(at 63.881 80.1116 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1nF"
-			(at 63.881 82.423 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 61.9252 85.09 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 60.96 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 60.96 81.28 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C100040"
-			(at 60.96 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JlcRotOffset" ""
-			(at 60.96 81.28 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "acaa435a-d40c-48f8-8c4a-53fe41f6c7a1")
-		)
-		(pin "2"
-			(uuid "3bd4fc59-5537-49ab-88b0-37fc058ffbb5")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "C37")
 					(unit 1)
 				)
 			)
@@ -3649,7 +2791,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C27675"
+		(property "LCSC" "C1603"
 			(at 198.12 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -3751,7 +2893,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C27675"
+		(property "LCSC" "C1603"
 			(at 184.15 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -3974,7 +3116,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D12.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_8x10.5"
 			(at 100.33 58.7248 0)
 			(hide yes)
 			(show_name no)
@@ -4007,7 +3149,7 @@
 				)
 			)
 		)
-		(property "LCSC Part #" "C233101"
+		(property "LCSC Part #" "C970708"
 			(at 96.52 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -4673,7 +3815,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C27675"
+		(property "LCSC" "C1603"
 			(at 198.12 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -5048,7 +4190,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C1691"
+		(property "LCSC" "C19702"
 			(at 134.62 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -5080,109 +4222,6 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "C5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 38.1 77.47 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f1570ed6-2c0a-469e-94a0-405a5c358a44")
-		(property "Reference" "C17"
-			(at 36.9316 80.391 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1 uF"
-			(at 39.243 80.391 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 41.91 78.4352 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 77.47 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C1592"
-			(at 38.1 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JlcRotOffset" ""
-			(at 38.1 77.47 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f190b5c7-9072-4e4b-8dfd-d0b5b4fb3435")
-		)
-		(pin "2"
-			(uuid "2c568428-5573-456b-a576-9e67579da570")
-		)
-		(instances
-			(project "FM-Radio"
-				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
-					(reference "C17")
 					(unit 1)
 				)
 			)
