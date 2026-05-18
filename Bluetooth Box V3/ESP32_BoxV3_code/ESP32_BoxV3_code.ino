@@ -8,6 +8,8 @@
 #include "driver/i2c_master.h"
 #include <cstring>
 
+#include "../DSP/BoxV3-DSP_IC_1.h"
+
 #define MODE_PIN 8
 #define SCL 1
 #define SDA 2
@@ -126,7 +128,7 @@ void setup() {
   //status registers in high page 0 registers
   
   //ADAU Setup
-  //TODO
+  default_download_IC_1();
 
   //I²S setup
 //  i2s_chan_handle_t tx_handle; was moved to global scope
