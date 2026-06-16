@@ -5093,16 +5093,6 @@
 	)
 	(wire
 		(pts
-			(xy 127 77.47) (xy 130.81 77.47)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "484b995c-8799-4fc0-a330-0586e1419a7a")
-	)
-	(wire
-		(pts
 			(xy 50.8 57.15) (xy 62.23 57.15)
 		)
 		(stroke
@@ -5430,16 +5420,6 @@
 			(type default)
 		)
 		(uuid "ab5f8958-855c-4e6b-a32e-dbbb4ef985a2")
-	)
-	(wire
-		(pts
-			(xy 127 85.09) (xy 130.81 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ab703aaa-0ba9-45f9-a9eb-e89a77f66909")
 	)
 	(wire
 		(pts
@@ -5991,16 +5971,6 @@
 		)
 		(uuid "99f6927e-7aff-471b-b171-c2b3b41e0766")
 	)
-	(label "SDN"
-		(at 127 85.09 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "9c80b745-81bd-4bbb-be27-078abe8fe0d0")
-	)
 	(label "LRCK"
 		(at 135.89 143.51 0)
 		(effects
@@ -6040,16 +6010,6 @@
 			(justify left bottom)
 		)
 		(uuid "bfc3f022-6ba3-4a3f-89a0-e0abaf32d6ea")
-	)
-	(label "IRQ"
-		(at 127 77.47 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "c11e9f5c-326d-4af8-a434-8281b02c3db0")
 	)
 	(label "SD-MIC"
 		(at 157.48 58.42 180)
@@ -12431,9 +12391,9 @@
 				(justify left top)
 			)
 		)
-		(pin "IRQ" input
-			(at 130.81 77.47 180)
-			(uuid "3cd07434-b59a-4e1f-aaad-d9fdf356fc22")
+		(pin "CS" input
+			(at 130.81 90.17 180)
+			(uuid "67a20f17-3fca-49f6-86b0-ae49d4e91a81")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12443,7 +12403,7 @@
 		)
 		(pin "SCLK" input
 			(at 130.81 80.01 180)
-			(uuid "5a30a070-3c48-4815-aebc-935a3ad04189")
+			(uuid "c6e349c5-a960-4b04-93ee-33024f3dbd41")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12451,9 +12411,9 @@
 				(justify left)
 			)
 		)
-		(pin "SDI" input
+		(pin "SI" input
 			(at 130.81 82.55 180)
-			(uuid "816e3972-88b1-4946-9a80-c0855efa3972")
+			(uuid "a6c4315e-6b39-4104-84d7-aa7cb43434df")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12461,29 +12421,9 @@
 				(justify left)
 			)
 		)
-		(pin "SDN" input
-			(at 130.81 85.09 180)
-			(uuid "c7a861b1-9b61-4f62-8333-8bb2965b7f27")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "SDO" input
+		(pin "SO" input
 			(at 130.81 87.63 180)
-			(uuid "d2b80a84-861a-49c8-8e1a-687f7288469d")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "SEL" input
-			(at 130.81 90.17 180)
-			(uuid "d27bafc4-61db-436b-9c6f-b0fa3071077c")
+			(uuid "a2ab71cc-c894-4fe1-a5be-593c11c546dc")
 			(effects
 				(font
 					(size 1.27 1.27)
