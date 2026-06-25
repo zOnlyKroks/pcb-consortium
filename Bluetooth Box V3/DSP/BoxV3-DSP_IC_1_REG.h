@@ -1,7 +1,7 @@
 /*
- * File:           C:\Users\123ba\Documents\Bluetooth Box V3\BoxV3-DSP_IC_1_REG.h
+ * File:           C:\Users\finnr\Desktop\pcb-consortium\Bluetooth Box V3\DSP\BoxV3-DSP_IC_1_REG.h
  *
- * Created:        Monday, March 2, 2026 11:24:07 PM
+ * Created:        Thursday, June 25, 2026 8:05:14 PM
  * Description:    BoxV3:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -88,7 +88,7 @@
 /* CoreRegister  - Registers (IC 1) */
 #define REG_COREREGISTER_IC_1_ADDR                0x81C
 #define REG_COREREGISTER_IC_1_BYTE                2
-#define REG_COREREGISTER_IC_1_VALUE               0x1C
+#define REG_COREREGISTER_IC_1_VALUE               0xC
 
 /* RAMRegister  - Registers (IC 1) */
 #define REG_RAMREGISTER_IC_1_ADDR                 0x81D
@@ -108,17 +108,17 @@
 /* MpCfg0  - Registers (IC 1) */
 #define REG_MPCFG0_IC_1_ADDR                      0x820
 #define REG_MPCFG0_IC_1_BYTE                      3
-#define REG_MPCFG0_IC_1_VALUE                     0x440004
+#define REG_MPCFG0_IC_1_VALUE                     0x440044
 
 /* MpCfg1  - Registers (IC 1) */
 #define REG_MPCFG1_IC_1_ADDR                      0x821
 #define REG_MPCFG1_IC_1_BYTE                      3
-#define REG_MPCFG1_IC_1_VALUE                     0x0
+#define REG_MPCFG1_IC_1_VALUE                     0xF000
 
 /* AnalogPowerDownRegister  - Registers (IC 1) */
 #define REG_ANALOGPOWERDOWNREGISTER_IC_1_ADDR     0x822
 #define REG_ANALOGPOWERDOWNREGISTER_IC_1_BYTE     2
-#define REG_ANALOGPOWERDOWNREGISTER_IC_1_VALUE    0x3
+#define REG_ANALOGPOWERDOWNREGISTER_IC_1_VALUE    0x83
 
 /* TestRegister  - Registers (IC 1) */
 #define REG_TESTREGISTER_IC_1_ADDR                0x823
@@ -254,7 +254,7 @@
 #define R13_PROGRAM_LENGTH_IC_1                   0x0    /* 00b	[1:0] */
 #define R13_REGISTER_ZERO_IC_1                    0x1    /* 1b	[2] */
 #define R13_MUTE_DAC_IC_1                         0x1    /* 1b	[3] */
-#define R13_MUTE_ADC_IC_1                         0x1    /* 1b	[4] */
+#define R13_MUTE_ADC_IC_1                         0x0    /* 0b	[4] */
 #define R13_SAFELOAD_IC_1                         0x0    /* 0b	[5] */
 #define R13_WRITESPI_INTERFACEREG_IC_1            0x0    /* 0b	[6] */
 #define R13_WRITESPI_GPIO_IC_1                    0x0    /* 0b	[7] */
@@ -333,7 +333,7 @@
 /* MpCfg0 (IC 1) */
 #define R17_MFSELECT0_IC_1                        0x4    /* 100b	[2:0] */
 #define R17_MFINVERT0_IC_1                        0x0    /* 0b	[3] */
-#define R17_MFSELECT1_IC_1                        0x0    /* 000b	[6:4] */
+#define R17_MFSELECT1_IC_1                        0x4    /* 100b	[6:4] */
 #define R17_MFINVERT1_IC_1                        0x0    /* 0b	[7] */
 #define R17_MFSELECT2_IC_1                        0x0    /* 000b	[10:8] */
 #define R17_MFINVERT2_IC_1                        0x0    /* 0b	[11] */
@@ -375,8 +375,8 @@
 #define R18_MFINVERT7_IC_1                        0x0    /* 0b	[7] */
 #define R18_MFSELECT8_IC_1                        0x0    /* 000b	[10:8] */
 #define R18_MFINVERT8_IC_1                        0x0    /* 0b	[11] */
-#define R18_MFSELECT9_IC_1                        0x0    /* 000b	[14:12] */
-#define R18_MFINVERT9_IC_1                        0x0    /* 0b	[15] */
+#define R18_MFSELECT9_IC_1                        0x7    /* 111b	[14:12] */
+#define R18_MFINVERT9_IC_1                        0x1    /* 1b	[15] */
 #define R18_MFSELECT10_IC_1                       0x0    /* 000b	[18:16] */
 #define R18_MFINVERT10_IC_1                       0x0    /* 0b	[19] */
 #define R18_MFSELECT11_IC_1                       0x0    /* 000b	[22:20] */
@@ -414,7 +414,7 @@
 #define R19_DACS_RESET_IC_1                       0x0    /* 0b	[4] */
 #define R19_REF_CORE_POWERDOWN_IC_1               0x0    /* 0b	[5] */
 #define R19_REF_BUF_POWERDOWN_IC_1                0x0    /* 0b	[6] */
-#define R19_ADCS_POWERDOWN_IC_1                   0x0    /* 0b	[7] */
+#define R19_ADCS_POWERDOWN_IC_1                   0x1    /* 1b	[7] */
 #define R19_AUX_ADC_FILTER_IC_1                   0x0    /* 000b	[10:8] */
 #define R19_DAC3_POWERDOWN_IC_1_MASK              0x1
 #define R19_DAC3_POWERDOWN_IC_1_SHIFT             0
