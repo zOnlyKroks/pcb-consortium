@@ -1,5 +1,7 @@
 #include <Arduino.h>
-#include <cstring>
+#include <Wire.h>
+#include <SigmaDSP.h>
+#include "SigmaDSP_parameters.h"
 
 #include "BluetoothSerial.h"
 
@@ -15,9 +17,6 @@
 #include "esp_a2dp_api.h"
 #include "esp_avrc_api.h"
 
-#include "driver/i2c_master.h"
-#include "../DSP/BoxV3_IC_1.h"
-
 // ================= PINS =================
 #define SDA_PIN 14
 #define SCL_PIN 26
@@ -30,12 +29,12 @@
 #define DSP_IN_SELECT 18
 #define AMP_MUTE_PIN 4  // PAM8620TR mute pin (LOW = mute, HIGH = unmute)
 
+// ================= DSP =================
+SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 48000.0f);
+
 // ================= GLOBALS =================
 RingbufHandle_t audio_rb;
-
-i2c_master_dev_handle_t adau_handle;
 i2s_chan_handle_t tx_handle;
-i2c_master_bus_handle_t i2c_bus;
 
 int current_mode = 0;
 
@@ -138,29 +137,6 @@ void i2s_task(void *arg)
             vRingbufferReturnItem(audio_rb, item);
         }
     }
-}
-
-// ================= ADAU WRITE =================
-void SigmaWriteRegisterBlock(uint8_t devAddr,
-                             uint16_t regAddr,
-                             uint16_t length,
-                             uint8_t *data)
-{
-    uint8_t *buf = (uint8_t*)malloc(length + 2);
-    if (!buf) return;
-
-    buf[0] = regAddr >> 8;
-    buf[1] = regAddr & 0xFF;
-    memcpy(buf + 2, data, length);
-
-    i2c_master_transmit(
-        adau_handle,
-        buf,
-        length + 2,
-        pdMS_TO_TICKS(50)
-    );
-
-    free(buf);
 }
 
 // ================= BT INIT =================
@@ -276,33 +252,25 @@ void setup()
         Serial.println("BT NOT AVAILABLE (continuing)");
     }
 
-    // ================= I2C =================
+    // ================= I2C & DSP =================
     Serial.println("I2C init");
+    Wire.begin(SDA_PIN, SCL_PIN);
+    Wire.setClock(400000);
 
-    i2c_master_bus_config_t bus_cfg = {};
-    bus_cfg.i2c_port = I2C_NUM_0;
-    bus_cfg.sda_io_num = (gpio_num_t)SDA_PIN;
-    bus_cfg.scl_io_num = (gpio_num_t)SCL_PIN;
-    bus_cfg.clk_source = I2C_CLK_SRC_DEFAULT;
+    Serial.println("ADAU1701 init...");
+    dsp.begin();
 
-    if (i2c_new_master_bus(&bus_cfg, &i2c_bus) != ESP_OK) {
-        Serial.println("I2C FAIL");
-        while (1) delay(1000);
+    // Check if DSP is responding
+    uint8_t pingResult = dsp.ping();
+    if (pingResult == 0) {
+        Serial.println("ADAU1701 found!");
+    } else {
+        Serial.printf("ADAU1701 not responding (error: %d)\n", pingResult);
     }
 
-    i2c_device_config_t adau_cfg = {};
-    adau_cfg.dev_addr_length = I2C_ADDR_BIT_LEN_7;
-    adau_cfg.device_address = 0x34;
-    adau_cfg.scl_speed_hz = 100000;
-
-    if (i2c_master_bus_add_device(i2c_bus, &adau_cfg, &adau_handle) != ESP_OK) {
-        Serial.println("ADAU FAIL");
-        while (1) delay(1000);
-    }
-
-    Serial.println("ADAU init...");
-    default_download_IC_1();
-    Serial.println("ADAU done");
+    // Load DSP program from flash
+    loadProgram(dsp);
+    Serial.println("ADAU1701 program loaded");
 
     // ================= I2S =================
     Serial.println("I2S init");
