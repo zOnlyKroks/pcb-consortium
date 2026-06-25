@@ -1,7 +1,7 @@
 /*
- * File:           C:\Users\123ba\Documents\Bluetooth Box V3\BoxV3-DSP_IC_1_REG.h
+ * File:           C:\Users\finnr\Desktop\pcb-consortium\Bluetooth Box V3\DSP\BoxV3_IC_1_REG.h
  *
- * Created:        Monday, March 2, 2026 11:24:07 PM
+ * Created:        Thursday, June 25, 2026 6:22:05 PM
  * Description:    BoxV3:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -16,8 +16,8 @@
  *
  * Copyright ©2026 Analog Devices, Inc. All rights reserved.
  */
-#ifndef __BOXV3_DSP_IC_1_REG_H__
-#define __BOXV3_DSP_IC_1_REG_H__
+#ifndef __BOXV3_IC_1_REG_H__
+#define __BOXV3_IC_1_REG_H__
 
 
 /* InterfaceRegister0  - Registers (IC 1) */
@@ -108,17 +108,17 @@
 /* MpCfg0  - Registers (IC 1) */
 #define REG_MPCFG0_IC_1_ADDR                      0x820
 #define REG_MPCFG0_IC_1_BYTE                      3
-#define REG_MPCFG0_IC_1_VALUE                     0x440004
+#define REG_MPCFG0_IC_1_VALUE                     0x445674
 
 /* MpCfg1  - Registers (IC 1) */
 #define REG_MPCFG1_IC_1_ADDR                      0x821
 #define REG_MPCFG1_IC_1_BYTE                      3
-#define REG_MPCFG1_IC_1_VALUE                     0x0
+#define REG_MPCFG1_IC_1_VALUE                     0x665677
 
 /* AnalogPowerDownRegister  - Registers (IC 1) */
 #define REG_ANALOGPOWERDOWNREGISTER_IC_1_ADDR     0x822
 #define REG_ANALOGPOWERDOWNREGISTER_IC_1_BYTE     2
-#define REG_ANALOGPOWERDOWNREGISTER_IC_1_VALUE    0x3
+#define REG_ANALOGPOWERDOWNREGISTER_IC_1_VALUE    0x80
 
 /* TestRegister  - Registers (IC 1) */
 #define REG_TESTREGISTER_IC_1_ADDR                0x823
@@ -333,11 +333,11 @@
 /* MpCfg0 (IC 1) */
 #define R17_MFSELECT0_IC_1                        0x4    /* 100b	[2:0] */
 #define R17_MFINVERT0_IC_1                        0x0    /* 0b	[3] */
-#define R17_MFSELECT1_IC_1                        0x0    /* 000b	[6:4] */
+#define R17_MFSELECT1_IC_1                        0x7    /* 111b	[6:4] */
 #define R17_MFINVERT1_IC_1                        0x0    /* 0b	[7] */
-#define R17_MFSELECT2_IC_1                        0x0    /* 000b	[10:8] */
+#define R17_MFSELECT2_IC_1                        0x6    /* 110b	[10:8] */
 #define R17_MFINVERT2_IC_1                        0x0    /* 0b	[11] */
-#define R17_MFSELECT3_IC_1                        0x0    /* 000b	[14:12] */
+#define R17_MFSELECT3_IC_1                        0x5    /* 101b	[14:12] */
 #define R17_MFINVERT3_IC_1                        0x0    /* 0b	[15] */
 #define R17_MFSELECT4_IC_1                        0x4    /* 100b	[18:16] */
 #define R17_MFINVERT4_IC_1                        0x0    /* 0b	[19] */
@@ -369,17 +369,17 @@
 #define R17_MFINVERT5_IC_1_SHIFT                  23
 
 /* MpCfg1 (IC 1) */
-#define R18_MFSELECT6_IC_1                        0x0    /* 000b	[2:0] */
+#define R18_MFSELECT6_IC_1                        0x7    /* 111b	[2:0] */
 #define R18_MFINVERT6_IC_1                        0x0    /* 0b	[3] */
-#define R18_MFSELECT7_IC_1                        0x0    /* 000b	[6:4] */
+#define R18_MFSELECT7_IC_1                        0x7    /* 111b	[6:4] */
 #define R18_MFINVERT7_IC_1                        0x0    /* 0b	[7] */
-#define R18_MFSELECT8_IC_1                        0x0    /* 000b	[10:8] */
+#define R18_MFSELECT8_IC_1                        0x6    /* 110b	[10:8] */
 #define R18_MFINVERT8_IC_1                        0x0    /* 0b	[11] */
-#define R18_MFSELECT9_IC_1                        0x0    /* 000b	[14:12] */
+#define R18_MFSELECT9_IC_1                        0x5    /* 101b	[14:12] */
 #define R18_MFINVERT9_IC_1                        0x0    /* 0b	[15] */
-#define R18_MFSELECT10_IC_1                       0x0    /* 000b	[18:16] */
+#define R18_MFSELECT10_IC_1                       0x6    /* 110b	[18:16] */
 #define R18_MFINVERT10_IC_1                       0x0    /* 0b	[19] */
-#define R18_MFSELECT11_IC_1                       0x0    /* 000b	[22:20] */
+#define R18_MFSELECT11_IC_1                       0x6    /* 110b	[22:20] */
 #define R18_MFINVERT11_IC_1                       0x0    /* 0b	[23] */
 #define R18_MFSELECT6_IC_1_MASK                   0x7
 #define R18_MFSELECT6_IC_1_SHIFT                  0
@@ -407,14 +407,14 @@
 #define R18_MFINVERT11_IC_1_SHIFT                 23
 
 /* AnalogPowerDownRegister (IC 1) */
-#define R19_DAC3_POWERDOWN_IC_1                   0x1    /* 1b	[0] */
-#define R19_DAC2_POWERDOWN_IC_1                   0x1    /* 1b	[1] */
+#define R19_DAC3_POWERDOWN_IC_1                   0x0    /* 0b	[0] */
+#define R19_DAC2_POWERDOWN_IC_1                   0x0    /* 0b	[1] */
 #define R19_DAC1_POWERDOWN_IC_1                   0x0    /* 0b	[2] */
 #define R19_DAC0_POWERDOWN_IC_1                   0x0    /* 0b	[3] */
 #define R19_DACS_RESET_IC_1                       0x0    /* 0b	[4] */
 #define R19_REF_CORE_POWERDOWN_IC_1               0x0    /* 0b	[5] */
 #define R19_REF_BUF_POWERDOWN_IC_1                0x0    /* 0b	[6] */
-#define R19_ADCS_POWERDOWN_IC_1                   0x0    /* 0b	[7] */
+#define R19_ADCS_POWERDOWN_IC_1                   0x1    /* 1b	[7] */
 #define R19_AUX_ADC_FILTER_IC_1                   0x0    /* 000b	[10:8] */
 #define R19_DAC3_POWERDOWN_IC_1_MASK              0x1
 #define R19_DAC3_POWERDOWN_IC_1_SHIFT             0

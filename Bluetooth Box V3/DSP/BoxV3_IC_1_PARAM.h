@@ -1,8 +1,8 @@
 /*
- * File:           defines.h
+ * File:           C:\Users\finnr\Desktop\pcb-consortium\Bluetooth Box V3\DSP\BoxV3_IC_1_PARAM.h
  *
  * Created:        Thursday, June 25, 2026 6:22:05 PM
- * Description:    BoxV3 IC default download data definitions.
+ * Description:    BoxV3:IC 1 parameter RAM definitions.
  *
  * This software is distributed in the hope that it will be useful,
  * but is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
@@ -16,11 +16,8 @@
  *
  * Copyright ©2026 Analog Devices, Inc. All rights reserved.
  */
-#ifndef __DEFINES_H__
-#define __DEFINES_H__
-
-#define BufferSize_IC_1     	9254
-#define NumTransactions_IC_1	5
+#ifndef __BOXV3_IC_1_PARAM_H__
+#define __BOXV3_IC_1_PARAM_H__
 
 
 #endif
