@@ -16,7 +16,7 @@
 #include "esp_avrc_api.h"
 
 #include "driver/i2c_master.h"
-#include "../DSP/BoxV3-DSP_IC_1.h"
+#include "../DSP/BoxV3_IC_1.h"
 
 // ================= PINS =================
 #define SDA_PIN 14
