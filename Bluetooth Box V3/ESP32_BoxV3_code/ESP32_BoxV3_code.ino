@@ -105,7 +105,7 @@ void setup() {
 
   i2c_device_config_t adau_device_config = {
     .dev_addr_length = I2C_ADDR_BIT_LEN_7,
-    .device_address = 0x34, //0x34; maybe try 0x68 if not working
+    .device_address = 0x68, //0x34; maybe try 0x68 if not working
     .scl_speed_hz = 100000, //100 khz
   };
 
