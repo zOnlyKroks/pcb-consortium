@@ -27,7 +27,7 @@
 
 #define MODE_PIN 19
 #define DSP_IN_SELECT 18
-#define AMP_MUTE_PIN 4  // PAM8620TR mute pin (LOW = mute, HIGH = unmute)
+#define AMP_MUTE_PIN 4 
 
 // ================= DSP =================
 SigmaDSP dsp(Wire, DSP_I2C_ADDRESS, 48000.0f);
@@ -271,6 +271,17 @@ void setup()
     // Load DSP program from flash
     loadProgram(dsp);
     Serial.println("ADAU1701 program loaded");
+
+    // Fix registers after program load:
+    // 1. Unmute DAC (CoreRegister 0x81C: clear MUTE_DAC bit)
+    uint8_t coreReg[] = {0x00, 0x14};  // MUTE_DAC=0, MUTE_ADC=1, REG_ZERO=1
+    dsp.writeRegister(0x81C, 2, coreReg);
+
+    // 2. Fix pin config (MpCfg0 0x820: MP4=LRCLK, MP5=BCLK)
+    uint8_t mpCfg0[] = {0x23, 0x56, 0x74};  // MP5=BCLK(2), MP4=LRCLK(3), MP0=SDATA_IN(4)
+    dsp.writeRegister(0x820, 3, mpCfg0);
+
+    Serial.println("ADAU1701 registers fixed (DAC unmuted, pins configured)");
 
     // ================= I2S =================
     Serial.println("I2S init");
