@@ -31,7 +31,7 @@ i2s_chan_handle_t tx_handle;
 void audio_data_callback(const uint8_t *data, uint32_t len)
 {
     if (audio_rb) {
-        xRingbufferSend(audio_rb, data, len, 0);
+        xRingbufferSend(audio_rb, data, len, pdMS_TO_TICKS(5));
     }
 }
 
@@ -53,18 +53,20 @@ void bt_app_a2d_cb(esp_a2d_cb_event_t event, esp_a2d_cb_param_t *param)
 
 void i2s_task(void *arg)
 {   
-  size_t item_size;
-  uint8_t* item;
-  while (1) {
-    item = (uint8_t *)xRingbufferReceive(audio_rb, &item_size, portMAX_DELAY);
+    size_t item_size;
+    uint8_t* item;
 
-    if (item) {
-        size_t written;
-        i2s_channel_write(tx_handle, item, item_size, &written, portMAX_DELAY);
+    while (1) {
+        item = (uint8_t *)xRingbufferReceive(audio_rb, &item_size, pdMS_TO_TICKS(100));
 
-        vRingbufferReturnItem(audio_rb, item);
+        if (item) {
+            size_t written;
+            i2s_channel_write(tx_handle, item, item_size, &written, pdMS_TO_TICKS(100));
+            vRingbufferReturnItem(audio_rb, item);
+        }
+
+        vTaskDelay(pdMS_TO_TICKS(1));  // prevents watchdog reset
     }
-  }
 }
 
 void SigmaWriteRegisterBlock(uint8_t devAddr, uint16_t regAddr, uint16_t length, uint8_t *data) {
@@ -105,7 +107,7 @@ void setup() {
 
   i2c_device_config_t adau_device_config = {
     .dev_addr_length = I2C_ADDR_BIT_LEN_7,
-    .device_address = 0x68, //0x34; maybe try 0x68 if not working
+    .device_address = 0x34, //0x34; maybe try 0x68 if not working
     .scl_speed_hz = 100000, //100 khz
   };
 

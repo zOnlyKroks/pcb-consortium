@@ -23,7 +23,7 @@
 #include "BoxV3-DSP_IC_1_REG.h"
 
 #define DEVICE_ARCHITECTURE_IC_1                  "ADAU1701"
-#define DEVICE_ADDR_IC_1                          0x68
+#define DEVICE_ADDR_IC_1                          0x34
 
 /* DSP Program Data */
 #define PROGRAM_SIZE_IC_1 5120
