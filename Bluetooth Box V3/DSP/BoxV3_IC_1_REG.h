@@ -1,7 +1,7 @@
 /*
- * File:           C:\Users\finnr\Desktop\pcb-consortium\Bluetooth Box V3\DSP\BoxV3-DSP_IC_1_REG.h
+ * File:           C:\Users\finnr\Desktop\pcb-consortium\Bluetooth Box V3\DSP\BoxV3_IC_1_REG.h
  *
- * Created:        Thursday, June 25, 2026 8:05:14 PM
+ * Created:        Friday, June 26, 2026 9:29:15 AM
  * Description:    BoxV3:IC 1 control register definitions.
  *
  * This software is distributed in the hope that it will be useful,
@@ -16,8 +16,8 @@
  *
  * Copyright ©2026 Analog Devices, Inc. All rights reserved.
  */
-#ifndef __BOXV3_DSP_IC_1_REG_H__
-#define __BOXV3_DSP_IC_1_REG_H__
+#ifndef __BOXV3_IC_1_REG_H__
+#define __BOXV3_IC_1_REG_H__
 
 
 /* InterfaceRegister0  - Registers (IC 1) */

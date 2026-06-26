@@ -1,7 +1,7 @@
 /*
  * File:           defines.h
  *
- * Created:        Thursday, June 25, 2026 8:05:14 PM
+ * Created:        Friday, June 26, 2026 9:29:15 AM
  * Description:    BoxV3 IC default download data definitions.
  *
  * This software is distributed in the hope that it will be useful,
