@@ -17,17 +17,11 @@
 <NetList>
     <IC name=" IC 1 " type="DSPSigma100">
         <Schematic>
-            <Algorithm name="WhiteNAlgNew1" friendlyname="White Noise " cell="W Noise1 " location="{X=829, Y=392} " Growth="0 " GrowthB="0 " FS="48000">
+            <Algorithm name="sin_lookupAlg19401" friendlyname="Tone Synthesis (lookup/sine) " cell="Tone1 " location="{X=838, Y=512} " Growth="0 " GrowthB="0 " FS="48000">
                 <Link pin="O_C0_A0_P1_out" dir="out" link="Link0" />
             </Algorithm>
-            <Algorithm name="WhiteNAlgNew2" friendlyname="White Noise " cell="W Noise2 " location="{X=829, Y=479} " Growth="0 " GrowthB="0 " FS="48000">
-                <Link pin="O_C8_A0_P1_out" dir="out" link="Link1" />
-            </Algorithm>
-            <Algorithm name="ICSigma100Out2" friendlyname="170x\140x output " cell="Output2 " location="{X=1038, Y=408} " Growth="0 " GrowthB="0">
-                <Link pin="I_C35_A0_P1_in" dir="in" link="Link0" />
-            </Algorithm>
-            <Algorithm name="ICSigma100Out1" friendlyname="170x\140x output " cell="Output1 " location="{X=1038, Y=487} " Growth="0 " GrowthB="0">
-                <Link pin="I_C11_A0_P1_in" dir="in" link="Link1" />
+            <Algorithm name="ICSigma100Out1" friendlyname="170x\140x output " cell="Output1 " location="{X=1008, Y=503.2601} " Growth="0 " GrowthB="0">
+                <Link pin="I_C11_A0_P1_in" dir="in" link="Link0" />
             </Algorithm>
         </Schematic>
     </IC>
