@@ -3485,6 +3485,12 @@
 		(uuid "8ef20ad1-d3e0-4085-a770-93c11bb4a186")
 	)
 	(junction
+		(at 147.32 72.39)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90fb22bd-579f-4c33-834d-497b2188c83a")
+	)
+	(junction
 		(at 191.77 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3579,12 +3585,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f2559d78-6884-42fd-ae19-1f2b80580465")
-	)
-	(junction
-		(at 147.32 72.39)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f4d6c471-e7b5-4470-b628-c7e0d725c7c0")
 	)
 	(junction
 		(at 148.59 101.6)
@@ -5019,88 +5019,6 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "R8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized_Small")
-		(at 147.32 69.85 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "0af6829f-7b90-4aa0-bb96-ff14b14c992e")
-		(property "Reference" "C13"
-			(at 149.86 68.0338 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "220 uF"
-			(at 149.86 70.5738 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
-			(at 147.32 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 147.32 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Polarized capacitor, small symbol"
-			(at 147.32 69.85 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "29ef64f0-b405-4268-97ba-4f4f493ec217")
-		)
-		(pin "2"
-			(uuid "b4921629-6a1f-452c-b7ef-2f6512a2c388")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "C13")
 					(unit 1)
 				)
 			)
@@ -8585,6 +8503,88 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 147.32 69.85 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9fd33934-cc85-46ec-8a63-75efce314969")
+		(property "Reference" "C13"
+			(at 149.86 69.126 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "220 uF"
+			(at 149.86 71.666 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
+			(at 147.32 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 147.32 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a39a635-8ee6-4671-bc86-a547ccc0fac0")
+		)
+		(pin "2"
+			(uuid "82c7c277-fef6-4e41-9e42-e4dfee9b171e")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "C13")
 					(unit 1)
 				)
 			)
