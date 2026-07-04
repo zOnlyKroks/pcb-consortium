@@ -3491,6 +3491,12 @@
 		(uuid "90fb22bd-579f-4c33-834d-497b2188c83a")
 	)
 	(junction
+		(at 86.36 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "911b1e9c-4f02-4d65-a9b4-bedfe863e04e")
+	)
+	(junction
 		(at 191.77 102.87)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3828,6 +3834,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 106.68) (xy 86.36 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b3028b1-f351-432d-a7a3-05f2ae0af6c1")
+	)
+	(wire
+		(pts
 			(xy 91.44 67.31) (xy 99.06 67.31)
 		)
 		(stroke
@@ -3995,6 +4011,16 @@
 			(type default)
 		)
 		(uuid "70fcf15c-e174-4bc8-a10c-cd77b4912e53")
+	)
+	(wire
+		(pts
+			(xy 99.06 106.68) (xy 86.36 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7346e26f-431f-4417-976b-783f04ffde38")
 	)
 	(wire
 		(pts
@@ -7537,6 +7563,165 @@
 		)
 	)
 	(symbol
+		(lib_id "Jumper:SolderJumper_2_Open")
+		(at 81.28 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6843a1bf-b002-4e3c-b04c-38a67654d7d5")
+		(property "Reference" "JP2"
+			(at 81.28 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "mute"
+			(at 81.28 118.11 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm"
+			(at 81.28 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 81.28 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Solder Jumper, 2-pole, open"
+			(at 81.28 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "af723250-2217-4a62-aea8-81e82717bd02")
+		)
+		(pin "2"
+			(uuid "ed06a3d7-5810-4617-8bab-f4d6c8e1c7ee")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "JP2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 76.2 121.92 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6a21aa23-3762-4e32-acff-397233823b91")
+		(property "Reference" "#PWR028"
+			(at 80.01 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 72.39 121.9199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 76.2 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 76.2 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 76.2 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e7000d4a-e65f-413a-a92b-a949f62cee11")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "#PWR028")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 138.43 83.82 270)
 		(mirror x)
@@ -8018,6 +8203,85 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "C20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 86.36 127 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7e1368fc-fd73-4468-9739-55c8ba6a99eb")
+		(property "Reference" "#PWR027"
+			(at 86.36 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 86.3601 130.81 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 86.36 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 86.36 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 86.36 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "212730df-c4c8-4515-9571-a47e2b3c7ad6")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -8755,8 +9019,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 99.06 106.68 270)
+		(lib_id "Device:R_Small")
+		(at 86.36 124.46 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -8765,10 +9029,19 @@
 		(in_pos_files yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "a81441c3-f70b-496f-b09e-87d9508eb9bc")
-		(property "Reference" "#PWR04"
-			(at 92.71 106.68 0)
-			(hide yes)
+		(uuid "a3c8b0c4-113c-419c-94f4-28714c17b6a6")
+		(property "Reference" "R12"
+			(at 91.44 124.46 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 88.9 124.46 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8777,19 +9050,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 95.25 106.6799 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" ""
-			(at 99.06 106.68 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 86.36 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8800,7 +9062,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 106.68 0)
+			(at 86.36 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8810,8 +9072,8 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 99.06 106.68 0)
+		(property "Description" "Resistor, small symbol"
+			(at 86.36 124.46 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8820,14 +9082,17 @@
 					(size 1.27 1.27)
 				)
 			)
+		)
+		(pin "2"
+			(uuid "c2547778-b4f6-45c5-a8db-74afed7e5737")
 		)
 		(pin "1"
-			(uuid "dded2fc1-6018-4c79-a772-c6fe8c1e48c1")
+			(uuid "3cfd7689-9888-434d-bae1-2bd45aaf7c95")
 		)
 		(instances
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "#PWR04")
+					(reference "R12")
 					(unit 1)
 				)
 			)
