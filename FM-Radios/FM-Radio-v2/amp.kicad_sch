@@ -1445,6 +1445,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 77.47) (xy 74.93 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14828239-40ff-463a-9f1b-8542c89804c7")
+	)
+	(wire
+		(pts
 			(xy 133.35 77.47) (xy 198.12 77.47)
 		)
 		(stroke
@@ -1512,6 +1522,16 @@
 			(type default)
 		)
 		(uuid "5d8e147f-7ca9-4ca3-ab52-93c4dd9f0613")
+	)
+	(wire
+		(pts
+			(xy 34.29 77.47) (xy 52.07 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "60b7a217-74ac-4bfa-a8f6-1f9579564773")
 	)
 	(wire
 		(pts
@@ -1615,6 +1635,16 @@
 	)
 	(wire
 		(pts
+			(xy 46.99 72.39) (xy 74.93 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b2f8a43-78b4-40ed-a150-081f47a3555a")
+	)
+	(wire
+		(pts
 			(xy 134.62 35.56) (xy 146.05 35.56)
 		)
 		(stroke
@@ -1713,9 +1743,19 @@
 		)
 		(uuid "f7a99ba3-817a-4d75-b949-ae07447288e2")
 	)
+	(wire
+		(pts
+			(xy 34.29 72.39) (xy 39.37 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff80a9b3-5171-492b-b472-b4bb9f2cc9d1")
+	)
 	(hierarchical_label "INL"
 		(shape input)
-		(at 74.93 72.39 180)
+		(at 34.29 72.39 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1759,7 +1799,7 @@
 	)
 	(hierarchical_label "INR"
 		(shape input)
-		(at 74.93 77.47 180)
+		(at 34.29 77.47 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1767,6 +1807,109 @@
 			(justify right)
 		)
 		(uuid "ae049b16-5152-400a-adf8-fc1def09bfc9")
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 55.88 77.47 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "07764b2f-70e7-47ae-afc1-7e8d93ba72f9")
+		(property "Reference" "C13"
+			(at 54.7116 80.391 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1 uF"
+			(at 57.023 80.391 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 59.69 78.4352 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55.88 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55.88 77.47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 55.88 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 55.88 77.47 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0028b17f-189b-4455-906b-f7f023cbbd58")
+		)
+		(pin "2"
+			(uuid "cc9bdb3f-3af3-456a-a702-ad65d3732a78")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
+					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3441,6 +3584,108 @@
 			(project "FM-Radio"
 				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
 					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 43.18 72.39 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b6604fa5-e7c5-4be6-a78e-b9677cdcfeb5")
+		(property "Reference" "C12"
+			(at 42.0116 69.469 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1 uF"
+			(at 44.323 69.469 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 46.99 71.4248 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 72.39 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 43.18 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JlcRotOffset" ""
+			(at 43.18 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "57982125-e4dc-47e8-a388-a403ca31493a")
+		)
+		(pin "2"
+			(uuid "340befa9-3104-42a5-8cd2-80acbfac468b")
+		)
+		(instances
+			(project "FM-Radio"
+				(path "/8a5dac2c-def6-4068-997d-88e941bc9e21/18d8f057-b407-4e30-81ec-39f7fcc0cfbd"
+					(reference "C12")
 					(unit 1)
 				)
 			)
