@@ -4649,6 +4649,12 @@
 		(uuid "ade3e8f4-b5b7-4deb-ae4e-d7983225556c")
 	)
 	(junction
+		(at 260.35 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b529c9d1-6566-468c-9ee3-01514d5fe6ea")
+	)
+	(junction
 		(at 194.31 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4717,6 +4723,16 @@
 	(no_connect
 		(at 116.84 105.41)
 		(uuid "dd041311-d24d-4c22-8520-993586ea6cb0")
+	)
+	(wire
+		(pts
+			(xy 260.35 133.35) (xy 260.35 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03ffa778-5ec8-4902-a75e-e25c0840329a")
 	)
 	(wire
 		(pts
@@ -4797,16 +4813,6 @@
 			(type default)
 		)
 		(uuid "295cf34b-d93d-466f-8d6b-7fafb8f23927")
-	)
-	(wire
-		(pts
-			(xy 74.93 102.87) (xy 81.28 102.87)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2d95e463-6207-4194-aa17-4c17f914268e")
 	)
 	(wire
 		(pts
@@ -5160,6 +5166,16 @@
 	)
 	(wire
 		(pts
+			(xy 260.35 135.89) (xy 260.35 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d071f68a-ebf7-497d-a5c0-61f671316731")
+	)
+	(wire
+		(pts
 			(xy 130.81 85.09) (xy 130.81 102.87)
 		)
 		(stroke
@@ -5258,16 +5274,6 @@
 		)
 		(uuid "f3e926b7-16e1-4535-bfdd-6c6194066acc")
 	)
-	(label "AVDD2"
-		(at 43.18 78.74 270)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "1befe6cf-2e5a-48ef-a605-404cf27b7e65")
-	)
 	(label "XTAL2"
 		(at 81.28 107.95 180)
 		(effects
@@ -5307,16 +5313,6 @@
 			(justify right bottom)
 		)
 		(uuid "a5acb6b3-b3d6-47d4-836e-79c7479a50a7")
-	)
-	(label "AVDD2"
-		(at 81.28 102.87 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "b3c5b9c7-4eb5-4e61-a50c-1d5497dc57ea")
 	)
 	(label "RFIN"
 		(at 104.14 130.81 0)
@@ -7788,7 +7784,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 74.93 102.87 90)
+		(at 81.28 102.87 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7799,7 +7795,7 @@
 		(fields_autoplaced yes)
 		(uuid "64d60950-9bff-4062-9f80-6d7b3e4580ef")
 		(property "Reference" "#PWR05"
-			(at 78.74 102.87 0)
+			(at 85.09 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7810,7 +7806,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 73.66 100.33 90)
+			(at 80.01 100.33 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7820,7 +7816,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.93 102.87 0)
+			(at 81.28 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7831,7 +7827,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.93 102.87 0)
+			(at 81.28 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7842,7 +7838,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 74.93 102.87 0)
+			(at 81.28 102.87 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10357,7 +10353,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 260.35 123.19 180)
+		(at 260.35 135.89 180)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10368,7 +10364,7 @@
 		(fields_autoplaced yes)
 		(uuid "a9985069-146d-4dc9-b160-36eda26c190c")
 		(property "Reference" "#PWR022"
-			(at 260.35 119.38 0)
+			(at 260.35 132.08 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10379,7 +10375,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 260.35 128.27 0)
+			(at 260.35 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10389,7 +10385,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 260.35 123.19 0)
+			(at 260.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10400,7 +10396,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 260.35 123.19 0)
+			(at 260.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10411,7 +10407,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 260.35 123.19 0)
+			(at 260.35 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11729,84 +11725,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 43.18 73.66 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "e0e87eb5-a776-410b-9380-b86aa870942e")
-		(property "Reference" "#PWR029"
-			(at 43.18 67.31 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 43.18 68.58 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 43.18 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 43.18 73.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b5d67fc8-187f-4cbc-b4d7-8e06a3d7e0e2")
-		)
-		(instances
-			(project "AT1846S-breakout"
-				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
-					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 152.4 115.57 0)
 		(unit 1)
 		(body_style 1)
@@ -12221,6 +12139,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 255.27 133.35 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef412c4b-1339-49f9-90cc-8fb03553fa56")
+		(property "Reference" "#PWR029"
+			(at 248.92 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 251.46 133.3499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 255.27 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 255.27 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 255.27 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "01bc9686-ce89-43fc-96f7-66890b8ab457")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C_Small")
 		(at 196.85 87.63 270)
 		(mirror x)
@@ -12384,6 +12381,86 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 257.81 133.35 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fbcd53f7-7147-410b-a0ab-49d2cecf60ab")
+		(property "Reference" "C15"
+			(at 257.8037 127 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 257.81 129.286 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 257.81 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 257.81 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 257.81 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "613b1bd3-44fd-4e7b-887c-c727a7233256")
+		)
+		(pin "2"
+			(uuid "a3c71424-817d-4926-a75f-15112bb59d9b")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "C15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 189.23 113.03 180)
 		(unit 1)
 		(body_style 1)
@@ -12456,85 +12533,6 @@
 			(project "AT1846S-breakout"
 				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
 					(reference "C8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 43.18 76.2 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fd5e3808-584e-475a-a19a-cd7d333734db")
-		(property "Reference" "C15"
-			(at 36.83 76.1937 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100 nF"
-			(at 39.116 76.2 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 43.18 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 43.18 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 43.18 76.2 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b4ba61fb-5443-4343-a516-9ff2402cbf0a")
-		)
-		(pin "2"
-			(uuid "53476761-9ff5-4328-b7af-6ca5e7509169")
-		)
-		(instances
-			(project "AT1846S-breakout"
-				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
-					(reference "C15")
 					(unit 1)
 				)
 			)
