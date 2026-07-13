@@ -4541,6 +4541,12 @@
 		(uuid "0e6929b4-0420-4d06-bca3-4f92c2035666")
 	)
 	(junction
+		(at 135.89 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "133cdc60-4085-4dec-88fa-4cf649e80bb1")
+	)
+	(junction
 		(at 124.46 97.79)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4595,6 +4601,12 @@
 		(uuid "697de367-40d4-405f-9e72-372b5941285f")
 	)
 	(junction
+		(at 147.32 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7af63e87-f59f-4f69-bb83-1264ce8753f8")
+	)
+	(junction
 		(at 106.68 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4605,6 +4617,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "947a29da-507e-4539-a384-b981a9f24d97")
+	)
+	(junction
+		(at 190.5 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9c05e1e4-17c3-4b41-a7b6-b2f1bee20b9e")
 	)
 	(junction
 		(at 50.8 110.49)
@@ -4819,6 +4837,16 @@
 			(type default)
 		)
 		(uuid "3cb69adb-d3db-452e-a4fb-0b6013345c2d")
+	)
+	(wire
+		(pts
+			(xy 190.5 57.15) (xy 170.18 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ccf4c3b-8fc3-4b13-9fd9-ffdadb2e9a52")
 	)
 	(wire
 		(pts
@@ -5112,6 +5140,16 @@
 	)
 	(wire
 		(pts
+			(xy 147.32 57.15) (xy 154.94 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c2a7647f-402e-4e9b-89f5-94a9f2f2ed56")
+	)
+	(wire
+		(pts
 			(xy 130.81 102.87) (xy 116.84 102.87)
 		)
 		(stroke
@@ -5209,6 +5247,16 @@
 			(type default)
 		)
 		(uuid "f24fa4ec-1c74-416d-a2b6-a4df65719f21")
+	)
+	(wire
+		(pts
+			(xy 135.89 57.15) (xy 147.32 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3e926b7-16e1-4535-bfdd-6c6194066acc")
 	)
 	(label "AVDD2"
 		(at 43.18 78.74 270)
@@ -6713,6 +6761,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 190.5 59.69 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "37b4797c-4819-4566-8499-2fdc78dbb6e1")
+		(property "Reference" "C21"
+			(at 196.85 59.6837 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 194.564 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 190.5 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 190.5 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "adb880c6-c660-4e23-94b1-767fa32e52ee")
+		)
+		(pin "2"
+			(uuid "6db5da77-f4a4-4015-9b76-f1b51f819ba2")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 54.61 96.52 0)
 		(unit 1)
@@ -6789,6 +6917,84 @@
 			(project "AT1846S-breakout"
 				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
 					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 190.5 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3fd06827-7262-4ad6-bd5e-3b137a7f283b")
+		(property "Reference" "#PWR040"
+			(at 190.5 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 190.5 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 190.5 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "da2c0b37-6553-44ef-8cb1-09cf3b80b64a")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "#PWR040")
 					(unit 1)
 				)
 			)
@@ -7034,6 +7240,163 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 135.89 62.23 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4e874f09-606b-4650-9382-2dc89625b99c")
+		(property "Reference" "#PWR039"
+			(at 135.89 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 135.89 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 135.89 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5019bc88-bf34-4e82-b6d2-13a020759731")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x01_Pin")
+		(at 147.32 52.07 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4eb61687-b562-42bd-b62b-2981643231cd")
+		(property "Reference" "J7"
+			(at 148.59 51.4349 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "5V"
+			(at 148.59 53.9749 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical"
+			(at 147.32 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x01, script generated"
+			(at 147.32 52.07 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4d5bb207-17f6-4b3f-9d4e-9793c41d31f5")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "J7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 124.46 80.01 180)
 		(unit 1)
 		(body_style 1)
@@ -7105,6 +7468,84 @@
 			(project "AT1846S-breakout"
 				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
 					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 190.5 57.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "578bd9e6-2ef2-425a-8b1f-f8282c5c1cff")
+		(property "Reference" "#PWR037"
+			(at 190.5 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 190.5 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 190.5 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 190.5 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 190.5 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1e420ab5-54a5-43ea-b9ab-d88f77b6ba1a")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -7418,6 +7859,86 @@
 			(project "AT1846S-breakout"
 				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 135.89 59.69 0)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6632d428-e405-49fb-8cff-f0554e110d44")
+		(property "Reference" "C20"
+			(at 142.24 59.6837 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 nF"
+			(at 139.954 59.69 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 135.89 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 135.89 59.69 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b33bc30-1458-4a02-b6a2-68f2f52ba04e")
+		)
+		(pin "2"
+			(uuid "1e68d0f7-537e-4733-a08c-e8fe7836931c")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "C20")
 					(unit 1)
 				)
 			)
@@ -11043,6 +11564,84 @@
 			(project "AT1846S-breakout"
 				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
 					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 135.89 57.15 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "de258b2b-1a2a-49b2-a8d0-45b8232f6eb2")
+		(property "Reference" "#PWR038"
+			(at 135.89 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+5V"
+			(at 135.89 52.07 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.89 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 135.89 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "dca0cdf8-218c-4a76-843a-00f20a6e1791")
+		)
+		(instances
+			(project "AT1846S-breakout"
+				(path "/6c2ac1f4-198c-429f-b54a-f0ca870143d4"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
