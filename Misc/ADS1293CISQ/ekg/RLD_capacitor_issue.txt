@@ -1,0 +1,172 @@
+ADS1293 RLD OSCILLATION - ROOT CAUSE IDENTIFIED
+================================================
+
+PROBLEM: RLD capacitor is 17 pF instead of 1.5 nF (1500 pF)
+
+This is 88x SMALLER than the datasheet specification!
+
+
+WHY THIS CAUSES OSCILLATION:
+----------------------------
+
+The RLD (Right Leg Drive) circuit is a negative feedback loop:
+1. ADS1293 measures common-mode voltage on IN1/IN2/IN3
+2. RLD amplifier inverts and drives it back to IN4 (RL electrode)
+3. This cancels common-mode noise (50/60 Hz interference)
+
+The capacitor stabilizes this feedback loop by providing:
+- Low-pass filtering
+- Phase compensation
+- Prevents oscillation
+
+
+IMPACT OF WRONG CAPACITOR VALUE:
+---------------------------------
+
+YOUR PCB: 1 MΩ + 17 pF
+- RC time constant = 17 µs
+- Cutoff frequency = ~9.4 kHz
+- Result: 90x HIGHER bandwidth than intended
+
+DATASHEET SPEC: 1 MΩ + 1.5 nF
+- RC time constant = 1.5 ms
+- Cutoff frequency = ~106 Hz
+- Result: Stable RLD feedback
+
+With 90x higher bandwidth, the RLD feedback loop is UNSTABLE and oscillates!
+
+
+THIS EXPLAINS ALL YOUR SYMPTOMS:
+---------------------------------
+
+✓ Why RLD_CN = 0x04 (TI spec, active RLD) causes oscillation
+✓ Why RLD_CN = 0x00 (disabled RLD) has growing amplitude
+✓ Why RLD_CN = 0x0F might still be unstable
+✓ The 30-second cycling pattern (slow oscillation buildup)
+✓ Signal works for a few seconds then "goes to shit"
+✓ Amplitude cycles: 0.5 mV → 10 mV → 0.5 mV → repeat
+
+
+SOLUTIONS:
+----------
+
+OPTION 1: Fix the Hardware (BEST SOLUTION)
+==========================================
+Replace the 17 pF capacitor with 1.5 nF (1500 pF)
+
+Component specifications:
+- Value: 1.5 nF (also marked as 152, 1n5, or 1500pF)
+- Type: Ceramic capacitor (X7R or C0G/NP0)
+- Package: 0603 or 0805 SMD
+- Voltage rating: 16V or higher
+
+After replacing:
+- Configure RLD_CN = 0x04 (TI datasheet specification)
+- RLD will be stable and provide excellent noise rejection
+- No software filtering workarounds needed
+
+
+OPTION 2: Software Workaround (CURRENT APPROACH)
+=================================================
+Keep RLD disabled to prevent oscillation
+
+Configuration:
+- Set RLD_CN = 0x00 (RLD disabled)
+- Accept higher 50/60 Hz noise in signal
+- Use aggressive software filtering (high-pass + notch filter)
+
+Disadvantages:
+- More power line interference
+- Lower signal quality
+- May struggle in electrically noisy environments
+
+
+OPTION 3: Try Reduced RLD Gain (EXPERIMENTAL)
+==============================================
+Test different RLD_CN values to find stable configuration
+
+Values to try:
+- 0x01, 0x02, 0x03, 0x05, 0x06, 0x07, 0x08, etc.
+- Some may have lower RLD gain = more stable with wrong cap
+- Still not ideal, but might work better than fully disabled
+
+This is trial-and-error and won't be as good as the correct capacitor.
+
+
+RECOMMENDED ACTION:
+-------------------
+
+1. Identify the capacitor on your PCB:
+   - Look for reference designator (e.g., C5, C12, etc.)
+   - It's connected between RLDINV pin and ground
+   - Near the 1 MΩ resistor in RLD circuit
+
+2. Replace 17 pF capacitor with 1.5 nF capacitor:
+   - Use ceramic capacitor (X7R dielectric recommended)
+   - 0603 or 0805 package to match your PCB
+   - 1.5 nF = 152 marking = 1500 pF
+
+3. Update firmware to use RLD_CN = 0x04 (TI specification)
+
+4. Test - oscillation should be completely eliminated
+
+
+VERIFICATION AFTER FIX:
+-----------------------
+
+After replacing the capacitor, you should see:
+
+✓ STABLE signal amplitude (2-4 mV consistently)
+✓ NO cycling behavior
+✓ NO saturation
+✓ Clean ECG waveforms with visible P-QRS-T complexes
+✓ Much better noise rejection (RLD working properly)
+
+
+ADDITIONAL NOTES:
+-----------------
+
+The 17 pF capacitor was likely a PCB assembly error:
+- Wrong BOM (Bill of Materials) entry
+- Part placement mistake during manufacturing
+- Transcription error (17pF vs 1.7nF vs 1.5nF)
+
+This is a critical component for RLD stability. Without the correct
+value, the RLD feedback loop oscillates at low frequency (30-40 second
+period), causing the amplitude cycling you've been experiencing.
+
+The fact that you have 0-ohm resistors (matching TI reference design)
+but wrong RLD capacitor suggests this was a BOM/assembly issue rather
+than an intentional design change.
+
+
+CURRENT WORKAROUND STATUS:
+--------------------------
+
+Your current firmware configuration:
+- RLD_CN = 0x0F (testing all inputs mode)
+- Software DC removal (0.2 Hz high-pass filter)
+- Fixed Y-axis scaling (±3 mV)
+
+This should provide somewhat usable ECG, but:
+- Signal quality will be compromised
+- More susceptible to electrical interference
+- Not optimal for medical-grade measurements
+
+For best results: REPLACE THE CAPACITOR with 1.5 nF
+
+
+QUESTIONS TO ANSWER:
+--------------------
+
+1. What is the reference designator of this capacitor on your PCB?
+   (Look for Cxx marking near RLDINV pin)
+
+2. Can you verify the actual value with a multimeter/LCR meter?
+   (Confirm it's really 17 pF)
+
+3. Do you have access to replacement 1.5 nF capacitors?
+   (0603/0805 ceramic, X7R, 16V+)
+
+4. Are you able to do SMD rework to replace it?
+   (Hot air station or soldering iron with fine tip)

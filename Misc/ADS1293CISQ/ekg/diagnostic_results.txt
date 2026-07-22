@@ -1,0 +1,82 @@
+ADS1293 ECG Diagnostic Results
+================================
+
+HARDWARE STATUS: ✅ WORKING CORRECTLY
+
+SPI Communication:
+- Revision ID: 0x1
+- Status: OK - Communication working
+
+Register Configuration:
+- All 14 registers verified: ALL OK
+- No mismatches detected
+- Configuration accepted by chip
+
+CURRENT SIGNAL ANALYSIS:
+
+What your data shows:
+- DC offset: ~900 mV (typical for floating electrodes)
+- Raw values: ~6,280,000 to 6,295,000
+- Variation: ±15,000 counts (small, as expected with disconnected electrodes)
+- This is NORMAL behavior for unconnected/floating inputs
+
+The signal you're seeing is environmental noise pickup (50/60Hz from power lines,
+static, etc.) which is expected when electrodes are not connected to a body.
+
+NEXT STEPS - TO SEE ACTUAL ECG:
+
+Connect electrodes to your body:
+1. RA (IN1) - Right arm/wrist
+2. LA (IN2) - Left arm/wrist
+3. LL (IN3) - Left leg/ankle
+4. RL (IN4) - Right leg/ankle (RLD drive)
+
+Quick Test:
+Just touch the RA and LA electrode wires with your fingers (one wire per hand).
+You should immediately see:
+- Much larger variations (100,000+ counts or more)
+- Your heartbeat signal appearing
+- More 50/60Hz noise from your body acting as antenna
+
+HARDWARE CONCERN DETECTED:
+
+ESP32 Reset Issue:
+Your ESP32 keeps resetting (multiple "rst:0x1 (POWERON)" messages detected).
+
+This suggests:
+- Power supply issue - insufficient current capacity
+- Brownout condition - voltage dropping under load
+- Possible USB cable issue
+
+Recommendations:
+- Check your USB cable quality
+- Try a different USB port or powered hub
+- Verify power supply can deliver enough current
+- Check for short circuits or excessive current draw
+
+CONFIGURATION SUMMARY:
+
+3-Lead ECG Setup (per datasheet section 9.2.1):
+- Channel 1: Lead I (LA - RA)
+- Channel 2: Lead II (LL - RA)
+- Channel 3: Lead III (LL - LA)
+- Common-mode detection: Averaging IN1, IN2, IN3 (RA, LA, LL)
+- RLD output: Driving RL electrode via IN4 for common-mode rejection
+- Reference: Internal 2.4V
+- Clock: External 4.096 MHz crystal
+- Sample rate: ~85 Hz per channel (after decimation)
+
+Data Format:
+timestamp_ms, raw_value, voltage_mV
+
+Voltage Conversion:
+voltage_mV = (raw_value / 8388607.0) * 1200.0
+
+CONCLUSION:
+
+Your ADS1293 hardware and configuration are working correctly. The current readings
+show normal floating input behavior. To see ECG signals, connect the electrodes to
+your body as described above.
+
+The ESP32 power issue should be addressed to ensure stable operation during actual
+ECG measurements.
