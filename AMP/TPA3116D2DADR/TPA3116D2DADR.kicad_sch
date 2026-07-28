@@ -866,160 +866,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:SMAJ24A"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "SMAJ24A"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" "Diode_SMD:D_SMA"
-				(at 0 -5.08 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
-				(at -1.27 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "400W unidirectional Transient Voltage Suppressor, 24.0Vr, SMA(DO-214AC)"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "unidirectional diode TVS voltage suppressor"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "D*SMA*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "SMAJ24A_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "SMAJ24A_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "A1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Jumper:SolderJumper_2_Open"
 			(pin_numbers
 				(hide yes)
@@ -1188,551 +1034,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Power_Management:LTC4359-DCB"
-			(pin_names
-				(offset 1.016)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at -5.08 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "LTC4359-DCB"
-				(at 6.35 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_DFN_QFN:DFN-6-1EP_3x2mm_P0.5mm_EP1.65x1.35mm"
-				(at 6.35 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4359.pdf"
-				(at 0 -6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Ideal diode controller with reverse input protection, DFN-6"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "ideal-diode or-ing reverse-protection"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "DFN*1EP*3x2mm*P0.5mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "LTC4359-DCB_0_1"
-				(rectangle
-					(start -5.08 7.62)
-					(end 5.08 -7.62)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type background)
-					)
-				)
-			)
-			(symbol "LTC4359-DCB_1_1"
-				(pin input line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "OUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin output line
-					(at 2.54 10.16 270)
-					(length 2.54)
-					(name "GATE"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at 0 10.16 270)
-					(length 2.54)
-					(name "SRC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at -7.62 0 0)
-					(length 2.54)
-					(name "IN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "~{SHDN}"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -10.16 90)
-					(length 2.54)
-					(name "Vss"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 2.54 -10.16 90)
-					(length 2.54)
-					(name "Pad"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Transistor_FET:AO3400A"
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "Q"
-				(at 5.08 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "AO3400A"
-				(at 5.08 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-				(at 5.08 -1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-						(italic yes)
-					)
-					(justify left)
-				)
-			)
-			(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-				(at 5.08 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "N-Channel MOSFET"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "SOT?23*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "AO3400A_0_1"
-				(polyline
-					(pts
-						(xy 0.254 1.905) (xy 0.254 -1.905)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.254 0) (xy -2.54 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 2.286) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 0.508) (xy 0.762 -0.508)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.27) (xy 0.762 -2.286)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 -1.778) (xy 3.302 -1.778) (xy 3.302 1.778) (xy 0.762 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.016 0) (xy 2.032 0.381) (xy 2.032 -0.381) (xy 1.016 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 1.651 0)
-					(radius 2.794)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 2.54) (xy 2.54 1.778)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.54 1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(circle
-					(center 2.54 -1.778)
-					(radius 0.254)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 -2.54) (xy 2.54 0) (xy 0.762 0)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.921 0.381) (xy 3.683 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 3.302 0.381) (xy 2.921 -0.254) (xy 3.683 -0.254) (xy 3.302 0.381)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "AO3400A_1_1"
-				(pin input line
-					(at -5.08 0 0)
-					(length 2.54)
-					(name "G"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 -5.08 90)
-					(length 2.54)
-					(name "S"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 2.54 5.08 270)
-					(length 2.54)
-					(name "D"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1987,244 +1288,6 @@
 						)
 					)
 					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "symbols:SMAT70A-13-F"
-			(pin_names
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 10.16 8.89 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Value" "SMAT70A-13-F"
-				(at 10.16 6.35 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Footprint" "DIOM5226X230N"
-				(at 10.16 -93.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30213.pdf"
-				(at 10.16 -193.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Description" "Diodes Inc SMAT70A-13-F Uni-Directional TVS Diode, 400W peak, 2-Pin SMA"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Height" "2.3"
-				(at 10.16 -393.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Mouser Part Number" "621-SMAT70A-13-F"
-				(at 10.16 -493.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SMAT70A-13-F?qs=gaDBXWSqsDAzZwchZhUtfQ%3D%3D"
-				(at 10.16 -593.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Manufacturer_Name" "Diodes Incorporated"
-				(at 10.16 -693.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(property "Manufacturer_Part_Number" "SMAT70A-13-F"
-				(at 10.16 -793.65 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left bottom)
-				)
-			)
-			(symbol "SMAT70A-13-F_1_1"
-				(polyline
-					(pts
-						(xy 4.064 2.54) (xy 5.08 2.032)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 0) (xy 10.16 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.032) (xy 5.08 2.032)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 5.08 -2.032) (xy 6.096 -2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 5.08 0)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 10.16 -2.54) (xy 10.16 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at 0 0 0)
-					(length 5.08)
-					(name "K"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 15.24 0 180)
-					(length 5.08)
-					(name "A"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3005,12 +2068,6 @@
 		(uuid "24ace9d8-528e-4970-9a68-b9a349960a7c")
 	)
 	(junction
-		(at 58.42 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "252a14cd-7b78-4895-bd8e-e6792ff2fb1a")
-	)
-	(junction
 		(at 134.62 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3029,12 +2086,6 @@
 		(uuid "2d2c098b-2a44-40f9-ad7e-40c027a552fb")
 	)
 	(junction
-		(at 50.8 143.51)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2d9d5f8d-627f-45e6-bd95-b6d37bf4ebcc")
-	)
-	(junction
 		(at 191.77 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3047,22 +2098,10 @@
 		(uuid "30802c2a-c0ff-4b0e-98c9-3fba70de2de0")
 	)
 	(junction
-		(at 66.04 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3d82b6fb-123b-4607-a5de-e5eb81c1011f")
-	)
-	(junction
 		(at 191.77 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "40134857-3cd3-41d0-b1ad-fb90400e53f6")
-	)
-	(junction
-		(at 36.83 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4780ac35-8813-4b06-bd3b-23016666e70c")
 	)
 	(junction
 		(at 177.8 102.87)
@@ -3131,18 +2170,6 @@
 		(uuid "7e1a6477-5134-4e00-88d9-cc5eed4132f0")
 	)
 	(junction
-		(at 66.04 153.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8a315f7b-a6cd-4bc4-905b-71edc3503cc6")
-	)
-	(junction
-		(at 50.8 135.89)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8b0ac054-5000-4a04-8b71-047a28f62d60")
-	)
-	(junction
 		(at 177.8 71.12)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3179,6 +2206,12 @@
 		(uuid "9da260ce-be70-4d28-8b89-740f15f48635")
 	)
 	(junction
+		(at 36.83 135.89)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a17cb3d0-9f00-40ff-9861-42883c32c2b6")
+	)
+	(junction
 		(at 139.7 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3203,22 +2236,10 @@
 		(uuid "d765fe57-54c3-4f58-b82e-782f8707c1f6")
 	)
 	(junction
-		(at 60.96 163.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d87df927-51fd-468c-855c-e05b8836bb23")
-	)
-	(junction
 		(at 181.61 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d88a1edb-78f2-4219-81b8-bbb487e98e5e")
-	)
-	(junction
-		(at 191.77 91.44)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "dfa1eb6a-2dd7-461e-b8cd-623ffa5bdbb0")
 	)
 	(junction
 		(at 177.8 92.71)
@@ -3231,6 +2252,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee755f3b-6ed7-455e-a3c4-77f02ec44533")
+	)
+	(junction
+		(at 191.77 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef315f88-259d-442a-9bbd-24a703b8823f")
 	)
 	(junction
 		(at 140.97 91.44)
@@ -3257,10 +2284,6 @@
 		(uuid "f8e4058b-c874-47c3-ad50-fa248179f66e")
 	)
 	(no_connect
-		(at 50.8 156.21)
-		(uuid "6772f30b-4bff-426a-91fb-8a2ff77e5a7f")
-	)
-	(no_connect
 		(at 99.06 116.84)
 		(uuid "e0aa95a5-c614-49fc-a495-d7433d3c6ca0")
 	)
@@ -3273,6 +2296,16 @@
 			(type default)
 		)
 		(uuid "05a2083b-8051-45ff-8f63-d3cc48fbea7e")
+	)
+	(wire
+		(pts
+			(xy 247.65 101.6) (xy 245.11 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05fa3bf6-7cd2-4e61-8fe1-f6bd75e73643")
 	)
 	(wire
 		(pts
@@ -3406,16 +2439,6 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 93.98) (xy 247.65 101.6)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "35e9d78c-95d8-4d0b-94c0-e5001a36c5b7")
-	)
-	(wire
-		(pts
 			(xy 24.13 104.14) (xy 99.06 104.14)
 		)
 		(stroke
@@ -3436,6 +2459,26 @@
 	)
 	(wire
 		(pts
+			(xy 243.84 81.28) (xy 247.65 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3badb1af-4d77-42cb-8504-d0a5d472b68e")
+	)
+	(wire
+		(pts
+			(xy 246.38 71.12) (xy 191.77 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cde90a6-d0e0-421a-9672-c837de3b0431")
+	)
+	(wire
+		(pts
 			(xy 24.13 88.9) (xy 99.06 88.9)
 		)
 		(stroke
@@ -3453,16 +2496,6 @@
 			(type default)
 		)
 		(uuid "4045a84f-c435-4069-b778-d1f62e962f95")
-	)
-	(wire
-		(pts
-			(xy 36.83 158.75) (xy 36.83 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "446aac81-7083-4f86-9fc7-122fedc81d9b")
 	)
 	(wire
 		(pts
@@ -3526,6 +2559,16 @@
 	)
 	(wire
 		(pts
+			(xy 240.03 104.14) (xy 240.03 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "50c173c3-9983-46ea-b70d-eb3e93e53775")
+	)
+	(wire
+		(pts
 			(xy 167.64 71.12) (xy 167.64 80.01)
 		)
 		(stroke
@@ -3536,7 +2579,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 110.49) (xy 247.65 110.49)
+			(xy 212.09 110.49) (xy 245.11 110.49)
 		)
 		(stroke
 			(width 0)
@@ -3586,23 +2629,13 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 71.12) (xy 191.77 71.12)
+			(xy 247.65 104.14) (xy 240.03 104.14)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "682c3f9f-6a99-4947-b4f3-87b84221345f")
-	)
-	(wire
-		(pts
-			(xy 36.83 163.83) (xy 58.42 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6b2e859b-24e9-40ba-8522-511e29bfc2e7")
+		(uuid "65ebef71-395e-47e8-9ae7-dd6875ad6dcd")
 	)
 	(wire
 		(pts
@@ -3613,16 +2646,6 @@
 			(type default)
 		)
 		(uuid "6d4a6dfe-ae8d-4a89-a8c9-1a91a8f2876a")
-	)
-	(wire
-		(pts
-			(xy 247.65 81.28) (xy 247.65 71.12)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6d7e2f18-b3c5-4978-a907-984e1fdab453")
 	)
 	(wire
 		(pts
@@ -3646,16 +2669,6 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 163.83) (xy 60.96 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "70fcf15c-e174-4bc8-a10c-cd77b4912e53")
-	)
-	(wire
-		(pts
 			(xy 99.06 106.68) (xy 86.36 106.68)
 		)
 		(stroke
@@ -3663,6 +2676,16 @@
 			(type default)
 		)
 		(uuid "7346e26f-431f-4417-976b-783f04ffde38")
+	)
+	(wire
+		(pts
+			(xy 36.83 139.7) (xy 36.83 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "735cc0e9-1c60-42ce-b6ca-9505db3cebc0")
 	)
 	(wire
 		(pts
@@ -3676,7 +2699,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 91.44) (xy 191.77 91.44)
+			(xy 243.84 91.44) (xy 191.77 91.44)
 		)
 		(stroke
 			(width 0)
@@ -3703,6 +2726,16 @@
 			(type default)
 		)
 		(uuid "7c4672d5-dba3-4951-a1c6-3baddc23dbd4")
+	)
+	(wire
+		(pts
+			(xy 246.38 71.12) (xy 246.38 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d8ac72c-8205-4459-9e87-82f3013689e1")
 	)
 	(wire
 		(pts
@@ -3746,16 +2779,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 143.51) (xy 58.42 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8c5f26ea-4161-4034-aa1b-418db7abc659")
-	)
-	(wire
-		(pts
 			(xy 177.8 71.12) (xy 181.61 71.12)
 		)
 		(stroke
@@ -3793,16 +2816,6 @@
 			(type default)
 		)
 		(uuid "97095d35-a33f-45dd-a9fd-fb09b8250ff0")
-	)
-	(wire
-		(pts
-			(xy 50.8 135.89) (xy 50.8 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "979d9468-bfa1-45b9-ad5a-e2d75e8acc7e")
 	)
 	(wire
 		(pts
@@ -3846,16 +2859,6 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 158.75) (xy 66.04 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7b65f2a-1390-4ab4-b5db-767d56183690")
-	)
-	(wire
-		(pts
 			(xy 134.62 106.68) (xy 148.59 106.68)
 		)
 		(stroke
@@ -3876,16 +2879,6 @@
 	)
 	(wire
 		(pts
-			(xy 55.88 135.89) (xy 50.8 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "be43d256-1c45-4247-a20d-c49d97da0e90")
-	)
-	(wire
-		(pts
 			(xy 160.02 113.03) (xy 160.02 109.22)
 		)
 		(stroke
@@ -3903,16 +2896,6 @@
 			(type default)
 		)
 		(uuid "bfc5c8c0-525b-4d8a-8701-db61effa2335")
-	)
-	(wire
-		(pts
-			(xy 247.65 110.49) (xy 247.65 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0d2c964-3708-4531-a233-efd8c78d4719")
 	)
 	(wire
 		(pts
@@ -4016,13 +2999,13 @@
 	)
 	(wire
 		(pts
-			(xy 66.04 135.89) (xy 66.04 153.67)
+			(xy 247.65 83.82) (xy 246.38 83.82)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d402a540-c7ca-477b-9b08-69295b175fdd")
+		(uuid "d0969d7a-fa37-4f50-9c5f-6057852e3b32")
 	)
 	(wire
 		(pts
@@ -4053,6 +3036,16 @@
 			(type default)
 		)
 		(uuid "d96a4aa0-78d5-42cf-af25-55c2e27f8457")
+	)
+	(wire
+		(pts
+			(xy 245.11 101.6) (xy 245.11 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9c61708-4d54-44cd-9bb8-7cabe60dc1d1")
 	)
 	(wire
 		(pts
@@ -4106,16 +3099,6 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 153.67) (xy 50.8 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dd9c40d0-ca0f-4ced-91e2-6d410a77bd78")
-	)
-	(wire
-		(pts
 			(xy 49.53 90.17) (xy 49.53 91.44)
 		)
 		(stroke
@@ -4156,7 +3139,7 @@
 	)
 	(wire
 		(pts
-			(xy 212.09 93.98) (xy 247.65 93.98)
+			(xy 212.09 93.98) (xy 240.03 93.98)
 		)
 		(stroke
 			(width 0)
@@ -4216,7 +3199,7 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 83.82) (xy 247.65 91.44)
+			(xy 243.84 81.28) (xy 243.84 91.44)
 		)
 		(stroke
 			(width 0)
@@ -4293,26 +3276,6 @@
 			(type default)
 		)
 		(uuid "fd637e9a-3cf8-4dc8-9651-c42bfd3695bc")
-	)
-	(wire
-		(pts
-			(xy 66.04 163.83) (xy 60.96 163.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fde89b72-2699-43d6-ad3c-9b3d94998ce6")
-	)
-	(wire
-		(pts
-			(xy 36.83 135.89) (xy 50.8 135.89)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffb4bb44-8a1d-4170-a195-c54fae55aba9")
 	)
 	(label "GVDD"
 		(at 99.06 93.98 0)
@@ -5290,101 +4253,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Power_Management:LTC4359-DCB")
-		(at 58.42 153.67 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "24faa74c-389a-4301-bae9-105b521a0ed2")
-		(property "Reference" "U2"
-			(at 73.406 150.368 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LTC4359-DCB"
-			(at 73.406 152.908 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:DFN-6-1EP_3x2mm_P0.5mm_EP1.65x1.35mm"
-			(at 64.77 157.48 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ltc4359.pdf"
-			(at 58.42 160.02 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Ideal diode controller with reverse input protection, DFN-6"
-			(at 58.42 153.67 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "7c54c5ea-69dd-4bea-96f4-ab987ab9255d")
-		)
-		(pin "7"
-			(uuid "ebae0252-8173-4525-acdc-8b9bafb55061")
-		)
-		(pin "6"
-			(uuid "0bde5ad4-e61a-4928-9504-7f70794766ce")
-		)
-		(pin "4"
-			(uuid "97487b14-170c-4b7f-8187-42cb621a4a3b")
-		)
-		(pin "1"
-			(uuid "2a7af5cd-9636-46d6-910f-1eccf2300f07")
-		)
-		(pin "3"
-			(uuid "e5a54ff1-042a-4cbe-b96e-2973d9194f79")
-		)
-		(pin "5"
-			(uuid "8444d03e-506f-404b-a746-ac38d072b40a")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:Screw_Terminal_01x02")
 		(at 31.75 135.89 180)
 		(unit 1)
@@ -5945,6 +4813,88 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized_Small")
+		(at 36.83 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "44b9df2c-5f0e-4f31-92ea-55a0d83db6cd")
+		(property "Reference" "C30"
+			(at 39.37 140.4238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "220 uF"
+			(at 39.37 142.9638 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10"
+			(at 36.83 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Polarized capacitor, small symbol"
+			(at 36.83 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0b8a1499-0c77-4d94-8ca7-0ce323d8a598")
+		)
+		(pin "2"
+			(uuid "2958b3c5-245a-40a8-bbda-9864051f1558")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -6754,170 +5704,6 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:AO3400A")
-		(at 60.96 138.43 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "65b52650-059a-4f70-a186-dceecef1606b")
-		(property "Reference" "Q2"
-			(at 60.96 129.54 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AO3400A"
-			(at 60.96 132.08 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 62.865 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3400A.pdf"
-			(at 64.77 133.35 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "30V Vds, 5.7A Id, N-Channel MOSFET, SOT-23"
-			(at 60.96 138.43 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "c1a68bb6-be9f-414c-a891-ea240e23eb49")
-		)
-		(pin "2"
-			(uuid "a1448026-82ad-467a-8cfb-ae4c072f4c81")
-		)
-		(pin "1"
-			(uuid "c4169e3c-97c9-46be-8c09-fda138f449ea")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "Q2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 58.42 168.91 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "6638fcec-8c29-4e9e-98b7-448ca04e593e")
-		(property "Reference" "#PWR024"
-			(at 58.42 175.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 58.42 173.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 58.42 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 58.42 168.91 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8b964384-53d7-40ef-ba5a-40355feb68fe")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -7895,7 +6681,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 66.04 135.89 270)
+		(at 36.83 135.89 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7906,7 +6692,7 @@
 		(fields_autoplaced yes)
 		(uuid "989e0b0c-c925-4235-92bb-39b5ae5224a2")
 		(property "Reference" "#PWR025"
-			(at 62.23 135.89 0)
+			(at 33.02 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7917,7 +6703,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 69.85 135.8899 90)
+			(at 40.64 135.8899 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7928,7 +6714,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 135.89 0)
+			(at 36.83 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7939,7 +6725,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 135.89 0)
+			(at 36.83 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7950,7 +6736,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 66.04 135.89 0)
+			(at 36.83 135.89 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8132,89 +6918,6 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "C13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 66.04 156.21 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "9ff590be-2236-4587-a18f-360eb72c03a7")
-		(property "Reference" "C30"
-			(at 68.58 154.9462 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "47 nF"
-			(at 68.58 157.4862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 66.04 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 66.04 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 66.04 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9d6e633f-839a-415c-abe9-2f05d63bf4b8")
-		)
-		(pin "2"
-			(uuid "7f720d03-368a-46a7-a496-b4b9b5f7a5d5")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "C30")
 					(unit 1)
 				)
 			)
@@ -8459,89 +7162,6 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "R10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 58.42 166.37 0)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "afea16d3-304e-4a0c-a2dd-94317981a752")
-		(property "Reference" "R11"
-			(at 55.88 165.0999 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "1k"
-			(at 55.88 167.6399 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 58.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 58.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 58.42 166.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "d02af76d-32cc-4d2a-91b4-701ca4aff04b")
-		)
-		(pin "1"
-			(uuid "59223b53-f783-44a7-9b80-a12c954307b3")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -9111,151 +7731,6 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "symbols:SMAT70A-13-F")
-		(at 36.83 135.89 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ca07fb63-adbd-4cd0-8bb2-583b85c2662f")
-		(property "Reference" "D1"
-			(at 33.02 141.7319 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SMAT70A-13-F"
-			(at 33.02 144.2719 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "footprints:DIOM5226X230N"
-			(at 130.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/ds30213.pdf"
-			(at 230.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Description" "Diodes Inc SMAT70A-13-F Uni-Directional TVS Diode, 400W peak, 2-Pin SMA"
-			(at 36.83 135.89 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Height" "2.3"
-			(at 430.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Mouser Part Number" "621-SMAT70A-13-F"
-			(at 530.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Mouser Price/Stock" "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/SMAT70A-13-F?qs=gaDBXWSqsDAzZwchZhUtfQ%3D%3D"
-			(at 630.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Manufacturer_Name" "Diodes Incorporated"
-			(at 730.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Manufacturer_Part_Number" "SMAT70A-13-F"
-			(at 830.48 146.05 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(pin "1"
-			(uuid "06996eb7-4a3d-4c70-8cba-87b870328d59")
-		)
-		(pin "2"
-			(uuid "1afa188a-7275-4bce-8584-55f1ee0f2b72")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -10625,88 +9100,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:SMAJ24A")
-		(at 36.83 154.94 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f135554b-fc2e-4074-bfbc-25095dc8b77e")
-		(property "Reference" "D2"
-			(at 39.37 153.6699 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "SMAJ24A"
-			(at 39.37 156.2099 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 41.91 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.littelfuse.com/media?resourcetype=datasheets&itemid=75e32973-b177-4ee3-a0ff-cedaf1abdb93&filename=smaj-datasheet"
-			(at 36.83 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "400W unidirectional Transient Voltage Suppressor, 24.0Vr, SMA(DO-214AC)"
-			(at 36.83 154.94 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "b29ab30c-b5f8-4747-8758-de20fe73f9ee")
-		)
-		(pin "1"
-			(uuid "37a9205a-ca20-43da-8796-1e08ee6aa6c5")
-		)
-		(instances
-			(project "TPA3116D2DADR"
-				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 21.59 88.9 90)
 		(mirror x)
@@ -10782,6 +9175,84 @@
 			(project "TPA3116D2DADR"
 				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 36.83 144.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc50ab9f-7f09-4a1c-9ac3-365caf0ca293")
+		(property "Reference" "#PWR024"
+			(at 36.83 151.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 36.83 149.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 36.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 36.83 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f371339c-440d-4900-9bcf-549cd34b5b2f")
+		)
+		(instances
+			(project "TPA3116D2DADR"
+				(path "/8131a7e7-9c52-4491-9a0c-425e137ec0c2"
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
