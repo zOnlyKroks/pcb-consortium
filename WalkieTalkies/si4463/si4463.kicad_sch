@@ -2889,6 +2889,12 @@
 		(uuid "bfb1883d-e27e-45e0-8886-4db21b3b3286")
 	)
 	(junction
+		(at 199.39 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ddcea46d-6480-4764-8e74-9aee7e7ac4d6")
+	)
+	(junction
 		(at 229.87 7.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2913,6 +2919,16 @@
 			(type default)
 		)
 		(uuid "0848cace-7ac2-4b06-b1cd-ea0133a947b8")
+	)
+	(wire
+		(pts
+			(xy 199.39 24.13) (xy 199.39 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bb81b36-b94d-45d3-b37a-509f58ee48e9")
 	)
 	(wire
 		(pts
@@ -2983,6 +2999,16 @@
 			(type default)
 		)
 		(uuid "34bc7102-b864-4076-b1db-1c959c8dcbf1")
+	)
+	(wire
+		(pts
+			(xy 199.39 36.83) (xy 210.82 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "392410bf-96e2-421d-86c9-00c6db52e3a0")
 	)
 	(wire
 		(pts
@@ -3246,7 +3272,7 @@
 	)
 	(wire
 		(pts
-			(xy 195.58 36.83) (xy 210.82 36.83)
+			(xy 195.58 36.83) (xy 199.39 36.83)
 		)
 		(stroke
 			(width 0)
@@ -3962,6 +3988,85 @@
 			(project "si4463"
 				(path "/4821c8f3-a9df-42f3-a3f5-668e248707dc"
 					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 204.47 19.05 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "10aeec4c-1e56-4246-864c-feabe603c351")
+		(property "Reference" "#PWR022"
+			(at 210.82 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 208.28 19.0499 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 204.47 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 204.47 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 204.47 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5618dfea-5589-4217-a59b-819c7404dff1")
+		)
+		(instances
+			(project "si4463"
+				(path "/4821c8f3-a9df-42f3-a3f5-668e248707dc"
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -7384,7 +7489,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "TX"
+		(property "Value" "TX_A"
 			(at 260.35 38.3931 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7766,6 +7871,86 @@
 			(project "si4463"
 				(path "/4821c8f3-a9df-42f3-a3f5-668e248707dc"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_Coaxial")
+		(at 199.39 19.05 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fc0781b1-147b-4050-a92b-9a6d3c97f067")
+		(property "Reference" "J8"
+			(at 199.6832 12.7 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TX_PA"
+			(at 199.6832 15.24 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Coaxial:SMA_BAT_Wireless_BWSMA-KWE-Z001"
+			(at 199.39 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 199.39 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+			(at 199.39 19.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "06ed55d7-5b06-4127-925c-e3c2ffd789cd")
+		)
+		(pin "1"
+			(uuid "4c51a458-3306-47d6-85f1-bbf332e71f04")
+		)
+		(instances
+			(project "si4463"
+				(path "/4821c8f3-a9df-42f3-a3f5-668e248707dc"
+					(reference "J8")
 					(unit 1)
 				)
 			)
