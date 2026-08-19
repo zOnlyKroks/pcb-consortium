@@ -474,6 +474,212 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:Screw_Terminal_01x02"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Screw_Terminal_01x02"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "screw terminal"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "TerminalBlock*:*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Screw_Terminal_01x02_1_1"
+				(rectangle
+					(start -1.27 1.27)
+					(end 1.27 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 0.3302) (xy 0.3302 -0.508)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.5334 -2.2098) (xy 0.3302 -3.048)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 0.508) (xy 0.508 -0.3302)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.3556 -2.032) (xy 0.508 -2.8702)
+					)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 -2.54)
+					(radius 0.635)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector:USB_C_Receptacle_USB2.0"
 			(pin_names
 				(offset 1.016)
@@ -3092,7 +3298,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Transistor_FET:BUK9832-55A"
+		(symbol "Transistor_FET:IRF540N"
 			(pin_names
 				(hide yes)
 			)
@@ -3112,7 +3318,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "BUK9832-55A"
+			(property "Value" "IRF540N"
 				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3123,7 +3329,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
 				(at 5.08 -1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3136,7 +3342,7 @@
 					(justify left)
 				)
 			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK9832-55A.pdf"
+			(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
 				(at 5.08 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3148,7 +3354,7 @@
 					(justify left)
 				)
 			)
-			(property "Description" "12A Id, 55V Vds, RdsOn 25mOhm, N-Channel Enhancement Mode MOSFET, SOT-223"
+			(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3159,7 +3365,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "n-channel n channel mosfet enhancement mode"
+			(property "ki_keywords" "HEXFET N-Channel MOSFET"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3170,7 +3376,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223*"
+			(property "ki_fp_filters" "TO?220*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3181,7 +3387,7 @@
 					)
 				)
 			)
-			(symbol "BUK9832-55A_0_1"
+			(symbol "IRF540N_0_1"
 				(polyline
 					(pts
 						(xy 0.254 1.905) (xy 0.254 -1.905)
@@ -3348,7 +3554,7 @@
 					)
 				)
 			)
-			(symbol "BUK9832-55A_1_1"
+			(symbol "IRF540N_1_1"
 				(pin input line
 					(at -5.08 0 0)
 					(length 2.54)
@@ -3939,15 +4145,23 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "https://cdn-learn.adafruit.com/assets/assets/000/129/847/original/CH552DS1.PDF?1715004485"
-		(exclude_from_sim no)
-		(at 60.96 21.336 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "087f43de-e487-403e-b85e-ab8c8e1a5377")
+	(junction
+		(at 135.89 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "03afeb5c-44f9-42ba-9fdb-07491a81ef68")
+	)
+	(junction
+		(at 121.92 154.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1556cc2b-477e-404f-baa7-c1321d23ff5e")
+	)
+	(junction
+		(at 105.41 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2380066d-7b6a-4d56-bbb0-9745520deaad")
 	)
 	(junction
 		(at 157.48 54.61)
@@ -3972,6 +4186,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4a244a7b-345d-4b1b-99d0-a258ef90d983")
+	)
+	(junction
+		(at 135.89 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "559c90f4-9365-4ee7-a425-dc7d5233926b")
 	)
 	(junction
 		(at 135.89 107.95)
@@ -4022,6 +4242,12 @@
 		(uuid "9ca75d63-e7b8-4b26-8539-4e61dd090692")
 	)
 	(junction
+		(at 147.32 147.32)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a9f407bc-c8e3-4292-be3d-0ca4d1f9b644")
+	)
+	(junction
 		(at 220.98 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4052,12 +4278,40 @@
 		(uuid "e8eb1cda-f710-4e8e-a148-52f08d0f4865")
 	)
 	(no_connect
+		(at 111.76 97.79)
+		(uuid "144fd51a-a4ba-4562-92d0-b70f9b938624")
+	)
+	(no_connect
+		(at 111.76 107.95)
+		(uuid "2a919d03-9eeb-4fc7-b99b-104645873c9b")
+	)
+	(no_connect
 		(at 52.07 171.45)
 		(uuid "3cd0a8f2-1fac-44c0-9cc1-a6fbe80df428")
 	)
 	(no_connect
 		(at 52.07 168.91)
 		(uuid "47c0eba4-b823-45ac-89c6-5f6c68783a0c")
+	)
+	(no_connect
+		(at 111.76 102.87)
+		(uuid "5b34d1ed-beea-4f44-8113-6e35315d3119")
+	)
+	(no_connect
+		(at 111.76 110.49)
+		(uuid "91ff35e6-325a-4c19-b9c5-e6c94bd1cf81")
+	)
+	(no_connect
+		(at 111.76 92.71)
+		(uuid "aa441f91-338c-4fba-b532-0e5cfd5eea61")
+	)
+	(no_connect
+		(at 111.76 95.25)
+		(uuid "c05d8653-3c09-489c-9b93-2c8ac2b5a1a6")
+	)
+	(no_connect
+		(at 111.76 100.33)
+		(uuid "d21506d1-99e4-4a53-9959-d33f16acc187")
 	)
 	(wire
 		(pts
@@ -4168,6 +4422,16 @@
 			(type default)
 		)
 		(uuid "1d57fa8a-40fd-432f-9d32-7942322acdd2")
+	)
+	(wire
+		(pts
+			(xy 135.89 147.32) (xy 147.32 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20ec0cbb-5b5c-489c-be1b-98382b36688f")
 	)
 	(wire
 		(pts
@@ -4361,6 +4625,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 154.94) (xy 121.92 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b056b9b-06ca-41c4-b3d1-42cc01abeab0")
+	)
+	(wire
+		(pts
 			(xy 135.89 147.32) (xy 129.54 147.32)
 		)
 		(stroke
@@ -4368,6 +4642,26 @@
 			(type default)
 		)
 		(uuid "7d7328c4-05b7-4f45-a852-7361da0fb3be")
+	)
+	(wire
+		(pts
+			(xy 105.41 152.4) (xy 105.41 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f6989de-be09-4c97-bb3b-537ce1979b2b")
+	)
+	(wire
+		(pts
+			(xy 135.89 152.4) (xy 147.32 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "823d33b7-ec00-4d9a-a74a-9cbea1a7ea51")
 	)
 	(wire
 		(pts
@@ -4401,6 +4695,16 @@
 	)
 	(wire
 		(pts
+			(xy 135.89 152.4) (xy 135.89 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e78a2a7-fcc6-4e20-8730-6768085f0cd4")
+	)
+	(wire
+		(pts
 			(xy 53.34 158.75) (xy 53.34 161.29)
 		)
 		(stroke
@@ -4428,6 +4732,16 @@
 			(type default)
 		)
 		(uuid "ab81bc95-0fca-48fb-8a5f-4f589df5d23c")
+	)
+	(wire
+		(pts
+			(xy 135.89 154.94) (xy 121.92 154.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4e4abe3-49aa-4124-9b08-7bc7ceb1fc7f")
 	)
 	(wire
 		(pts
@@ -4935,6 +5249,85 @@
 	)
 	(symbol
 		(lib_id "power:GND")
+		(at 39.37 73.66 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "04eef9f1-1f36-4ee4-9a19-990d210c1bd8")
+		(property "Reference" "#PWR031"
+			(at 45.72 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 43.18 73.6599 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 39.37 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e362568b-23c5-4487-bc01-fea46bffed37")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "#PWR031")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
 		(at 241.3 66.04 0)
 		(unit 1)
 		(body_style 1)
@@ -5042,7 +5435,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical"
 			(at 201.93 132.08 0)
 			(hide yes)
 			(show_name no)
@@ -5091,6 +5484,99 @@
 			(project "CH552G"
 				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 135.89 149.86 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "2114ec46-0cc0-484b-9a53-c712e25702d0")
+		(property "Reference" "C6"
+			(at 138.43 148.5835 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF"
+			(at 138.43 151.1235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 135.89 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.89 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 135.89 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 135.89 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2a77a688-1fd2-41a2-aca2-b6ca2615483b")
+		)
+		(pin "2"
+			(uuid "b3410fc9-9ff3-4b65-8533-e73957f2e825")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -5254,6 +5740,86 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 34.29 76.2 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26547bd1-2353-4245-adfb-56b21f6c683a")
+		(property "Reference" "J3"
+			(at 34.29 67.31 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 34.29 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "footprints:WJ500V-5.08-2P"
+			(at 34.29 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic screw terminal, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 34.29 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "a5bee285-9e11-4956-99dc-4e0d8336b95e")
+		)
+		(pin "1"
+			(uuid "0d677f54-956c-48af-a862-cdf627580420")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "J3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 135.89 97.79 90)
 		(unit 1)
@@ -5410,7 +5976,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 135.89 147.32 0)
+		(at 147.32 147.32 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5421,7 +5987,7 @@
 		(fields_autoplaced yes)
 		(uuid "2cc13b45-211d-42ca-8d61-983a31c296d7")
 		(property "Reference" "#PWR09"
-			(at 135.89 151.13 0)
+			(at 147.32 151.13 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5432,7 +5998,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 135.89 142.24 0)
+			(at 147.32 142.24 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5442,7 +6008,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 135.89 147.32 0)
+			(at 147.32 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5453,7 +6019,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 135.89 147.32 0)
+			(at 147.32 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5464,7 +6030,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 135.89 147.32 0)
+			(at 147.32 147.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5675,7 +6241,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 135.89 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -6307,7 +6873,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 236.22 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -6356,6 +6922,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 105.41 149.86 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "594b7568-20ff-4ec4-8906-b4974fdbf193")
+		(property "Reference" "C5"
+			(at 107.95 148.5835 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "100nF"
+			(at 107.95 151.1235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 105.41 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 105.41 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 105.41 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 105.41 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e38e5312-fc2b-41fa-852c-34d4dd34e3e3")
+		)
+		(pin "2"
+			(uuid "f16846d7-4be8-433a-a0ea-cd65f0c48b68")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small")
 		(at 144.78 113.03 0)
 		(unit 1)
@@ -6389,7 +7048,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 144.78 113.03 0)
 			(hide yes)
 			(show_name no)
@@ -6653,7 +7312,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 58.42 168.148 90)
 			(hide yes)
 			(show_name no)
@@ -6706,6 +7365,92 @@
 			(project "CH552G"
 				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
 					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Transistor_FET:IRF540N")
+		(at 127 49.53 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "75b64664-b8ee-4462-9af1-bd42f8dbcc70")
+		(property "Reference" "Q2"
+			(at 127 40.64 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LOAD"
+			(at 127 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Vertical"
+			(at 128.905 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "http://www.irf.com/product-info/datasheets/data/irf540n.pdf"
+			(at 130.81 44.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" "33A Id, 100V Vds, HEXFET N-Channel MOSFET, TO-220"
+			(at 127 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "e93a05bf-e546-4945-b145-c084b5588625")
+		)
+		(pin "2"
+			(uuid "389c21ca-375a-4ec9-9720-9e1fbddce34b")
+		)
+		(pin "1"
+			(uuid "0d2a281f-b0d4-4081-88a9-c988071c2144")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "Q2")
 					(unit 1)
 				)
 			)
@@ -6876,92 +7621,6 @@
 			(project "CH552G"
 				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
 					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Transistor_FET:BUK9832-55A")
-		(at 127 49.53 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "85f4ddd0-977e-4348-b28b-d82e183a0b5e")
-		(property "Reference" "Q1"
-			(at 127 40.64 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LOAD_FET"
-			(at 127 43.18 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
-			(at 128.905 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-					(italic yes)
-				)
-				(justify left)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BUK9832-55A.pdf"
-			(at 130.81 44.45 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Description" "12A Id, 55V Vds, RdsOn 25mOhm, N-Channel Enhancement Mode MOSFET, SOT-223"
-			(at 127 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "3"
-			(uuid "58ecadd0-952a-498c-bab9-b90ac5db46c5")
-		)
-		(pin "1"
-			(uuid "c32ca466-77dd-4c9a-bdb2-b1dfa350ab85")
-		)
-		(pin "2"
-			(uuid "57cca212-4338-4b06-aecd-bcbfa8dd34c3")
-		)
-		(instances
-			(project "CH552G"
-				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
-					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -7339,7 +7998,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 58.42 158.623 90)
 			(hide yes)
 			(show_name no)
@@ -7779,7 +8438,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 210.82 86.36 0)
 			(hide yes)
 			(show_name no)
@@ -8448,6 +9107,99 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 147.32 149.86 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9f46eba-abeb-4d6e-870d-2fca457fefe2")
+		(property "Reference" "C7"
+			(at 149.86 148.5835 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "4.7 uF"
+			(at 149.86 151.1235 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 147.32 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 147.32 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C49678"
+			(at 147.32 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "11f353bb-fe20-4c83-921e-cbff3e154cbe")
+		)
+		(pin "2"
+			(uuid "d558fbfd-6e99-4448-b078-d9bdd5943aa5")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 143.51 90.17 180)
 		(unit 1)
@@ -9037,6 +9789,85 @@
 		)
 	)
 	(symbol
+		(lib_id "power:VCC")
+		(at 39.37 76.2 270)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3ef2b65-b9a8-4f03-852e-737dfb162430")
+		(property "Reference" "#PWR023"
+			(at 35.56 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VCC"
+			(at 43.18 76.1999 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 39.37 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 39.37 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6d910d6-a22f-47e8-9808-6542e69990e0")
+		)
+		(instances
+			(project "CH552G"
+				(path "/db23fd15-e58a-49c8-beb9-a839ff19dc59"
+					(reference "#PWR023")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 55.88 148.59 90)
 		(unit 1)
@@ -9067,7 +9898,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 55.88 150.368 90)
 			(hide yes)
 			(show_name no)
@@ -9233,7 +10064,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 55.88 144.272 90)
 			(hide yes)
 			(show_name no)
@@ -9324,7 +10155,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 223.52 80.01 0)
 			(hide yes)
 			(show_name no)
