@@ -8,7 +8,7 @@
         "apply_defaults_to_fp_fields": false,
         "apply_defaults_to_fp_shapes": false,
         "apply_defaults_to_fp_text": false,
-        "board_outline_line_width": 0.1,
+        "board_outline_line_width": 0.05,
         "copper_line_width": 0.2,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
@@ -32,7 +32,7 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.15,
+        "other_line_width": 0.1,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
@@ -41,13 +41,13 @@
         "pads": {
           "drill": 0.8,
           "height": 1.27,
-          "width": 2.54
+          "width": 1.27
         },
-        "silk_line_width": 0.15,
+        "silk_line_width": 0.1,
         "silk_text_italic": false,
         "silk_text_size_h": 1.0,
         "silk_text_size_v": 1.0,
-        "silk_text_thickness": 0.15,
+        "silk_text_thickness": 0.1,
         "silk_text_upright": false,
         "zones": {
           "border_display_style": 2,
@@ -139,25 +139,23 @@
         "zones_intersect": "error"
       },
       "rules": {
-        "allow_blind_buried_vias": false,
-        "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.1016,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.3,
+        "min_copper_edge_clearance": 0.5,
         "min_groove_width": 0.0,
-        "min_hole_clearance": 0.1016,
-        "min_hole_to_hole": 0.1016,
+        "min_hole_clearance": 0.25,
+        "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
-        "min_resolved_spokes": 1,
+        "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
         "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.15,
-        "min_track_width": 0.1016,
-        "min_via_annular_width": 0.05,
-        "min_via_diameter": 0.25,
+        "min_through_hole_diameter": 0.3,
+        "min_track_width": 0.2,
+        "min_via_annular_width": 0.1,
+        "min_via_diameter": 0.5,
         "solder_mask_to_copper_clearance": 0.0,
         "use_height_for_length_calcs": true
       },
@@ -242,7 +240,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": "v1.3"
+      "sch_revision": ""
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -490,14 +488,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "icepi-zero.kicad_pro",
+    "filename": "CH569W.kicad_pro",
     "version": 3
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.1016,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -508,10 +506,10 @@
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 2147483647,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.1016,
+        "track_width": 0.2,
         "tuning_profile": "",
-        "via_diameter": 0.25,
-        "via_drill": 0.15,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -524,7 +522,6 @@
   },
   "pcbnew": {
     "last_paths": {
-      "gencad": "",
       "idf": "",
       "netlist": "",
       "plot": "",
@@ -593,6 +590,18 @@
         },
         {
           "group_by": true,
+          "label": "Exclude from Simulation",
+          "name": "${EXCLUDE_FROM_SIM}",
+          "show": true
+        },
+        {
+          "group_by": true,
+          "label": "Exclude from Position Files",
+          "name": "${EXCLUDE_FROM_POS_FILES}",
+          "show": true
+        },
+        {
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -609,7 +618,7 @@
       "include_excluded_from_bom": true,
       "name": "Default Editing",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Referenz"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -647,46 +656,22 @@
     "subpart_id_separator": 0,
     "top_level_sheets": [
       {
-        "filename": "icepi-zero.kicad_sch",
-        "name": "icepi-zero",
-        "uuid": "f88da08e-cf42-4d03-a08f-3f602fe6658d"
+        "filename": "CH569W.kicad_sch",
+        "name": "Stammblatt",
+        "uuid": "5f355040-3c98-408f-a4c4-e9b21b64c196"
       }
     ],
-    "used_designators": "J9,R20,R22,R28,R31,#PWR79,#PWR99,#PWR101-103,D6,D8,C45,C55,U5",
+    "used_designators": "U1-5,#PWR1-64,J1-4,R1-4,P1,C1-27,Y1",
     "variants": []
   },
   "sheets": [
     [
-      "f88da08e-cf42-4d03-a08f-3f602fe6658d",
-      "icepi-zero"
+      "5f355040-3c98-408f-a4c4-e9b21b64c196",
+      "Stammblatt"
     ],
     [
-      "a9c02a11-f344-487c-ac67-1be6ae5dcf49",
-      "Power"
-    ],
-    [
-      "efe0a411-ae63-4682-aa63-a9a30697cd67",
-      "GPDI"
-    ],
-    [
-      "b8c813e2-b0ac-42df-b4a2-893985a7d29c",
-      "USB"
-    ],
-    [
-      "3bffbb9a-e009-498c-a1b0-c490cdf30139",
-      "SDRAM"
-    ],
-    [
-      "d4e07380-5584-4eac-bd07-d260a33e64d7",
-      "Flash"
-    ],
-    [
-      "d38ad226-7226-4c8c-b808-74c724beb9de",
-      "uSD"
-    ],
-    [
-      "17c9c9b3-f379-4e1f-a876-d3fcf0529a4d",
-      "Unused IO"
+      "e12751b3-3fdd-4fbb-b90d-c0e7c1612573",
+      "emmc"
     ]
   ],
   "text_variables": {},

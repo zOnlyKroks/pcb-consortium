@@ -7162,121 +7162,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "power:PWR_FLAG"
-			(power global)
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 0)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "#FLG"
-				(at 0 1.905 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "PWR_FLAG"
-				(at 0 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Special symbol for telling ERC where power comes from"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_keywords" "flag power"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_0"
-				(pin power_out line
-					(at 0 0 90)
-					(length 0)
-					(name ""
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "PWR_FLAG_0_1"
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 	)
 	(junction
 		(at 181.61 135.89)
@@ -7315,6 +7200,12 @@
 		(uuid "36521388-8029-4134-84e7-abe01410b759")
 	)
 	(junction
+		(at 52.07 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "383fb7c4-268d-41b2-aaec-e450877f1a9f")
+	)
+	(junction
 		(at 146.05 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -7343,12 +7234,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6b2bb82c-75d6-4278-ad83-9cfb616c0a0b")
-	)
-	(junction
-		(at 52.07 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "73e63670-a8d0-431e-8bf4-b8e5097be04d")
 	)
 	(junction
 		(at 49.53 127)
@@ -7391,12 +7276,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "edbf9e77-6d2a-4699-a9a7-0846cd53f6ef")
-	)
-	(junction
-		(at 59.69 109.22)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "eee0f5d3-6184-4b65-8f1f-187101f0503a")
 	)
 	(junction
 		(at 146.05 63.5)
@@ -7538,16 +7417,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 109.22) (xy 71.12 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1f0d6903-b076-47aa-afe1-60643b507805")
-	)
-	(wire
-		(pts
 			(xy 91.44 107.95) (xy 91.44 116.84)
 		)
 		(stroke
@@ -7598,7 +7467,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 127) (xy 92.71 127)
+			(xy 49.53 127) (xy 68.58 127)
 		)
 		(stroke
 			(width 0)
@@ -7888,6 +7757,16 @@
 	)
 	(wire
 		(pts
+			(xy 76.2 127) (xy 92.71 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6ae59106-e74a-47fc-80b0-35982f3f38fc")
+	)
+	(wire
+		(pts
 			(xy 128.27 129.54) (xy 140.97 129.54)
 		)
 		(stroke
@@ -7905,6 +7784,16 @@
 			(type default)
 		)
 		(uuid "6cca6cd7-082a-4195-8c6b-f4bd47d8f670")
+	)
+	(wire
+		(pts
+			(xy 76.2 124.46) (xy 92.71 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "708bac7d-652a-4033-852d-dc4b08f777f6")
 	)
 	(wire
 		(pts
@@ -8018,7 +7907,7 @@
 	)
 	(wire
 		(pts
-			(xy 49.53 124.46) (xy 92.71 124.46)
+			(xy 49.53 124.46) (xy 68.58 124.46)
 		)
 		(stroke
 			(width 0)
@@ -8035,16 +7924,6 @@
 			(type default)
 		)
 		(uuid "889ea521-2a67-44a0-99df-cfe22b770b5f")
-	)
-	(wire
-		(pts
-			(xy 52.07 109.22) (xy 59.69 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "89bcd442-d857-40b9-8be3-44f8e8c374c2")
 	)
 	(wire
 		(pts
@@ -8085,16 +7964,6 @@
 			(type default)
 		)
 		(uuid "8d338f5d-74e3-4b96-af77-bec315621cde")
-	)
-	(wire
-		(pts
-			(xy 71.12 115.57) (xy 71.12 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8e05383c-38e1-4741-8d34-da76800a17ca")
 	)
 	(wire
 		(pts
@@ -8155,16 +8024,6 @@
 			(type default)
 		)
 		(uuid "99550f5a-e803-46da-85df-2da5128fca98")
-	)
-	(wire
-		(pts
-			(xy 71.12 109.22) (xy 71.12 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "996f99d9-2b0f-42e9-a420-3fd4d7fe2000")
 	)
 	(wire
 		(pts
@@ -8578,6 +8437,16 @@
 	)
 	(wire
 		(pts
+			(xy 60.96 109.22) (xy 52.07 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed85fc54-8c17-4419-babe-de4a91f2033f")
+	)
+	(wire
+		(pts
 			(xy 30.48 73.66) (xy 38.1 73.66)
 		)
 		(stroke
@@ -8628,13 +8497,13 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 107.95) (xy 59.69 109.22)
+			(xy 66.04 109.22) (xy 69.85 109.22)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f431300d-5bc5-4e89-a3ec-d38eaa1e85f0")
+		(uuid "f4120a27-b11d-4a22-8d2a-ba881c3685db")
 	)
 	(wire
 		(pts
@@ -9464,6 +9333,152 @@
 			(project "icepi-zero"
 				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
 					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 72.39 124.46 270)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0bac8c82-ed60-43b7-a097-4c0b133044bf")
+		(property "Reference" "R28"
+			(at 72.39 122.174 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "22"
+			(at 72.39 124.46 90)
+			(show_name no)
+			(do_not_autoplace yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 72.39 126.238 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 72.39 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 72.39 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C473051"
+			(at 72.39 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Link" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-0201WMF270JTEE_C473051.html"
+			(at 72.39 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufactuer Part Number" "0201WMF270JTEE"
+			(at 72.39 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" ""
+			(at 72.39 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Notes" ""
+			(at 72.39 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Original" ""
+			(at 72.39 124.46 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e8ea1500-78d6-4ae1-93e9-7f95bba65c28")
+		)
+		(pin "2"
+			(uuid "5e47b8c0-f924-422e-82aa-fb1863eaf247")
+		)
+		(instances
+			(project "icepi-zero"
+				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
+					(reference "R28")
 					(unit 1)
 				)
 			)
@@ -10535,154 +10550,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 71.12 113.03 0)
-		(mirror y)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3f4a9068-f0ed-4456-9f1d-c65e2ed4d0e2")
-		(property "Reference" "C45"
-			(at 71.628 110.998 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "22uF"
-			(at 71.628 115.062 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Part #" "C59461"
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC Link" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.html"
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufactuer Part Number" "CL10A226MQ8NRNC"
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Note" ""
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Notes" ""
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Original" ""
-			(at 71.12 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "42b11cd0-07d0-437b-abba-1de8df869f10")
-		)
-		(pin "1"
-			(uuid "58563401-9f88-4ece-a434-8861eeb54433")
-		)
-		(instances
-			(project "icepi-zero"
-				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
-					(reference "C45")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 176.53 119.38 0)
 		(unit 1)
@@ -11604,8 +11471,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 71.12 116.84 0)
+		(lib_id "Device:R")
+		(at 72.39 127 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11613,11 +11480,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "59f7470a-52ea-4f10-87e8-dd2617136e8b")
-		(property "Reference" "#PWR075"
-			(at 71.12 123.19 0)
-			(hide yes)
+		(uuid "63c348d6-6278-4619-9c99-921d490b1012")
+		(property "Reference" "R31"
+			(at 72.39 129.286 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11626,18 +11491,18 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 71.12 121.92 0)
+		(property "Value" "22"
+			(at 72.39 127 90)
 			(show_name no)
-			(do_not_autoplace no)
+			(do_not_autoplace yes)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 71.12 116.84 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 72.39 125.222 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11648,7 +11513,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 71.12 116.84 0)
+			(at 72.39 127 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11658,8 +11523,74 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 71.12 116.84 0)
+		(property "Description" "Resistor"
+			(at 72.39 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C473051"
+			(at 72.39 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Link" "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-0201WMF270JTEE_C473051.html"
+			(at 72.39 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufactuer Part Number" "0201WMF270JTEE"
+			(at 72.39 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" ""
+			(at 72.39 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Notes" ""
+			(at 72.39 127 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Original" ""
+			(at 72.39 127 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11670,12 +11601,15 @@
 			)
 		)
 		(pin "1"
-			(uuid "04dcb65a-b89e-426a-b523-a675a9fadc9e")
+			(uuid "9b46cd31-4261-47a8-b8ce-72f2be8afb70")
+		)
+		(pin "2"
+			(uuid "ed47606b-fc76-4049-a56b-52c779cede4d")
 		)
 		(instances
 			(project "icepi-zero"
 				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
-					(reference "#PWR075")
+					(reference "R31")
 					(unit 1)
 				)
 			)
@@ -14277,84 +14211,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 59.69 107.95 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b82d27b2-4084-4598-8ee1-690b7d4e91ac")
-		(property "Reference" "#FLG07"
-			(at 59.69 106.045 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 59.69 102.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 59.69 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 59.69 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 59.69 107.95 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dafd3eab-49e2-41c6-b72f-fea551593064")
-		)
-		(instances
-			(project "icepi-zero"
-				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
-					(reference "#FLG07")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 62.23 43.18 270)
 		(unit 1)
@@ -14572,6 +14428,154 @@
 			(project "icepi-zero"
 				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
 					(reference "#PWR071")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 63.5 109.22 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0cc38e9-b00c-40e4-bb76-3a5cb3b126a1")
+		(property "Reference" "C45"
+			(at 61.468 108.712 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "22uF"
+			(at 65.532 108.712 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C59461"
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Link" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Samsung-Electro-Mechanics-CL10A226MQ8NRNC_C59461.html"
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufactuer Part Number" "CL10A226MQ8NRNC"
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Note" ""
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Notes" ""
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Original" ""
+			(at 63.5 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "e44fddf3-0a70-4d76-bc6c-d1389fac50d6")
+		)
+		(pin "1"
+			(uuid "da4ab80e-bc40-4f1c-af31-120302d34cde")
+		)
+		(instances
+			(project "icepi-zero"
+				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
+					(reference "C45")
 					(unit 1)
 				)
 			)
@@ -15085,6 +15089,85 @@
 			(project "icepi-zero"
 				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
 					(reference "R34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 69.85 109.22 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e3c6d4f0-ae8e-45e4-b832-fe05543132cc")
+		(property "Reference" "#PWR079"
+			(at 76.2 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 73.66 109.2199 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 69.85 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 69.85 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3e5e8416-acb0-4577-a062-fc648d9eca43")
+		)
+		(instances
+			(project "icepi-zero"
+				(path "/f88da08e-cf42-4d03-a08f-3f602fe6658d/b8c813e2-b0ac-42df-b4a2-893985a7d29c"
+					(reference "#PWR079")
 					(unit 1)
 				)
 			)
