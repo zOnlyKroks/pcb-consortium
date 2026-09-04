@@ -2487,7 +2487,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Regulator_Linear:LT1117-3.3"
+		(symbol "Regulator_Linear:AP2112K-3.3"
 			(pin_names
 				(offset 0.254)
 			)
@@ -2497,17 +2497,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -3.81 3.175 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "LT1117-3.3"
-				(at 0 3.175 0)
+				(at -5.08 5.715 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2517,8 +2507,19 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
-				(at 0 0 0)
+			(property "Value" "AP2112K-3.3"
+				(at 0 5.715 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 8.255 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2528,8 +2529,8 @@
 					)
 				)
 			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1117fd.pdf"
-				(at 0 0 0)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2539,7 +2540,7 @@
 					)
 				)
 			)
-			(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, SOT-223/TO-263"
+			(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2561,7 +2562,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "SOT?223* TO?263*"
+			(property "ki_fp_filters" "SOT?23?5*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2572,10 +2573,10 @@
 					)
 				)
 			)
-			(symbol "LT1117-3.3_0_1"
+			(symbol "AP2112K-3.3_0_1"
 				(rectangle
-					(start -5.08 -5.08)
-					(end 5.08 1.905)
+					(start -5.08 4.445)
+					(end 5.08 -5.08)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -2585,11 +2586,11 @@
 					)
 				)
 			)
-			(symbol "LT1117-3.3_1_1"
+			(symbol "AP2112K-3.3_1_1"
 				(pin power_in line
-					(at 0 -7.62 90)
+					(at -7.62 2.54 0)
 					(length 2.54)
-					(name "GND"
+					(name "VIN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2604,10 +2605,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 7.62 0 180)
+				(pin power_in line
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VO"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2622,10 +2623,10 @@
 						)
 					)
 				)
-				(pin power_in line
+				(pin input line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "VI"
+					(name "EN"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2633,6 +2634,43 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin no_connect line
+					(at 5.08 0 180)
+					(length 2.54)
+					(hide yes)
+					(name "NC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "VOUT"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4778,7 +4816,13 @@
 		(uuid "457d6708-1d57-47b7-b28f-fab4efd77944")
 	)
 	(junction
-		(at 20.32 119.38)
+		(at 26.67 116.84)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "463772e8-c2e5-47c1-b98d-6c113ac577bf")
+	)
+	(junction
+		(at 20.32 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5d8ee208-7927-4893-af74-fc79ff61bedf")
@@ -4808,7 +4852,7 @@
 		(uuid "cf15f052-16ba-4531-b675-cfa5198e2c8f")
 	)
 	(junction
-		(at 48.26 119.38)
+		(at 48.26 116.84)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d99357bf-40cb-4585-a8c3-a9e7a5416bd5")
@@ -5077,7 +5121,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 119.38) (xy 48.26 119.38)
+			(xy 41.91 116.84) (xy 48.26 116.84)
 		)
 		(stroke
 			(width 0)
@@ -5157,7 +5201,7 @@
 	)
 	(wire
 		(pts
-			(xy 20.32 119.38) (xy 26.67 119.38)
+			(xy 20.32 116.84) (xy 26.67 116.84)
 		)
 		(stroke
 			(width 0)
@@ -5444,6 +5488,16 @@
 			(type default)
 		)
 		(uuid "e322138b-315f-4e04-8c05-7d334f1dc1d3")
+	)
+	(wire
+		(pts
+			(xy 26.67 116.84) (xy 26.67 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e70ea1c3-b565-4bfb-8a05-24715e2ad224")
 	)
 	(wire
 		(pts
@@ -6055,7 +6109,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 48.26 124.46 0)
+		(at 48.26 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6066,7 +6120,7 @@
 		(fields_autoplaced yes)
 		(uuid "17f477d6-36bb-49a4-af9f-c704b1254afb")
 		(property "Reference" "#PWR059"
-			(at 48.26 130.81 0)
+			(at 48.26 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6077,7 +6131,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 48.26 129.54 0)
+			(at 48.26 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6087,7 +6141,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 124.46 0)
+			(at 48.26 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6098,7 +6152,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 124.46 0)
+			(at 48.26 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6109,7 +6163,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 48.26 124.46 0)
+			(at 48.26 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6661,7 +6715,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 20.32 119.38 0)
+		(at 20.32 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6672,7 +6726,7 @@
 		(fields_autoplaced yes)
 		(uuid "30f84caf-4a97-47ae-9236-3484dd9fe5b0")
 		(property "Reference" "#PWR055"
-			(at 20.32 123.19 0)
+			(at 20.32 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6683,7 +6737,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 20.32 114.3 0)
+			(at 20.32 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6693,7 +6747,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 20.32 119.38 0)
+			(at 20.32 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6704,7 +6758,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 20.32 119.38 0)
+			(at 20.32 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6715,7 +6769,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 20.32 119.38 0)
+			(at 20.32 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7624,6 +7678,95 @@
 		)
 	)
 	(symbol
+		(lib_id "Regulator_Linear:AP2112K-3.3")
+		(at 34.29 119.38 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "735e541c-3619-4596-8459-8932381067f0")
+		(property "Reference" "U4"
+			(at 34.29 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AP2112K-3.3"
+			(at 34.29 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 34.29 111.125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
+			(at 34.29 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(at 34.29 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "ede966da-22cc-4980-85e4-977afc56ee08")
+		)
+		(pin "2"
+			(uuid "63101780-748e-415d-9a0a-2c420d1aa553")
+		)
+		(pin "5"
+			(uuid "d08727e1-a18a-4fb2-a28b-d4aa1daf85ae")
+		)
+		(pin "4"
+			(uuid "377179a1-ec62-4160-8bad-98ef89ddde83")
+		)
+		(pin "1"
+			(uuid "a5b8d519-77b6-4750-8777-9f67c15246d6")
+		)
+		(instances
+			(project "CH569W"
+				(path "/5f355040-3c98-408f-a4c4-e9b21b64c196"
+					(reference "U4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 264.16 44.45 0)
 		(unit 1)
@@ -8042,7 +8185,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 48.26 121.92 0)
+		(at 48.26 119.38 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -8054,7 +8197,7 @@
 		(fields_autoplaced yes)
 		(uuid "8675d7b2-7d59-4daa-bb3b-3fdad5e120d6")
 		(property "Reference" "C25"
-			(at 45.72 120.6499 0)
+			(at 45.72 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8065,7 +8208,7 @@
 			)
 		)
 		(property "Value" "3.3uF"
-			(at 45.72 123.1899 0)
+			(at 45.72 120.6499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -8076,7 +8219,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 48.26 121.92 0)
+			(at 48.26 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8087,7 +8230,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 121.92 0)
+			(at 48.26 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8098,7 +8241,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 48.26 132.08 0)
+			(at 48.26 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8436,89 +8579,6 @@
 			(project "CH569W"
 				(path "/5f355040-3c98-408f-a4c4-e9b21b64c196"
 					(reference "C9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:LT1117-3.3")
-		(at 34.29 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a4b39c2c-360b-419e-bf7f-87bb7551a128")
-		(property "Reference" "U3"
-			(at 34.29 113.03 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LT1117-3.3"
-			(at 34.29 115.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-5"
-			(at 34.29 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1117fd.pdf"
-			(at 34.29 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "800mA Low-Dropout Linear Regulator, 3.3V fixed output, SOT-223/TO-263"
-			(at 34.29 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2b053ec4-2573-43dd-a835-85090796fc74")
-		)
-		(pin "3"
-			(uuid "fedf756c-4d8e-49fb-a662-091bd4032fee")
-		)
-		(pin "2"
-			(uuid "996cb8d9-121e-4718-bc77-40cca87d1c0e")
-		)
-		(instances
-			(project "CH569W"
-				(path "/5f355040-3c98-408f-a4c4-e9b21b64c196"
-					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -9078,7 +9138,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 20.32 124.46 0)
+		(at 20.32 121.92 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9089,7 +9149,7 @@
 		(fields_autoplaced yes)
 		(uuid "b655484e-6e7a-4fb5-9442-bcfd3e6665e1")
 		(property "Reference" "#PWR058"
-			(at 20.32 130.81 0)
+			(at 20.32 128.27 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9100,7 +9160,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 20.32 129.54 0)
+			(at 20.32 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9110,7 +9170,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 20.32 124.46 0)
+			(at 20.32 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9121,7 +9181,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 20.32 124.46 0)
+			(at 20.32 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9132,7 +9192,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 20.32 124.46 0)
+			(at 20.32 121.92 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9156,7 +9216,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 20.32 121.92 0)
+		(at 20.32 119.38 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -9168,7 +9228,7 @@
 		(fields_autoplaced yes)
 		(uuid "b75cd20d-f095-4732-864f-1742684ae6ed")
 		(property "Reference" "C24"
-			(at 17.78 120.6499 0)
+			(at 17.78 118.1099 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9179,7 +9239,7 @@
 			)
 		)
 		(property "Value" "3.3uF"
-			(at 17.78 123.1899 0)
+			(at 17.78 120.6499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9190,7 +9250,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 20.32 121.92 0)
+			(at 20.32 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9201,7 +9261,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 20.32 121.92 0)
+			(at 20.32 119.38 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9212,7 +9272,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 20.32 132.08 0)
+			(at 20.32 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10640,7 +10700,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 48.26 119.38 0)
+		(at 48.26 116.84 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -10651,7 +10711,7 @@
 		(fields_autoplaced yes)
 		(uuid "ed4cd505-8416-4f08-a30b-65e479c43d05")
 		(property "Reference" "#PWR057"
-			(at 48.26 123.19 0)
+			(at 48.26 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10662,7 +10722,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 48.26 114.3 0)
+			(at 48.26 111.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10672,7 +10732,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 48.26 119.38 0)
+			(at 48.26 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10683,7 +10743,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 48.26 119.38 0)
+			(at 48.26 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10694,7 +10754,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 48.26 119.38 0)
+			(at 48.26 116.84 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
