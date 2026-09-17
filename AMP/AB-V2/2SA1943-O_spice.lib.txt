@@ -1,0 +1,42 @@
+.SUBCKT 2SA1943_O C B E
+Q1 C B E 2SA1943_O_BJT
+
+.MODEL 2SA1943_O_BJT PNP(
++ LEVEL = 1
++ IS = 1.0e-12
++ BF = 120
++ NF = 1
++ VAF = 80
++ IKF = 8
++ ISE = 5.0e-13
++ NE = 1.5
++ BR = 5
++ NR = 1
++ VAR = 20
++ IKR = 1
++ ISC = 3.0e-10
++ NC = 1.5
++ NK = 1.12
++ RE = 0.03
++ RB = 0.15
++ RC = 0.12
++ CJE = 4.50e-10
++ VJE = 0.65
++ MJE = 0.33
++ CJC = 1.80e-10
++ VJC = 0.55
++ MJC = 0.30
++ FC = 0.5
++ TF = 8.0e-10
++ XTF = 10
++ VTF = 2
++ ITF = 1
++ PTF = 0
++ TR = 2.0e-6
++ EG = 1.11
++ XTB = 3
++ XTI = 5.9601
++ TRC1 = 0
++ TNOM = 25
+)
+.ENDS 2SA1943_O
