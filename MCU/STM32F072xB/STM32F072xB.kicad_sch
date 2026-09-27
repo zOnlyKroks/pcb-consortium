@@ -5753,12 +5753,6 @@
 		)
 	)
 	(junction
-		(at 233.68 59.69)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0912d34b-404e-4aa9-ba14-6f794e15cf84")
-	)
-	(junction
 		(at 53.34 137.16)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5811,12 +5805,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "66cf79fa-18bf-4c32-ae8a-2b3aab323975")
-	)
-	(junction
-		(at 233.68 54.61)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "68df5053-9378-4407-abc0-71b8345f2865")
 	)
 	(junction
 		(at 252.73 77.47)
@@ -6915,7 +6903,7 @@
 		(uuid "85f72895-0151-4ed1-b69e-810287723c0f")
 	)
 	(label "D-"
-		(at 228.6 54.61 180)
+		(at 233.68 54.61 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6945,7 +6933,7 @@
 		(uuid "add53373-03aa-4bd9-9161-a07197afb865")
 	)
 	(label "D+"
-		(at 228.6 59.69 180)
+		(at 233.68 59.69 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7505,87 +7493,6 @@
 			(project "STM32F072xB"
 				(path "/89b92340-dd4a-422b-a554-a83312c57f0c"
 					(reference "J2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 231.14 59.69 90)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23733b05-d0f8-4120-9804-4f32230213ce")
-		(property "Reference" "R9"
-			(at 231.14 64.77 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 231.14 62.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 231.14 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 231.14 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "2aa7a460-4285-4ad1-b165-f9045b6498a2")
-		)
-		(pin "1"
-			(uuid "c183e3f3-25f7-4d34-b386-f9842e976ef6")
-		)
-		(instances
-			(project "STM32F072xB"
-				(path "/89b92340-dd4a-422b-a554-a83312c57f0c"
-					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -9601,86 +9508,6 @@
 			(project "STM32F072xB"
 				(path "/89b92340-dd4a-422b-a554-a83312c57f0c"
 					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R_Small")
-		(at 231.14 54.61 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "74f4454e-65e6-434d-9c6a-4f195cb1fea6")
-		(property "Reference" "R8"
-			(at 231.14 49.53 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.016 1.016)
-				)
-			)
-		)
-		(property "Value" "22"
-			(at 231.14 52.07 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Resistor, small symbol"
-			(at 231.14 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "2"
-			(uuid "0f2369e4-947c-446d-abd2-c495c80864b1")
-		)
-		(pin "1"
-			(uuid "ee16fef5-183b-48be-b915-a7953ae47380")
-		)
-		(instances
-			(project "STM32F072xB"
-				(path "/89b92340-dd4a-422b-a554-a83312c57f0c"
-					(reference "R8")
 					(unit 1)
 				)
 			)
