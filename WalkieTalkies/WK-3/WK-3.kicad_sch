@@ -1,0 +1,449 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "94caafe6-8803-438e-992f-ae1a55393657")
+	(paper "A4")
+	(lib_symbols)
+	(text "RX: PIN T/R -> 7-pole LPF -> elliptic HPF -> BFR92P LNA -> J310 mixer (LO 108) -> 37.4 MHz 4-crystal ladder -> BFR92P -> MC3361 (38.4 MHz) -> 1 MHz -> LM386"
+		(exclude_from_sim no)
+		(at 25.4 182.88 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "2ae2e2d4-ad93-4e69-b7ff-eae0b1d75f4d")
+	)
+	(text "WK-3  -  fully analog 2 m NBFM PTT walkie-talkie (no MCU, no PLL, no firmware, no alignment)"
+		(exclude_from_sim no)
+		(at 25.4 160.02 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "2f7f689c-a8e8-4b1b-842a-e1ba83077f40")
+	)
+	(text "Nothing to trim: no trimmer caps, pots or adjustable coils. Simulation benches for KiCad's simulator in sim/. Amateur licence required to transmit."
+		(exclude_from_sim no)
+		(at 25.4 198.12 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "7f7a3992-8df0-4676-b8d2-edd18aaaeb34")
+	)
+	(text "Channel: 145.400 MHz simplex, 12.5 kHz NBFM; stock crystals only: 54.000 / 37.400 / 38.400 MHz (all LCSC)"
+		(exclude_from_sim no)
+		(at 25.4 167.64 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "a110944c-abb2-4ebb-bd40-fbf3d24835a7")
+	)
+	(text "Supply: 2S Li-ion 6.0-8.4 V; LP2985 5 V; PTT switches TX5 / RX5 rails with P-FETs"
+		(exclude_from_sim no)
+		(at 25.4 190.5 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "cd1668c6-2779-4a33-8946-886a9d8fa850")
+	)
+	(text "TX: 54 MHz VXO (FM on 1SV305) x2 = 108 MHz + 37.4 MHz -> MC1496 + ETC1-1-13 baluns -> HPF / LPF / BFR92P x2 -> 2SC3357 -> RFM01U7P (fixed bias), ~1 W"
+		(exclude_from_sim no)
+		(at 25.4 175.26 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+			)
+			(justify left bottom)
+		)
+		(uuid "ce5d68f4-366e-4be7-8b9d-390dabbba420")
+	)
+	(sheet
+		(at 25.4 101.6)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0496fedb-6deb-40ef-8e0c-4e433306e585")
+		(property "Sheetname" "rf_frontend"
+			(at 27.94 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rf_frontend.kicad_sch"
+			(at 27.94 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 50.8)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "2bc09823-a11d-4e8b-a47f-0063229540c3")
+		(property "Sheetname" "tx_amp"
+			(at 160.02 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tx_amp.kicad_sch"
+			(at 160.02 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 91.44 50.8)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "390817fe-cf57-45ed-a501-31b0e8a23020")
+		(property "Sheetname" "tx_exciter"
+			(at 93.98 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tx_exciter.kicad_sch"
+			(at 93.98 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 223.52 101.6)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a5d649d7-8271-4a45-9550-ee6ba42ba84c")
+		(property "Sheetname" "audio"
+			(at 226.06 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "audio.kicad_sch"
+			(at 226.06 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 223.52 50.8)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d719a0de-82a8-4c9c-b6f6-3c42a2cf3067")
+		(property "Sheetname" "tx_pa"
+			(at 226.06 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "tx_pa.kicad_sch"
+			(at 226.06 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 91.44 101.6)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e609ff48-396f-4c75-92e5-3e4e10ddf511")
+		(property "Sheetname" "lo"
+			(at 93.98 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "lo.kicad_sch"
+			(at 93.98 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 101.6)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e71bfa8c-6910-4102-a48f-aa9a895018fc")
+		(property "Sheetname" "rx_if"
+			(at 160.02 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "rx_if.kicad_sch"
+			(at 160.02 133.35 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 25.4 50.8)
+		(size 55.88 30.48)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.0006)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "fcee52b8-6ccd-4ca2-8069-f61b8110ad53")
+		(property "Sheetname" "power"
+			(at 27.94 49.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 27.94 82.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "WK-3"
+				(path "/94caafe6-8803-438e-992f-ae1a55393657"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
