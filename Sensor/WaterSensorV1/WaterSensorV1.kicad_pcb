@@ -3,7 +3,7 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(general
-		(thickness 1.6)
+		(thickness 1.580794)
 		(legacy_teardrops no)
 	)
 	(paper "A4")
@@ -47,7 +47,7 @@
 			)
 			(layer "F.Mask"
 				(type "Top Solder Mask")
-				(color "#FF008000")
+				(color "Green")
 				(thickness 0.0254)
 				(material "SM-001")
 				(epsilon_r 4)
@@ -70,7 +70,7 @@
 			)
 			(layer "B.Mask"
 				(type "Bottom Solder Mask")
-				(color "#FF008000")
+				(color "Green")
 				(thickness 0.0254)
 				(material "SM-001")
 				(epsilon_r 4)
@@ -82,7 +82,7 @@
 			(layer "B.SilkS"
 				(type "Bottom Silk Screen")
 			)
-			(copper_finish "Lead-Free")
+			(copper_finish "User defined")
 			(dielectric_constraints yes)
 		)
 		(pad_to_mask_clearance 0)
@@ -102,6 +102,7 @@
 		)
 		(capping no)
 		(filling no)
+		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)

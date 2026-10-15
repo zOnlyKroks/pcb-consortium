@@ -1,0 +1,318 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "3c5e8b1a-2f4d-4e6a-9b7c-1d2e3f4a5b6c")
+	(paper "A3")
+	(title_block
+		(title "NetworkSwitchV1 - 6-port managed gigabit switch, PoE powered")
+		(date "2026-10-14")
+		(rev "1")
+		(company "NetworkSwitchV1")
+		(comment 1 "RTL8370N-VB + CH32V208, TPS23753A PoE PD, JLCPCB Basic parts where possible")
+		(comment 2 "Schematic only (board not started)")
+	)
+	(lib_symbols)
+	(text "Self-boot: RTL8370N loads its registers from the U302 EEPROM at every reset; works without the MCU"
+		(exclude_from_sim no)
+		(at 25.4 60.96 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "114970c1-d6b1-5815-bf2f-037fbf0baccb")
+	)
+	(text "NetworkSwitchV1: 6-port gigabit smart-managed switch"
+		(exclude_from_sim no)
+		(at 25.4 35.56 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 0.762)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "204100a4-c678-5df5-8d5a-502311951eef")
+	)
+	(text "MG_AP/AN/BP/BN (management link), POE_CT1..4 (port 1 centre taps)"
+		(exclude_from_sim no)
+		(at 25.4 172.72 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "351ec8ed-4aa2-5256-9465-e90c6dfc1b4f")
+	)
+	(text "802.3x flow control, 802.3az EEE, auto-MDIX, 9216-byte jumbo, IGMP/MLD snooping, 802.1Q VLAN (4K), QoS 8 queues,"
+		(exclude_from_sim no)
+		(at 25.4 50.8 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "5380b2c6-743a-554d-8758-95b65ed64e71")
+	)
+	(text "Front panel: link/act (green) + 1000M (yellow) LED per port, power LED, SYS LED, factory-reset button"
+		(exclude_from_sim no)
+		(at 25.4 76.2 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "590349c7-b119-5ad5-83eb-cf037dd99ea8")
+	)
+	(text "Cross-sheet nets are global labels: P<n>_LNK / P<n>_SPD (LEDs), SW_SCL / SW_SDA / SW_RST_N / EE_WP / SW_GPIO1,"
+		(exclude_from_sim no)
+		(at 25.4 167.64 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "7931af3c-6392-5c2f-a86d-e305e1d8151b")
+	)
+	(text "Power: 12 V DC jack or 802.3af PoE on port 1 (class 3, isolated 12.2 V flyback); 3.3 V and 1.1 V bucks"
+		(exclude_from_sim no)
+		(at 25.4 71.12 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc5b3b44-6216-56b8-9938-be546ae37281")
+	)
+	(text "RTL8370N-VB 8-port GbE switch (P0-P5 = front ports 1-6, P6 unused, P7 = internal management link)"
+		(exclude_from_sim no)
+		(at 25.4 45.72 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d04f0bd4-37f4-5a86-b178-b325d8f84bca")
+	)
+	(text "Management: CH32V208 on the I2C/SMI bus (rewrites U302) + 10BASE-T into P7 -> web UI (firmware to be written)"
+		(exclude_from_sim no)
+		(at 25.4 66.04 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "d5cb1e3a-e28d-5efc-8a3f-a40dca236930")
+	)
+	(text "  port mirroring, 2 link-aggregation groups, loop detection, storm control, 802.1X, MIB counters, RTCT cable test"
+		(exclude_from_sim no)
+		(at 25.4 55.88 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+			(justify left bottom)
+		)
+		(uuid "deb1b2cd-ab7b-5c93-8db1-0b8f5735eaec")
+	)
+	(sheet
+		(at 38.1 101.6)
+		(size 63.5 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "1cbb6f64-3824-5b53-bda2-02740a316939")
+		(property "Sheetname" "Power: 12 V in, PoE PD, 3.3 V / 1.1 V"
+			(at 38.1 100.888 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 38.1 140.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NetworkSwitchV1"
+				(path "/d062679b-5a34-4425-8b92-ed950f80703e"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 226.06 101.6)
+		(size 63.5 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "3d139a1d-1610-5f09-b35e-43569e3026f7")
+		(property "Sheetname" "Ports 1-6 + magnetics"
+			(at 226.06 100.888 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ports.kicad_sch"
+			(at 226.06 140.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NetworkSwitchV1"
+				(path "/d062679b-5a34-4425-8b92-ed950f80703e"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 132.08 101.6)
+		(size 63.5 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "ab509c50-3d92-5564-834a-988f62914024")
+		(property "Sheetname" "Switch core: RTL8370N"
+			(at 132.08 100.888 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "switch.kicad_sch"
+			(at 132.08 140.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NetworkSwitchV1"
+				(path "/d062679b-5a34-4425-8b92-ed950f80703e"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 320.04 101.6)
+		(size 63.5 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "e5a2c05b-f899-5a51-9846-0ec851a34837")
+		(property "Sheetname" "Management: CH32V208"
+			(at 320.04 100.888 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mgmt.kicad_sch"
+			(at 320.04 140.285 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "NetworkSwitchV1"
+				(path "/d062679b-5a34-4425-8b92-ed950f80703e"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
