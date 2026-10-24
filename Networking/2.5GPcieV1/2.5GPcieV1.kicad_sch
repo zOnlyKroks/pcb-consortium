@@ -1,0 +1,181 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "8d0b6a3e-4c21-4f7b-9e5a-2b6c1d7e9f30")
+	(paper "A3")
+	(title_block
+		(title "2.5GPcieV1 - RTL8125BG 2.5GbE PCIe x1 card")
+		(date "2026-10-16")
+		(rev "2")
+		(company "2.5GPcieV1")
+		(comment 1 "Overview")
+	)
+	(lib_symbols)
+	(text "- 2 LEDs in the RJ45: green = LED1, yellow = LED2. Their function is set by the driver (default: link/activity)."
+		(exclude_from_sim no)
+		(at 30.48 55.88 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "134a907b-d856-57a6-bf10-a86aab60cc5c")
+	)
+	(text "- No EEPROM or SPI flash. The MAC comes from the chip's eFuse if programmed, otherwise the driver assigns one."
+		(exclude_from_sim no)
+		(at 30.48 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2243150e-4d7b-586a-b71b-9e1776ee87ba")
+	)
+	(text "- Plugs into any PCIe x1 (or wider) slot; the OS driver (r8125 / r8169 / Windows) configures the chip."
+		(exclude_from_sim no)
+		(at 30.48 40.64 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "98b019a5-5ff0-5ef7-a742-8c651073cf83")
+	)
+	(text "- No Wake-on-LAN (3.3 Vaux and WAKE# unused)."
+		(exclude_from_sim no)
+		(at 30.48 60.96 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a74915cc-db0a-5683-a4a4-4cfc5d65167e")
+	)
+	(text "- Powered from the slot's +3.3 V only. The 0.95 V core comes from an SY8089 buck."
+		(exclude_from_sim no)
+		(at 30.48 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d1a4e18e-1647-56cb-bd0b-183e6ed62990")
+	)
+	(text "2.5GPcieV1 - minimal RTL8125BG 2.5GbE PCIe x1 card"
+		(exclude_from_sim no)
+		(at 30.48 30.48 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "d82d03b0-3ee1-54c9-9175-a11049cbd668")
+	)
+	(sheet
+		(at 40.64 88.9)
+		(size 50.8 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0ebe22b4-62c0-5602-ab6b-b6ccd5ed9a03")
+		(property "Sheetname" "PCIe x1 + power"
+			(at 40.64 88.188 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "pcie.kicad_sch"
+			(at 40.64 114.885 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "2.5GPcieV1"
+				(path "/cdadc36c-00fd-4ef1-8fff-58c3bde70053"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 121.92 88.9)
+		(size 50.8 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "32c2c889-bfb3-5321-bd63-b1e1a31ff9a3")
+		(property "Sheetname" "RTL8125BG + Ethernet"
+			(at 121.92 88.188 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "nic.kicad_sch"
+			(at 121.92 114.885 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "2.5GPcieV1"
+				(path "/cdadc36c-00fd-4ef1-8fff-58c3bde70053"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

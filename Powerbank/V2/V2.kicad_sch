@@ -1,0 +1,219 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "8e2b4c61-1a3f-4d5e-9c7b-6a1d2e3f4b5c")
+	(paper "A3")
+	(title_block
+		(title "PowerbankV2 - Overview")
+		(date "2026-10-24")
+		(rev "1")
+		(company "V2")
+		(comment 1 "2x USB-C PD DRP (TPS25751D + BQ25798), 45 W out / 66 W in per port")
+		(comment 2 "4S2P 18650, BQ7791501 protection, JLC PCBA")
+	)
+	(lib_symbols)
+	(text "PowerbankV2"
+		(exclude_from_sim no)
+		(at 25.4 30.48 0)
+		(effects
+			(font
+				(size 3 3)
+				(thickness 0.6)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "2cd91fd9-0807-5e70-bd68-091553fb8e19")
+	)
+	(sheet
+		(at 127 60.96)
+		(size 63.5 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "25fba872-8cd3-502f-b8da-ee0af1530068")
+		(property "Sheetname" "Port A"
+			(at 127 60.248 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "port_a.kicad_sch"
+			(at 127 86.945 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "V2"
+				(path "/8e2b4c61-1a3f-4d5e-9c7b-6a1d2e3f4b5c"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 203.2 60.96)
+		(size 63.5 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "57567fbf-a569-517c-864a-a1796e6b0f43")
+		(property "Sheetname" "Port B"
+			(at 203.2 60.248 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "port_b.kicad_sch"
+			(at 203.2 86.945 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "V2"
+				(path "/8e2b4c61-1a3f-4d5e-9c7b-6a1d2e3f4b5c"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 279.4 60.96)
+		(size 63.5 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "b7503747-5efb-577c-87b3-497a920a25c1")
+		(property "Sheetname" "System"
+			(at 279.4 60.248 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "system.kicad_sch"
+			(at 279.4 86.945 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "V2"
+				(path "/8e2b4c61-1a3f-4d5e-9c7b-6a1d2e3f4b5c"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 60.96)
+		(size 63.5 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "edd5c6ac-a0f5-5604-a00a-a6d91ebc4cec")
+		(property "Sheetname" "Battery"
+			(at 50.8 60.248 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "battery.kicad_sch"
+			(at 50.8 86.945 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "V2"
+				(path "/8e2b4c61-1a3f-4d5e-9c7b-6a1d2e3f4b5c"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
