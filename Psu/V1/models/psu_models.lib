@@ -1,0 +1,209 @@
+* Lab PSU V1 - simulation models for ngspice (KiCad built-in simulator)
+* Behavioural models of ICs; parameters are first-order, not characterised. Not yet run in ngspice - tune before trusting results.
+
+* MOSFETs Q1/Q2: IRFS4127PBF as a native ngspice VDMOS. Parameters taken from Infineon's own SPICE3 model (irfs4127pbf.spi):
+*   Vto=4.9139 Kp=16.1662 Lambda=0.0358354 Rd=4.0m Rs=0.1m Rg=1.497 Cgs=5.25n (CGSO*W), Cgd 56p..300p (Infineon's 2.35n low-Vds peak made the solver stiff with probes), body diode Is=4.4e-7 N=1.41 Rb=1.83m Tt=100n Cjo=8.5n Bv=200
+* Infineon's file stays in models/ as the reference; the original subcircuit is not used because its internal current-sensor / controlled-source
+* loop cannot take the first transient step once KiCad wraps probe sources around it.
+.model IRFS4127_VDM VDMOS(Vto=4.9139 Kp=16.1662 Lambda=0.0358354 Rd=4m Rs=0.1m Rg=1.497 Cgs=5.25n Cgdmax=300p Cgdmin=56p A=0.3 Cjo=8.5n Vj=0.5 M=0.774 Is=4.4e-7 N=1.41 Rb=1.83m tt=100n Bv=200 Ibv=2.5e-4)
+.subckt IRFS4127_PRB 1 2 3
+M1 1 2 3 3 IRFS4127_VDM
+.ends IRFS4127_PRB
+
+* ---- diodes
+.model BAT54 D(Is=3e-8 N=1.1 Rs=0.6 Cjo=10p Vj=0.3 M=0.4 Bv=30 Ibv=1e-5)
+.model ES1D D(Is=3e-9 N=1.9 Rs=0.15 Cjo=15p Bv=200 Ibv=1e-5 tt=25n)
+.model BAS21 D(Is=2e-9 N=1.8 Rs=0.9 Cjo=2p Bv=250 Ibv=1e-6 tt=50n)
+.model SS34 D(Is=5e-6 N=1.1 Rs=0.03 Cjo=300p Bv=40 Ibv=1e-4)
+.model SS14 D(Is=3e-6 N=1.1 Rs=0.05 Cjo=150p Bv=40 Ibv=1e-4)
+
+* ---- bidirectional TVS clamp (breakdown ~ 1.12 x standoff), single behavioural element, no internal node
+.subckt TVS130 a b
+Bt a b I = 1m*(exp(min((V(a,b)-145)/0.7,40)) - exp(min((-V(a,b)-145)/0.7,40)))
+Rl a b 1G
+.ends TVS130
+.subckt TVS110 a b
+Bt a b I = 1m*(exp(min((V(a,b)-123)/0.7,40)) - exp(min((-V(a,b)-123)/0.7,40)))
+Rl a b 1G
+.ends TVS110
+.subckt TVS18 a b
+Bt a b I = 1m*(exp(min((V(a,b)-20)/0.7,40)) - exp(min((-V(a,b)-20)/0.7,40)))
+Rl a b 1G
+.ends TVS18
+
+* ---- 4-terminal Kelvin shunt: force p1/p4, sense sp/sn
+.subckt SHUNT4 p1 sp sn p4 params: r=10m
+R1 p1 p4 {r}
+Rsp sp p1 1m
+Rsn sn p4 1m
+.ends SHUNT4
+
+* ---- IR2184 half-bridge driver: single input, internal dead time, bootstrap high side
+.subckt IR2184_BEH in sd com lo vcc vs ho vb
+Rfi in nfi 1k
+Cfi nfi com 100p
+Bho nho vs V = V(vb,vs)*(0.5*(1+tanh((V(vcc,com)-8)/0.1)))*(0.5*(1+tanh((V(sd,com)-1.8)/0.05)))*(0.5*(1+tanh((V(nfi,com)-2.2)/0.05)))
+Rho nho ho 2.5
+Blo nlo com V = V(vcc,com)*(0.5*(1+tanh((V(vcc,com)-8)/0.1)))*(0.5*(1+tanh((V(sd,com)-1.8)/0.05)))*(0.5*(1+tanh((1.1-V(nfi,com))/0.05)))
+Rlo nlo lo 2.5
+Rqcc vcc com 8k
+Rqbs vb vs 120k
+Rsd sd com 1meg
+Rin2 in com 1meg
+.ends IR2184_BEH
+
+* ---- INA240A1: gain 20, out = 20*(inp-inn) + (ref1+ref2)/2, rail clamped, ~400 kHz bandwidth
+.subckt INA240_BEH inp inn ref1 ref2 vp gnd out
+Bo o1 gnd V = min(max(20*(V(inp,gnd)-V(inn,gnd)) + (V(ref1,gnd)+V(ref2,gnd))/2, 0.02), V(vp,gnd)-0.1)
+Ro o1 out 100
+Co out gnd 4n
+Rip inp gnd 1meg
+Rin inn gnd 1meg
+Rq vp gnd 5k
+.ends INA240_BEH
+
+* ---- MCP6002 dual rail-to-rail op-amp: A0=2e3, slew ~0.4 V/us (GBW is higher than the real 1 MHz part, deliberately, to keep slew realistic)
+.subckt OPA2_BEH out1 inm1 inp1 vee inp2 inm2 out2 vcc
+Bo1 a1 vee V = V(vcc,vee)*(0.5+0.5*tanh(4e3*(V(inp1,vee)-V(inm1,vee))/V(vcc,vee)))
+Rp1 a1 b1 1k
+Cp1 b1 vee 8n
+Ro1 b1 out1 100
+Bo2 a2 vee V = V(vcc,vee)*(0.5+0.5*tanh(4e3*(V(inp2,vee)-V(inm2,vee))/V(vcc,vee)))
+Rp2 a2 b2 1k
+Cp2 b2 vee 8n
+Ro2 b2 out2 100
+Rq vcc vee 20k
+Ri1 inp1 vee 1e11
+Ri2 inp2 vee 1e11
+Ri3 inm1 vee 1e11
+Ri4 inm2 vee 1e11
+.ends OPA2_BEH
+
+* ---- LM393 dual open-drain comparator: output sinks (60 ohm) when inp < inm; smooth, no switch hysteresis
+.subckt COMP2_OD out1 inm1 inp1 gnd inp2 inm2 out2 vcc
+B1 out1 gnd I = V(out1,gnd)*(0.5*(1+tanh((V(inm1,gnd)-V(inp1,gnd))/0.002)))/60
+B2 out2 gnd I = V(out2,gnd)*(0.5*(1+tanh((V(inm2,gnd)-V(inp2,gnd))/0.002)))/60
+Rq vcc gnd 4k
+Ri1 inp1 gnd 1e11
+Ri2 inm1 gnd 1e11
+Ri3 inp2 gnd 1e11
+Ri4 inm2 gnd 1e11
+.ends COMP2_OD
+
+* ---- AP63203: ideal 3.3 V rail (on from t=0, undervoltage lockout) at the FB/output pin; SW and BST are not modelled
+.subckt BUCK33_BEH fb en in gnd sw bst
+Bv nint gnd V = 3.3*(0.5*(1+tanh((V(in,gnd)-4)/0.1)))*(0.5*(1+tanh((V(en,gnd)-1.2)/0.05)))
+Rs nint fb 50m
+Rsw sw gnd 1meg
+Rbst bst gnd 1meg
+Ren en gnd 1meg
+Bi in gnd I = 0.0008*(0.5*(1+tanh((V(in,gnd)-4)/0.1)))
+.ends BUCK33_BEH
+
+* ---- STM32G474 control firmware stand-in (NOT the MCU): feed-forward duty = Vset/Vbus + slow PI trim,
+* ---- CV/CC by taking the smaller of the voltage and current errors, fixed-frequency triangle-carrier PWM (algebraic carrier: no PULSE breakpoints), DAC thresholds.
+* ---- Only the pins the power stage uses are modelled; params: vset [V], iset [A], ovp [V], ocp [A], ki [1/s]
+.subckt MCU_BEH vdd vss vout iout vin drv_in drv_en fault_n ovp_dac ocp_dac params: vset=50 iset=3 ovp=110 ocp=6 ki=3 kd=1u tss=3m fsw=100k
+Bon on vss V = (0.5*(1+tanh((V(vdd,vss)-2.5)/0.05)))
+Bvsp vsp vss V = {vset}*min(max(time-400u,0)/{tss},1)
+Bvm vm vss V = V(vout,vss)*34.22
+Bvb vbus vss V = max(V(vin,vss)*51,20)
+Bim im vss V = (V(iout,vss)-V(vdd,vss)/2)/0.2
+Bev ev vss V = V(vsp)-V(vmf)
+Bei ei vss V = ({iset}-V(im))*5
+Bem em vss V = 0.5*(V(ev)+V(ei)-sqrt((V(ev)-V(ei))*(V(ev)-V(ei))+0.01))
+Brdy rdy vss V = (0.5*(1+tanh((time-400u-{tss})/50u)))
+Bint vss ctl I = {ki}*V(em)*V(run)*V(rdy)*(1-(0.5*(1+tanh((V(ctl)-0.3)/0.01)))*(0.5*(1+tanh((V(em))/0.01)))-(0.5*(1+tanh((-0.3-V(ctl))/0.01)))*(0.5*(1+tanh((-V(em))/0.01))))
+Cint ctl vss 1 ic=0
+Rctl ctl vss 1e9
+Rf vm vmf 1
+Cf vmf vss 1p
+Bdv dvm vss V = ddt(V(vmf))
+Brun run vss V = V(on)*(0.5*(1+tanh((V(vbus)-60)/1)))*(0.5*(1+tanh((time-400u)/5u)))
+Bd d vss V = V(run)*min(max(V(vsp)/V(vbus) + V(ctl) - {kd}*V(dvm), 0), 0.9)
+Bsaw saw vss V = 0.5+asin(sin(6.28318530718*{fsw}*time))/3.14159265359
+Bpwm drv_in vss V = 3.3*(0.5*(1+tanh((V(d)-V(saw)-0.005)/0.002)))
+Ben drv_en vss V = V(run)*3.3
+Bov ovp_dac vss V = {ovp}/34.22
+Boc ocp_dac vss V = V(vdd,vss)/2 + {ocp}*0.2
+Rfl fault_n vss 1G
+Rvo vout vss 1G
+.ends MCU_BEH
+
+* ======================= MAINS SIDE MODELS (MainsInput sheet) =======================
+* Toroid 230V : 2 x 45V 500VA (Vigortronix VTX-146-500-145 datasheet: 6 % regulation, 5.56 A series, 68 K rise).
+* Linear model (no core saturation, so switch-on inrush is only roughly right). Pins: 1=AA 2=AB (primary), 3=SA 4=SB 5=SC 6=SD.
+* Interwinding capacitance 2 x 300 pF (also keeps the isolated secondary common-mode well conditioned).
+* Per-winding no-load 47.7 V (45 V x 1.06): turns ratio 0.2074; Rp=2R, Rs=0.4R each (+ ~0.1R reflected) reproduces the 6 % regulation.
+.subckt TRAFO_500 aa ab sa sb sc sd params: lp=10 rp=1.2 rs=0.12 k=0.9995 n=0.2074
+Rp aa ap {rp}
+Lp ap ab {lp}
+Rs1 sa s1 {rs}
+Ls1 s1 sb {lp*n*n}
+Rs2 sc s2 {rs}
+Ls2 s2 sd {lp*n*n}
+K1 Lp Ls1 Ls2 {k}
+Cps1 ap s1 300p
+Cps2 ap s2 300p
+.ends TRAFO_500
+
+* Bridge rectifier KBPC-class, 25 A 1000 V (Vf ~0.97 V at 5 A). Pins: 1=+ 2=- 3=AC 4=AC.
+.model DBR D(Is=5e-8 N=1.9 Rs=0.012 Cjo=10p Bv=1000 Ibv=5e-6 tt=0)
+.subckt BRIDGE_KBPC dcp dcn ac1 ac2
+D1 ac1 dcp DBR
+D2 ac2 dcp DBR
+D3 dcn ac1 DBR
+D4 dcn ac2 DBR
+.ends BRIDGE_KBPC
+
+* Electrolytic with ESR. Pins 1=+ 2=-
+.subckt CAP_ESR p n params: c=3300u esr=0.03
+C1 p m {c}
+R1 m n {esr}
+.ends CAP_ESR
+
+* MOV S14K275 (430 V @ 1 mA, ~I ~ V^25). Pins 1,2
+.subckt MOV275 a b
+Bt a b I = 1m*(exp(min((V(a,b)-430)/17,40)) - exp(min((-V(a,b)-430)/17,40)))
+Rl a b 1G
+.ends MOV275
+
+* Mains switch DPST, closed (1 mOhm per pole). Pins: 1-2 and 3-4
+.subckt SW_DPST_ON p1 p2 p3 p4
+Ra p3 p4 1m
+Rb p1 p2 1m
+.ends SW_DPST_ON
+
+* Common-mode choke 2 x 3.3 mH, k=0.99, 40 mOhm per winding. Pins 1-2 and 3-4
+.subckt CMCHOKE a1 a2 b1 b2
+Ra a1 am 40m
+La am a2 3.3m
+Rb b1 bm 40m
+Lb bm b2 3.3m
+K1 La Lb 0.99
+.ends CMCHOKE
+
+* NTC inrush limiter with self-heating: R falls from r25 (cold) to rhot as dissipated energy (node e, joules) builds up; cools with tau ~100 s. e_amb = stored heat at start in J (0 = cold start, ~100 = fully warm).
+.subckt NTC_INRUSH a b params: r25=5 rhot=0.3 e0=25 e_amb=0
+Br rr 0 V = {rhot}+({r25}-{rhot})*exp(-V(e)/{e0})
+Bi a b I = V(a,b)/V(rr)
+Bp 0 e I = V(a,b)*V(a,b)/V(rr)
+Ce e 0 1
+Rl e 0 100
+Bamb 0 e I = {e_amb}/100
+.ends NTC_INRUSH
+
+* Mean Well IRM-10-12 (behavioural): 12 V (0.1 ohm) once the rectified-mean mains input exceeds ~70 V, fixed ~8 W input draw. Pins 1=AC/N 2=AC/L 3=-Vo 4=+Vo
+.subckt IRM_10_12 acn acl vn vp
+Rin acl acn 6.6k
+Benv env 0 V = abs(V(acl,acn))
+Renv env e2 1k
+Cenv e2 0 100u
+Bv vpi vn V = 12*(0.5*(1+tanh((V(e2)-70)/10)))
+Rout vpi vp 0.1
+.ends IRM_10_12
+
+* Constant-power load standing in for the buck stage (draws pwr/V from the bus once t > tstart). Pins 1=+ 2=-
+.subckt CPL_LOAD p n params: pload=540 tstart=60m tramp=2m vmin=50
+B1 p n I = {pload}*min(max((time-{tstart})/{tramp},0),1)/max(V(p,n),{vmin})
+.ends CPL_LOAD
