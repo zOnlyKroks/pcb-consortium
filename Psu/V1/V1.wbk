@@ -1,11 +1,11 @@
 {
   "custom_cursors": 2,
-  "last_sch_text_sim_command": ".tran 100n 10m",
+  "last_sch_text_sim_command": ".tran 100n 40m",
   "tabs": [
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 100n 10m 0m 100n",
+        ".tran 800n 40m",
         ".kicad adjustpaths",
         ".save all"
       ],
@@ -19,6 +19,11 @@
       "measurements": [],
       "showGrid": true,
       "traces": [
+        {
+          "color": "rgb(255, 127, 0)",
+          "signal": "V(/PowerStage/BEFORE)",
+          "trace_type": 1
+        },
         {
           "color": "rgb(228, 26, 28)",
           "signal": "V(/PowerStage/OUT)",

@@ -3234,7 +3234,7 @@
 		)
 		(uuid "11549a18-7b50-4c21-a37f-ed38f0d7f5a5")
 	)
-	(text "STM32G474RET6: HRTIM generates the buck PWM, 12-bit ADCs close the CV/CC loops, DACs set OVP/OCP thresholds, native USB FS device (CDC/SCPI). No crystal: HSI48 + CRS locks to USB SOF."
+	(text "STM32G474RET6: HRTIM generates the 4-switch buck-boost PWM (CHA1 input leg, CHB1 output leg), 12-bit ADCs close the CV/CC loops, DACs set OVP/OCP thresholds, native USB FS device (CDC/SCPI). No crystal: HSI48 + CRS locks to USB SOF."
 		(exclude_from_sim no)
 		(at 12.954 14.478 0)
 		(effects
@@ -3300,10 +3300,6 @@
 		(uuid "3761834a-98f3-43d1-80d0-99799dbb4aaf")
 	)
 	(no_connect
-		(at 195.58 132.08)
-		(uuid "7026c66e-6a8f-4b79-94e7-90333c1aec54")
-	)
-	(no_connect
 		(at 195.58 144.78)
 		(uuid "773c6950-18a5-43a8-907d-b337c0d805f9")
 	)
@@ -3334,10 +3330,6 @@
 	(no_connect
 		(at 287.02 149.86)
 		(uuid "ee94df2d-9151-4bd8-a808-0ff2b87b809f")
-	)
-	(no_connect
-		(at 195.58 177.8)
-		(uuid "fd33d7d4-961f-4ebd-9a17-57e7591b2a34")
 	)
 	(wire
 		(pts
@@ -3881,6 +3873,16 @@
 	)
 	(wire
 		(pts
+			(xy 195.58 132.08) (xy 241.3 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bc246b9a-031b-4213-9a9d-0b1a10db23c7")
+	)
+	(wire
+		(pts
 			(xy 195.58 114.3) (xy 241.3 114.3)
 		)
 		(stroke
@@ -4019,6 +4021,16 @@
 		)
 		(uuid "f04fbc2e-10a4-4b2b-85c9-2fe1f3b83cb4")
 	)
+	(wire
+		(pts
+			(xy 195.58 177.8) (xy 241.3 177.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fd15a84a-8eb7-4895-bdab-0ca6a9c4e586")
+	)
 	(hierarchical_label "IOUT_ADC"
 		(shape bidirectional)
 		(at 241.3 109.22 0)
@@ -4062,6 +4074,17 @@
 			(justify left)
 		)
 		(uuid "21440350-a5da-4030-a934-8bc78a69ce6f")
+	)
+	(hierarchical_label "RELAY_EN"
+		(shape bidirectional)
+		(at 241.3 177.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2428dd34-338d-4e98-80cd-74e6dc26dd50")
 	)
 	(hierarchical_label "BTN_PRESET"
 		(shape bidirectional)
@@ -4337,6 +4360,17 @@
 			(justify right)
 		)
 		(uuid "d614454a-9923-457c-a34a-5b29f2ecbbbb")
+	)
+	(hierarchical_label "DRV_IN2"
+		(shape bidirectional)
+		(at 241.3 132.08 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d86c5d23-83f5-4777-9994-7d104f5b9035")
 	)
 	(hierarchical_label "LCD_DC"
 		(shape bidirectional)
@@ -5348,7 +5382,7 @@
 				)
 			)
 		)
-		(property "Sim.Pins" "12=vout 13=iout 14=vin 15=vss 16=vdd 18=ovp_dac 19=ocp_dac 26=drv_en 30=fault_n 42=drv_in"
+		(property "Sim.Pins" "12=vout 13=iout 14=vin 15=vss 16=vdd 18=ovp_dac 19=ocp_dac 26=drv_en 30=fault_n 33=relay_en 42=drv_in 44=drv_in2"
 			(at 177.8 147.32 0)
 			(hide yes)
 			(show_name no)
@@ -5359,7 +5393,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "vset=50 iset=5 ovp=110 ocp=6 ki=5 kd=3.5u tss=3m fsw=200k"
+		(property "Sim.Params" "vset=50 iset=5 ovp=110 ocp=6 ki=5 kd=3.5u tss=3m fsw=200k tstab=2m"
 			(at 177.8 147.32 0)
 			(hide yes)
 			(show_name no)

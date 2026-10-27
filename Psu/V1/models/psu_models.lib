@@ -17,18 +17,27 @@ M1 1 2 3 3 IRFS4127_VDM
 .model SS34 D(Is=5e-6 N=1.1 Rs=0.03 Cjo=300p Bv=40 Ibv=1e-4)
 .model SS14 D(Is=3e-6 N=1.1 Rs=0.05 Cjo=150p Bv=40 Ibv=1e-4)
 
-* ---- bidirectional TVS clamp (breakdown ~ 1.12 x standoff), single behavioural element, no internal node
+* ---- bidirectional TVS clamp: two anti-series junction diodes (built-in junction limiting, so Newton stays well-behaved); breakdown at 1 mA ~ 1.12 x standoff
+.model TVS130_D D(Is=1e-12 N=1 Rs=1.5 Bv=145 Ibv=1m)
+.model TVS110_D D(Is=1e-12 N=1 Rs=1.5 Bv=123 Ibv=1m)
+.model TVS18_D D(Is=1e-12 N=1 Rs=0.3 Bv=20 Ibv=1m)
 .subckt TVS130 a b
-Bt a b I = 1m*(exp(min((V(a,b)-145)/0.7,40)) - exp(min((-V(a,b)-145)/0.7,40)))
-Rl a b 1G
+D1 a n TVS130_D
+D2 b n TVS130_D
+Ra a n 1G
+Rb b n 1G
 .ends TVS130
 .subckt TVS110 a b
-Bt a b I = 1m*(exp(min((V(a,b)-123)/0.7,40)) - exp(min((-V(a,b)-123)/0.7,40)))
-Rl a b 1G
+D1 a n TVS110_D
+D2 b n TVS110_D
+Ra a n 1G
+Rb b n 1G
 .ends TVS110
 .subckt TVS18 a b
-Bt a b I = 1m*(exp(min((V(a,b)-20)/0.7,40)) - exp(min((-V(a,b)-20)/0.7,40)))
-Rl a b 1G
+D1 a n TVS18_D
+D2 b n TVS18_D
+Ra a n 1G
+Rb b n 1G
 .ends TVS18
 
 * ---- 4-terminal Kelvin shunt: force p1/p4, sense sp/sn
@@ -90,20 +99,91 @@ Ri3 inp2 gnd 1e11
 Ri4 inm2 gnd 1e11
 .ends COMP2_OD
 
-* ---- AP63203: ideal 3.3 V rail (on from t=0, undervoltage lockout) at the FB/output pin; SW and BST are not modelled
-.subckt BUCK33_BEH fb en in gnd sw bst
-Bv nint gnd V = 3.3*(0.5*(1+tanh((V(in,gnd)-4)/0.1)))*(0.5*(1+tanh((V(en,gnd)-1.2)/0.05)))
-Rs nint fb 50m
-Rsw sw gnd 1meg
-Rbst bst gnd 1meg
-Ren en gnd 1meg
-Bi in gnd I = 0.0008*(0.5*(1+tanh((V(in,gnd)-4)/0.1)))
-.ends BUCK33_BEH
+* ---- AP63203 (Diodes, 3.3 V fixed, 1.1 MHz, 2 A sync buck): switch-level, fixed-frequency peak-current-mode.
+* ---- Datasheet values: Rds(on) HS 125 mR / LS 68 mR, Ipeak 2.8 A, UVLO 3.5 V rising / 440 mV hyst, EN 1.18 V / 1.10 V, soft-start 4 ms, VFB 3.30 V (internal 0.8 V ref + divider).
+* ---- NOT modelled: spread spectrum, hiccup, thermal shutdown. Pins as the symbol: fb en in gnd sw bst
+.model AP_BODY D(Is=1e-9 N=1.2 Rs=0.03 Cjo=100p tt=5n)
+.model AP_BST D(Is=1e-9 N=1.2 Rs=3 Cjo=1p)
+.subckt AP63203_SW fb en in gnd sw bst params: fsw=1.1meg
+* enable / UVLO (input rising 3.5 V, falling ~3.06 V approximated by a single mid threshold)
+Bok ok gnd V = (0.5*(1+tanh((V(in,gnd)-3.3)/0.05)))*(0.5*(1+tanh((V(en,gnd)-1.14)/0.02)))
+Bvcc vcc gnd V = 4.7*(0.5*(1+tanh((V(in,gnd)-4.2)/0.1)))
+* soft-start: 250 nA into 1 nF = 1 V in 4 ms, discharged when disabled
+Css ss gnd 1n
+Bss gnd ss I = V(ok)*250n*(0.5*(1-tanh((V(ss,gnd)-1)/0.005))) - (1-V(ok))*V(ss,gnd)/200
+* error amp (gm 200 uS) compares FB/4.125 (=0.8 V at 3.3 V) with the ramped 0.8 V reference
+Bea gnd comp I = 200u*(0.8*(0.5*(V(ss,gnd)+1-abs(V(ss,gnd)-1))) - V(fb,gnd)*0.8/3.3) - 1m*(V(comp,gnd)-1.45)*0.5*(1+tanh((V(comp,gnd)-1.45)/0.02)) - 1m*V(comp,gnd)*0.5*(1-tanh(V(comp,gnd)/0.02))
+Rc comp cc 70k
+Rcp comp gnd 100meg
+Cc cc gnd 380p
+Cp comp gnd 5p
+Rfb fb gnd 1meg
+Ren en gnd 10meg
+* clock: short pulse at the crest of a sine (about 70 ns), and an analog slope-compensation ramp sl (0..1) that is pulled to 0 during that pulse (continuous, no sawtooth jump)
+Bclk clk gnd V = 0.5*(1+tanh((sin(6.28318530718*{fsw}*time)-0.97)/0.01))
+Csl sl gnd 1p
+Rsl sl gnd 1g
+Bsl gnd sl I = 1p*({fsw}*(1-V(clk,gnd)) - 5e7*V(clk,gnd)*V(sl,gnd))
+* set/reset latch on node q: reset dominant and regenerative (a cubic term pushes q to 0 or 1, like a real flip-flop); no new cycle while comp is at its floor (power-save skipping) or while the low-side valley current exceeds 3.2 A
+Cq q gnd 1p
+Rq q gnd 1g
+Bq gnd q I = 1p*1e8*(V(ok)*V(clk,gnd)*(1-V(rst,gnd))*(0.5*(1+tanh((V(comp,gnd)-0.05)/0.02)))*(1-0.5*(1+tanh((-V(sw,gnd)*14.7*V(ls,gnd)-3.2)/0.05)))*(1-V(q,gnd)) - V(rst,gnd)*V(q,gnd) + 3*V(q,gnd)*(1-V(q,gnd))*(2*V(q,gnd)-1))
+Bsum sum gnd V = 0.4*V(ihs,gnd) + 0.18*V(sl,gnd)
+* reset: peak current reached, 2.8 A limit or max duty, after the 80 ns minimum on-time (soft OR)
+Bcmp cmp gnd V = 1-(1-0.5*(1+tanh((V(sum,gnd)-V(comp,gnd))/0.01)))*(1-0.5*(1+tanh((V(ihs,gnd)-2.8)/0.02)))*(1-0.5*(1+tanh((V(sl,gnd)-0.92)/0.01)))
+Brst rst gnd V = (0.5*(1+tanh((V(sl,gnd)-0.08)/0.01)))*V(cmp,gnd)
+Bqc qc gnd V = 0.5*(1+tanh((V(q,gnd)-0.5)/0.05))
+* dead time: delayed copy; HS needs both high, LS needs both low (products stay smooth)
+Rd qc qd 4
+Cd qd gnd 2p
+Bhs hs gnd V = V(qc,gnd)*V(qd,gnd)*(0.5*(1+tanh((V(bst,sw)-2.5)/0.1)))
+Bls ls gnd V = (1-V(qc,gnd))*(1-V(qd,gnd))*V(ok)
+* power switches as gated conductances
+Bhsp in sw I = V(in,sw)*(8*V(hs,gnd)+1e-9)
+Blsp sw gnd I = V(sw,gnd)*(14.7*V(ls,gnd)+1e-9)
+Bihs ihs gnd V = 0.5*(V(in,sw)*8*V(hs,gnd)+sqrt(V(in,sw)*8*V(hs,gnd)*V(in,sw)*8*V(hs,gnd)+1e-4))
+Dbody gnd sw AP_BODY
+Dbst vcc bst AP_BST
+Csw sw gnd 100p
+Rbst bst gnd 10meg
+Rin in gnd 5meg
+.ends AP63203_SW
+
+* ---- AP63203 (Diodes, 3.3 V fixed, 2 A sync buck), cycle-averaged: no 1.1 MHz switching, so the transient runs at normal step sizes.
+* ---- Real-part numbers: UVLO 3.5 V rising, EN 1.14 V, 4 ms soft-start, VFB 3.30 V, peak limit 2.8 A, ~0.1 ohm conduction loss, ~0.12 W switching/driver loss (~90 % at 1 A, 12 V to 3.3 V), Iq 22 uA.
+* ---- The switch node sw is driven as an average voltage by a fast inner current loop (peak-current-mode equivalent: demand = comp/0.4 A/V - half ripple).
+* ---- Not modelled: ripple, spread spectrum, hiccup, thermal shutdown, power-save skipping (it behaves as forced-PWM, current may reverse). Pins as the symbol: fb en in gnd sw bst
+.subckt AP63203_AVG fb en in gnd sw bst params: lnom=4.7u
+Bok ok gnd V = (0.5*(1+tanh((V(in,gnd)-3.3)/0.05)))*(0.5*(1+tanh((V(en,gnd)-1.14)/0.02)))
+Css ss gnd 1n
+Bss gnd ss I = V(ok)*250n*(0.5*(1-tanh((V(ss,gnd)-1)/0.005))) - (1-V(ok))*V(ss,gnd)/200
+Bea gnd comp I = 200u*(0.8*(0.5*(V(ss,gnd)+1-abs(V(ss,gnd)-1))) - V(fb,gnd)*0.8/3.3) - 1m*(V(comp,gnd)-1.45)*0.5*(1+tanh((V(comp,gnd)-1.45)/0.02)) - 1m*V(comp,gnd)*0.5*(1-tanh(V(comp,gnd)/0.02))
+Rc comp cc 70k
+Rcp comp gnd 100meg
+Cc cc gnd 380p
+Cp comp gnd 5p
+Rfb fb gnd 1meg
+Ren en gnd 10meg
+* average inductor-current demand, limited to the 2.8 A peak limit less half the ripple
+Bid id gnd V = V(ok)*0.5*(V(max0,gnd)+2.57-abs(V(max0,gnd)-2.57))
+Bmx max0 gnd V = 0.5*((V(comp,gnd)/0.4-0.23)+abs(V(comp,gnd)/0.4-0.23))
+* inner current loop: switch-node voltage = output voltage (feed-forward) + k*(demand - iL), k = 2*pi*150 kHz*L, kept inside 0..0.9*Vin
+Bsw nint gnd V = V(ok)*0.5*(V(vhi,gnd)+0.9*V(in,gnd)-abs(V(vhi,gnd)-0.9*V(in,gnd)))
+Bhi vhi gnd V = 0.5*(V(vlo,gnd)+abs(V(vlo,gnd)))
+Blo vlo gnd V = V(fb,gnd) + 6.283185*150k*{lnom}*(V(id,gnd)-I(Vz))
+Vz nint n2 0
+Rs n2 sw 0.1
+* input current: power taken from the bus / Vin, plus switching loss and Iq
+Bin in gnd I = V(ok)*(0.5*(V(P,gnd)+abs(V(P,gnd))))/max(V(in,gnd),3) + 22u + V(ok)*0.12/max(V(in,gnd),3)
+BP P gnd V = V(nint)*I(Vz)
+Rbst bst gnd 10meg
+Rin in gnd 5meg
+.ends AP63203_AVG
 
 * ---- STM32G474 control firmware stand-in (NOT the MCU): feed-forward duty = Vset/Vbus + slow PI trim,
 * ---- CV/CC by taking the smaller of the voltage and current errors, fixed-frequency triangle-carrier PWM (algebraic carrier: no PULSE breakpoints), DAC thresholds.
 * ---- Only the pins the power stage uses are modelled; params: vset [V], iset [A], ovp [V], ocp [A], ki [1/s]
-.subckt MCU_BEH vdd vss vout iout vin drv_in drv_en fault_n ovp_dac ocp_dac params: vset=50 iset=3 ovp=110 ocp=6 ki=3 kd=1u tss=3m fsw=100k
+.subckt MCU_BEH vdd vss vout iout vin drv_in drv_in2 drv_en fault_n ovp_dac ocp_dac relay_en params: vset=50 iset=3 ovp=110 ocp=6 ki=3 kd=1u tss=3m fsw=100k tstab=20m
 Bon on vss V = (0.5*(1+tanh((V(vdd,vss)-2.5)/0.05)))
 Bvsp vsp vss V = {vset}*min(max(time-400u,0)/{tss},1)
 Bvm vm vss V = V(vout,vss)*34.22
@@ -118,14 +198,28 @@ Cint ctl vss 1 ic=0
 Rctl ctl vss 1e9
 Rf vm vmf 1
 Cf vmf vss 1p
-Bdv dvm vss V = ddt(V(vmf))
-Brun run vss V = V(on)*(0.5*(1+tanh((V(vbus)-60)/1)))*(0.5*(1+tanh((time-400u)/5u)))
-Bd d vss V = V(run)*min(max(V(vsp)/V(vbus) + V(ctl) - {kd}*V(dvm), 0), 0.9)
+* RC differentiator (10 us lag) instead of ddt(), which amplifies noise as the solver shrinks the timestep
+Rdv vmf vf2 1k
+Cdv vf2 vss 10n
+Bdv dvm vss V = (V(vmf)-V(vf2,vss))/10u
+Brun run vss V = V(on)*(0.5*(1+tanh((V(vbus)-30)/1)))*(0.5*(1+tanh((time-400u)/5u)))
+Bm m vss V = V(run)*min(max(V(vsp)/V(vbus) + V(ctl) - {kd}*V(dvm), 0), 4.5)
+Bd d vss V = min(0.9*V(m), 0.9)
+Bd2 d2 vss V = 0.9/max(V(m), 1)
 Bsaw saw vss V = 0.5+asin(sin(6.28318530718*{fsw}*time))/3.14159265359
 Bpwm drv_in vss V = 3.3*(0.5*(1+tanh((V(d)-V(saw)-0.005)/0.002)))
+Bpwm2 drv_in2 vss V = 3.3*(0.5*(1+tanh((V(d2)-V(saw)-0.005)/0.002)))
 Ben drv_en vss V = V(run)*3.3
 Bov ovp_dac vss V = {ovp}/34.22
 Boc ocp_dac vss V = V(vdd,vss)/2 + {ocp}*0.2
+* ---- Output relay enable (firmware): closes only after the measured output (ADC on VOUT) has stayed within 5 % + 0.5 V of the setpoint, or sat at the current limit (CC),
+* ---- for tstab with FAULT_N high and the soft-start finished; opens again if that is lost for a few ms.
+Bgd gd vss V = max(0.5*(1+tanh((0.05*{vset}+0.5-abs(V(vm)-V(vsp)))/0.05)), 0.5*(1+tanh((V(im)-0.95*{iset})/0.05)))*V(rdy)*(0.5*(1+tanh((V(fault_n,vss)-1.65)/0.1)))
+Ctm tmr vss 1 ic=0
+Btm vss tmr I = V(run)*V(gd)*(0.5*(1-tanh((V(tmr)-1)/0.01)))/{tstab} - (1-V(run)*V(gd))*tanh(max(V(tmr),0)/0.01)/2m
+Rtm tmr vss 1e9
+Brl relay_en vss V = 3.3*(0.5*(1+tanh((V(tmr)-0.98)/0.005)))
+Rrl relay_en vss 1G
 Rfl fault_n vss 1G
 Rvo vout vss 1G
 .ends MCU_BEH
@@ -203,7 +297,131 @@ Bv vpi vn V = 12*(0.5*(1+tanh((V(e2)-70)/10)))
 Rout vpi vp 0.1
 .ends IRM_10_12
 
+* IRM-10-12 stand-in fed from the rectified toroid bus (+HV) instead of mains: the AC pins are unused, so 12 V and the 3.3 V buck behind it follow the transformer.
+* 12 V (0.1 ohm) once +HV exceeds ~12 V; input draw = Pout/0.8 + 0.3 W from +HV. Pins 1=AC/N 2=AC/L 3=-Vo 4=+Vo
+.global +HV
+.subckt IRM_10_12_HV acn acl vn vp
+Benv env 0 V = V(+HV)
+Renv env e2 100
+Cenv e2 0 10u
+Bv vpi vn V = 12*(0.5*(1+tanh((V(e2)-12)/2)))
+Rout vpi vp 0.1
+Bin +HV vn I = (0.5*(1+tanh((V(e2)-12)/2)))*(V(vpi,vn)*(V(vpi,vp)/0.1)/0.8 + 0.3)/max(V(+HV,vn),10)
+.ends IRM_10_12_HV
+
 * Constant-power load standing in for the buck stage (draws pwr/V from the bus once t > tstart). Pins 1=+ 2=-
 .subckt CPL_LOAD p n params: pload=540 tstart=60m tramp=2m vmin=50
 B1 p n I = {pload}*min(max((time-{tstart})/{tramp},0),1)/max(V(p,n),{vmin})
 .ends CPL_LOAD
+
+* ---- 2N7002 (relay coil driver): SOT-23 N-MOSFET, Vth ~2.1 V, Rds(on) ~2 ohm at 4.5 V (datasheet-class values, native VDMOS)
+.model N2N7002_VDM VDMOS(Vto=2.1 Kp=0.25 Lambda=0.01 Rd=0.7 Rs=0.1 Rg=10 Cgs=22p Cgdmax=4p Cgdmin=4p A=0.3 Cjo=10p Vj=0.7 M=0.4 Is=1e-9 N=1.3 Rb=1 Bv=60 Ibv=1e-6)
+.subckt N2N7002 d g s
+M1 d g s s N2N7002_VDM
+.ends N2N7002
+
+* ---- SPST-NO power relay, 12 V coil (400 ohm, 0.2 H): pulls in above 9 V after ~8 ms, drops out below 1.2 V after ~4 ms, contact 10 mohm. No bounce, no contact rating.
+.subckt RELAY_SPST_12V c1 c2 k1 k2 params: rcoil=400 lcoil=0.2 vpu=9 vdo=1.2 ton=8m toff=4m ron=10m
+Rc c1 cx {rcoil}
+Lc cx c2 {lcoil}
+Cq q 0 1u
+Rq q 0 1e9
+Bq 0 q I = 1u*((0.5*(1+tanh((V(c1,c2)-{vpu})/0.2)))*(1-V(q))/{ton} - (0.5*(1+tanh(({vdo}-V(c1,c2))/0.2)))*V(q)/{toff})
+Bk k1 k2 I = V(k1,k2)*((0.5*(1+tanh((V(q)-0.5)/0.05)))/{ron} + 1e-9)
+.ends RELAY_SPST_12V
+
+* ======================= ANALOG CONTROLLER MODELS (AnalogCtl sheet) =======================
+* Op-amp macromodel: single dominant pole (GBW), slew limit, output swing, input bias, offset. Single-supply, output stage = B-source + Rout.
+* ngspice: gm [S] sets the gain stage; Ca gives the GBW, the tanh output current limit gives the slew rate
+.subckt OPAMP_CORE out inm inp vee vcc params: gbw=1meg sr=0.3meg vos=2m ib=45n voh=1.5 vol=0.02 rout=50 a0=1e5 iq=350u gm=1m
+.param cap={gm/(6.283185*gbw)} imx={sr*gm/(6.283185*gbw)} rra={a0/gm}
+Bib1 inp vee I = {ib}
+Bib2 inm vee I = {ib}
+Bg vee a I = {imx}*tanh({gm}*(V(inp,vee)-V(inm,vee)+{vos})/{imx})
+Ra a vee {rra}
+Ca a vee {cap}
+Bcl vee a I = -1m*(V(a,vee)-(V(vcc,vee)-{voh}))*0.5*(1+tanh((V(a,vee)-(V(vcc,vee)-{voh}))/20m)) - 1m*(V(a,vee)-{vol})*0.5*(1-tanh((V(a,vee)-{vol})/20m))
+Bo o vee V = V(a,vee)
+Ro o out {rout}
+Iqq vcc vee {iq}
+.ends OPAMP_CORE
+
+* LM358 (dual): GBW 1 MHz, SR 0.3 V/us, Vos 2 mV, Ib 45 nA, output to Vcc-1.5 V, sinks to ~20 mV.  Pins as the symbol/OPA2_BEH: 1=out1 2=inm1 3=inp1 4=vee 5=inp2 6=inm2 7=out2 8=vcc
+.subckt LM358 out1 inm1 inp1 vee inp2 inm2 out2 vcc
+XA out1 inm1 inp1 vee vcc OPAMP_CORE gbw=1meg sr=0.3meg vos=2m ib=45n voh=1.5 vol=0.02 rout=50 iq=350u
+XB out2 inm2 inp2 vee vcc OPAMP_CORE gbw=1meg sr=0.3meg vos=2m ib=45n voh=1.5 vol=0.02 rout=50 iq=350u
+.ends LM358
+
+* Open-collector comparator core: output transistor sinks (ron) when inp < inm, response time tpd, offset vos, input bias ib
+.subckt COMP_OC out inm inp vee vcc params:  tpd=1.3u vos=2m ib=25n ron=60
+.param ctd={tpd/2200}
+Bib1 inp vee I = {ib}
+Bib2 inm vee I = {ib}
+Bd x vee V = 0.5*(1+tanh((V(inp,vee)-V(inm,vee)-{vos})/5m))
+Rd x xd 1k
+Cd xd vee {ctd}
+Bo out vee I = V(out,vee)*((1-V(xd,vee))/{ron}+1n)
+Iqq vcc vee 0.2m
+.ends COMP_OC
+
+* LM393 (dual): tpd 1.3 us, 16 mA sink.  Pins: 1=out1 2=inm1 3=inp1 4=vee 5=inp2 6=inm2 7=out2 8=vcc
+.subckt LM393 out1 inm1 inp1 vee inp2 inm2 out2 vcc
+XA out1 inm1 inp1 vee vcc COMP_OC tpd=1.3u vos=2m ib=25n ron=60
+XB out2 inm2 inp2 vee vcc COMP_OC tpd=1.3u vos=2m ib=25n ron=60
+.ends LM393
+
+* LM311 (single, faster): tpd 200 ns.  Pins as the KiCad symbol: 1=GND(emitter) 2=IN+ 3=IN- 4=V- 5=BAL 6=STRB 7=OUT 8=V+
+.subckt LM311 gnd inp inm vee bal strb out vcc
+X1 out inm inp gnd vcc COMP_OC tpd=0.2u vos=2m ib=100n ron=20
+Rb bal gnd 1g
+Rs strb gnd 1g
+Rv vee gnd 0.1
+.ends LM311
+
+* NE555 (bipolar, astable/ramp use): set when TRIG < CTRL/2, reset when THRES > CTRL, discharge transistor on while output low, internal 3 x 5k divider.
+* Pins: 1=GND 2=TRIG 3=OUT 4=RESET 5=CTRL 6=THRES 7=DISCH 8=VCC
+.subckt NE555 gnd trig out rst ctrl thr dis vcc
+Rd1 vcc ctrl 5k
+Rd2 ctrl lo 5k
+Rd3 lo gnd 5k
+Cq q gnd 1p
+Rq q gnd 1g
+Bs s gnd V = 0.5*(1+tanh((V(lo,gnd)-V(trig,gnd))/2m))
+Br r gnd V = max(0.5*(1+tanh((V(thr,gnd)-V(ctrl,gnd))/2m)),0.5*(1-tanh((V(rst,gnd)-0.7)/0.05)))
+Bq gnd q I = 1p*1e8*(V(s,gnd)*(1-V(r,gnd))*(1-V(q,gnd)) - V(r,gnd)*V(q,gnd) + 3*V(q,gnd)*(1-V(q,gnd))*(2*V(q,gnd)-1))
+Bo outi gnd V = V(vcc,gnd)*V(q,gnd)
+Ro outi out 20
+Bdis dis gnd I = V(dis,gnd)*(0.5*(1-tanh((V(q,gnd)-0.5)/0.1)))/10
+Iqq vcc gnd 3m
+.ends NE555
+
+* TL431: 2.495 V reference. Pins as the KiCad symbol: 1=REF 2=A 3=K.  Cathode current rises steeply once REF exceeds 2.495 V; 2 uA reference input current.
+.subckt TL431 ref a k
+Bi1 ref a I = 2u
+Bk k a I = 0.5*(V(x,a)+sqrt(V(x,a)*V(x,a)+1e-6))*(0.5*(1+tanh((V(k,a)-1)/0.1)))
+Bx x a V = 1e3*(V(ref,a)-2.495)
+.ends TL431
+
+* Potentiometer (front-panel knob): a - w - b, total r, wiper position pos (0..1 from a). Optional step: moves to pos2 over 1 ms starting at tstep (leave pos2=pos for a static knob)
+.subckt POT3 a w b params: r=10k pos=0.5 pos2=0.5 tstep=1
+Bp p 0 V = max(min({pos}+({pos2}-{pos})*min(max((time-{tstep})/1m,0),1),0.999),0.001)
+Rpd p 0 1g
+B1 a w I = V(a,w)/({r}*V(p))
+B2 w b I = V(w,b)/({r}*(1-V(p)))
+.ends POT3
+
+* Front-panel toggle switch, closes at time ton (emulates the user flipping it), ron when closed
+.subckt SW_TIMED a b params: ton=1m ron=20m
+Bsw a b I = V(a,b)*(0.5*(1+tanh((time-{ton})/20u))/{ron}+1n)
+.ends SW_TIMED
+
+.model LED_RED D(Is=1e-20 N=2 Rs=5 Cjo=30p Bv=5 Ibv=10u)
+
+.model D1N4148 D(Is=2.5n N=1.75 Rs=0.6 Cjo=2p Vj=0.6 M=0.4 Bv=100 Ibv=100u tt=4n)
+.model BZX84C5V1 D(Is=1e-14 N=1 Rs=15 Cjo=60p Bv=5.1 Ibv=5m)
+.model BC857 PNP(Is=2e-14 Bf=250 Vaf=80 Ikf=0.1 Rb=10 Re=1 Rc=1 Cje=10p Cjc=6p Tf=0.5n Tr=30n)
+
+* subckt wrapper so KiCad can map the BJT pins: c b e
+.subckt BC857_S c b e
+Q1 c b e BC857
+.ends BC857_S
