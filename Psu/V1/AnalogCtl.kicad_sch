@@ -3740,10 +3740,6 @@
 		(uuid "7a643895-0834-47d0-bbc1-99c5d2c0861a")
 	)
 	(no_connect
-		(at 452.12 158.75)
-		(uuid "85d3dd8f-37f9-439f-8aa6-2d3b6ef5088a")
-	)
-	(no_connect
 		(at 182.88 48.26)
 		(uuid "85f7e5db-347f-46cd-b395-dbe3c93131b1")
 	)
@@ -6057,16 +6053,6 @@
 	)
 	(wire
 		(pts
-			(xy 436.88 156.21) (xy 434.34 156.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bae1475a-981f-43f1-af4d-84d2bf22fe6d")
-	)
-	(wire
-		(pts
 			(xy 209.55 50.8) (xy 209.55 54.61)
 		)
 		(stroke
@@ -6924,16 +6910,6 @@
 			(justify left bottom)
 		)
 		(uuid "17f3a377-d745-4b5a-b793-be135b1b0026")
-	)
-	(label "VREF3"
-		(at 436.88 161.29 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "194a53c8-0a97-4cd3-a776-d2719e660c88")
 	)
 	(label "RAMP"
 		(at 473.71 130.81 180)
@@ -12416,149 +12392,6 @@
 				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
 					(reference "#PWR402")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Comparator:LM393")
-		(at 444.5 158.75 0)
-		(unit 2)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3b8efc7a-5f93-4954-bcb3-7c2d33fc3636")
-		(property "Reference" "U113"
-			(at 451.49 156.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "LM393"
-			(at 451.49 158.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "SUBCKT"
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Library" "${KIPRJMOD}/models/psu_models.lib"
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Name" "LM393"
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=out1 2=inm1 3=inp1 4=vee 5=inp2 6=inm2 7=out2 8=vcc"
-			(at 444.5 158.75 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "5"
-			(uuid "adec93b8-30b4-4431-9722-c06c9d9993c0")
-		)
-		(pin "6"
-			(uuid "45d04f96-0522-41ed-b81f-e202ff0a871d")
-		)
-		(pin "7"
-			(uuid "3757b662-68f6-476e-9ebc-a2fc5ce12aa0")
-		)
-		(pin "1"
-			(uuid "b1c7035e-8ba0-47bb-8561-5f505a08bc08")
-		)
-		(pin "2"
-			(uuid "def511af-16c7-4514-a983-a7e500890d7f")
-		)
-		(pin "3"
-			(uuid "7a611f84-6953-4742-9154-96d4c3c636cf")
-		)
-		(pin "4"
-			(uuid "d43b517e-ffe0-4a67-80ee-4a237552f2ac")
-		)
-		(pin "8"
-			(uuid "83edb56e-4d8b-4806-a8dd-764078251075")
-		)
-		(instances
-			(project "V1"
-				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
-					(reference "U113")
-					(unit 2)
 				)
 			)
 		)
@@ -30334,83 +30167,6 @@
 			(project "V1"
 				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
 					(reference "U106")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 434.34 156.21 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files no)
-		(dnp no)
-		(uuid "f7c34330-2b70-4fd1-a398-f3a4ceef9350")
-		(property "Reference" "#PWR465"
-			(at 434.34 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 436.88 156.21 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 434.34 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 434.34 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 434.34 156.21 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1cc0a6c8-234d-4345-acf5-c076b970d271")
-		)
-		(instances
-			(project "V1"
-				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
-					(reference "#PWR465")
 					(unit 1)
 				)
 			)
