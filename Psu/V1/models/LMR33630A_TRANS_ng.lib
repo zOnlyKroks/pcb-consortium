@@ -1,6 +1,6 @@
 * LMR33630A transient model (TI, SNVMBF9 'unencrypted', Final 1.10), converted for ngspice/KiCad:
 *  - continuation lines joined, spaced numbers fixed, nested .PARAM braces fixed, leading-underscore names renamed
-*  - the 16 VSWITCH switches replaced by equivalent smooth behavioural conductances (same Ron/Roff/Voff/Von)
+*  - the 16 VSWITCH switches replaced by smooth behavioural conductances (same Ron/Roff/Voff/Von), interpolated logarithmically in conductance like a real VSWITCH (linear interpolation leaves a ~Ron-scaled leak in the off state)
 *  Original unmodified model: LMR33630A_TRANS_TI.lib.  NOT YET SIMULATED in ngspice - expect more PSpice-isms to fix.
 *$
 * LMR33630A
@@ -325,7 +325,7 @@ X_U4_U15         U4_N16842761 U4_N16842786 HDRV AND2_BASIC_GEN PARAMS: VDD=1 VSS
 E_E1         FBI 0 FB AGND 1
 .ENDS LMR33630A_TRANS
 *$
-.PARAM  cramp=3.3p gain_comp2i={(imaxpk-iminpk)/(vcomp_maxpk-vcomp_min)} rdsls=55m vcomp_maxvy={{imaxvy}/{gain_comp2i}} fsmin_ratio=0.1 rt= {gain_ramp/(cramp*vosc*freq)} rvtoi_ls={rvtoi_hs/pk2vl} imaxneg=0 iclamp=0.0 rdshs=85m vcomp_min=0.16 iminpk=0.72 imaxpk=4.5 vcomp_max=1 gain_ramp=0.25 rvtoi_hs={rsense_hs/gain_comp2i/rdshs} rsense_ls={rsense_hs*rdsls/rdshs} freq=400k gain_slope2i={1.8/gain_comp2i/vosc} gain_lowslope2i= {2.1/gain_comp2i/vosc} vcomp_maxpk=1 rsense_hs=3825 vosc=1 pk2vl=2 rvtoi_slope= {rvtoi_hs/gain_slope2i} imaxvy=3.5 vref=1
+.PARAM  cramp=3.3p gain_comp2i={(imaxpk-iminpk)/(vcomp_maxpk-vcomp_min)} rdsls=55m vcomp_maxvy={imaxvy/gain_comp2i} fsmin_ratio=0.1 rt= {gain_ramp/(cramp*vosc*freq)} rvtoi_ls={rvtoi_hs/pk2vl} imaxneg=0 iclamp=0.0 rdshs=85m vcomp_min=0.16 iminpk=0.72 imaxpk=4.5 vcomp_max=1 gain_ramp=0.25 rvtoi_hs={rsense_hs/gain_comp2i/rdshs} rsense_ls={rsense_hs*rdsls/rdshs} freq=400k gain_slope2i={1.8/gain_comp2i/vosc} gain_lowslope2i= {2.1/gain_comp2i/vosc} vcomp_maxpk=1 rsense_hs=3825 vosc=1 pk2vl=2 rvtoi_slope= {rvtoi_hs/gain_slope2i} imaxvy=3.5 vref=1
 *$
 .subckt ERROR_AMPLIFIER_mod_U1_F4 1 2 3 4  
 F_U1_F4         3 4 VF_U1_F4 40k
@@ -338,7 +338,7 @@ VH_U1_H1         1 2 0V
 .ends ERROR_AMPLIFIER_mod_U1_H1
 *$
 .subckt ERROR_AMPLIFIER_mod_U1_S2 1 2 3 4  
-BS_U1_S2 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(0.1)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U1_S2 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(0.1))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U1_S2         1 2 1G
 .ends ERROR_AMPLIFIER_mod_U1_S2
 *$
@@ -348,22 +348,22 @@ VF_U1_F3         1 2 0V
 .ends ERROR_AMPLIFIER_mod_U1_F3
 *$
 .subckt HICCUP1_U5_S4 1 2 3 4  
-BS_U5_S4 3 4 I = V(3,4)*(1/(1000000.0)+(1/(0.001)-1/(1000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.25))/2))/(((0.8)-(0.25))/6))))
+BS_U5_S4 3 4 I = V(3,4)*exp(ln(1/(1000000.0))+(ln(1/(0.001))-ln(1/(1000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.25))/2))/(((0.8)-(0.25))/6))))
 RS_U5_S4         1 2 1G
 .ends HICCUP1_U5_S4
 *$
 .subckt HICCUP1_U5_S3 1 2 3 4  
-BS_U5_S3 3 4 I = V(3,4)*(1/(100000000000.0)+(1/(1.0)-1/(100000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U5_S3 3 4 I = V(3,4)*exp(ln(1/(100000000000.0))+(ln(1/(1.0))-ln(1/(100000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U5_S3         1 2 1G
 .ends HICCUP1_U5_S3
 *$
 .subckt PGOOD_U10_S19 1 2 3 4  
-BS_U10_S19 3 4 I = V(3,4)*(1/(100000000.0)+(1/(60.0)-1/(100000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
+BS_U10_S19 3 4 I = V(3,4)*exp(ln(1/(100000000.0))+(ln(1/(60.0))-ln(1/(100000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
 RS_U10_S19         1 2 1G
 .ends PGOOD_U10_S19
 *$
 .subckt Oscillator_mod_U3_S30 1 2 3 4  
-BS_U3_S30 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(0.001)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U3_S30 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(0.001))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U3_S30         1 2 1G
 .ends Oscillator_mod_U3_S30
 *$
@@ -373,7 +373,7 @@ VF_U3_F1         1 2 0V
 .ends Oscillator_mod_U3_F1
 *$
 .subckt Oscillator_mod_U3_S26 1 2 3 4  
-BS_U3_S26 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(0.001)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
+BS_U3_S26 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(0.001))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
 RS_U3_S26         1 2 1G
 .ends Oscillator_mod_U3_S26
 *$
@@ -388,22 +388,22 @@ VF_U3_F3         1 2 0V
 .ends Oscillator_mod_U3_F3
 *$
 .subckt Oscillator_mod_U3_S29 1 2 3 4  
-BS_U3_S29 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(0.2)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
+BS_U3_S29 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(0.2))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
 RS_U3_S29         1 2 1G
 .ends Oscillator_mod_U3_S29
 *$
 .subckt Oscillator_mod_U3_S28 1 2 3 4  
-BS_U3_S28 3 4 I = V(3,4)*(1/(5000000000.0)+(1/(0.2)-1/(5000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U3_S28 3 4 I = V(3,4)*exp(ln(1/(5000000000.0))+(ln(1/(0.2))-ln(1/(5000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U3_S28         1 2 1G
 .ends Oscillator_mod_U3_S28
 *$
 .subckt GmIphase_mod_U6_S7 1 2 3 4  
-BS_U6_S7 3 4 I = V(3,4)*(1/(2000000000.0)+(1/(10000.0)-1/(2000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U6_S7 3 4 I = V(3,4)*exp(ln(1/(2000000000.0))+(ln(1/(10000.0))-ln(1/(2000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U6_S7         1 2 1G
 .ends GmIphase_mod_U6_S7
 *$
 .subckt GmIphase_mod_U6_S8 1 2 3 4  
-BS_U6_S8 3 4 I = V(3,4)*(1/(2000000000.0)+(1/(10000.0)-1/(2000000000.0))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
+BS_U6_S8 3 4 I = V(3,4)*exp(ln(1/(2000000000.0))+(ln(1/(10000.0))-ln(1/(2000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.75)+(0.25))/2))/(((0.75)-(0.25))/6))))
 RS_U6_S8         1 2 1G
 .ends GmIphase_mod_U6_S8
 *$
@@ -418,27 +418,27 @@ VH_U6_H2         1 2 0V
 .ends GmIphase_mod_U6_H2
 *$
 .subckt GmIphase_mod_U6_S1 1 2 3 4  
-BS_U6_S1 3 4 I = V(3,4)*(1/(1000000.0)+(1/(1.0)-1/(1000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
+BS_U6_S1 3 4 I = V(3,4)*exp(ln(1/(1000000.0))+(ln(1/(1.0))-ln(1/(1000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
 RS_U6_S1         1 2 1G
 .ends GmIphase_mod_U6_S1
 *$
 .subckt SOFT_START_U2_S1 1 2 3 4  
-BS_U2_S1 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(3000.0)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
+BS_U2_S1 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(3000.0))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
 RS_U2_S1         1 2 1G
 .ends SOFT_START_U2_S1
 *$
 .subckt Driver_mod_U4_S2 1 2 3 4  
-BS_U4_S2 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(RDSLS)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
+BS_U4_S2 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(RDSLS))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
 RS_U4_S2         1 2 1G
 .ends Driver_mod_U4_S2
 *$
 .subckt Driver_mod_U4_S3 1 2 3 4  
-BS_U4_S3 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(0.1)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
+BS_U4_S3 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(0.1))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.8)+(0.2))/2))/(((0.8)-(0.2))/6))))
 RS_U4_S3         1 2 1G
 .ends Driver_mod_U4_S3
 *$
 .subckt Driver_mod_U4_S1 1 2 3 4  
-BS_U4_S1 3 4 I = V(3,4)*(1/(1000000000.0)+(1/(RDSHS)-1/(1000000000.0))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
+BS_U4_S1 3 4 I = V(3,4)*exp(ln(1/(1000000000.0))+(ln(1/(RDSHS))-ln(1/(1000000000.0)))*0.5*(1+tanh((V(1,2)-(((0.5)+(0.2))/2))/(((0.5)-(0.2))/6))))
 RS_U4_S1         1 2 1G
 .ends Driver_mod_U4_S1
 *$
@@ -464,15 +464,13 @@ e_abm2         reset 0 value { if(v(ch)<0.5,1,0)    }
 *$
 .subckt dffsr_rhpbasic_gen q qb clk d r s params: vdd=1 vss=0 vthresh=0.5 
 x1 clk clkdel1 inv_basic_gen params: vdd={vdd} vss={vss} vthresh={vthresh}
-r_clk clkdel1 clkdel 21.64502165
+r_clk clkdel1 clkdel 216.4502165
 c_clk clkdel 0 1n
 x2 clk clkdel clkint and2_basic_gen params: vdd={vdd} vss={vss} vthresh= {vthresh}
 gq 0 qint value = {if(v(r) > {vthresh},-5,if(v(s) > {vthresh},5, if(v(clkint)> {vthresh}, if(v(d)> {vthresh},5,-5),0)))}
 cqint qint 0 1n
-d_d10 qint my5 d_d1
-v1 my5 0 {vdd}
-d_d11 myvss qint d_d1
-v2 myvss 0 {vss} 
+* qint state clamp to [vss,vdd]: continuous 1 mOhm clamp instead of two n=0.1 diodes (those lose the stored state when ngspice takes a coarse step)
+bclamp qint 0 I = 1000*(max(v(qint)-{vdd},0)+min(v(qint)-{vss},0))
 eq qqq 0 qint 0 1
 x3 qqq qqqd1 buf_delay_basic_gen params: vdd={vdd} vss={vss} vthresh={vthresh} delay = 1n
 rqq qqqd1 q 1

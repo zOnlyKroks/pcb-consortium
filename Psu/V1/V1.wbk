@@ -1,13 +1,15 @@
 {
   "custom_cursors": 2,
-  "last_sch_text_sim_command": ".tran 100n 40m",
+  "last_sch_text_sim_command": ".tran 100n 30m",
   "tabs": [
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 800n 40m",
+        ".tran 200n 60m 30m",
         ".kicad adjustpaths",
-        ".save all"
+        ".save all",
+        ".probe alli",
+        ".probe allp"
       ],
       "dottedSecondary": false,
       "margins": {

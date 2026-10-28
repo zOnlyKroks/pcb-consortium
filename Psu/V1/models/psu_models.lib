@@ -315,10 +315,31 @@ B1 p n I = {pload}*min(max((time-{tstart})/{tramp},0),1)/max(V(p,n),{vmin})
 .ends CPL_LOAD
 
 * ---- 2N7002 (relay coil driver): SOT-23 N-MOSFET, Vth ~2.1 V, Rds(on) ~2 ohm at 4.5 V (datasheet-class values, native VDMOS)
-.model N2N7002_VDM VDMOS(Vto=2.1 Kp=0.25 Lambda=0.01 Rd=0.7 Rs=0.1 Rg=10 Cgs=22p Cgdmax=4p Cgdmin=4p A=0.3 Cjo=10p Vj=0.7 M=0.4 Is=1e-9 N=1.3 Rb=1 Bv=60 Ibv=1e-6)
+* level-1 NMOS + body diode (same Vto/Kp/Rd/Rs/caps/diode data): the native VDMOS version made ngspice abort with 'timestep too small' in the AnalogCtl ramp oscillator
+.model N2N7002_L1 NMOS(Level=1 Vto=2.1 Kp=0.25 Lambda=0.01 Rd=0.7 Rs=0.1 Cgso=22p Cgdo=4p)
+.model N2N7002_DB D(Is=1e-9 N=1.3 Rs=1 Cjo=10p Vj=0.7 M=0.4 Bv=60 Ibv=1e-6)
 .subckt N2N7002 d g s
-M1 d g s s N2N7002_VDM
+M1 d g s s N2N7002_L1 W=1 L=1
+Dbody s d N2N7002_DB
 .ends N2N7002
+
+* ---- LMR33630A (Buck3V3 sheet), behavioural stand-in for EVERYDAY simulation: UVLO (3.8 V) + EN threshold (1.2 V), ~4 ms soft-start, ideal vout behind 0.2 ohm
+* ---- (the 400 kHz vendor model LMR33630A_TRANS_ng.lib is ~100x slower; select it on U201 in Buck3V3.kicad_sch when the buck itself is being checked)
+* ---- Pins as LMR33630A_DDA / the KiCad symbol: 1=gnd 2=vin 3=en 4=pg 5=fb 6=vcc 7=boot 8=sw.  vout is fixed (does not follow the FB divider).
+.subckt LMR33630A_BEH gnd vin en pg fb vcc boot sw params: vout=3.3
+Bok ok gnd V = (0.5*(1+tanh((V(vin,gnd)-3.8)/0.1)))*(0.5*(1+tanh((V(en,gnd)-1.2)/0.05)))
+Css ss gnd 1n
+Bss gnd ss I = V(ok)*250n*(0.5*(1-tanh((V(ss,gnd)-1)/0.005))) - (1-V(ok))*V(ss,gnd)/200
+Bsw nsw gnd V = min({vout}*V(ss,gnd), max(V(vin,gnd)-0.1,0))
+Rsw nsw sw 0.2
+Bvcc nvcc gnd V = 5*V(ok)
+Rvcc nvcc vcc 100
+Bq vin gnd I = 1m*V(ok)
+Rfb fb gnd 1meg
+Rbt boot gnd 1meg
+Rpg pg gnd 1meg
+Ren en gnd 1meg
+.ends LMR33630A_BEH
 
 * ---- SPST-NO power relay, 12 V coil (400 ohm, 0.2 H): pulls in above 9 V after ~8 ms, drops out below 1.2 V after ~4 ms, contact 10 mohm. No bounce, no contact rating.
 .subckt RELAY_SPST_12V c1 c2 k1 k2 params: rcoil=400 lcoil=0.2 vpu=9 vdo=1.2 ton=8m toff=4m ron=10m
