@@ -5,11 +5,9 @@
     {
       "analysis": "TRAN",
       "commands": [
-        ".tran 200n 60m 30m",
+        ".tran 200n 200m",
         ".kicad adjustpaths",
-        ".save all",
-        ".probe alli",
-        ".probe allp"
+        ".save all"
       ],
       "dottedSecondary": false,
       "margins": {
@@ -22,9 +20,19 @@
       "showGrid": true,
       "traces": [
         {
-          "color": "rgb(255, 127, 0)",
-          "signal": "V(/PowerStage/BEFORE)",
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(+12V)",
           "trace_type": 1
+        },
+        {
+          "color": "rgb(55, 126, 184)",
+          "signal": "V(+3V3)",
+          "trace_type": 1
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(+HV)",
+          "trace_type": 257
         },
         {
           "color": "rgb(228, 26, 28)",
