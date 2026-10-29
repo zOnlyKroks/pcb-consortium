@@ -323,18 +323,15 @@ M1 d g s s N2N7002_L1 W=1 L=1
 Dbody s d N2N7002_DB
 .ends N2N7002
 
-* ---- LMR33630A (Buck3V3 sheet), behavioural stand-in for EVERYDAY simulation: UVLO (3.8 V) + EN threshold (1.2 V), ~4 ms soft-start, ideal vout behind 0.2 ohm
-* ---- (the 400 kHz vendor model LMR33630A_TRANS_ng.lib is ~100x slower; select it on U201 in Buck3V3.kicad_sch when the buck itself is being checked)
+* ---- LMR33630A (Buck3V3 sheet): IDEAL 3.3 V source for simulation. Present from t=0 (no UVLO, enable or soft-start), 50 mohm output impedance.
+* ---- The 400 kHz vendor model LMR33630A_TRANS_ng.lib is ~100x slower; select it on U201 in Buck3V3.kicad_sch when the buck itself is being checked.
 * ---- Pins as LMR33630A_DDA / the KiCad symbol: 1=gnd 2=vin 3=en 4=pg 5=fb 6=vcc 7=boot 8=sw.  vout is fixed (does not follow the FB divider).
 .subckt LMR33630A_BEH gnd vin en pg fb vcc boot sw params: vout=3.3
-Bok ok gnd V = (0.5*(1+tanh((V(vin,gnd)-3.8)/0.1)))*(0.5*(1+tanh((V(en,gnd)-1.2)/0.05)))
-Css ss gnd 1n
-Bss gnd ss I = V(ok)*250n*(0.5*(1-tanh((V(ss,gnd)-1)/0.005))) - (1-V(ok))*V(ss,gnd)/200
-Bsw nsw gnd V = min({vout}*V(ss,gnd), max(V(vin,gnd)-0.1,0))
-Rsw nsw sw 0.2
-Bvcc nvcc gnd V = 5*V(ok)
+Bsw nsw gnd V = {vout}
+Rsw nsw sw 0.05
+Bvcc nvcc gnd V = 5
 Rvcc nvcc vcc 100
-Bq vin gnd I = 1m*V(ok)
+Rvin vin gnd 1meg
 Rfb fb gnd 1meg
 Rbt boot gnd 1meg
 Rpg pg gnd 1meg
@@ -378,6 +375,8 @@ XB out2 inm2 inp2 vee vcc OPAMP_CORE gbw=1meg sr=0.3meg vos=2m ib=45n voh=1.5 vo
 .param ctd={tpd/2200}
 Bib1 inp vee I = {ib}
 Bib2 inm vee I = {ib}
+Ri1 inp vee 1e11
+Ri2 inm vee 1e11
 Bd x vee V = 0.5*(1+tanh((V(inp,vee)-V(inm,vee)-{vos})/5m))
 Rd x xd 1k
 Cd xd vee {ctd}

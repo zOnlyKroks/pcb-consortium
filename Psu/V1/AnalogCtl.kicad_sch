@@ -3453,6 +3453,17 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "WINDUP CLAMP: limits how far the current amp (EAI) can wind up above its inverting input; keeps constant-current engagement fast"
+		(exclude_from_sim no)
+		(at 44.45 355.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5b4553d5-e925-43a8-83df-88d63edd2da1")
+	)
 	(text "8 MEG"
 		(exclude_from_sim no)
 		(at 538.988 185.928 0)
@@ -5723,6 +5734,16 @@
 	)
 	(wire
 		(pts
+			(xy 44.45 365.76) (xy 49.53 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9cc2eecb-4047-47e0-9582-0ec9ebc78680")
+	)
+	(wire
+		(pts
 			(xy 560.07 114.3) (xy 560.07 116.84)
 		)
 		(stroke
@@ -6153,6 +6174,16 @@
 	)
 	(wire
 		(pts
+			(xy 57.15 365.76) (xy 62.23 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c8716bfa-2b65-41cf-99d8-e37ffc5b7811")
+	)
+	(wire
+		(pts
 			(xy 252.73 31.75) (xy 252.73 35.56)
 		)
 		(stroke
@@ -6533,6 +6564,16 @@
 	)
 	(wire
 		(pts
+			(xy 69.85 365.76) (xy 74.93 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1d92ba4-4883-4be9-9ad0-39917b0d5596")
+	)
+	(wire
+		(pts
 			(xy 349.25 85.09) (xy 350.52 85.09)
 		)
 		(stroke
@@ -6793,6 +6834,16 @@
 	)
 	(wire
 		(pts
+			(xy 82.55 365.76) (xy 87.63 365.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9cc43cc-fffa-4e72-8fcf-83480c4e188e")
+	)
+	(wire
+		(pts
 			(xy 251.46 31.75) (xy 252.73 31.75)
 		)
 		(stroke
@@ -6911,6 +6962,16 @@
 		)
 		(uuid "17f3a377-d745-4b5a-b793-be135b1b0026")
 	)
+	(label "IAMP_INV"
+		(at 87.63 365.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2306d47a-a3bd-4481-9933-175f49e85d6b")
+	)
 	(label "RAMP"
 		(at 473.71 130.81 180)
 		(effects
@@ -6970,6 +7031,16 @@
 			(justify right bottom)
 		)
 		(uuid "2878264a-d4e0-4762-b52c-60d6fea88af7")
+	)
+	(label "IAMP_INV"
+		(at 364.49 142.24 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2a41b3a2-7e4f-47ae-9bcf-b6895b41c390")
 	)
 	(label "EAI"
 		(at 379.73 139.7 0)
@@ -7370,6 +7441,16 @@
 			(justify left bottom)
 		)
 		(uuid "d259e348-11f8-47a5-a261-7bb61bcac1e0")
+	)
+	(label "EAI"
+		(at 44.45 365.76 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d279bdb0-a461-431f-a308-4a2581ba82f0")
 	)
 	(label "EAI"
 		(at 332.74 119.38 90)
@@ -9497,7 +9578,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "100k"
 			(at 198.5 128.27 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9563,7 +9644,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "r=1k"
+		(property "Sim.Params" "r=100k"
 			(at 195.58 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -15437,6 +15518,130 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D")
+		(at 78.74 365.76 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "59c9ac2d-50f3-4d8e-bd50-806508dd1cf2")
+		(property "Reference" "D114"
+			(at 78.74 361.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D1N4148"
+			(at 78.74 370.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/models/psu_models.lib"
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "D1N4148"
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 78.74 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bd0a9d9-1195-41d2-b783-3e0da8219030")
+		)
+		(pin "2"
+			(uuid "89d47a50-c112-41cc-afd9-1b4c935e428d")
+		)
+		(instances
+			(project "V1"
+				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
+					(reference "D114")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:2N7002")
 		(at 320.04 49.53 0)
 		(unit 1)
@@ -18399,7 +18604,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47k"
+		(property "Value" "1k"
 			(at 215.27 199.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18465,7 +18670,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "r=47k"
+		(property "Sim.Params" "r=1k"
 			(at 210.82 199.39 0)
 			(hide yes)
 			(show_name no)
@@ -18781,7 +18986,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10n"
+		(property "Value" "470n"
 			(at 223.65 184.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -18847,7 +19052,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "c=10n"
+		(property "Sim.Params" "c=470n"
 			(at 220.98 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -20811,7 +21016,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47n"
+		(property "Value" "470n"
 			(at 570.36 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -20877,7 +21082,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "c=47n"
+		(property "Sim.Params" "c=470n"
 			(at 566.42 129.54 0)
 			(hide yes)
 			(show_name no)
@@ -24697,6 +24902,130 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:D")
+		(at 66.04 365.76 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c095f28b-d599-4406-b480-cce9faec3acb")
+		(property "Reference" "D113"
+			(at 66.04 361.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D1N4148"
+			(at 66.04 370.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/models/psu_models.lib"
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "D1N4148"
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 66.04 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e9297ab-7d76-4305-8bc4-da6325d58af3")
+		)
+		(pin "2"
+			(uuid "77cedf64-72e0-43cf-8d76-a3ff99a72bff")
+		)
+		(instances
+			(project "V1"
+				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
+					(reference "D113")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Comparator:LM393")
 		(at 248.92 125.73 0)
 		(unit 2)
@@ -25293,6 +25622,130 @@
 			(project "V1"
 				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
 					(reference "#PWR484")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:D")
+		(at 53.34 365.76 0)
+		(mirror y)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c76fce64-bce5-41f4-a262-94bfba5dec23")
+		(property "Reference" "D112"
+			(at 53.34 361.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "D1N4148"
+			(at 53.34 370.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Library" "${KIPRJMOD}/models/psu_models.lib"
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "D1N4148"
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 53.34 365.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "03da6a03-1b19-46ab-8782-addb8cc89f63")
+		)
+		(pin "2"
+			(uuid "212f2aec-ee20-4e39-9a4e-f2c2d71f6f12")
+		)
+		(instances
+			(project "V1"
+				(path "/ac43abac-3a45-4cc0-8cc7-86391d0cc456/6ff5dedc-2375-436c-82db-06b4588cec6b"
+					(reference "D112")
 					(unit 1)
 				)
 			)
@@ -29861,7 +30314,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 481.33 123.19 0)
+			(at 478.79 118.618 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -30319,7 +30772,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "27n"
+		(property "Value" "150n"
 			(at 532.26 167.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30385,7 +30838,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "c=27n"
+		(property "Sim.Params" "c=150n"
 			(at 528.32 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -30561,7 +31014,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "10k"
+		(property "Value" "330"
 			(at 582.04 106.68 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30627,7 +31080,7 @@
 				)
 			)
 		)
-		(property "Sim.Params" "r=10k"
+		(property "Sim.Params" "r=330"
 			(at 579.12 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -30812,5 +31265,4 @@
 			(page "4")
 		)
 	)
-	(embedded_fonts no)
 )
