@@ -1,0 +1,6 @@
+* Behavioural comparator (stand-in for the TLV3201 in simulation): push-pull output, 0 V / V(vcc)
+.subckt CMP_BEH inp inn out vcc gnd
+B1 mid gnd V = V(vcc)*0.5*(1+tanh(200*(V(inp)-V(inn))))
+R1 mid out 100
+C1 out gnd 100p
+.ends CMP_BEH

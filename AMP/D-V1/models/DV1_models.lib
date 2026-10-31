@@ -1,0 +1,124 @@
+* D-V1 behavioural SPICE models (ngspice, as bundled with KiCad).
+* These are generic behavioural stand-ins that capture the datasheet headline numbers, not vendor
+* models.  Replace with the manufacturer model if you need device-level accuracy.
+
+* ---------------------------------------------------------------------------------------------
+* TLV9061-class rail-to-rail op amp: 10 MHz GBW, 100 dB gain, +-50 mV rail clearance, 6.5 V/us SR
+* ---------------------------------------------------------------------------------------------
+.subckt OPAMP_RR inp inn vcc vee out
+Gm 0 n1 inp inn 1m
+R1 n1 0 100Meg
+C1 n1 0 15.9p
+Bsr n2 0 V = V(n1)
+* soft rail clamp (no hard corner: friendlier to the Newton solver)
+Bcl n3 0 V = V(vee) + 0.05 + (V(vcc) - V(vee) - 0.1) * (0.5 + 0.5 * tanh((V(n2) - 0.5*(V(vcc) + V(vee))) / (0.5*(V(vcc) - V(vee)) - 0.05)))
+Rn3 n3 out 25
+Cout out 0 1p
+Rvcc vcc 0 1Meg
+Rvee vee 0 1Meg
+.ends OPAMP_RR
+
+* ---------------------------------------------------------------------------------------------
+* TLV3501-class rail-to-rail push-pull comparator, ~5 ns propagation delay
+* ---------------------------------------------------------------------------------------------
+.subckt COMP_RR inp inn vcc vee out
+Bc n1 0 V = V(vee) + (V(vcc) - V(vee)) * (0.5 + 0.5 * tanh((V(inp) - V(inn)) / 1m))
+Rd n1 n2 1k
+Cd n2 0 3p
+Ro n2 out 20
+Rvcc vcc 0 1Meg
+Rvee vee 0 1Meg
+.ends COMP_RR
+
+* ---------------------------------------------------------------------------------------------
+* IR2181-class half-bridge driver: independent HIN / LIN, no internal dead time, bootstrapped high side,
+* ~5 ohm outputs, 6 V UVLO.   pin order: vcc hin lin com lo vs ho vb
+* ---------------------------------------------------------------------------------------------
+.subckt HBRIDGE_DRV vcc hin lin com lo vs ho vb
+* input thresholds 2.0 V against COM (datasheet: VIL 0.8 V max, VIH 2.7 V min)
+Bhi hon 0 V = 0.5 + 0.5 * tanh((V(hin,com) - 2.0) / 20m)
+Bli lon 0 V = 0.5 + 0.5 * tanh((V(lin,com) - 2.0) / 20m)
+Buv uv 0 V = 0.5 + 0.5 * tanh((V(vcc,com) - 6) / 100m)
+* high-side UVLO: HO is held off while VB-VS < 8.5 V (as the real part does), so the bridge cannot sit in a weakly driven linear state
+* ~15 ns of output delay keeps the edges smooth for the solver
+Rdh hon hond 1k
+Cdh hond 0 15p
+Rdl lon lond 1k
+Cdl lond 0 15p
+* low side output
+Blo loa com V = V(lond) * V(uv) * V(vcc,com)
+Vsl loa loi 0
+Rlo loi lo 5
+* high side output (referenced to VS) and the current it takes from the bootstrap supply
+Bho hoa vs V = V(hond) * V(uv) * (0.5 + 0.5 * tanh((V(vb,vs) - 8.5) / 0.1)) * V(vb,vs)
+Vsh hoa hoi 0
+Rho hoi ho 5
+Bbs vb vs I = I(Vsh) + 100u
+Bcc vcc com I = I(Vsl) + 0.5m
+Rg1 hin com 10Meg
+Rg2 lin com 10Meg
+Rg3 vcc com 100Meg
+Rg4 ho vs 10Meg
+Rg5 lo com 10Meg
+Rg6 vb vs 100Meg
+.ends HBRIDGE_DRV
+
+* ---------------------------------------------------------------------------------------------
+* 60 V logic-level-ish power MOSFET (~10 mohm), Ciss 2 nF, Qg ~40 nC, fast body diode
+* pin order: d g s
+* ---------------------------------------------------------------------------------------------
+.subckt NMOS_60V d g s
+Rg g gi 2
+M1 di gi si si NM W=1 L=1
+Rd d di 4m
+Rs s si 4m
+Cgs gi si 1.8n
+Cgd gi di 120p
+Cds d s 250p
+Dbody si di DBODY
+.model NM NMOS (LEVEL=1 VTO=3 KP=25 LAMBDA=0.01)
+.model DBODY D (IS=1e-11 N=1.1 RS=5m TT=45n CJO=0.3n M=0.5 BV=70 IBV=250u)
+.ends NMOS_60V
+
+* fast switching / bootstrap diode (1N4148W-class)
+.model D1N4148W D (IS=2.5n N=1.75 RS=0.6 CJO=2p M=0.4 TT=4n BV=100 IBV=2.5u)
+* 26 V TVS
+.model DTVS26 D (IS=1n N=1.2 RS=0.2 CJO=500p BV=26 IBV=1m)
+
+* ---------------------------------------------------------------------------------------------
+* 3-terminal fixed linear regulators (78Lxx-class): 1.7 V dropout, 0.5 ohm output impedance
+* pin order: vin vout gnd
+* ---------------------------------------------------------------------------------------------
+.subckt LDO_12V vin vout gnd
+Breg n1 gnd V = min(12, max(V(vin,gnd) - 1.7, 0))
+Ro n1 vout 0.5
+Rin vin gnd 100k
+.ends LDO_12V
+
+.subckt LDO_5V vin vout gnd
+Breg n1 gnd V = min(5, max(V(vin,gnd) - 1.7, 0))
+Ro n1 vout 0.5
+Rin vin gnd 100k
+.ends LDO_5V
+
+* simulation-only differential probe: out = V(inp) - V(inn), referenced to ground (shows a bridge output as one trace)
+.subckt DIFFPROBE inp inn out
+Bd out 0 V = V(inp) - V(inn)
+Rp inp 0 10Meg
+Rn inn 0 10Meg
+.ends DIFFPROBE
+
+* ---------------------------------------------------------------------------------------------
+* 2N7002-class small-signal N-MOSFET (60 V, ~2 ohm, Ciss ~ 30 pF, Crss ~ 5 pF, Coss ~ 12 pF)
+* pin order: d g s
+* ---------------------------------------------------------------------------------------------
+.subckt NMOS_2N7002 d g s
+M1 d gi s s NMS W=1 L=1
+Rg g gi 20
+Cgs gi s 25p
+Cgd gi d 4p
+Cds d s 8p
+Dbody s d DBS
+.model NMS NMOS (LEVEL=1 VTO=2 KP=0.15 LAMBDA=0.01)
+.model DBS D (IS=1e-12 N=1.1 RS=1 CJO=2p TT=10n BV=70)
+.ends NMOS_2N7002

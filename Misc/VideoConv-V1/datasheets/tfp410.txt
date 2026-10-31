@@ -1,0 +1,3345 @@
+
+=====PAGE 1=====
+TFP410 TI PanelBus™ Digital Transmitter
+1 Features
+•
+Digital visual interface (DVI) compliant1
+•
+Supports pixel rates up to 165MHz (including 
+1080p and WUXGA at 60Hz)
+•
+Universal graphics controller interface:
+–
+12-bit, dual-edge and 24-bit, single-edge input 
+modes
+–
+Adjustable 1.1V to 1.8V and standard 3.3V 
+CMOS input signal Levels
+–
+Fully differential and single-ended input 
+clocking modes
+–
+Standard Intel 12-bit digital video port 
+compatible as on Intel™ 81x Chipsets
+•
+Enhanced PLL noise immunity:
+–
+On-chip regulators and bypass capacitors for 
+reducing system Costs
+•
+Enhanced jitter performance:
+–
+No HSYNC jitter anomaly
+–
+Negligible data-dependent jitter
+•
+Programmable using I2C serial interface
+•
+Monitor detection through hot-plug and receiver 
+detection
+•
+Single 3.3V supply operation
+•
+64-Pin TQFP using TI’s PowerPAD™ package
+•
+TI’s advanced 0.18µm EPIC-5™ CMOS process 
+technology
+•
+Pin compatible with SiI164 DVI transmitter1
+2 Applications
+•
+DVD
+•
+Blu-ray™
+•
+HD projectors
+•
+DVI/HDMI transmitter 2
+3 Description
+The 
+TFP410 
+device 
+is 
+a 
+Texas 
+Instruments 
+PanelBus™ 
+flat-panel 
+display 
+product, 
+part 
+of 
+a comprehensive family of end-to-end DVI 1.0-
+compliant solutions, targeted at the PC and consumer 
+electronics industry.
+The TFP410 device provides a universal interface 
+to allow a glueless connection to most commonly 
+available 
+graphics 
+controllers. 
+Some 
+of 
+the 
+advantages 
+of 
+this 
+universal 
+interface 
+include 
+selectable bus widths, adjustable signal levels, and 
+differential and single-ended clocking. The adjustable 
+1.1V to 1.8V digital interface provides a low-EMI, 
+high-speed bus that connects seamlessly with 12-bit 
+or 24-bit interfaces. The DVI interface supports flat-
+panel display resolutions up to UXGA at 165MHz in 
+24-bit true color pixel format.
+The TFP410 device combines PanelBus circuit 
+innovation with TI’s advanced 0.18μm EPIC-5 
+CMOS process technology and TI’s ultra-low ground 
+inductance PowerPAD package. The result is a 
+compact 64-pin TQFP package providing a reliable, 
+low-current, low-noise, high-speed digital interface 
+solution.
+Package Information
+PART NUMBER
+PACKAGE(1)
+PACKAGE SIZE (2)
+TFP410
+PAP (HTQFP, 64)
+12mm × 12mm
+(1)
+For more information, see Section 10
+(2)
+The package size (length × width) is a nominal value and 
+includes pins, where applicable.
+Typical HDMI Interface
+1 The digital visual interface (DVI) specification is an industry standard developed by the digital display working group (DDWG) for high-
+speed digital connection to digital displays and has been adopted by industry-leading PC and consumer electronics manufacturers. 
+The TFP410 is compliant to the DVI Revision 1.0 specification.
+2 HDMI video-only
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+An IMPORTANT NOTICE at the end of this data sheet addresses availability, warranty, changes, use in safety-critical applications, 
+intellectual property matters and other important disclaimers. PRODUCTION DATA.
+
+=====PAGE 2=====
+Table of Contents
+1 Features............................................................................1
+2 Applications.....................................................................1
+3 Description.......................................................................1
+4 Pin Configuration and Functions...................................2
+5 Specifications.................................................................. 6
+5.1 Absolute Maximum Ratings........................................ 6
+5.2 ESD Ratings............................................................... 6
+5.3 Recommended Operating Conditions.........................6
+5.4 Thermal Information....................................................6
+5.5 Electrical Characteristics.............................................7
+5.6 Timing Requirements..................................................7
+5.7 Typical Characteristics................................................9
+6 Detailed Description......................................................10
+6.1 Overview...................................................................10
+6.2 Functional Block Diagram......................................... 11
+6.3 Feature Description...................................................11
+6.4 Device Functional Modes..........................................12
+6.5 Programming............................................................ 17
+6.6 Register Maps...........................................................18
+7 Application and Implementation..................................25
+7.1 Application Information............................................. 25
+7.2 Typical Application.................................................... 25
+7.3 Power Supply Recommendations.............................28
+7.4 Layout....................................................................... 28
+8 Device and Documentation Support............................33
+8.1 Receiving Notification of Documentation Updates....33
+8.2 Support Resources................................................... 33
+8.3 Trademarks...............................................................33
+8.4 Electrostatic Discharge Caution................................33
+8.5 Glossary....................................................................33
+9 Revision History............................................................ 33
+10 Mechanical, Packaging, and Orderable 
+Information.................................................................... 34
+4 Pin Configuration and Functions
+60
+62
+23
+21
+19
+DATA0
+PVDD
+63
+18
+PGND
+DGND
+64
+17
+TFADJ
+DATA1
+DATA2
+TGND
+61
+20
+TXC-
+DATA3
+DATA4
+TXC+
+59
+22
+DATA5
+TVDD
+58
+TX0-
+57
+24
+IDCK+
+TX0+
+56
+25
+IDCK-
+TGND
+55
+26
+DATA6
+TX1-
+DATA7
+54
+27
+DATA8
+TX1+
+53
+28
+DATA9
+TVDD
+52
+29
+DATA10
+TX2-
+51
+30
+DATA11
+TX2+
+50
+31
+NC
+TGND
+49
+32
+DVDD
+DGND
+1
+48
+DE
+DATA12
+2
+47
+VREF
+DATA13
+3
+46
+HSYNC
+DATA14
+4
+45
+DATA15
+VSYNC
+5
+44
+A3/DK3
+DATA16
+6
+43
+DGND
+DVDD
+16
+33
+BSEL/SCL
+RESERVED
+15
+34
+DSEL/SDA
+DKEN
+14
+35
+ISEL/RST
+DATA23
+13
+36
+DVDD
+DATA22
+12
+37
+MSEN/PO1
+DATA21
+11
+38
+PD
+DATA20
+10
+39
+CTL2/A2/DK2
+DATA17
+7
+42
+CTL1/A1/DK1
+DATA18
+8
+41
+EDGE/HTPLG
+DATA19
+9
+40
+Figure 4-1. PAP Package, 64 Pin HTQFP (Top View) 
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+2
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 3=====
+Table 4-1. Pin Functions
+PIN
+TYPE(1)
+DESCRIPTION
+NAME
+NO.
+INPUT
+DATA[23:12]
+36−47
+I
+The upper 12 bits of the 24-bit pixel bus
+In 24-bit, single-edge input mode (BSEL = high), this bus inputs the top half of the 24-bit pixel bus. In 
+12-bit, dual-edge input mode (BSEL = low), these bits are not used to input pixel data. In this mode, 
+the state of DATA[23:16] is input to the I2C register CFG. This allows 8 bits of user configuration data 
+to be read by the graphics controller through the I2C interface (see Section 6.6).
+Note: All unused data inputs should be tied to GND or VDD.
+DATA[11:0]
+50−55,
+58−63
+I
+The lower 12 bits of the 24-bit pixel bus/12-bit pixel bus input
+In 24-bit, single-edge input mode (BSEL = high), this bus inputs the bottom half of the 24-bit pixel 
+bus. In 12-bit, dual-edge input mode (BSEL = low), this bus inputs 1/2 a pixel (12 bits) at every latch 
+edge (both rising and falling) of the clock.
+IDCK–
+IDCK+
+56
+57
+I
+Differential clock input. The TFP410 supports both single-ended and fully differential clock input 
+modes. In the single-ended clock input mode, the IDCK+ input (pin 57) should be connected to the 
+single-ended clock source and the IDCK− input (pin 56) should be tied to GND. In the differential 
+clock input mode, the TFP410 uses the crossover point between the IDCK+ and IDCK– signals 
+as the timing reference for latching incoming data DATA[23:0], DE, HSYNC, and VSYNC. The 
+differential clock input mode is only available in the low signal swing mode.
+DE
+2
+I
+Data enable. As defined in DVI 1.0 specification, the DE signal allows the transmitter to encode pixel 
+data or control data on any given input clock cycle. During active video (DE = high), the transmitter 
+encodes pixel data, DATA[23:0]. During the blanking interval (DE = low), the transmitter encodes 
+HSYNC, VSYNC and CTL[3:1].
+HSYNC
+4
+I
+Horizontal sync input
+VSYNC
+5
+I
+Vertical sync input
+A3/DK3
+CTL2/A2/DK2
+CTL1/A1/DK1
+6
+7
+8
+I
+The operation of these three multifunction inputs depends on the settings of the ISEL (pin 13) and 
+DKEN (pin 35) inputs. All three inputs support 3.3V CMOS signal levels and contain weak pulldown 
+resistors so that if left unconnected they default to all low.
+When the I2C bus is disabled (ISEL = low) and the de-skew mode is disabled (DKEN = low), pins 7 
+and 8 become the control inputs, CTL[2:1], which can be used to send additional information across 
+the DVI link during the blanking interval (DE = low). Pin 6 is not used.
+When the I2C bus is disabled (ISEL = low) and the de-skew mode is enabled (DKEN = high), these 
+three inputs become the de-skew inputs DK[3:1], used to adjust the setup and hold times of the pixel 
+data inputs DATA[23:0], relative to the clock input IDCK±.
+When the I2C bus is enabled (ISEL = high), these three inputs become the 3 LSBs of the I2C target 
+address, A[3:1].
+CONFIGURATION/PROGRAMMING
+MSEN/PO1
+11
+O
+Monitor sense/programmable output 1. The operation of this pin depends on whether the I2C 
+interface is enabled or disabled. This pin has an open-drain output and is only 3.3V tolerant. An 
+external 5kΩ pullup resistor connected to VDD is required on this pin.
+When I2C is disabled (ISEL = low), a high level indicates a powered on receiver is detected at the 
+differential outputs. A low level indicates a powered on receiver is not detected. This function is only 
+valid in dc-coupled systems.
+When I2C is enabled (ISEL = high), this output is programmable through the I2C interface (see the 
+I2C register descriptions section).
+ISEL/ RST
+13
+I
+I2C interface select/I2C RESET (active low, asynchronous)
+If ISEL is high, then the I2C interface is active. Default values for the I2C registers can be found in 
+the see Section 6.6.
+If ISEL is low, then I2C is disabled and the chip configuration is specified by the configuration pins 
+(BSEL, DSEL, EDGE, VREF) and state pins (PD, DKEN).
+If ISEL is brought low and then back high, the I2C state machine is reset. The register values are 
+changed to their default values and are not preserved from before the reset.
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+3
+Product Folder Links: TFP410
+
+=====PAGE 4=====
+Table 4-1. Pin Functions (continued)
+PIN
+TYPE(1)
+DESCRIPTION
+NAME
+NO.
+BSEL/SCL
+15
+I
+Input bus select/I2C clock input. The operation of this pin depends on whether the I2C interface is 
+enabled or disabled. This pin is only 3.3V tolerant.
+When I2C is disabled (ISEL = low), a high level selects 24-bit input, single-edge input mode. A low 
+level selects 12-bit input, dual-edge input mode.
+When I2C is enabled (ISEL = high), this pin functions as the I2C clock input (see Section 6.6). In 
+this configuration, this pin has an open-drain output that requires an external 5kΩ pullup resistor 
+connected to VDD.
+DSEL/SDA
+14
+I/O
+DSEL/I2C data. The operation of this pin depends on whether the I2C interface is enabled or 
+disabled. This pin is only 3.3V tolerant.
+When I2C is disabled (ISEL = low), this pin is used with BSEL and VREF to select the single-ended or 
+differential input clock mode (see Table 6-1).
+When I2C is enabled (ISEL = high), this pin functions as the I2C bidirectional data line. In this 
+configuration, this pin has an open-drain output that requires an external 5kΩ pullup resistor 
+connected to VDD.
+EDGE/HTPLG
+9
+I
+Edge select/hot plug input. The operation of this pin depends on whether the I2C interface is enabled 
+or disabled. This input is 3.3V tolerant only.
+When I2C is disabled (ISEL = low), a high level selects the primary latch to occur on the rising edge 
+of the input clock IDCK+. A low level selects the primary latch to occur on the falling edge of the 
+input clock IDCK+. This is the case for both single-ended and differential input clock modes.
+When I2C is enabled (ISEL = high), this pin is used to monitor the hot plug detect signal. When used 
+for hot-plug detection, this pin requires a series
+1kΩ resistor.
+DKEN
+35
+I
+Data de-skew enable. The de-skew function can be enabled either through I2C or by this pin when 
+I2C is disabled. When de-skew is enabled, the input clock to data setup/hold time can be adjusted in 
+discrete trim increments. The amount of trim per increment is defined by t(STEP).
+When I2C is disabled (ISEL = low), a high level enables de-skew with the trim increment determined 
+by pins DK[3:1] (see Section 6.4.2). A low level disables de-skew and the default trim setting is used.
+When I2C is enabled (ISEL = high), the value of DKEN and the trim increment are selected through 
+I2C. In this configuration, the DKEN pin should be tied to either GND or VDD to avoid a floating input.
+VREF
+3
+I
+Input reference voltage. Selects the swing range of the digital data inputs (DATA[23:0], DE, HSYNC, 
+VSYNC, and IDCK±).
+For high-swing 3.3V input signal levels, VREF should be tied to VDD.
+For low-swing input signal levels, VREF should be set to half of the maximum input voltage level. See 
+Section 5.3 for the allowable range for VREF.
+The desired VREF voltage level is typically derived using a simple voltage-divider circuit.
+PD
+10
+I
+Power down (active low). In the powerdown state, only the digital I/O buffers and I2C interface 
+remain active.
+When I2C is disabled (ISEL = low), a high level selects the normal operating mode. A low level 
+selects the powerdown mode.
+When I2C is enabled (ISEL = high), the power-down state is selected through I2C. In this 
+configuration, the PD pin should be tied to GND.
+Note: The default register value for PD is low, so the device is in powerdown mode when I2C is first 
+enabled or after an I2C RESET.
+RESERVED
+RESERVED
+34
+I
+This pin is reserved and must be tied to GND for normal operation.
+DVI DIFFERENTIAL SIGNAL OUTPUT PINS
+TX0+
+TX0−
+25
+24
+O
+Channel 0 DVI differential output pair. TX0± transmits the 8-bit blue pixel data during active video 
+andHSYNC and VSYNC during the blanking interval.
+TX1+
+TX1−
+28
+27
+O
+Channel 1 DVI differential output pair. TX1± transmits the 8-bit green pixel data during active video 
+and CTL[1] during the blanking interval.
+TX2+
+TX2−
+31
+30
+O
+Channel 2 DVI differential output pair. TX2± transmits the 8-bit red pixel data during active video and 
+CTL[3:2] during the blanking interval.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+4
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 5=====
+Table 4-1. Pin Functions (continued)
+PIN
+TYPE(1)
+DESCRIPTION
+NAME
+NO.
+TXC+
+TXC−
+22
+21
+O
+DVI differential output clock.
+TFADJ
+19
+I
+Full-scale adjust. This pin controls the amplitude of the DVI output voltage swing, determined by the 
+value of the pullup resistor RTFADJ connected to TVDD.
+POWER AND GROUND PINS
+DVDD
+1, 12, 33
+Power
+Digital power supply. Must be set to 3.3V nominal.
+PVDD
+18
+Power
+PLL power supply. Must be set to 3.3V nominal.
+TVDD
+23, 29
+Power
+Transmitter differential output driver power supply. Must be set to 3.3V nominal.
+DGND
+16, 48, 64
+Ground Digital ground
+PGND
+17
+Ground PLL ground
+TGND
+20, 26, 32
+Ground Transmitter differential output driver ground
+NC
+49
+NC
+No connection required. If connected, tie high.
+(1)
+I = input, O = output, NC = no conection, P = power, G = ground
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+5
+Product Folder Links: TFP410
+
+=====PAGE 6=====
+5 Specifications
+5.1 Absolute Maximum Ratings
+over operating free-air temperature range (unless otherwise noted)(1)
+MIN
+MAX
+UNIT
+DVDD, PVDD, 
+TVDD
+Supply voltage range
+–0.5
+4
+V
+Input voltage, logic/analog signals
+–0.5
+4
+V
+RT
+External DVI single-ended termination resistance
+0 to open circuit
+Ω
+External TFADJ resistance, RTFADJ
+300 to open circuit
+Ω
+Case temperature for 10 seconds
+260
+°C
+JEDEC latch-up (EIA/JESD78)
+100
+mA
+Tstg
+Storage temperature
+260
+°C
+(1)
+Stresses beyond those listed under Absolute Maximum Ratings may cause permanent damage to the device. These are stress 
+ratings only, which do not imply functional operation of the device at these or any other conditions beyond those indicated under 
+Recommended Operating Conditions. Exposure to absolute-maximum-rated conditions for extended periods may affect device 
+reliability.
+5.2 ESD Ratings
+VALUE
+UNIT
+V(ESD)
+Electrostatic discharge
+Human body model (HBM), per ANSI/
+ESDA/JEDEC JS-001(1)
+DVI pins
+±4000
+V
+All other pins
+±2000
+(1)
+JEDEC document JEP155 states that 500-V HBM allows safe manufacturing with a standard ESD control process.
+5.3 Recommended Operating Conditions
+over operating free-air temperature range (unless otherwise noted)
+MIN
+NOM
+MAX
+UNIT
+VDD
+Supply voltage (DVDD, PVDD, TVDD)
+3.0
+3.3
+3.6
+V
+VREF
+Input reference voltage
+Low-swing mode
+0.55
+VDDQ/2(1)
+0.9
+V
+High-swing mode
+DVDD
+V
+AVDD
+DVI termination supply voltage(2)
+DVI receiver
+3.14
+3.3
+3.46
+V
+RT
+DVI Single-ended termination resistance(3)
+DVI receiver
+45
+50
+55
+Ω
+R(TFADJ)
+TFADJ resistor for DVI-compliant V(SWING) range
+400mV = V(SWING) = 600mV
+505
+510
+515
+Ω
+TA
+Operating free-air temperature range
+0
+25
+70
+°C
+(1)
+VDDQ defines the maximum low-level input voltage, it is not an actual input voltage.
+(2)
+AVDD is the termination supply voltage of the DVI link.
+(3)
+RT is the single-ended termination resistance at the receiver end of the DVI link.
+5.4 Thermal Information
+THERMAL METRIC(1)
+TFP410
+UNIT
+PAP
+64 PINS
+RθJA
+Junction-to-ambient thermal resistance
+26.6
+°C/W
+RθJC(top)
+Junction-to-case (top) thermal resistance
+14.1
+RθJB
+Junction-to-board thermal resistance
+11.3
+ψJT
+Junction-to-top characterization parameter
+0.4
+ψJB
+Junction-to-board characterization parameter
+11.2
+RθJC(bot)
+Junction-to-case (bottom) thermal resistance
+0.9
+(1)
+For more information about traditional and new thermal metrics, IC Package Thermal Metrics application report (SPRA953).
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+6
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 7=====
+5.5 Electrical Characteristics
+over recommended operating free-air temperature range (unless otherwise noted)
+PARAMETER
+TEST CONDITIONS
+MIN
+TYP
+MAX
+UNIT
+DC SPECIFICATIONS
+VIH
+High-level input voltage (Data, DE, VSYNC, 
+HSYNC, and IDCK+/- CMOS inputs)
+VREF = DVDD
+0.7VDD
+V
+0.5V ≤ V ≤ 0.95V
+VREF + 0.2
+High-level input voltage (all other CMOS inputs)
+0.7VDD
+VIL
+Low-level input voltage (Data, DE, VSYNC, 
+HSYNC, and IDCK+/- CMOS inputs)
+VREF = DVDD
+0.3VDD
+V
+0.5V ≤V ≤ 0.95V
+VREF – 0.2
+Low-level input voltage (all other CMOS inputs)
+0.3VDD
+VOH
+High-level digital output voltage (open-drain 
+output)
+VDD = 3V, IOH = 20μA
+2.4
+V
+VOL
+Low-level digital output voltage (open-drain 
+output)
+VDD = 3.6V, IOL = 4mA
+0.4
+V
+IIH
+High-level input current
+VI = 3.6V
+±25
+µA
+IIL
+Low-level input current
+VI = 0
+±25
+µA
+VH
+DVI single-ended high-level output voltage
+AVDD = 3.3V ± 5%,
+RT (1) = 50Ω ± 10%,
+RTFADJ = 510Ω ± 1%
+AVDD – 0.01
+AVDD + 0.01
+V
+VL
+DVI single-ended low-level output voltage
+AVDD – 0.6
+AVDD – 0.4
+V
+VSWING
+DVI single-ended output swing voltage
+400
+600
+mVP-P
+VOFF
+DVI single-ended standby/off output voltage
+AVDD – 0.01
+AVDD + 0.01
+V
+IPD
+Power-down current(3)
+200
+500
+µA
+IIDD
+Normal power supply current
+Worst-case pattern(2)
+200
+250
+mA
+AC SPECIFICATIONS
+f(IDCK)
+IDCK frequency
+25
+165
+MHz
+tr
+DVI output rise time (20-80%)(4)
+f(IDCK) = 165MHz
+75
+240
+ps
+tf
+DVI output fall time (20-80%)(4)
+75
+240
+ps
+tsk(D)
+DVI output intra-pair + to − differential skew(5), 
+see Figure 5-4
+50
+ps
+tojit
+DVI output clock jitter, max.(6)
+150
+ps
+t(STEP)
+De-skew trim increment
+DKEN = 1
+350
+ps
+(1)
+RT is the single-ended termination resistance at the receiver end of the DVI link
+(2)
+Black and white checkerboard pattern, each checker is one pixel wide.
+(3)
+Assumes all inputs to the transmitter are not toggling.
+(4)
+Rise and fall times are measured as the time between 20% and 80% of signal amplitude.
+(5)
+Measured differentially at the 50% crossing point using the IDCK+ input clock as a trigger.
+(6)
+Relative to input clock (IDCK).
+5.6 Timing Requirements
+MIN
+NOM
+MAX
+UNIT
+t(pixel)
+Pixel time period(1)
+6.06
+40
+ns
+t(IDCK)
+IDCK duty cycle
+30%
+70%
+t(ijit)
+IDCK clock jitter tolerance
+2
+ns
+tsk(CC)
+DVI output inter-pair or channel-to-channel skew (2), see Figure 5-2
+f(IDCK) = 165MHz
+1.2
+ns
+tsu(IDF)
+Data, DE, VSYNC, HSYNC setup time to IDCK+ falling edge, see 
+Figure 5-2
+Single edge (BSEL=1, DSEL=0,
+DKEN=0, EDGE=0)
+1.2
+ns
+th(IDF)
+Data, DE, VSYNC, HSYNC hold time to IDCK+ falling edge, see 
+Figure 5-2
+1.3
+ns
+tsu(IDR)
+Data, DE, VSYNC, HSYNC setup time to IDCK+ rising edge, see 
+Figure 5-2
+Single edge (BSEL=1, DSEL=0,
+DKEN=0, EDGE=1)
+1.2
+ns
+th(IDR)
+Data, DE, VSYNC, HSYNC hold time to IDCK+ rising edge, see 
+Figure 5-2
+1.3
+ns
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+7
+Product Folder Links: TFP410
+
+=====PAGE 8=====
+5.6 Timing Requirements (continued)
+MIN
+NOM
+MAX
+UNIT
+tsu(ID)
+Data, DE, VSYNC, HSYNC setup time to IDCK+ falling/rising edge, 
+see Figure 5-3
+Dual edge(BSEL=0,
+DSEL=1, DKEN=0)
+0.9
+ns
+th(ID)
+Data, DE, VSYNC, HSYNC hold time to IDCK+ falling/rising edge, 
+see Figure 5-3
+Dual edge (BSEL=0,
+DSEL=1, DKEN=0)
+1
+ns
+(1)
+t(pixel) is the pixel time defined as the period of the TXC output clock. The period of IDCK is equal to t(pixel).
+(2)
+Measured differentially at the 50% crossing point using the IDCK+ input clock as a trigger.
+tr
+tf
+80% VOD
+20% VOD
+DVI
+Outputs
+Figure 5-1. Rise and Fall Time for DVI Outputs
+th(IDF)
+tsu(IDF)
+th(IDR)
+tsu(IDR)
+VIH
+VIL
+IDCK+
+DATA[23:0], DE,
+HSYNC, VSYNC
+IDCK−
+Figure 5-2. Control and Single-Edge-Data Setup/Hold Time to IDCK±
+tsu(ID)
+th(ID)
+VIH
+VIL
+IDCK+
+DATA[23:0], DE,
+HSYNC, VSYNC
+th(ID)
+tsu(ID)
+Figure 5-3. Dual Edge Data Setup/Hold Times to IDCK+
+tsk(D)
+50%
+TX+
+TX−
+Figure 5-4. Analog Output Intra-Pair ± Differential Skew
+tsk(CC)
+50%
+50%
+TXN
+TXM
+Figure 5-5. Analog Output Channel-to-Channel Skew
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+8
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 9=====
+5.7 Typical Characteristics
+RTFDAJ(ohm)
+Vswing(mV)
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+Figure 5-6. RTFDAJ vs Vswing 
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+9
+Product Folder Links: TFP410
+
+=====PAGE 10=====
+6 Detailed Description
+6.1 Overview
+The TFP410 is a DVI-compliant digital transmitter that is used in digital host monitor systems to T.M.D.S. encode 
+and serialize RGB pixel data streams. TFP410 supports resolutions from VGA to WUXGA (and 1080p) and can 
+be controlled in two ways:
+1.
+Configuration and state pins
+2.
+The programmable I2C serial interface (see Table 6-1)
+The host in a digital display system, usually a PC or consumer electronics device, contains a DVI-compatible 
+transmitter such as the TI TFP410 that receives 24-bit pixel data along with appropriate control signals. 
+The TFP410 encodes the signals into a high speed, low voltage, differential serial bit stream optimized for 
+transmission over a twisted-pair cable to a display device. The display device, usually a flat-panel monitor, 
+requires a DVI compatible receiver like the TI TFP401 to decode the serial bit stream back to the same 24-bit 
+pixel data and control signals that originated at the host. This decoded data can then be applied directly to the 
+flat panel drive circuitry to produce an image on the display. Because the host and display can be separated by 
+distances up to 5 meters or more, serial transmission of the pixel data is preferred (see Section 6.3.1, Section 
+6.3.2, and Section 6.3.3).
+The TFP410 integrates a high-speed digital interface, a T.M.D.S. encoder, and three differential T.M.D.S. 
+drivers. Data is driven to the TFP410 encoder across 12 or 24 data lines, along with differential clock pair 
+and sync signals. The flexibility of the TFP410 allows for multiple clock and data formats that enhance system 
+performance.
+The TFP410 also has enhanced PLL noise immunity, an enhancement accomplished with on-chip regulators and 
+bypass capacitors.
+The TFP410 is versatile and highly programmable to provide maximum flexibility for the user. An I2C host 
+interface is provided to allow enhanced configurations in addition to power-on default settings programmed by 
+pin-strapping resistors.
+The TFP410 offers monitor detection through receiver detection, or hot-plug detection when I2C is enabled. The 
+monitor detection feature allows the user enhanced flexibility when attaching to digital displays or receivers (see 
+Section 6.4.3 and the see Section 6.6).
+The TFP410 has a data de-skew feature allowing the users to de-skew the input data with respect to the IDCK± 
+(see Section 6.4.2).
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+10
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 11=====
+6.2 Functional Block Diagram
+12/24 Bit
+I/F
+Data
+Format
+Universal Input
+T.M.D.S. Transmitter
+Serializer
+Serializer
+Serializer
+Control
+I2C Target I/F
+For DDC
+1.8-V Regulators
+With Bypass
+Capacitors
+PLL
+TX2±
+TX1±
+TX0±
+TXC±
+TFADJ
+IDCK±
+DATA[23:0]
+DE
+VSYNC
+HSYNC
+EDGE/HTPLG
+MSEN
+PD
+ISEL/RST
+BSEL/SCL
+DSEL/SDA
+VREF
+Encoder
+Encoder
+Encoder
+CTL/A/DK[3:1]
+DKEN
+6.3 Feature Description
+6.3.1 T.M.D.S. Pixel Data and Control Signal Encoding
+For transition minimized differential signaling (T.M.D.S.), only one of two possible T.M.D.S. characters for a given 
+pixel is transmitted at a given time. The transmitter keeps a running count of the number of ones and zeros 
+previously sent and transmits the character that minimizes the number of transitions and approximates a dc 
+balance of the transmission line. Three T.M.D.S. channels are used to transmit RGB pixel data during the active 
+video interval (DE = High). These same three channels are also used to transmit HSYNC, VSYNC, and three 
+control signals, CTL[3:1], during the inactive display or blanking interval (DE = Low). The following table maps 
+the transmitted output data to the appropriate T.M.D.S. output channel in a DVI-compliant system.
+INPUT PINS
+(VALID FOR DE = High)
+T.M.D.S. OUTPUT CHANNEL
+TRANSMITTED PIXEL DATA
+ACTIVE DISPLAY (DE = High)
+DATA[23:16]
+Channel 2 (TX2 ±)
+Red[7:0]
+DATA[15:8]
+Channel 1 (TX1 ±)
+Green[7:0]
+DATA[7:0]
+Channel 0 (TX0 ±)
+Blue[7:0]
+INPUT PINS
+(VALID FOR DE = Low)
+T.M.D.S. OUTPUT CHANNEL
+TRANSMITTED CONTROL DATA
+BLANKING INTERVAL (DE = Low)
+CTL2(1)
+Channel 2 (TX2 ±)
+CTL[2]
+CTL1 (1)
+Channel 1 (TX1 ±)
+CTL[1]
+HSYNC, VSYNC
+Channel 0 (TX0 ±)
+HSYNC, VSYNC
+(1)
+The TFP410 encodes and transfers the CTL[2:1] inputs during the vertical blanking interval. CTL3 is reserved for HDCP and is always 
+encoded as 0. The CTL[2:1] inputs are reserved for future use. When DE = high, CTL and SYNC pins must be held constant.
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+11
+Product Folder Links: TFP410
+
+=====PAGE 12=====
+6.3.2 Universal Graphics Controller Interface Voltage Signal Levels
+The universal graphics controller interface can operate in the following two distinct voltage modes:
+•
+The high-swing mode where standard 3.3V CMOS signaling levels are used.
+•
+The low-swing mode where adjustable 1.1V to 1.8V signaling levels are used.
+To select the high-swing mode, the VREF input pin must be tied to the 3.3V power supply.
+To select the low-swing mode, the VREF must be 0.55 to 0.95V.
+In the low-swing mode, VREF is used to set the midpoint of the adjustable signaling levels. The allowable range 
+of values for VREF is from 0.55V to 0.9V. The typical approach is to provide this from off chip by using a 
+simple voltage-divider circuit. The minimum allowable input signal swing in the low-swing mode is VREF ±0.2V. In 
+low-swing mode, the VREF input is common to all differential input receivers.
+6.3.3 Universal Graphics Controller Interface Clock Inputs
+The universal graphics controller interface of the TFP410 supports both fully differential and single-ended clock 
+input modes. In the differential clock input mode, the universal graphics controller interface uses the crossover 
+point between the IDCK+ and IDCK− signals as the timing reference for latching incoming data (DATA[23:0], DE, 
+HSYNC, and VSYNC). Differential clock inputs provide greater common-mode noise rejection. The differential 
+clock input mode is only available in the low-swing mode. In the single-ended clock input mode, the IDCK+ input 
+(Pin 57) should be connected to the single-ended clock source and the IDCK− input (Pin 56) should be tied to 
+GND.
+The universal graphics controller interface of the TFP410 provides selectable 12-bit dual-edge, and 24-bit 
+single-edge, input clocking modes. In the 12-bit dual-edge, the 12-bit data is latched on each edge of the input 
+clock. In the 24-bit single-edge mode, the 24-bit data is latched on the rising edge of the input clock when EDGE 
+= 1 and the falling edge of the input clock when EDGE = 0.
+DKEN and DK[3:1] allow the user to compensate the skew between IDCK± and the pixel data and control 
+signals. See Table 6-10 for details.
+6.4 Device Functional Modes
+6.4.1 Universal Graphics Controller Interface Modes
+Table 6-1 is a tabular representation of the different modes for the universal graphics controller interface. The 
+12-bit mode is selected when BSEL=0 and the 24-bit mode when BSEL=1. The 12-bit mode uses dual-edge 
+clocking and the 24-bit mode uses single-edge clocking. The EDGE input is used to control the latching edge in 
+24-bit mode, or the primary latching edge in 12-bit mode. When EDGE=1, the data input is latched on the rising 
+edge of the input clock; and when EDGE=0, the data input is latched on the falling edge of the input clock. A fully 
+differential input clock is available only in the low-swing mode. Single-ended clocking is not recommended in the 
+low-swing mode as this decreases common-mode noise rejection.
+Note that BSEL, DSEL, and EDGE are determined by register CTL_1_MODE when I2C is enabled (ISEL=1) and 
+by input pins when I2C is disabled (ISEL=0).
+Table 6-1. Universal Graphics Controller Interface Options (Tabular Representation)
+VREF
+BSEL
+EDGE
+DSEL
+BUS WIDTH
+LATCH MODE
+CLOCK EDGE
+CLOCK MODE
+0.55V − 0.9V
+0
+0
+0
+12-bit
+Dual-edge
+Falling
+Differential(1) (2)
+0.55V − 0.9V
+0
+0
+1
+12-bit
+Dual-edge
+Falling
+Single-ended
+0.55V – 0.9V
+0
+1
+0
+12-bit
+Dual-edge
+Rising
+Differential(1) (2)
+0.55V − 0.9V
+0
+1
+1
+12-bit
+Dual-edge
+Rising
+Single-ended
+0.55V – 0.9V
+1
+0
+0
+24-bit
+Single-edge
+Falling
+Single-ended
+0.55V – 0.9V
+1
+0
+1
+24-bit
+Single-edge
+Falling
+Differential(1) (3)
+0.55V – 0.9V
+1
+1
+0
+24-bit
+Single-edge
+Rising
+Single-ended
+0.55V – 0.9V
+1
+1
+1
+24-bit
+Single-edge
+Rising
+Differential(1) (3)
+DVDD
+0
+0
+X
+12-bit
+Dual-edge
+Falling
+Single-ended(4)
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+12
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 13=====
+Table 6-1. Universal Graphics Controller Interface Options (Tabular Representation) (continued)
+VREF
+BSEL
+EDGE
+DSEL
+BUS WIDTH
+LATCH MODE
+CLOCK EDGE
+CLOCK MODE
+DVDD
+0
+1
+X
+12-bit
+Dual-edge
+Rising
+Single-ended(4)
+DVDD
+1
+0
+X
+24-bit
+Single-edge
+Falling
+Single-ended(4)
+DVDD
+1
+1
+X
+24-bit
+Single-edge
+Rising
+Single-ended(4)
+(1)
+The differential clock input mode is only available in the low signal swing mode (that is, VREF ≤ 0.9V).
+(2)
+The TFP410 does not support a 12-bit dual-clock, single-edge input clocking mode.
+(3)
+The TFP410 does not support a 24-bit single-clock, dual-edge input clocking mode.
+(4)
+In the high-swing mode (VREF = DVDD), DSEL is a don’t care; therefore, the device is always in the single-ended latch mode.
+P L
+0
+P H
+0
+P L
+1
+P H
+1
+P
+L
+N−1
+P L
+N
+P H
+N
+PN+1L
+DSEL=1
+EDGE=0
+DSEL=1
+EDGE=1
+DSEL=0
+EDGE=0
+DSEL=0
+EDGE=1
+Single-Ended
+Clock Input
+Mode
+Differential
+Clock Input
+Mode (Low
+Swing Only)
+DE
+D[11:0]
+IDCK+
+IDCK+
+{(IDCK+) −(IDCK−)}
+{(IDCK+) −(IDCK−)}
+First Latch Edge
+12-Bit, Dual-Edge Input Mode (BSEL = 0)
+L = Low Half Pixel
+H = High Half Pixel
+Figure 6-1. Universal Graphics Controller Interface Options for 12-Bit Mode (Graphical Representation)
+P0
+P1
+PN-1
+PN
+DSEL=0
+EDGE=0
+DSEL=0
+EDGE=1
+DSEL=1
+EDGE=0
+DSEL=1
+EDGE=1
+Single-Ended
+Clock Input
+Mode
+Differential
+Clock Input
+Mode (Low
+Swing Only)
+DE
+D[23:0]
+IDCK+
+IDCK+
+{(IDCK+) −(IDCK−)}
+{(IDCK+) −(IDCK−)}
+First Latch Edge
+24-Bit, Single-Edge Input Mode (BSEL = 1)
+Figure 6-2. Universal Graphics Controller Interface Options for 24-Bit Mode (Graphical Representation)
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+13
+Product Folder Links: TFP410
+
+=====PAGE 14=====
+Table 6-2. 12-Bit Mode Data Mapping
+PIN NAME
+P0
+P1
+P2
+P0L
+P0H
+P1L
+P1H
+P2L
+P2H
+LOW
+HIGH
+LOW
+HIGH
+LOW
+HIGH
+D11
+G0[3]
+R0[7]
+G1[3]
+R1[7]
+G2[3]
+R2[7]
+D10
+G0[2]
+R0[6]
+G1[2]
+R1[6]
+G2[2]
+R2[6]
+D9
+G0[1]
+R0[5]
+G1[1]
+R1[5]
+G2[1]
+R2[5]
+D8
+G0[0]
+R0[4]
+G1[0]
+R1[4]
+G2[0]
+R2[4]
+D7
+B0[7]
+R0[3]
+B1[7]
+R1[3]
+B2[7]
+R2[3]
+D6
+B0[6]
+R0[2]
+B1[6]
+R1[2]
+B2[6]
+R2[2]
+D5
+B0[5]
+R0[1]
+B1[5]
+R1[1]
+B2[5]
+R2[1]
+D4
+B0[4]
+R0[0]
+B1[4]
+R1[0]
+B2[4]
+R2[0]
+D3
+B0[3]
+G0[7]
+B1[3]
+G1[7]
+B2[3]
+G2[7]
+D2
+B0[2]
+G0[6]
+B1[2]
+G1[6]
+B2[2]
+G2[6]
+D1
+B0[1]
+G0[5]
+B1[1]
+G1[5]
+B2[1]
+G2[5]
+D0
+B0[0]
+G0[4]
+B1[0]
+G1[4]
+B2[0]
+G2[4]
+Table 6-3. 24-Bit Mode Data Mapping
+PIN NAME
+P0
+P1
+P2
+PIN NAME
+P0
+P1
+P2
+D23
+R0[7]
+R1[7]
+R2[7]
+D11
+G0[3]
+G1[3]
+G2[3]
+D22
+R0[6]
+R1[6]
+R2[6]
+D10
+G0[2]
+G1[2]
+G2[2]
+D21
+R0[5]
+R1[5]
+R2[5]
+D9
+G0[1]
+G1[1]
+G2[1]
+D20
+R0[4]
+R1[4]
+R2[4]
+D8
+G0[0]
+G1[0]
+G2[0]
+D19
+R0[3]
+R1[3]
+R2[3]
+D7
+B0[7]
+B1[7]
+B2[7]
+D18
+R0[2]
+R1[2]
+R2[2]
+D6
+B0[6]
+B1[6]
+B2[6]
+D17
+R0[1]
+R1[1]
+R2[1]
+D5
+B0[5]
+B1[5]
+B2[5]
+D16
+R0[0]
+R1[0]
+R2[0]
+D4
+B0[4]
+B1[4]
+B2[4]
+D15
+G0[7]
+G1[7]
+G2[7]
+D3
+B0[3]
+B1[3]
+B2[3]
+D14
+G0[6]
+G1[6]
+G2[6]
+D2
+B0[2]
+B1[2]
+B2[2]
+D13
+G0[5]
+G1[5]
+G2[5]
+D1
+B0[1]
+B1[1]
+B2[1]
+D12
+G0[4]
+G1[4]
+G2[4]
+D0
+B0[0]
+B1[0]
+B2[0]
+6.4.2 Data De-skew Feature
+The de-skew feature allows adjustment of the input setup/hold time. Specifically, the input data DATA[23:0] can 
+be latched slightly before or after the latching edge of the clock IDCK± depending on the amount of de-skew 
+desired. When de-skew enable (DKEN) is enabled, the amount of de-skew is programmable by setting the three 
+bits DK[3:1]. When disabled, a default de-skew setting is used. To allow maximum flexibility and ease of use, 
+DKEN and DK[3:1] are accessed directly through configuration pins when I2C is disabled, or through registers of 
+the same name when I2C is enabled. When using I2C mode, the DKEN pin should be tied to ground to avoid a 
+floating input.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+14
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 15=====
+The input setup/hold time can be varied with respect to the input clock by an amount t(CD) given by the formula in 
+Equation 1.
+t(CD) = (DK[3:1] – 4) × t(STEP)
+(1)
+where
+•
+t(STEP) is the adjustment increment amount
+•
+DK[3:1] is a number from 0 to 7 represented as a 3-bit binary number
+•
+t(CD) is the cumulative de-skew amount
+(DK[3:1]-4) is simply a multiplier in the range {-4,-3,-2,-1, 0, 1, 2, 3} for t(STEP). Therefore, data can be latched in 
+increments from 4 times the value of t(STEP) before the latching edge of the clock to 3 times the value of t(STEP) 
+after the latching edge. Note that the input clock is not changed, only the time when data is latched with respect 
+to the clock.
+−t(CD)
+000
+−4 × t(STEP)
+100
+0
+Default Falling
+111
+3 × t(STEP)
+000
+−4 × t(STEP)
+100
+0
+Default Rising
+111
+3 × t(STEP)
+DATA[23:0]
+IDCK±
+DK[3:1]
+t(CD)
+t(CD)
+−t(CD)
+t(CD)
+Figure 6-3. A Graphical Representation of the De-Skew Function
+6.4.3 Hot Plug/Unplug (Auto Connect/Disconnect Detection)
+TFP410 supports hot plug/unplug (auto connect/disconnect detection) for the DVI link. The receiver sense input 
+(RSEN) bit indicates if a DVI receiver is connected to TXC+ and TXC–. The HTPLG bit reflects the current state 
+of the HTPLG pin connected to the monitor via the DVI connector. When I2C is disabled (ISEL=0), the RSEN 
+value is available on the MSEN pin. When I2C is enabled, the connection status of the DVI link and HTPLG 
+sense pins are provided by the CTL_2_MODE register. The MSEL bits of the CTL_2_MODE register can be 
+used to program the MSEN to output the HTPLG value, the RSEN value, an interrupt, or be disabled.
+The source of the interrupt event is selected by TSEL in the CTL_2_MODE register. An interrupt is generated 
+by a change in status of the selected signal. The interrupt status is indicated in the MDI bit of CTL_2_MODE 
+and can be output via the MSEN pin. The interrupt continues to be asserted until a 1 is written to the MDI bit, 
+resetting the bit back to 0. Writing 0 to the MDI bit has no effect.
+6.4.4 Device Configuration and I2C RESET Description
+The TFP410 device configuration can be programmed by several different methods to allow maximum flexibility 
+for the user’s application. Device configuration is controlled depending on the state of the ISEL/ RST pin, 
+configuration pins (BSEL, DSEL, EDGE, VREF) and state pins ( PD, DKEN). I2C bus select and I2C RESET 
+(active low) are shared functions on the ISEL/ RST pin, which operates asynchronously.
+Holding ISEL/ RST low causes the device configuration to be set by the configuration pins (BSEL, DSEL, EDGE, 
+and VREF) and state pins ( PD, DKEN). The I2C bus is disabled.
+Holding ISEL/ RST high causes the chip configuration to be set based on the configuration bits (BSEL, DSEL, 
+EDGE) and state bits ( PD, DKEN) in the I2C registers. The I2C bus is enabled.
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+15
+Product Folder Links: TFP410
+
+=====PAGE 16=====
+Momentarily bringing ISEL/ RST low and then back high while the device is operating in normal or power-down 
+mode will RESET the I2C registers to their default values. The device configuration will be changed to the default 
+power-up state with I2C enabled. After power up, the device must be reset. It is suggested that this pin be tied to 
+the system reset signal, which is low during power up and is then asserted high after all the power supplies are 
+fully functional.
+6.4.5 DE Generator
+The TFP410 contains a DE generator that can be used to generate an internal DE signal when the original data 
+source does not provide one. There are several I2C programmable values that control the DE generator (see 
+Figure 6-4). DE_GEN in the DE_CTL register enables this function. When enabled, the DE pin is ignored.
+DE_TOP and DE_LIN are line counts used to control the number of lines after VSYNC goes active that DE is 
+enabled, and the total number of lines that DE remains active, respectively. The polarity of VSYNC must be set 
+by VS_POL in the DE_CTL register.
+DE_DLY and DE_CNT are pixel counts used to control the number of pixels after HSYNC goes active that DE is 
+enabled, and the total number of pixels that DE remains active, respectively. The polarity of HSYNC must be set 
+by HS_POL in the DE_CTL register.
+The TFP410 also counts the total number of HSYNC pulses between VSYNC pulses, and the total number 
+of pixels between HSYNC pulses. These values, the total vertical and horizontal resolutions, are available in 
+V_RES and H_RES, respectively. These values are available at all times, whether or not the DE generator is 
+enabled.
+Actual Display Area
+DE_CNT
+DE_LIN
+Full Vertical Frame
+DE_TOP
+V_RES
+H_RES
+DE_DLY
+Figure 6-4. DE Generator Register Functions
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+16
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 17=====
+6.5 Programming
+6.5.1 I2C Interface
+The I2C interface is used to access the internal TFP410 registers. This two-pin interface consists of the SCL 
+clock line and the SDA serial data line. The basic I2C access cycles are shown in Figure 6-5 and Figure 6-6.
+Start Condition (S)
+Stop Condition (P)
+SDA
+SCL
+Figure 6-5. I2C Start and Stop Conditions
+The basic access write cycle consists of the following:
+1.
+A start condition
+2.
+A target address cycle
+3.
+A sub-address cycle
+4.
+Any number of data cycles
+5.
+A stop condition
+The basic access read cycle consists of the following:
+1.
+A start condition
+2.
+A target write address cycle
+3.
+A sub-address cycle
+4.
+A restart condition
+5.
+A target read address cycle
+6.
+Any number of data cycles
+7.
+A stop condition
+The start and stop conditions are shown in Figure 6-5. The high to low transition of SDA while SCL is high 
+defines the start condition. The low to high transition of SDA while SCL is high defines the stop condition. 
+Each cycle, data or address, consists of 8 bits of serial data followed by one acknowledge bit generated by the 
+receiving device. Thus, each data/address cycle contains 9 bits as shown in Figure 6-6.
+SCL
+1
+2
+3
+4
+5
+6
+7
+8
+9
+SDA
+1
+2
+3
+4
+5
+6
+7
+8
+9
+2
+3
+4
+5
+6
+7
+1
+Target Address
+Sub-Address
+Data
+Stop
+8
+9
+Figure 6-6. I2C Access Cycles
+Following a start condition, each I2C device decodes the target address. The TFP410 responds with an 
+acknowledge by pulling the SDA line low during the ninth clock cycle if it decodes the address as its address. 
+During subsequent sub-address and data cycles, the TFP410 responds with acknowledge as shown in Figure 
+6-7. The sub-address is auto-incremented after each data cycle.
+The transmitting device must not drive the SDA signal during the acknowledge cycle so that the receiving device 
+may drive the SDA signal low. The controller indicates a not acknowledge condition ( A) by keeping the SDA 
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+17
+Product Folder Links: TFP410
+
+=====PAGE 18=====
+signal high just before it asserts the stop condition (P). This sequence terminates a read cycle as shown in 
+Figure 6-8.
+The target address consists of 7 bits of address along with 1 bit of read/write information (read = 1, write = 0) as 
+shown below in Figure 6-6 and Figure 6-7. For the TFP410, the selectable target addresses (including the R/W 
+bit) using A[3:1] are 0x70, 0x72, 0x74, 0x76, 0x78, 0x7A, 0x7C, and 0x7E for write cycles and 0x71, 0x73, 0x75, 
+0x77, 0x79, 0x7B, 0x7D, and 0x7F for read cycles.
+S
+Target Address
+W
+A
+Sub-Address
+A
+Data
+A
+Data
+A
+P
+Where:
+From Controller
+A   Acknowledge
+From Target
+S   Start condition
+P   Stop Condition
+Figure 6-7. I2C Write Cycle
+S
+Target Address
+W
+A
+Sub-Address
+A
+Sr
+Target Address
+R
+A
+Data
+A
+Data
+/A
+P
+Where:
+From Controller
+A   Acknowledge
+From Target
+S   Start condition
+/A
+Not acknowledge (SDA high)
+P   Stop Condition
+R
+Read Condition = 1
+Sr  Restart Condition
+W
+Write Condition = 0
+Figure 6-8. I2C Read Cycle
+6.6 Register Maps
+The TFP410 is a standard I2C target device. All the registers can be written and read through the I2C interface 
+(unless otherwise specified). The TFP410 target machine supports only byte read and write cycles. Page 
+mode is not supported. The 8-bit binary address of the I2C machine is 0111 A3A2A1X, where A[3:1] are pin 
+programmable or set to 000 by default. The I2C base address of the TFP410 is dependent on A[3:1] (pins 6, 7 
+and 8 respectively) as shown below.
+A[3:1]
+WRITE ADDRESS
+(Hex)
+READ ADDRESS
+(Hex)
+000
+70
+71
+001
+72
+73
+010
+74
+75
+011
+76
+77
+100
+78
+79
+101
+7A
+7B
+110
+7C
+7D
+111
+7E
+7F
+REGISTER
+RW
+SUB-
+ADDRESS
+BIT7
+BIT6
+BIT5
+BIT4
+BIT3
+BIT2
+BIT1
+BIT0
+VEN_ID
+R
+00
+VEN_ID[7:0]
+R
+01
+VEN_ID[15:8]
+DEV_ID
+R
+02
+DEV_ID[7:0]
+R
+03
+DEV_ID[15:8]
+REV_ID
+R
+04
+REV_ID[7:0]
+RESERVED
+R
+05-07
+Reserved
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+18
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 19=====
+REGISTER
+RW
+SUB-
+ADDRESS
+BIT7
+BIT6
+BIT5
+BIT4
+BIT3
+BIT2
+BIT1
+BIT0
+CTL_1_MODE
+RW
+08
+RSVD
+TDIS
+VEN
+HEN
+DSEL
+BSEL
+EDGE
+PD
+CTL_2_MODE
+RW
+09
+VLOW
+MSEL
+TSEL
+RSEN
+HTPLG
+MDI
+CTL_3_MODE
+RW
+0A
+DK
+DKEN
+CTL
+RSVD
+CFG
+R
+0B
+CFG
+RESERVED
+RW
+0C-31
+Reserved
+DE_DLY
+RW
+32
+DE_DLY[7:0]
+DE_CTL
+RW
+33
+RSVD
+DE_GEN
+VS_POL
+HS_POL
+RSVD
+DE_DLY[8]
+DE_TOP
+RW
+34
+RSVD
+DE_DLY[6:0]
+RESERVED
+RW
+35
+Reserved
+DE_CNT
+RW
+36
+DE_CNT[7:0]
+RW
+37
+Reserved
+DE_CNT[10:8]
+DE_LIN
+RW
+38
+DE_LIN[7:0]
+RW
+39
+Reserved
+DE_LIN[10:8]
+H_RES
+R
+3A
+H_RES[7:0]
+R
+3B
+Reserved
+H_RES[10:8]
+V_RES
+R
+3C
+V_RES[7:0]
+R
+3D
+Reserved
+V_RES[10:8]
+RESERVED
+R
+3E−FF
+6.6.1 VEN_ID Register (Sub-Address = 01−00 ) [reset = 0x014C]
+Figure 6-9. VEN_ID Register
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+VEN_ID[15:8]
+VEN_ID[7:0]
+Table 6-4. VEN_ID Field Descriptions
+Bit
+Field
+Type
+Description
+15:8
+VEN_ID
+R
+These read-only registers contain the 16-bit Texas Instruments vendor ID. VEN_ID is 
+hardwired to 0x014C.
+7:0
+VEN_ID
+R
+6.6.2 DEV_ID Register (Sub-Address = 03–02) [reset = 0x0410]
+Figure 6-10. DEV_ID Register
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+DEV_ID[15:8]
+DEV_ID[7:0]
+Table 6-5. DEV_ID Register Field Descriptions
+Bit
+Field
+Type
+Description
+15:8
+DEV_ID
+R
+These read-only registers contain the 16-bit device ID for the TFP410. DEV_ID is 
+hardwired to 0x0410.
+7:0
+DEV_ID
+R
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+19
+Product Folder Links: TFP410
+
+=====PAGE 20=====
+6.6.3 REV_ID Register (Sub-Address = 04) [reset = 0x00]
+Figure 6-11. REV_ID Register
+7
+6
+5
+4
+3
+2
+1
+0
+REV_ID[7:0]
+Table 6-6. REV_ID Register Field Descriptions
+Bit
+Field
+Type
+Description
+7:0
+REV_ID
+R
+This read-only register contains the revision ID.
+6.6.4 Reserved Register (Sub-Address = 07–05) [reset = 0x641400]
+Figure 6-12. Reserved
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+RESERVED[15:8]
+RESERVED[7:0]
+Table 6-7. Reserved Field Descriptions
+Bit
+Field
+Type
+Description
+15:8
+RESERVED
+Read Only
+—
+7:0
+RESERVED
+Read Only
+—
+6.6.5 CTL_1_MODE (Sub-Address = 08) [reset = 0xBE]
+Figure 6-13. CTL_1_MODE Register
+7
+6
+5
+4
+3
+2
+1
+0
+RSVD
+TDIS
+VEN
+HEN
+DSEL
+BSEL
+EDGE
+PD
+Table 6-8. CTL_1_MODE Field Descriptions
+Bit
+Field
+Type
+Description
+7
+RSVD
+R/W
+Reserved
+6
+TDIS
+R/W
+This read/write register contains the T.M.D.S. disable mode
+0: T.M.D.S. circuitry enable state is determined by PD.
+1: T.M.D.S. circuitry is disabled.
+5
+VEN
+R/W
+This read/write register contains the vertical sync enable mode.
+0: VSYNC input is transmitted as a fixed low
+1: VSYNC input is transmitted in its original state
+4
+HEN
+R/W
+This read/write register contains the horizontal sync enable mode.
+0: HSYNC input is transmitted as a fixed low
+1: HSYNC input is transmitted in its original state
+3
+DSEL
+R/W
+This read/write register is used in combination with BSEL and VREF to select the 
+single-ended or differential input clock mode. In the high-swing mode, DSEL is a 
+don’t care because IDCK is always single-ended.
+2
+BSEL
+R/W
+This read/write register contains the input bus select mode.
+0: 12-bit operation with dual-edge clock
+1: 24-bit operation with single-edge clock
+1
+EDGE
+R/W
+This read/write register contains the edge select mode.
+0: Input data latches to the falling edge of IDCK+
+1: Input data latches to the rising edge of IDCK+
+0
+PD
+R/W
+This read/write register contains the power-down mode.
+0: Power down (default after RESET)
+1: Normal operation
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+20
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 21=====
+6.6.6 CTL_2_MODE Register (Sub-Address = 09) [reset = 0x00]
+Figure 6-14. CTL_2_MODE Register
+7
+6
+5
+4
+3
+2
+1
+0
+VLOW
+MSEL[3:1]
+TSEL
+RSEN
+HTPLG
+MDI
+Table 6-9. CTL_2_MODE Field Descriptions
+Bit
+Field
+Type
+Description
+7
+VLOW
+R/W
+This read only register indicates the VREF input level.
+0: This bit is a logic level (0) if the VREF analog input selects high-swing inputs
+1: This bit is a logic level (1) if the VREF analog input selects low-swing inputs
+6:4
+MSEL[3:1]
+R/W
+This read/write register contains the source select of the monitor sense output pin.
+000: Disabled. MSEN output high
+001: Outputs the MDI bit (interrupt)
+010: Outputs the RSEN bit (receiver detect)
+011: Outputs the HTPLG bit (hot plug detect)
+3
+TSEL
+R/W
+This read/write register contains the interrupt generation source select.
+0: Interrupt bit (MDI) is generated by monitoring RSEN
+1: Interrupt bit (MDI) is generated by monitoring HTPLG
+2
+RSEN
+R/W
+This read only register contains the receiver sense input logic state, which is valid 
+only for dc-coupled systems.
+0: A powered-on receiver is not detected
+1: A powered-on receiver is detected (that is, connected to the DVI transmitter 
+outputs)
+1
+HTPLG
+R/W
+This read only register contains the hot plug detection input logic state.
+0: Logic level detected on the EDGE/HTPLG pin (pin 9)
+1: High level detected on the EDGE/HTPLG pin (pin 9)
+0
+MDI
+R/W
+This read/write register contains the monitor detect interrupt mode.
+0: Detected logic level change in detection signal (to clear, write one to this bit)
+1: Logic level remains the same
+6.6.7 CTL_3_MODE Register (Sub-Address = 0A) [reset = 0x80]
+Figure 6-15. CTL_3_MODE Register
+7
+6
+5
+4
+3
+2
+1
+0
+DK[3:1]
+DKEN
+RSVD
+CTL[2:1]
+RSVD
+Table 6-10. CTL_3_MODE Register Field Descriptions
+Bit
+Field
+Type
+Description
+7:5
+DK[3:1]
+RW
+This read/write register contains the de-skew setting, each increment adjusts the 
+skew by t(STEP).
+000: Step 1 (minimum setup/maximum hold)
+001: Step 2
+010: Step 3
+011: Step 4
+100: Step 5 (default)
+101: Step 6
+110: Step 7
+111: Step 8 (maximum setup/minimum hold)
+4
+DKEN
+RW
+This read/write register controls the data de-skew enable.
+0: Data de-skew is disabled, the values in DK[3:1] are not used
+1: Data de-skew is enabled, the de-skew setting is controlled through DK[3:1]
+3
+RSVD
+RW
+—
+2:1
+CTL[2:1]
+RW
+This read/write register contains the values of the two CTL[2:1] bits that are output 
+on the DVI port during the blanking interval.
+0
+RSVD
+RW
+—
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+21
+Product Folder Links: TFP410
+
+=====PAGE 22=====
+6.6.8 CFG Register (Sub-Address = 0B)
+Figure 6-16. CFG Register
+7
+6
+5
+4
+3
+2
+1
+0
+CFG[7:0]
+Table 6-11. CFG Register Field Descriptions
+Bit
+Field
+Type
+Description
+7:0 (D[23:16]) CFG
+Read Only
+This read-only register contains the state of the inputs D[23:16]. These pins can 
+be used to provide the user with selectable configuration data through the I2C bus.
+6.6.9 RESERVED Register (Sub-Address = 0E–0C) [reset = 0x97D0A9]
+Figure 6-17. RESERVED Register
+7
+6
+5
+4
+3
+2
+1
+0
+RESERVED
+Table 6-12. RESERVED Register Field Descriptions
+Bit
+Field
+Type
+Description
+7:0
+RESERVED
+R/W
+—
+6.6.10 DE_DLY Register (Sub-Address = 32) [reset = 0x00]
+Figure 6-18. DE_DLY Register
+7
+6
+5
+4
+3
+2
+1
+0
+DE_DLY[7:0]
+Table 6-13. DE_DLY Field Descriptions
+Bit
+Field
+Type
+Description
+7:0
+DE_DLY
+R/W
+This read/write register defines the number of pixels after HSYNC goes active 
+that DE is generated, when the DE generator is enabled. The value must be less 
+than or equal to (2047 - DE_CNT)
+6.6.11 DE_CTL Register (Sub-Address = 33) [reset = 0x00]
+Figure 6-19. DE_CTL Register
+7
+6
+5
+4
+3
+2
+1
+0
+Reserved
+DE_GEN
+VS_POL
+HS_POL
+Reserved
+DE_DLY[8]
+Table 6-14. DE_CTL Register Field Descriptions
+Bit
+Field
+Type
+Description
+7
+Reserved
+R/W
+—
+6
+DE_GEN
+R/W
+This read/write register enables the internal DE generator.
+0: DE generator is disabled. Signal required on DE pin
+1: DE generator is enabled. DE pin is ignored.
+5
+VS_POL
+R/W
+This read/write register sets the VSYNC polarity.
+0: VSYNC is considered active low.
+1: VSYNC is considered active high.
+Line counts are reset on the VSYNC active edge.
+4
+HS_POL
+R/W
+This read/write register sets the HSYNC polarity.
+0: HSYNC is considered active low.
+1: HSYNC is considered active high. Pixel counts are reset on the HSYNC active edge.
+1:3
+Reserved
+R/W
+—
+0
+DE_DLY[8]
+R/W
+This read/write register contains the top bit of DE_DLY.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+22
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 23=====
+6.6.12 DE_TOP Register (Sub-Address = 34) [reset = 0x00]
+Figure 6-20. DE_TOP Register
+7
+6
+5
+4
+3
+2
+1
+0
+DE_TOP[7:0]
+Table 6-15. DE_TOP Register Field Descriptions
+Bit
+Field
+Type
+Description
+7:0
+DE_TOP
+R/W
+This read/write register defines the number of pixels after VSYNC goes active 
+that DE is generated, when the DE generator is enabled.
+6.6.13 DE_CNT Register (Sub-Address = 37–36) [reset = 0x0000]
+Figure 6-21. DE_CNT Register
+7
+6
+5
+4
+3
+2
+1
+0
+DE_CNT[7:0]
+Reserved
+DE_CNT[10:8]
+Table 6-16. DE_CNT Register Field Descriptions
+Bit
+Field
+Type
+Description
+10:8
+DE_CNT
+R/W
+These read/write registers define the width of the active display, in pixels, when the 
+DE generator is enabled. The value must be less than or equal to (2047 - DE_DLY).
+7:0
+DE_CNT
+R/W
+6.6.14 DE_LIN Register (Sub-Address = 39–38) [reset = 0x0000]
+Figure 6-22. DE_LIN Register
+7
+6
+5
+4
+3
+2
+1
+0
+DE_LIN[7:0]
+Reserved
+DE_LIN[10:8]
+Table 6-17. DE_LIN Register Field Descriptions
+Bit
+Field
+Type
+Description
+10:8
+DE_LIN
+R/W
+These read/write registers define the height of the active display, in lines, when the 
+DE generator is enabled.
+7:0
+DE_LIN
+R/W
+6.6.15 H_RES Register (Sub-Address = 3B−3A)
+Figure 6-23. H_RES Register
+7
+6
+5
+4
+3
+2
+1
+0
+H_RES[7:0]
+Reserved
+H_RES[10:8]
+Table 6-18. H_RES Register Field Descriptions
+Bit
+Field
+Type
+Description
+10:8
+H_RES
+Read Only
+These read-only registers return the number of pixels between consecutive 
+HSYNC pulses.
+7:0
+H_RES
+Read Only
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+23
+Product Folder Links: TFP410
+
+=====PAGE 24=====
+6.6.16 V_RES Register (Sub-Address = 3D−3C)
+Figure 6-24. V_RES Register
+7
+6
+5
+4
+3
+2
+1
+0
+V_RES[7:0]
+Reserved
+V_RES[10:8]
+Table 6-19. V_RES Register Field Descriptions
+Bit
+Field
+Type
+Description
+10:8
+V_RES
+Read Only
+These read-only registers return the number of lines between consecutive 
+VSYNC pulses.
+7:0
+V_RES
+Read Only
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+24
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 25=====
+7 Application and Implementation
+Note
+Information in the following applications sections is not part of the TI component specification, 
+and TI does not warrant its accuracy or completeness. TI’s customers are responsible for 
+determining suitability of components for their purposes, as well as validating and testing their design 
+implementation to confirm system functionality.
+7.1 Application Information
+The TFP410 is a DVI-compliant digital transmitter that is used in digital host monitor systems to T.M.D.S. encode 
+and serialize RGB pixel data streams. TFP410 supports resolutions from VGA to WUXGA (and 1080p). The host 
+in a digital display system, usually a PC or consumer electronics device, contains a DVI-compatible transmitter 
+such as the TI TFP410 that receives 24-bit pixel data along with appropriate control signals. The TFP410 
+encodes the signals into a high speed, low voltage, differential serial bit stream optimized for transmission over a 
+twisted-pair cable to a display device such as the TFP401.
+7.2 Typical Application
+Figure 7-1. Typical Application for the TFP410 Device
+7.2.1 Design Requirements
+PARAMETER
+VALUE
+Power supply
+3.3V dc at 1 A
+Input clock
+Single-ended
+Input clock frequency range
+25MHz — 165MHz
+Output format
+24 bits/pixel
+Input clock latching
+Rising edge
+I2C EEPROM support
+No
+De-skew
+No
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+25
+Product Folder Links: TFP410
+
+=====PAGE 26=====
+7.2.2 Detailed Design Procedure
+7.2.2.1 Data and Control Signals
+The trace length of data and control signals out of the receiver should be kept as close to equal as possible. 
+Trace separation should be approximately 5 times the height. As a general rule, traces also should be less than 
+2.8” if possible (longer traces can be acceptable).
+Delay = 85 × SQRT × er
+(2)
+where
+•
+er = 4.35; relative permativity of 50% resin FR-4 at 1 GHz
+•
+Delay = 177 pS/in
+Length of rising edge = Tr(ps) / Delay; Tr = 3 ns
+(3)
+where
+•
+= 3000 ps / 177 ps per inch
+•
+= 16.9 inches
+Length of rising edge / 6 = Max length of trace for lumped circuit.
+(4)
+16.9 / 6 = 2.8 inches
+(5)
+Figure 7-2. Data Signals
+7.2.2.2 Configuration Options
+The TFP410 can be configured in several modes depending on the required input format, for example 1 byte/
+clock, 2 bytes/clock, falling/rinsing clock edge.
+Refer to Table 6-1 for more information about configuration options.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+26
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 27=====
+7.2.2.3 Power Supplies Decoupling
+Digital, analog, and PLL supplies must be decoupled from each other to avoid electrical noise on the PLL and 
+the core.
+Figure 7-3. Power Decoupling
+7.2.3 Application Curves
+Sometimes the Panel does not support the same format as the GPU (graphics processor unit). In these cases 
+the user must decide how to connect the unused bits.
+Figure 7-4 and Figure 7-5 show the mismatches between the 18-bit GPU and a 24-bit LCD where “x” and “y” 
+represent the 2 LSB of the Panel.
+Pixel samples
+Pixel Value (dec)
+0
+2
+4
+6
+8 10 12 14 16 18 20 22 24 26 28 30 32 34
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+220
+240
+260
+D001
+B2 B1 = GND, B0=1
+B2 B1 B0 = B7 B6 B5
+Figure 7-4. 16b GPU to 24b LCD
+Pixel samples
+Pixel Value (dec)
+0
+4
+8
+12 16 20 24 28 32 36 40 44 48 52 56 60 64
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+220
+240
+260
+D002
+x=GND, y=1
+x=B7, y=B6
+Figure 7-5. 18b GPU to 24b LCD
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+27
+Product Folder Links: TFP410
+
+=====PAGE 28=====
+7.3 Power Supply Recommendations
+Use solid ground planes. Tie ground planes together with as many vias as is practical. This will provide a 
+desirable return path for current. Each supply should be on separate split power planes, where each power 
+plane should be as large an area as possible. Connect PanelBus receiver power and ground pins and all bypass 
+caps to appropriate power or ground plane with via. Vias should be as fat and short as practical, the goal is to 
+minimize the inductance.
+7.3.1 DVDD
+Place one 0.01µF capacitor as close as possible between each DVDD device pins and ground. A 22µF tantalum 
+capacitor should be placed between the supply and 0.01µF capacitors. A ferrite bead should be used between 
+the source and the 22µF capacitor.
+7.3.2 TVDD
+Place one 0.01µF capacitor as close as possible between each TVDD device pins and ground. A 22µF tantalum 
+capacitor should be placed between the supply and 0.01µF capacitors. A ferrite bead should be used between 
+the source and the 22µF capacitor.
+7.3.3 PVDD
+Place three 0.01µF capacitors in parallel as close as possible between the PVDD device pin and ground. A
+22µF tantalum capacitor should be placed between the supply and 0.01µF capacitors. A ferrite bead should be 
+used between the source and the 22µF capacitor.
+7.4 Layout
+7.4.1 Layout Guidelines
+7.4.1.1 Layer Stack
+The pinout of Texas Instruments' High Speed Interface (HSI) devices features differential signal pairs and the 
+remaining signals comprise the supply rails, VCC and ground, and lower-speed signals, such as control pins. 
+As an example, consider a device X which is a repeater/re-driver, so both inputs and outputs are high-speed 
+differential signals. These guidelines can be applied to other high-speed devices such as drivers, receivers, 
+multiplexers, and so on.
+A minimum of four layers is required to accomplish a low-EMI PCB design. Layer stacking should be in the 
+following order (top-to-bottom): high-speed differential signal layer, ground plane, power plane and control signal 
+layer.
+Figure 7-6. PCB Stack Up
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+28
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 29=====
+7.4.1.2 Routing High-Speed Differential Signal Traces
+(RxC-, RxC+, Rx0-, Rx0+, Rx1-, Rx1+, Rx2-, Rx2+)
+Trace impedance should be controlled for optimal performance. Each differential pair should be equal in length 
+and symmetrical and should have equal impedance to ground with a trace separation of 2 times to 4 times the 
+height. A differential trace separation of 4 times the height yields about 6% cross-talk (6% effect on impedance).
+We recommend that differential trace routing should be side-by-side, though it is not important that the 
+differential traces be tightly coupled together, because tight coupling is not achievable on PCB traces. Typical 
+ratios on PCBs are only 20% to 50%; 99.9% is the value of a well balanced twisted pair cable. Each 
+differential trace should be as short as possible (< 2 inches is preferable) with no 90° angles. These high-speed 
+transmission traces should be on layer 1, which is the top layer.
+RxC-, RxC+, Rx0-, Rx0+, Rx1-, Rx1+, Rx2-, Rx2+ signals all route directly from the DVI connector pins to the 
+device, no external components are needed.
+7.4.1.3 DVI Connector
+Clear-out holes for connector pins should leave space between pins to allow continuous ground through the pin 
+field. Allow enough spacing in ground plane around signal pins vias however, keep enough copper between vias 
+to allow for ground current to flow between the vias. Avoid creating a large ground plane slot around the entire 
+connector, because minimizing the via capacitance is the goal.
+7.4.2 Layout Example
+DVI connector trace matching is shown in Figure 7-7.
+Figure 7-7. DVI Signal Routing
+Keep the data lines as far as possible from each other as shown in Figure 7-8.
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+29
+Product Folder Links: TFP410
+
+=====PAGE 30=====
+Figure 7-8. Data Signal Routing
+Connect the thermal pad to ground as shown in Figure 7-9.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+30
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 31=====
+Figure 7-9. Ground Routing
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+31
+Product Folder Links: TFP410
+
+=====PAGE 32=====
+7.4.3 TI PowerPAD 64-Pin HTQFP Package
+The TFP410 is available in TI’s thermally enhanced 64-pin TQFP PowerPAD package. The PowerPAD package 
+is a 10mm × 10mm × 1.0mm TQFP outline with 0.5mm lead-pitch. The PowerPAD package has a specially 
+designed die mount pad that offers improved thermal capability over typical TQFP packages of the same outline. 
+The TI 64-pin TQFP PowerPAD package offers a backside solder plane that connects directly to the die mount 
+pad for enhanced thermal conduction. For thermal considerations, soldering the backside of the TFP410 to the 
+application board is not required because the device power dissipation is well within the package capability when 
+not soldered.
+Soldering the backside of the device to the PCB ground plane is recommended for electrical considerations. 
+Because the die pad is electrically connected to the chip substrate and hence chip ground, connecting the back 
+side of the PowerPAD package to a PCG ground plane provides a low-inductance, low-impedance connection to 
+help improve EMI, ground bounce, and power supply noise performance.
+Table 7-1 contains the thermal properties of the TI 64-pin TQFP PowerPAD package. The 64-pin TQFP non-
+PowerPAD package is included only for reference.
+Table 7-1. TI 64-Pin TQFP (10mm × 10mm × 1.0mm) / 0.5mm Lead-Pitch
+PARAMETER
+WITHOUT
+PowerPAD™
+PowerPAD™
+NOT CONNECTED TO
+PCB THERMAL PLANE
+PowerPAD™
+CONNECTED TO PCB
+THERMAL PLANE(1)
+RθJA
+Thermal resistance, junction-to-ambient(1) (2)
+75.83°C/W
+42.20°C/W
+21.47°C/W
+RθJC
+Thermal resistance, junction-to-case (1) (2)
+7.80°/W
+0.38°C/W
+0.38°C/W
+PD
+Power handling capabilities of package (1) (2) 
+(3)
+0.92 W
+1.66 W
+3.26 W
+(1)
+Specified with the PowerPAD bond pad on the backside of the package soldered to a 2-oz. Cu plate PCB thermal plane.
+(2)
+Airflow is at 0 LFM (no airflow)
+(3)
+Specified at 150°C junction temperature and 80°C ambient temperature.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+32
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 33=====
+8 Device and Documentation Support
+8.1 Receiving Notification of Documentation Updates
+To receive notification of documentation updates, navigate to the device product folder on ti.com. Click on 
+Notifications to register and receive a weekly digest of any product information that has changed. For change 
+details, review the revision history included in any revised document.
+8.2 Support Resources
+TI E2E™ support forums are an engineer's go-to source for fast, verified answers and design help — straight 
+from the experts. Search existing answers or ask your own question to get the quick design help you need.
+Linked content is provided "AS IS" by the respective contributors. They do not constitute TI specifications and do 
+not necessarily reflect TI's views; see TI's Terms of Use.
+8.3 Trademarks
+Intel™ is a trademark of Intel Corporation.
+PowerPAD™, EPIC-5™, and PanelBus™ are trademarks of TI.
+Blu-ray™ is a trademark of Blu-ray Disc Association.
+TI E2E™ is a trademark of Texas Instruments.
+All trademarks are the property of their respective owners.
+8.4 Electrostatic Discharge Caution
+This integrated circuit can be damaged by ESD. Texas Instruments recommends that all integrated circuits be handled 
+with appropriate precautions. Failure to observe proper handling and installation procedures can cause damage.
+ESD damage can range from subtle performance degradation to complete device failure. Precision integrated circuits may 
+be more susceptible to damage because very small parametric changes could cause the device not to meet its published 
+specifications.
+8.5 Glossary
+TI Glossary 
+This glossary lists and explains terms, acronyms, and definitions.
+9 Revision History
+NOTE: Page numbers for previous revisions may differ from page numbers in the current version.
+Changes from Revision C (November 2014) to Revision D (February 2024)
+Page
+•
+Added inclusive terminology throughout the data sheet.....................................................................................1
+•
+Changed pin 22 from: TVC + to: TXC+ ............................................................................................................. 2
+•
+Updated MSEN pin description from: when I2C is disabled (ISEL = low), a low level indicates a powered on 
+receiver is detected at the differential outputs. A high level indicates a powered on receiver is not detected to: 
+when I2C is disabled (ISEL = low), a high level indicates a powered on receiver is detected at the differential 
+outputs. A low level indicates a powered on receiver is not detected. .............................................................. 2
+•
+Changed pin 6 name from CTL3/A3/DK3 to A3/DK3......................................................................................... 2
+•
+Changed from: When the I2C bus is disabled (ISEL = low) and the de-skew mode is disabled (DKEN = low), 
+these three inputs become the control inputs, CTL[3:1], which can be used to send additional information 
+across the DVI link during the blanking interval (DE = low). The CTL3 input is reserved for HDCP compliant 
+DVI TXs (TFP510) and the CTL[2:1] inputs are reserved for future use. to: When the I2C bus is disabled 
+(ISEL = low) and the de-skew mode is disabled (DKEN = low), pins 7 and 8 become the control inputs, 
+CTL[2:1], which can be used to send additional information across the DVI link during the blanking interval 
+(DE = low). Pin 6 is not used. ............................................................................................................................2
+•
+Updated VIH and VIL for Data, DE, VSYNC, HSYNC, and IDCK+/- CMOS inputs and the remaining 
+CMOS inputs...................................................................................................................................................... 7
+•
+Changed three user definable control signals, CTL[3:1], during the inactive display or blanking interval to: 
+three control signals, CTL[3:1], during the inactive display or blanking interval .............................................. 11
+www.ti.com
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+Copyright © 2024 Texas Instruments Incorporated
+Submit Document Feedback
+33
+Product Folder Links: TFP410
+
+=====PAGE 34=====
+•
+Changed the TFP410 encodes and transfers the CTL[3:1] inputs during the vertical blanking interval to: the 
+TFP410 encodes and transfers the CTL[2:1] inputs during the vertical blanking interval ................................11
+•
+Changed the CTL3 input is reserved for HDCP compliant DVI TXs and the CTL[2:1] inputs are reserved for 
+future use to: CTL3 is reserved for HDCP and is always encoded as 0. The CTL[2:1] inputs are reserved for 
+future use .........................................................................................................................................................11
+•
+Changed RW field for sub-address 0B from RW to R. .................................................................................... 18
+•
+Changed CTL_1_MODE register reset value from: 0xFE to: 0xBE .................................................................20
+•
+Changed in the CTL_3_MODE register, bit 3 from CTL3 to RSVD .................................................................21
+•
+Added in DE_DLY register the value must be less than or equal to (2047 - DE_CNT) ...................................22
+•
+Added in the DE_CNT register the value must be less than or equal to (2047 - DE_DLY) .............................23
+•
+Changed Application Information summary to be focused on TFP410 instead of the TDP401....................... 25
+Changes from Revision B (May 2011) to Revision C (November 2014)
+Page
+•
+Added ESD Ratings table, Thermal Information table, Typical Characteristics section, Feature Description 
+section, Device Functional Modes, Application and Implementation section, Power Supply Recommendations 
+section, Layout section, Device and Documentation Support section, and Mechanical, Packaging, and 
+Orderable Information section. .......................................................................................................................... 1
+10 Mechanical, Packaging, and Orderable Information
+The following pages include mechanical, packaging, and orderable information. This information is the most 
+current data available for the designated devices. This data is subject to change without notice and revision of 
+this document. For browser-based versions of this data sheet, refer to the left-hand navigation.
+TFP410
+SLDS145D – OCTOBER 2001 – REVISED FEBRUARY 2024
+www.ti.com
+34
+Submit Document Feedback
+Copyright © 2024 Texas Instruments Incorporated
+Product Folder Links: TFP410
+
+=====PAGE 35=====
+PACKAGE OPTION ADDENDUM
+www.ti.com
+9-Nov-2025
+PACKAGING INFORMATION
+Orderable part number
+Status
+(1)
+Material type
+(2)
+Package | Pins
+Package qty | Carrier
+RoHS
+(3)
+Lead finish/
+Ball material
+(4)
+MSL rating/
+Peak reflow
+(5)
+Op temp (°C)
+Part marking
+(6)
+TFP410PAP
+Active
+Production
+HTQFP (PAP) | 64
+160 | JEDEC
+TRAY (10+1)
+Yes
+NIPDAU
+Level-3-260C-168 HR
+0 to 70
+TFP410PAP
+TFP410PAP.A
+Active
+Production
+HTQFP (PAP) | 64
+160 | JEDEC
+TRAY (10+1)
+Yes
+NIPDAU
+Level-3-260C-168 HR
+0 to 70
+TFP410PAP
+TFP410PAPG4
+Active
+Production
+HTQFP (PAP) | 64
+160 | JEDEC
+TRAY (10+1)
+Yes
+NIPDAU
+Level-3-260C-168 HR
+0 to 70
+TFP410PAP
+TFP410PAPR
+Active
+Production
+HTQFP (PAP) | 64
+1000 | LARGE T&R
+Yes
+NIPDAU
+Level-3-260C-168 HR
+0 to 70
+TFP410PAP
+TFP410PAPR.A
+Active
+Production
+HTQFP (PAP) | 64
+1000 | LARGE T&R
+Yes
+NIPDAU
+Level-3-260C-168 HR
+0 to 70
+TFP410PAP
+ 
+(1) Status:  For more details on status, see our product life cycle.
+ 
+(2) Material type:  When designated, preproduction parts are prototypes/experimental devices, and are not yet approved or released for full production. Testing and final process, including without limitation quality assurance,
+reliability performance testing, and/or process qualification, may not yet be complete, and this item is subject to further changes or possible discontinuation. If available for ordering, purchases will be subject to an additional
+waiver at checkout, and are intended for early internal evaluation purposes only. These items are sold without warranties of any kind.
+ 
+(3) RoHS values:  Yes, No, RoHS Exempt. See the TI RoHS Statement for additional information and value definition.
+ 
+(4) Lead finish/Ball material:  Parts may have multiple material finish options. Finish options are separated by a vertical ruled line. Lead finish/Ball material values may wrap to two lines if the finish value exceeds the maximum
+column width.
+ 
+(5) MSL rating/Peak reflow:  The moisture sensitivity level ratings and peak solder (reflow) temperatures. In the event that a part has multiple moisture sensitivity ratings, only the lowest level per JEDEC standards is shown.
+Refer to the shipping label for the actual reflow temperature that will be used to mount the part to the printed circuit board.
+ 
+(6) Part marking:  There may be an additional marking, which relates to the logo, the lot trace code information, or the environmental category of the part.
+ 
+Multiple part markings will be inside parentheses. Only one part marking contained in parentheses and separated by a "~" will appear on a part. If a line is indented then it is a continuation of the previous line and the two
+combined represent the entire part marking for that device.
+ 
+Important Information and Disclaimer:The information provided on this page represents TI's knowledge and belief as of the date that it is provided. TI bases its knowledge and belief on information provided by third parties, and
+makes no representation or warranty as to the accuracy of such information. Efforts are underway to better integrate information from third parties. TI has taken and continues to take reasonable steps to provide representative
+and accurate information but may not have conducted destructive testing or chemical analysis on incoming materials and chemicals. TI and TI suppliers consider certain information to be proprietary, and thus CAS numbers
+and other limited information may not be available for release.
+ 
+Addendum-Page 1
+
+=====PAGE 36=====
+PACKAGE OPTION ADDENDUM
+www.ti.com
+9-Nov-2025
+In no event shall TI's liability arising out of such information exceed the total purchase price of the TI part(s) at issue in this document sold by TI to Customer on an annual basis.
+ 
+ OTHER QUALIFIED VERSIONS OF TFP410 :
+• Enhanced Product : TFP410-EP
+ NOTE: Qualified Version Definitions:
+• Enhanced Product - Supports Defense, Aerospace and Medical Applications
+Addendum-Page 2
+
+=====PAGE 37=====
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+4-Sep-2026
+TAPE AND REEL INFORMATION
+Reel Width (W1)
+REEL DIMENSIONS
+A0
+B0
+K0
+W
+Dimension designed to accommodate the component length
+Dimension designed to accommodate the component thickness
+Overall width of the carrier tape
+Pitch between successive cavity centers
+Dimension designed to accommodate the component width
+TAPE DIMENSIONS
+K0
+ P1
+B0 W
+A0
+Cavity
+QUADRANT ASSIGNMENTS FOR PIN 1 ORIENTATION IN TAPE
+Pocket Quadrants
+Sprocket Holes
+Q1
+Q1
+Q2
+Q2
+Q3
+Q3
+Q4
+Q4
+User Direction of Feed
+P1
+Reel
+Diameter
+ 
+*All dimensions are nominal
+Device
+Package
+Type
+Package
+Drawing
+Pins
+SPQ
+Reel
+Diameter
+(mm)
+Reel
+Width
+W1 (mm)
+A0
+(mm)
+B0
+(mm)
+K0
+(mm)
+P1
+(mm)
+W
+(mm)
+Pin1
+Quadrant
+TFP410PAPR
+HTQFP
+PAP
+64
+1000
+330.0
+24.4
+13.0
+13.0
+1.5
+16.0
+24.0
+Q2
+Pack Materials-Page 1
+
+=====PAGE 38=====
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+4-Sep-2026
+TAPE AND REEL BOX DIMENSIONS
+Width (mm)
+W
+L
+H
+ 
+*All dimensions are nominal
+Device
+Package Type
+Package Drawing
+Pins
+SPQ
+Length (mm)
+Width (mm)
+Height (mm)
+TFP410PAPR
+HTQFP
+PAP
+64
+1000
+350.0
+350.0
+43.0
+Pack Materials-Page 2
+
+=====PAGE 39=====
+PACKAGE MATERIALS INFORMATION
+ 
+ 
+www.ti.com
+4-Sep-2026
+TRAY
+ 
+ 
+L - Outer tray length without tabs
+KO - 
+Outer 
+tray 
+height
+W - 
+Outer 
+tray 
+width
+P1 - Tray unit pocket pitch
+CW - Measurement for tray edge (Y direction) to corner pocket center
+CL - Measurement for tray edge (X direction) to corner pocket center
+Text
+ 
+ 
+Chamfer on Tray corner indicates Pin 1 orientation of packed units.
+ 
+ 
+*All dimensions are nominal
+Device
+Package
+Name
+Package
+Type
+Pins
+SPQ
+Unit array
+matrix
+Max
+temperature
+(°C)
+L (mm)
+W
+(mm)
+K0
+(µm)
+P1
+(mm)
+CL
+(mm)
+CW
+(mm)
+TFP410PAP
+PAP
+HTQFP
+64
+160
+8 x 20
+150
+315
+135.9
+7620
+15.2
+13.1
+13
+TFP410PAP.A
+PAP
+HTQFP
+64
+160
+8 x 20
+150
+315
+135.9
+7620
+15.2
+13.1
+13
+TFP410PAPG4
+PAP
+HTQFP
+64
+160
+8 x 20
+150
+315
+135.9
+7620
+15.2
+13.1
+13
+Pack Materials-Page 3
+
+=====PAGE 40=====
+www.ti.com
+GENERIC PACKAGE VIEW
+This image is a representation of the package family, actual package may vary.
+Refer to the product data sheet for package details.
+HTQFP - 1.2 mm max height
+PAP 64
+QUAD FLATPACK
+10 x 10, 0.5 mm pitch
+4226442/A
+
+=====PAGE 41=====
+
+=====PAGE 42=====
+
+=====PAGE 43=====
+www.ti.com
+
+=====PAGE 44=====
+IMPORTANT NOTICE AND DISCLAIMER
+TI PROVIDES TECHNICAL AND RELIABILITY DATA (INCLUDING DATASHEETS), DESIGN RESOURCES (INCLUDING REFERENCE 
+DESIGNS), APPLICATION OR OTHER DESIGN ADVICE, WEB TOOLS, SAFETY INFORMATION, AND OTHER RESOURCES “AS IS” 
+AND WITH ALL FAULTS, AND DISCLAIMS ALL WARRANTIES, EXPRESS AND IMPLIED, INCLUDING WITHOUT LIMITATION ANY 
+IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR NON-INFRINGEMENT OF THIRD 
+PARTY INTELLECTUAL PROPERTY RIGHTS.
+These resources are intended for skilled developers designing with TI products. You are solely responsible for (1) selecting the appropriate 
+TI products for your application, (2) designing, validating and testing your application, and (3) ensuring your application meets applicable 
+standards, and any other safety, security, regulatory or other requirements.
+These resources are subject to change without notice. TI grants you permission to use these resources only for development of an 
+application that uses the TI products described in the resource. Other reproduction and display of these resources is prohibited. No license 
+is granted to any other TI intellectual property right or to any third party intellectual property right. TI disclaims responsibility for, and you fully 
+indemnify TI and its representatives against any claims, damages, costs, losses, and liabilities arising out of your use of these resources.
+TI’s products are provided subject to TI’s Terms of Sale, TI’s General Quality Guidelines, or other applicable terms available either on 
+ti.com or provided in conjunction with such TI products. TI’s provision of these resources does not expand or otherwise alter TI’s applicable 
+warranties or warranty disclaimers for TI products. Unless TI explicitly designates a product as custom or customer-specified, TI products 
+are standard, catalog, general purpose devices.
+TI objects to and rejects any additional or different terms you may propose.
+IMPORTANT NOTICE
+Copyright © 2026, Texas Instruments Incorporated
+Last updated 10/2025

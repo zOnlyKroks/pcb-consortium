@@ -1,0 +1,50 @@
+ERC report (2026-10-30T17:18:20, Encoding UTF8)
+Report includes: Errors, Warnings, Exclusions
+
+***** Sheet /
+
+***** Sheet /Power/
+
+***** Sheet /Inputs/
+
+***** Sheet /TVP7002/
+[multiple_net_names]: Both GND and TV_UNUSED are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(30.48 mm, 85.09 mm): Symbol #PWR001 Pin 1 [Power input, Line]
+    @(182.88 mm, 218.44 mm): Label 'TV_UNUSED'
+
+***** Sheet /TVP5150/
+
+***** Sheet /FPGA/
+[multiple_net_names]: Both GND and FPGA_GND0 are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(60.96 mm, 106.68 mm): Symbol #PWR003 Pin 1 [Power input, Line]
+    @(200.66 mm, 538.48 mm): Label 'FPGA_GND0'
+[pin_to_pin]: Pins of type Bidirectional and Power output are connected
+    ; warning
+    @(208.28 mm, 535.94 mm): Symbol U11 Pin 63 [IOB_103_CBSEL0, Bidirectional, Line]
+    @(81.28 mm, 134.62 mm): Symbol #FLG02 Pin 1 [Power output, Line]
+[pin_to_pin]: Pins of type Bidirectional and Power output are connected
+    ; warning
+    @(208.28 mm, 538.48 mm): Symbol U11 Pin 64 [IOB_104_CBSEL1, Bidirectional, Line]
+    @(81.28 mm, 134.62 mm): Symbol #FLG02 Pin 1 [Power output, Line]
+
+***** Sheet /HDMI/
+[multiple_net_names]: Both GND and TF_LO are attached to the same items; GND will be used in the netlist
+    ; warning
+    @(43.18 mm, 262.89 mm): Symbol #PWR015 Pin 1 [Power input, Line]
+    @(93.98 mm, 187.96 mm): Label 'TF_LO'
+[pin_to_pin]: Pins of type Bidirectional and Power output are connected
+    ; warning
+    @(101.60 mm, 198.12 mm): Symbol U13 Pin 14 [DSEL/SDA, Bidirectional, Line]
+    @(81.28 mm, 134.62 mm): Symbol #FLG02 Pin 1 [Power output, Line]
+
+***** Sheet /VGA/
+
+ ** ERC messages: 6  Errors 0  Warnings 6
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

@@ -1,0 +1,13 @@
+format,frame_Hz,line_kHz,clock_MHz,PLLDIV_total,reg01h,reg02h(PLLDIV[3:0] in bits 7:4),reg03h(VCO[7:6] CP[5:3]),source
+480i  (native 13.5 MHz),29.97,15.734,13.5,858,0x35,0xA0,0x18,datasheet Table 4
+576i  (native 13.5 MHz),25,15.625,13.5,864,0x36,0x00,0x18,datasheet Table 4
+480p  27 MHz,59.94,31.469,27,858,0x35,0xA0,0x18,datasheet Table 4
+576p  27 MHz,50,31.25,27,864,0x36,0x00,0x18,datasheet Table 4
+720p60,60,45,74.25,1650,0x67,0x20,0xA0,datasheet Table 4
+720p50,50,37.5,74.25,1980,0x7B,0xC0,0x98,datasheet Table 4
+1080i60,30,33.75,74.25,2200,0x89,0x80,0x98,datasheet Table 4 (30 frames = 60 fields)
+1080i50,25,28.125,74.25,2640,0xA5,0x00,0x90,datasheet Table 4 (25 frames = 50 fields)
+1080p60,60,67.5,148.5,2200,0x89,0x80,0xE0,datasheet Table 4
+1080p50,50,56.25,148.5,2640,0xA5,0x00,0xD8,datasheet Table 4
+480i  oversampled 27 MHz,29.97,15.734,27,1716,0x6B,0x40,0x18,"derived: 2x PLLDIV of the 480i row, VCO/CP of the 480p row"
+576i  oversampled 27 MHz,25,15.625,27,1728,0x6C,0x00,0x18,"derived: 2x PLLDIV of the 576i row, VCO/CP of the 576p row"
