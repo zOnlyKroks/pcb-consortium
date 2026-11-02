@@ -1,0 +1,7 @@
+* HSU5N25 250 V N-MOSFET, generic level-1 approximation (Vth 3 V). Not a vendor model.
+.subckt HSU5N25 G D S
+M1 D G S S NM
+Cgs G S 300p
+Cgd G D 15p
+.model NM NMOS(LEVEL=1 VTO=3 KP=1.2 RD=0.4 RS=0.05 CBD=40p IS=1e-12)
+.ends HSU5N25
