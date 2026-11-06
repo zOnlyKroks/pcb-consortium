@@ -3290,6 +3290,229 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Simulation_SPICE:VDC"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.0254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "V"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "1"
+				(at 2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Voltage source, DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=+ 2=-"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Type" "DC"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Device" "V"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "ki_keywords" "simulation"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "VDC_0_0"
+				(polyline
+					(pts
+						(xy -1.27 0.254) (xy 1.27 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.762 -0.254) (xy -1.27 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 -0.254) (xy -0.254 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -0.254) (xy 0.762 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(text "+"
+					(at 0 1.905 0)
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(symbol "VDC_0_1"
+				(circle
+					(center 0 0)
+					(radius 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "VDC_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Transistor_FET:Q_NMOS_GDS"
 			(pin_names
 				(offset 0)
@@ -4146,6 +4369,16 @@
 		)
 		(uuid "74d16d22-1eb3-4633-b7fa-75ccf495d7a0")
 	)
+	(text ".options method=gear\n"
+		(exclude_from_sim no)
+		(at 31.242 201.422 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "7784a009-147a-40b7-ba5c-2ec48d31de38")
+	)
 	(text "    Any USB PD charger >= 18 W works. A plain 5 V port powers and flashes the ESP32; the tubes stay dark."
 		(exclude_from_sim no)
 		(at 233.68 80.01 0)
@@ -4270,6 +4503,12 @@
 		(uuid "1466207d-acb7-4c87-bb75-434d12ca258f")
 	)
 	(junction
+		(at 45.72 133.35)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1d60a2c4-daad-44b1-9523-bc0e8ad09b6f")
+	)
+	(junction
 		(at 81.28 41.91)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4352,12 +4591,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "92cabbba-f12b-4b6b-9f9d-41077fd01371")
-	)
-	(junction
-		(at 53.34 133.35)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "981ded1a-8e4f-4e71-b9b9-9114829ac8c0")
 	)
 	(junction
 		(at 102.87 58.42)
@@ -4771,16 +5004,6 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 133.35) (xy 93.98 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "817908cd-03a3-4490-bc8c-28e1e396008c")
-	)
-	(wire
-		(pts
 			(xy 132.08 166.37) (xy 132.08 168.91)
 		)
 		(stroke
@@ -4911,16 +5134,6 @@
 	)
 	(wire
 		(pts
-			(xy 45.72 133.35) (xy 53.34 133.35)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92459485-4e71-43d4-850a-f946ada26aad")
-	)
-	(wire
-		(pts
 			(xy 114.3 158.75) (xy 116.84 158.75)
 		)
 		(stroke
@@ -4928,6 +5141,16 @@
 			(type default)
 		)
 		(uuid "950a36fa-806f-4836-8c80-93ceb22a2436")
+	)
+	(wire
+		(pts
+			(xy 45.72 133.35) (xy 93.98 133.35)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95e61c7c-2c2c-4d5c-bbab-5c1ffe552fe1")
 	)
 	(wire
 		(pts
@@ -5309,13 +5532,13 @@
 		(at 99.06 41.91 90)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "006398d6-bb4b-49af-92f5-cc50ed2bd7c4")
-		(property "Reference" "F101"
+		(property "Reference" "F1"
 			(at 99.06 37.465 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5388,7 +5611,99 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "F101")
+					(reference "F1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 132.08 209.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "03b4cd81-e0d0-47c2-82a3-0586cbdc7a21")
+		(property "Reference" "Rload1"
+			(at 134.62 208.28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "40k"
+			(at 134.62 210.82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 132.08 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 132.08 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC Part #" "C25334"
+			(at 132.08 209.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e19f5a60-6bf8-45dd-acfc-8457b8ebdf3a")
+		)
+		(pin "2"
+			(uuid "74570dd7-5890-499e-bced-5793d269075f")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "Rload1")
 					(unit 1)
 				)
 			)
@@ -5405,7 +5720,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "07218cb9-68e2-4635-84b0-b73bb81b097e")
-		(property "Reference" "R103"
+		(property "Reference" "R9"
 			(at 120.65 154.305 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5478,7 +5793,83 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R103")
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "NixiClockV1:VIN")
+		(at 116.84 207.01 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0941cae0-dac2-41c8-b94e-0f944ea75d8b")
+		(property "Reference" "#PWR015"
+			(at 116.84 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "VIN"
+			(at 116.84 203.2 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 207.01 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 207.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4ea2ae70-569b-491a-8feb-8bffa562e0d6")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)
@@ -5495,7 +5886,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "09e02574-550a-4655-8b95-a0232ecf0085")
-		(property "Reference" "#FLG06"
+		(property "Reference" "#FLG02"
 			(at 67.31 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -5554,7 +5945,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#FLG06")
+					(reference "#FLG02")
 					(unit 1)
 				)
 			)
@@ -5562,7 +5953,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 53.34 140.97 0)
+		(at 45.72 140.97 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5571,8 +5962,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0a926612-aa4c-486c-865b-497e13d06bbe")
-		(property "Reference" "#PWR020"
-			(at 53.34 140.97 0)
+		(property "Reference" "#PWR04"
+			(at 45.72 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5583,7 +5974,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 53.34 144.78 0)
+			(at 45.72 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5593,7 +5984,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 53.34 140.97 0)
+			(at 45.72 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5604,7 +5995,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 140.97 0)
+			(at 45.72 140.97 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5615,7 +6006,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 53.34 140.97 0)
+			(at 45.72 140.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -5630,7 +6021,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR020")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -5647,7 +6038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1290ca1e-9418-43f3-82f4-f89652bbfda0")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR032"
 			(at 223.52 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -5706,7 +6097,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR012")
+					(reference "#PWR032")
 					(unit 1)
 				)
 			)
@@ -5723,7 +6114,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "12ade2a6-1d4e-40d0-b1f5-5e034e37c795")
-		(property "Reference" "C111"
+		(property "Reference" "C2"
 			(at 64.77 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5798,7 +6189,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C111")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -5809,13 +6200,13 @@
 		(at 76.2 60.96 180)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "17468808-44f7-4b12-b0e5-c16950406100")
-		(property "Reference" "R110"
+		(property "Reference" "R4"
 			(at 71.755 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5888,7 +6279,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R110")
+					(reference "R4")
 					(unit 1)
 				)
 			)
@@ -5905,7 +6296,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c3ead27-612e-434f-8dc5-8f4c86b2a5cc")
-		(property "Reference" "#PWR028"
+		(property "Reference" "#PWR019"
 			(at 142.24 176.53 0)
 			(hide yes)
 			(show_name no)
@@ -5964,7 +6355,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR028")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -5981,7 +6372,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1db59f6a-0e00-4e2b-aa53-f946035fa560")
-		(property "Reference" "R117"
+		(property "Reference" "R1"
 			(at 38.1 154.305 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6054,7 +6445,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R117")
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -6065,7 +6456,7 @@
 		(at 102.87 69.85 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
@@ -6176,7 +6567,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2451e2ad-02e7-47c4-823f-2d0745d21964")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR034"
 			(at 248.92 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -6235,7 +6626,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR017")
+					(reference "#PWR034")
 					(unit 1)
 				)
 			)
@@ -6252,7 +6643,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2e5a3fd8-543d-44b1-bae9-19908c9fcb6c")
-		(property "Reference" "R112"
+		(property "Reference" "R2"
 			(at 48.26 166.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6327,7 +6718,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R112")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -6344,7 +6735,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2f0a386e-4eef-4b3d-8107-31c261837f03")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR023"
 			(at 157.48 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -6403,7 +6794,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR021")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -6420,7 +6811,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2fb4fd71-83ca-4eb2-828d-9608162b06c2")
-		(property "Reference" "D104"
+		(property "Reference" "D1"
 			(at 58.42 175.26 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6484,6 +6875,50 @@
 				)
 			)
 		)
+		(property "Sim.Library" "${KIPRJMOD}/sim/1N4148W.lib"
+			(at 58.42 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "1N4148W"
+			(at 58.42 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 58.42 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 58.42 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "dd29c449-40b2-4b5e-ba2b-162b8820f2c5")
 		)
@@ -6493,7 +6928,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "D104")
+					(reference "D1")
 					(unit 1)
 				)
 			)
@@ -6510,7 +6945,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "38712a23-5ed9-48ed-9472-911cadc7279c")
-		(property "Reference" "#PWR010"
+		(property "Reference" "#PWR024"
 			(at 172.72 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -6569,7 +7004,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR010")
+					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -6586,7 +7021,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3c832300-f4f2-41f8-8bb3-a99bb423850d")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR033"
 			(at 248.92 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -6645,7 +7080,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR016")
+					(reference "#PWR033")
 					(unit 1)
 				)
 			)
@@ -6662,7 +7097,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f330bf7-2528-4128-98bd-ca769ffe05fd")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR035"
 			(at 259.08 135.89 0)
 			(hide yes)
 			(show_name no)
@@ -6721,7 +7156,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR018")
+					(reference "#PWR035")
 					(unit 1)
 				)
 			)
@@ -6738,7 +7173,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "422a2102-894b-4280-9505-9f2307645ccc")
-		(property "Reference" "D103"
+		(property "Reference" "D4"
 			(at 153.67 128.905 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6802,6 +7237,50 @@
 				)
 			)
 		)
+		(property "Sim.Library" "${KIPRJMOD}/sim/ES1J.lib"
+			(at 153.67 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "ES1J"
+			(at 153.67 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 153.67 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 153.67 133.35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "09bd5833-8d52-4787-883a-95ea967109f4")
 		)
@@ -6811,7 +7290,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "D103")
+					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -6828,7 +7307,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "498e9e84-6e70-491b-86c3-3307bf6c8b8e")
-		(property "Reference" "#PWR011"
+		(property "Reference" "#PWR026"
 			(at 190.5 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -6887,7 +7366,123 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR011")
+					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Simulation_SPICE:VDC")
+		(at 116.84 212.09 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4af0e600-1852-4eb4-909a-89e782b6ba3b")
+		(property "Reference" "V1"
+			(at 120.65 210.6901 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "9"
+			(at 120.65 213.2301 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-html-manual/manual.xhtml#sec_Independent_Sources_for"
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Voltage source, DC"
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Type" "DC"
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "V"
+			(at 116.84 212.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "2"
+			(uuid "74e5a6f6-bc94-46c0-b343-410c0b45cc42")
+		)
+		(pin "1"
+			(uuid "e686a0a5-198e-42a5-a854-ff588c76d52c")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "V1")
 					(unit 1)
 				)
 			)
@@ -6898,13 +7493,13 @@
 		(at 119.38 72.39 90)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4e6c275d-61f0-4d2d-b7e2-cf4b69aaa534")
-		(property "Reference" "R104"
+		(property "Reference" "R8"
 			(at 119.38 67.945 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6977,7 +7572,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R104")
+					(reference "R8")
 					(unit 1)
 				)
 			)
@@ -6994,7 +7589,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "521d8f3a-07fe-49a3-9c44-668dc62ffde0")
-		(property "Reference" "C102"
+		(property "Reference" "C7"
 			(at 175.26 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7060,6 +7655,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" "C"
+			(at 172.72 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 172.72 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "c=10u"
+			(at 172.72 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "704c7b69-9314-4799-a909-0e96474e0a66")
 		)
@@ -7069,7 +7697,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C102")
+					(reference "C7")
 					(unit 1)
 				)
 			)
@@ -7086,7 +7714,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "53f8bea3-1d16-4aed-aec7-437c5ced1dbb")
-		(property "Reference" "#PWR088"
+		(property "Reference" "#PWR010"
 			(at 80.01 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -7145,7 +7773,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR088")
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
@@ -7162,7 +7790,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "584d1047-2e69-4530-8dad-86ad75ea60d3")
-		(property "Reference" "C103"
+		(property "Reference" "C9"
 			(at 208.28 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7237,7 +7865,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C103")
+					(reference "C9")
 					(unit 1)
 				)
 			)
@@ -7254,7 +7882,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "59c4b60f-afb2-4811-aaca-55cd3a3e778c")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR020"
 			(at 143.51 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7313,7 +7941,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR015")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -7406,7 +8034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6b003b69-8597-41b0-a6c1-e882adb84582")
-		(property "Reference" "R118"
+		(property "Reference" "R15"
 			(at 251.46 123.19 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7481,7 +8109,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R118")
+					(reference "R15")
 					(unit 1)
 				)
 			)
@@ -7498,7 +8126,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "72270159-d70b-41b8-ab50-8b5fbf1372f9")
-		(property "Reference" "#PWR087"
+		(property "Reference" "#PWR012"
 			(at 102.87 77.47 0)
 			(hide yes)
 			(show_name no)
@@ -7557,7 +8185,83 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR087")
+					(reference "#PWR012")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 132.08 213.36 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73ed63f1-51f4-4c58-abf4-ae154cc367ff")
+		(property "Reference" "#PWR018"
+			(at 132.08 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 132.08 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 213.36 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 132.08 213.36 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "55b3dbce-b28a-42f0-b265-8bbcff89104d")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -7574,7 +8278,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7557656c-c52a-450e-a857-2cfe3e6d7038")
-		(property "Reference" "#PWR023"
+		(property "Reference" "#PWR027"
 			(at 193.04 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -7633,7 +8337,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR023")
+					(reference "#PWR027")
 					(unit 1)
 				)
 			)
@@ -7650,7 +8354,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "759dd936-ac77-447e-8f32-f9666f58a07f")
-		(property "Reference" "#PWR027"
+		(property "Reference" "#PWR013"
 			(at 104.14 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -7709,7 +8413,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR027")
+					(reference "#PWR013")
 					(unit 1)
 				)
 			)
@@ -7720,13 +8424,13 @@
 		(at 182.88 133.35 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "75fafd0d-941a-4a0d-8f07-9ae3d265e568")
-		(property "Reference" "TP101"
+		(property "Reference" "TP1"
 			(at 185.42 129.54 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7787,7 +8491,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "TP101")
+					(reference "TP1")
 					(unit 1)
 				)
 			)
@@ -7804,7 +8508,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "76355ed0-4fba-4757-8e60-97972aee7abe")
-		(property "Reference" "C101"
+		(property "Reference" "C5"
 			(at 160.02 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7870,6 +8574,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" "C"
+			(at 157.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 157.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "c=10u"
+			(at 157.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "bf1b204d-b4dc-449c-b42a-59f6289dff96")
 		)
@@ -7879,7 +8616,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C101")
+					(reference "C5")
 					(unit 1)
 				)
 			)
@@ -7890,13 +8627,13 @@
 		(at 215.9 151.13 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7768d8df-b765-4c34-8b7e-1b47833c0972")
-		(property "Reference" "TP102"
+		(property "Reference" "TP2"
 			(at 218.44 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7957,7 +8694,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "TP102")
+					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -7974,7 +8711,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ad393f4-8921-46db-8741-e12fc37f7c1b")
-		(property "Reference" "R106"
+		(property "Reference" "R10"
 			(at 129.54 161.29 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8049,7 +8786,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R106")
+					(reference "R10")
 					(unit 1)
 				)
 			)
@@ -8066,7 +8803,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7afdca1c-a1c4-47fc-881f-30cf993ef334")
-		(property "Reference" "R108"
+		(property "Reference" "R13"
 			(at 195.58 143.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8141,7 +8878,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R108")
+					(reference "R13")
 					(unit 1)
 				)
 			)
@@ -8152,13 +8889,13 @@
 		(at 45.72 80.01 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7b0fe3be-97e1-42e0-8175-5ec399e7bacc")
-		(property "Reference" "J101"
+		(property "Reference" "J1"
 			(at 30.48 53.34 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8278,7 +9015,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "J101")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -8295,7 +9032,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7bead05a-5e3e-4d71-8d78-4ab61094da47")
-		(property "Reference" "#PWR030"
+		(property "Reference" "#PWR06"
 			(at 67.31 166.37 0)
 			(hide yes)
 			(show_name no)
@@ -8354,7 +9091,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR030")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -8365,13 +9102,13 @@
 		(at 143.51 41.91 180)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7e256538-f984-4ab6-963a-799eddd0fbe6")
-		(property "Reference" "D101"
+		(property "Reference" "D2"
 			(at 143.51 37.465 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8444,7 +9181,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "D101")
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -8461,7 +9198,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "802076e6-8194-4799-8c13-899969d22373")
-		(property "Reference" "C114"
+		(property "Reference" "C11"
 			(at 261.62 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8536,7 +9273,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C114")
+					(reference "C11")
 					(unit 1)
 				)
 			)
@@ -8553,7 +9290,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8035c829-359f-4bb2-a1cd-f6a7f85085e9")
-		(property "Reference" "C107"
+		(property "Reference" "C8"
 			(at 177.8 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8619,6 +9356,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" "C"
+			(at 175.26 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 175.26 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "c=1n"
+			(at 175.26 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2041e2a6-0610-4700-a369-a86a33eecc56")
 		)
@@ -8628,7 +9398,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C107")
+					(reference "C8")
 					(unit 1)
 				)
 			)
@@ -8645,7 +9415,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "81527ee8-4e56-4c47-9ecb-5d5ec5e980b9")
-		(property "Reference" "Q101"
+		(property "Reference" "Q1"
 			(at 144.78 157.48 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8711,6 +9481,50 @@
 				)
 			)
 		)
+		(property "Sim.Library" "${KIPRJMOD}/sim/HSU5N25.lib"
+			(at 139.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "HSU5N25"
+			(at 139.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 139.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=G 2=D 3=S"
+			(at 139.7 158.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f1421b73-be0c-44ae-b143-ac7b4f1e92d2")
 		)
@@ -8723,7 +9537,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "Q101")
+					(reference "Q1")
 					(unit 1)
 				)
 			)
@@ -8740,7 +9554,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "85e31cf2-fab0-47a9-a476-81d6210ba8e7")
-		(property "Reference" "C112"
+		(property "Reference" "C3"
 			(at 81.28 179.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8815,7 +9629,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C112")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -8826,13 +9640,13 @@
 		(at 190.5 41.91 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "86578fd5-8b15-4ef1-a2b3-434a72edfc7d")
-		(property "Reference" "U101"
+		(property "Reference" "U3"
 			(at 190.5 36.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8908,7 +9722,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "U101")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -8925,7 +9739,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "869211aa-548b-434b-8bf4-8e2c9a2470bd")
-		(property "Reference" "#PWR025"
+		(property "Reference" "#PWR031"
 			(at 215.9 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -8984,7 +9798,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR025")
+					(reference "#PWR031")
 					(unit 1)
 				)
 			)
@@ -9001,7 +9815,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8737058f-b30d-4e6c-b6ac-eb20cffa7643")
-		(property "Reference" "R105"
+		(property "Reference" "R3"
 			(at 67.31 181.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9076,7 +9890,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R105")
+					(reference "R3")
 					(unit 1)
 				)
 			)
@@ -9093,7 +9907,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8d3f12b7-81c2-4c3d-9be3-c6e3edd79e37")
-		(property "Reference" "R119"
+		(property "Reference" "R16"
 			(at 251.46 130.81 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9168,7 +9982,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R119")
+					(reference "R16")
 					(unit 1)
 				)
 			)
@@ -9179,13 +9993,13 @@
 		(at 151.13 72.39 180)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90dede72-77ea-439e-9d9a-716f0d39c560")
-		(property "Reference" "D105"
+		(property "Reference" "D3"
 			(at 151.13 76.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9258,7 +10072,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "D105")
+					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -9275,7 +10089,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9175ad6b-9be5-444d-8782-2f17ffe01af5")
-		(property "Reference" "C106"
+		(property "Reference" "C6"
 			(at 160.02 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9341,6 +10155,39 @@
 				)
 			)
 		)
+		(property "Sim.Device" "C"
+			(at 157.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 157.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "c=2.2u"
+			(at 157.48 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fe0ba587-072d-490a-8c5c-8804e7738a72")
 		)
@@ -9350,7 +10197,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C106")
+					(reference "C6")
 					(unit 1)
 				)
 			)
@@ -9367,7 +10214,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "933ff5cf-521a-47a7-ab3a-e43635e2dfbf")
-		(property "Reference" "R111"
+		(property "Reference" "R5"
 			(at 81.28 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9442,7 +10289,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R111")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -9459,7 +10306,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93c61deb-9d40-46f2-846c-101cf3ca525c")
-		(property "Reference" "#PWR089"
+		(property "Reference" "#PWR014"
 			(at 113.03 54.61 0)
 			(hide yes)
 			(show_name no)
@@ -9518,7 +10365,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR089")
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -9535,7 +10382,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "961eec6e-a2c1-4654-bf5d-303db8238197")
-		(property "Reference" "#PWR024"
+		(property "Reference" "#PWR030"
 			(at 215.9 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -9594,7 +10441,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR024")
+					(reference "#PWR030")
 					(unit 1)
 				)
 			)
@@ -9611,7 +10458,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0d3e035-b663-4ec0-b049-6338ff3ad108")
-		(property "Reference" "#PWR031"
+		(property "Reference" "#PWR08"
 			(at 69.85 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -9670,7 +10517,83 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR031")
+					(reference "#PWR08")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 116.84 217.17 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a1c9c65a-6333-4f4c-9827-29f6df8c77e9")
+		(property "Reference" "#PWR016"
+			(at 116.84 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 116.84 220.98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 116.84 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 116.84 217.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 116.84 217.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89a06adb-198a-4732-961d-c63d7bf9213d")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -9682,13 +10605,13 @@
 		(mirror y)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a9e96e2d-af10-4da6-9140-379ac425ee0c")
-		(property "Reference" "J102"
+		(property "Reference" "J2"
 			(at 128.524 67.31 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9763,7 +10686,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "J102")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -9780,7 +10703,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "af121db9-d783-4338-baca-726283684685")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR025"
 			(at 175.26 140.97 0)
 			(hide yes)
 			(show_name no)
@@ -9839,7 +10762,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR022")
+					(reference "#PWR025")
 					(unit 1)
 				)
 			)
@@ -9856,7 +10779,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "af170428-5afb-498c-b5fd-08a12fd81b14")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR028"
 			(at 205.74 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -9915,7 +10838,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR013")
+					(reference "#PWR028")
 					(unit 1)
 				)
 			)
@@ -9923,7 +10846,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 53.34 137.16 0)
+		(at 45.72 137.16 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9932,8 +10855,8 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b0fc6769-ca7c-4283-93a7-440683eae7b1")
-		(property "Reference" "C105"
-			(at 55.88 135.89 0)
+		(property "Reference" "C1"
+			(at 48.26 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9944,7 +10867,7 @@
 			)
 		)
 		(property "Value" "10uF 25V"
-			(at 55.88 138.43 0)
+			(at 48.26 138.43 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9955,7 +10878,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 53.34 137.16 0)
+			(at 45.72 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9966,7 +10889,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 53.34 137.16 0)
+			(at 45.72 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9977,7 +10900,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 53.34 137.16 0)
+			(at 45.72 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9988,7 +10911,40 @@
 			)
 		)
 		(property "LCSC Part #" "C15850"
-			(at 53.34 137.16 0)
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "C"
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=+ 2=-"
+			(at 45.72 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Params" "c=10u"
+			(at 45.72 137.16 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10007,7 +10963,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C105")
+					(reference "C1")
 					(unit 1)
 				)
 			)
@@ -10024,7 +10980,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b294f0cf-7862-4930-8397-d6178a5a4925")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR03"
 			(at 45.72 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -10083,7 +11039,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR019")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -10100,7 +11056,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b5e1b36a-a0ce-4720-8c49-bbc216bf1a93")
-		(property "Reference" "#PWR09"
+		(property "Reference" "#PWR022"
 			(at 157.48 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -10159,7 +11115,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR09")
+					(reference "#PWR022")
 					(unit 1)
 				)
 			)
@@ -10176,7 +11132,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "b85c8e11-81d6-4132-9cfd-c8e57314cac2")
-		(property "Reference" "R107"
+		(property "Reference" "R12"
 			(at 195.58 135.89 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10251,7 +11207,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R107")
+					(reference "R12")
 					(unit 1)
 				)
 			)
@@ -10268,7 +11224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd3c18a0-63c2-46b1-8a31-95952de59ed7")
-		(property "Reference" "#PWR033"
+		(property "Reference" "#PWR09"
 			(at 78.74 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -10327,7 +11283,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR033")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -10414,13 +11370,13 @@
 		(at 109.22 54.61 90)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c0f69889-3197-4ecd-b6af-aea55191810c")
-		(property "Reference" "C108"
+		(property "Reference" "C4"
 			(at 107.95 52.07 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10495,7 +11451,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C108")
+					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -10506,13 +11462,13 @@
 		(at 102.87 48.26 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c124e53d-a433-43bb-965f-e822838ef25e")
-		(property "Reference" "R120"
+		(property "Reference" "R7"
 			(at 98.425 47.625 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10585,7 +11541,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R120")
+					(reference "R7")
 					(unit 1)
 				)
 			)
@@ -10602,7 +11558,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c824cadb-a855-4aec-9c00-1b3da045bc75")
-		(property "Reference" "#FLG05"
+		(property "Reference" "#FLG06"
 			(at 205.74 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -10661,7 +11617,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#FLG05")
+					(reference "#FLG06")
 					(unit 1)
 				)
 			)
@@ -10678,7 +11634,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9129b51-00c4-4933-beb2-5b26c3440368")
-		(property "Reference" "#FLG07"
+		(property "Reference" "#FLG04"
 			(at 123.19 58.42 0)
 			(hide yes)
 			(show_name no)
@@ -10737,7 +11693,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#FLG07")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
@@ -10754,7 +11710,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9338cd9-0aa0-4040-a562-5a7fd10c9872")
-		(property "Reference" "C104"
+		(property "Reference" "C10"
 			(at 218.44 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10829,7 +11785,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "C104")
+					(reference "C10")
 					(unit 1)
 				)
 			)
@@ -10922,7 +11878,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d6ca0f79-6564-443e-bfd0-acf815ef2e59")
-		(property "Reference" "#PWR026"
+		(property "Reference" "#PWR011"
 			(at 99.06 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -10981,7 +11937,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR026")
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -10998,7 +11954,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db839419-0e78-4626-b259-b77ca31fbb02")
-		(property "Reference" "#PWR08"
+		(property "Reference" "#PWR021"
 			(at 154.94 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -11057,7 +12013,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR08")
+					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -11074,7 +12030,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dcc5807d-25a5-418d-8bfb-55ab053274ed")
-		(property "Reference" "#PWR01"
+		(property "Reference" "#PWR02"
 			(at 45.72 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -11133,7 +12089,83 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR01")
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "NixiClockV1:+HV")
+		(at 132.08 205.74 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "deebd297-2c3e-4443-af15-2f4df6c357c1")
+		(property "Reference" "#PWR017"
+			(at 132.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+HV"
+			(at 132.08 201.93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 132.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 132.08 205.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 132.08 205.74 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2f024300-3440-46f4-bb86-f04e1a33da0d")
+		)
+		(instances
+			(project "NixiClockV1"
+				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -11150,7 +12182,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e0ed6bb4-874d-4e46-ab4b-5ac9e0012ab0")
-		(property "Reference" "#PWR032"
+		(property "Reference" "#PWR05"
 			(at 50.8 163.83 0)
 			(hide yes)
 			(show_name no)
@@ -11209,7 +12241,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR032")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -11226,7 +12258,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eaac4978-3165-41c6-9dd9-41e221864bbb")
-		(property "Reference" "R101"
+		(property "Reference" "R11"
 			(at 144.78 171.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11301,7 +12333,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R101")
+					(reference "R11")
 					(unit 1)
 				)
 			)
@@ -11318,7 +12350,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ebbfa484-cbca-42b9-a873-38e91af536c1")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR029"
 			(at 215.9 49.53 0)
 			(hide yes)
 			(show_name no)
@@ -11377,7 +12409,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR014")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -11394,7 +12426,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "eec286a3-45ce-4db3-b003-2a5b6dd84a84")
-		(property "Reference" "L101"
+		(property "Reference" "L1"
 			(at 97.79 128.905 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11467,7 +12499,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "L101")
+					(reference "L1")
 					(unit 1)
 				)
 			)
@@ -11478,13 +12510,13 @@
 		(at 83.82 60.96 0)
 		(unit 1)
 		(body_style 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f16503c4-3613-4141-84aa-f30a0ca0b661")
-		(property "Reference" "R113"
+		(property "Reference" "R6"
 			(at 88.265 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11557,7 +12589,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R113")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -11574,7 +12606,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f1ad11c5-5083-4253-912d-f052235019cb")
-		(property "Reference" "#PWR029"
+		(property "Reference" "#PWR01"
 			(at 30.48 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -11633,7 +12665,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#PWR029")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -11650,7 +12682,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f89a7105-0967-4dab-994d-9e4948e6d3fc")
-		(property "Reference" "U102"
+		(property "Reference" "U1"
 			(at 91.44 153.67 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11662,7 +12694,7 @@
 			)
 		)
 		(property "Value" "LM3478MA"
-			(at 106.68 176.53 0)
+			(at 91.948 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11716,6 +12748,50 @@
 				)
 			)
 		)
+		(property "Sim.Library" "${KIPRJMOD}/sim/LM3478_TRANS.lib"
+			(at 101.6 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Name" "LM3478_TRANS"
+			(at 101.6 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Device" "SUBCKT"
+			(at 101.6 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Sim.Pins" "1=ISEN 2=COMP 3=FB 4=AGND 5=PGND 6=DR 7=FA_SD 8=VIN"
+			(at 101.6 163.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "22de5b28-62ec-42fc-8335-2f87be5c3831")
 		)
@@ -11743,7 +12819,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "U102")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -11760,7 +12836,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f921830c-834f-4a4d-8c53-631fe0c38e23")
-		(property "Reference" "R109"
+		(property "Reference" "R14"
 			(at 195.58 151.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11835,7 +12911,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "R109")
+					(reference "R14")
 					(unit 1)
 				)
 			)
@@ -11852,7 +12928,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ff2f56e7-787c-4168-a700-b6cdaddcea87")
-		(property "Reference" "#FLG04"
+		(property "Reference" "#FLG05"
 			(at 172.72 41.91 0)
 			(hide yes)
 			(show_name no)
@@ -11911,7 +12987,7 @@
 		(instances
 			(project "NixiClockV1"
 				(path "/5a0d6c2e-8f3b-4e71-a9c4-2b7e1d9f3c58/677c2782-717d-5bad-86f6-60df216593c7"
-					(reference "#FLG04")
+					(reference "#FLG05")
 					(unit 1)
 				)
 			)
@@ -11922,4 +12998,5 @@
 			(page "1")
 		)
 	)
+	(embedded_fonts no)
 )
