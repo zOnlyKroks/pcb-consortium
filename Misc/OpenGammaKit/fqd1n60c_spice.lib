@@ -1,0 +1,7 @@
+* FQD1N60C (onsemi/Fairchild, 600 V, 1 A, DPAK; LCSC C241840) - ngspice VDMOS model fitted to the datasheet.
+* NOT the vendor's model: onsemi publishes none for this part. Fitted values:
+*   Vgs(th) 3 V typ (2..4 V), gfs 0.9 S @ 0.5 A -> Kp 0.8, Rds(on) 9.3 ohm typ @ 10 V -> Rd 9 ohm (drift region),
+*   Ciss 130 pF, Coss 18 pF, Crss 3.5 pF @ Vds 25 V -> Cgs 125 p, Cgd 2.5..30 p, Cjo 100 p (Vj 0.6, M 0.5),
+*   BVdss 600 V. Body-diode transit time (trr ~160 ns) deliberately left out: Tt makes ngspice fail to converge in the flyback.
+.model FQD1N60C VDMOS(NCHAN Vto=3 Kp=0.8 Lambda=0.01 Rd=9 Rs=0.5 Rg=10 Rds=1e9 Cgs=125p Cgdmin=2.5p Cgdmax=30p A=1
++ Cjo=100p M=0.5 Vj=0.6 Is=1e-13 N=1.1 Rb=1 Bv=600 Ibv=250u)

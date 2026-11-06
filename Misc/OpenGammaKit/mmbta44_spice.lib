@@ -1,0 +1,3 @@
+* MMBTA44 (onsemi, NPN, Vceo 400 V, Ic 0.3 A, SOT-23; LCSC) - Gummel-Poon model fitted to the datasheet.
+* NOT the vendor's model. hFE ~100 @ 10 mA / 10 V, Vce(sat) < 0.5 V @ 20 mA, Cob ~3 pF, Ccb 3 pF, fT ~ 50 MHz.
+.model MMBTA44 NPN(IS=2e-14 BF=100 NF=1 VAF=150 IKF=0.3 BR=2 RB=10 RE=1 RC=1 CJE=10p CJC=3p VJC=0.6 MJC=0.4 TF=3n TR=500n)
