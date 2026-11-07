@@ -1,0 +1,12 @@
+* Stand-in for the ADAU board on the Amp sheet's 8-pin interconnect (J11):
+*  1 GND, 2 +3V3, 3 AUDIO0 (right), 4 AUDIO1 (left), 5 AMP_SD (low = run), 6 AMP_FAULT (monitor only), 7 AMP_MUTE (low = unmuted), 8 GND
+* Set the test tone from the symbol's Sim.Params:  amp=<peak volts>  f=<Hz>
+.subckt J_ADAU_STUB P1 P2 P3 P4 P5 P6 P7 P8 params: amp=0.35 f=1k
+VA P3 P1 SIN(0 {amp} {f})
+VB P4 P1 SIN(0 {amp} {f})
+V33 P2 P1 DC 3.3
+RSD P5 P1 1k
+RMU P7 P1 1k
+RFL P6 P1 1G
+RG8 P8 P1 1m
+.ends J_ADAU_STUB
