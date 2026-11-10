@@ -1,0 +1,41 @@
+* DCF77 receiver simulation models
+
+* Toshiba 1SV281 varactor. No vendor SPICE model; Cj(V) fitted to datasheet
+* figures (C4V = 8.7 pF @ 1 MHz, C1V/C4V = 2.0, rs = 0.28 ohm, VR = 10 V).
+.model D1SV281 D(IS=1e-14 N=1 RS=0.28 CJO=31.9p VJ=0.7 M=0.683 FC=0.5 BV=10 IBV=1u)
+
+* 74HC4066 quad bilateral switch, 3.3 V supply, Ron ~100 ohm.
+* Pins: y/z = switch terminals, e = enable (active high).
+* Behavioural resistor instead of an SW device: ngspice's SW stays open in .ac.
+.subckt HC4066 y1 z1 e1 y2 z2 e2 y3 z3 e3 y4 z4 e4 vss vcc
+R1 y1 z1 r={100+1G/(1+exp((V(e1,vss)-1.65)/0.05))}
+R2 y2 z2 r={100+1G/(1+exp((V(e2,vss)-1.65)/0.05))}
+R3 y3 z3 r={100+1G/(1+exp((V(e3,vss)-1.65)/0.05))}
+R4 y4 z4 r={100+1G/(1+exp((V(e4,vss)-1.65)/0.05))}
+Rcc vcc vss 1G
+.ends HC4066
+
+* MCP4725 12-bit DAC, behavioural. Output = code/4096 * (VDD-VSS) through 1 ohm.
+* I2C pins are not simulated (power-on default code is 2048 = mid-scale).
+.subckt MCP4725 vout vss vdd sda scl a0 PARAMS: code=2048
+Bdac int vss V={code}/4096*(V(vdd)-V(vss))
+Rout int vout 1
+Rsda sda vss 1G
+Rscl scl vss 1G
+Ra0 a0 vss 1G
+Rq vdd vss 5k
+.ends MCP4725
+
+* DCF77 ferrite antenna: induced EMF in series with the winding.
+* Defaults match analysis/frontend.py (10 mH, Q0=150, 1 mV/m field -> 3.8 uV).
+* Transient: the carrier is keyed like the real signal. It drops to (1-depth) of
+* full amplitude from t=0 until t=tred (100 ms = bit 0, 200 ms = bit 1), then
+* returns to full amplitude. Set tred=0 for a constant carrier.
+* p1 = VREF side, p2 = tank node.
+.subckt FERRITE_ANT p1 p2 PARAMS: L=10m Q0=150 f0=77.5k emf=3.8u cw=25p tred=100m depth=0.85
+Vac p1 a1 DC 0 AC {emf}
+Btr a1 a V={emf}*sin(6.2832*f0*time)*(1-{depth}*0.5*(1-tanh((time-tred)/0.3m)))
+Lw a b {L}
+Rw b p2 {6.2832*f0*L/Q0}
+Cw p1 p2 {cw}
+.ends FERRITE_ANT

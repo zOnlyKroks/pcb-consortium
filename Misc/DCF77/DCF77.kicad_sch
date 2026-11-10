@@ -1,0 +1,399 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "e5ffa218-a3c5-4506-bce0-c7db5a2d5e52")
+	(paper "A3")
+	(title_block
+		(title "DCF77 self-tuning receiver")
+		(rev "A")
+		(company "pcb-consortium")
+	)
+	(lib_symbols)
+	(text "DCF77 self-tuning receiver - only the ferrite antenna is external."
+		(exclude_from_sim no)
+		(at 38.1 30.48 0)
+		(effects
+			(font
+				(size 2.5 2.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "76d8e823-70b5-44e0-b0cd-27930665e07a")
+	)
+	(wire
+		(pts
+			(xy 101.6 86.36) (xy 165.1 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ea49e15-49f9-48f1-a10c-f1d3f6b363f1")
+	)
+	(wire
+		(pts
+			(xy 101.6 60.96) (xy 165.1 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10782244-5cee-4277-a354-0ef865ece7ae")
+	)
+	(wire
+		(pts
+			(xy 101.6 91.44) (xy 165.1 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e55531b-04d1-4868-bd43-7a7ff658eb38")
+	)
+	(wire
+		(pts
+			(xy 101.6 55.88) (xy 165.1 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87bcef0f-9b61-48b0-958b-8091f8e9bf15")
+	)
+	(wire
+		(pts
+			(xy 101.6 66.04) (xy 165.1 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "898a8655-dcff-4873-bcbe-4fc169d769a1")
+	)
+	(wire
+		(pts
+			(xy 101.6 81.28) (xy 165.1 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d06f2837-3e3f-4ee8-bd0a-6bbe78131040")
+	)
+	(wire
+		(pts
+			(xy 101.6 76.2) (xy 165.1 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d841c37f-7a05-4e50-b2bf-ff1ecc1c6582")
+	)
+	(wire
+		(pts
+			(xy 101.6 71.12) (xy 165.1 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbbe5d4c-742c-42eb-8b9f-405922b5479c")
+	)
+	(sheet
+		(at 38.1 45.72)
+		(size 63.5 55.88)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "416248d1-b88b-422a-948c-d56683e336ea")
+		(property "Sheetname" "Analog"
+			(at 38.1 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "analog.kicad_sch"
+			(at 38.1 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ADC_IN" output
+			(at 101.6 55.88 0)
+			(uuid "927f92d6-023b-4627-9a3f-09e278ec2b79")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAP_SEL0" input
+			(at 101.6 60.96 0)
+			(uuid "77c73190-fb3e-48d8-b2a5-0aed3870286c")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAP_SEL1" input
+			(at 101.6 66.04 0)
+			(uuid "cfb01735-edb3-45bf-a47a-d2ec03145d84")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAP_SEL2" input
+			(at 101.6 71.12 0)
+			(uuid "25e0f7c9-ea83-4251-88d9-81d3d0da31ca")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "CAP_SEL3" input
+			(at 101.6 76.2 0)
+			(uuid "35d9e104-77cc-4c61-9d84-5985317af15f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "TONE" input
+			(at 101.6 81.28 0)
+			(uuid "a28ad9a2-5209-42ac-b5a0-7cea20495752")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SCL" input
+			(at 101.6 86.36 0)
+			(uuid "cb15265d-f4e1-4104-9eda-f5d4120f5829")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 101.6 91.44 0)
+			(uuid "356b0fd7-cdf6-40ee-aa77-05195677262d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(instances
+			(project "DCF77"
+				(path "/e5ffa218-a3c5-4506-bce0-c7db5a2d5e52"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 165.1 45.72)
+		(size 63.5 55.88)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "90a31137-c36d-4deb-bda5-740ee7f62597")
+		(property "Sheetname" "MCU"
+			(at 165.1 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "mcu.kicad_sch"
+			(at 165.1 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "ADC_IN" input
+			(at 165.1 55.88 180)
+			(uuid "c51d5b13-0c77-48a7-a6ab-4d83977aeaec")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAP_SEL0" output
+			(at 165.1 60.96 180)
+			(uuid "450d62c6-7f8f-4cfd-986f-451c54fab997")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAP_SEL1" output
+			(at 165.1 66.04 180)
+			(uuid "0beb41ae-e2a4-46e9-ac70-f6d51f141cc2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAP_SEL2" output
+			(at 165.1 71.12 180)
+			(uuid "53205c8e-4934-4d1e-8ca0-1aa5a0b15d6e")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "CAP_SEL3" output
+			(at 165.1 76.2 180)
+			(uuid "53094be7-d881-459f-90f4-e44f937e09f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "TONE" output
+			(at 165.1 81.28 180)
+			(uuid "769c7a84-c456-49c0-89f2-5f8ae9900685")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SCL" output
+			(at 165.1 86.36 180)
+			(uuid "63c0c7c6-dfbd-44b9-938b-473316792fc6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SDA" bidirectional
+			(at 165.1 91.44 180)
+			(uuid "963afa1b-f573-4434-a8d8-e043b1344355")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "DCF77"
+				(path "/e5ffa218-a3c5-4506-bce0-c7db5a2d5e52"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 38.1 127)
+		(size 63.5 25.4)
+		(exclude_from_sim yes)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a5ce70fc-b1cf-403d-99ad-cdd1fc565a6f")
+		(property "Sheetname" "Power"
+			(at 38.1 125.73 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "power.kicad_sch"
+			(at 38.1 153.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "DCF77"
+				(path "/e5ffa218-a3c5-4506-bce0-c7db5a2d5e52"
+					(page "4")
+				)
+			)
+		)
+	)
+)
